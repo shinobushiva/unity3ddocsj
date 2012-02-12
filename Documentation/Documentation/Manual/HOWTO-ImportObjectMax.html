@@ -1,0 +1,2426 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Importing Objects From 3D Studio Max</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Importing Objects From 3D Studio Max</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/FAQ.html">FAQ</a> &gt; <a href="../Manual/HOWTO-importObject.html">How do I import objects from my 3D app?</a> &gt; <a href="../Manual/HOWTO-ImportObjectMax.html">Importing Objects From 3D Studio Max</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/HOWTO-ImportObjectCinema4D.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/HOWTO-ImportObjectCheetah3D.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Importing Objects From 3D Studio Max</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>If you make your 3D objects in 3dsMax, you can save your .max files directly into your <span class='doc-keyword'>Project</span> or export them into Unity using the <b>Autodesk .FBX</b> format.  <b>Saving them in the original .max format is recommended.</b>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Unity currently imports from 3ds Max</h2>
+
+
+
+
+
+
+
+<ol><li>All nodes with position, rotation and scale. Pivot points and Names are also imported.
+
+
+
+
+
+
+
+</li><li>Meshes with vertex colors, normals and one or <a href='#twouvs'>two UV sets</a>.
+
+
+
+
+
+
+
+</li><li>Materials with diffuse texture and color. Multiple materials per mesh.
+
+
+
+
+
+
+
+</li><li>Animations.
+
+
+
+
+
+
+
+</li><li><a href='#bones'>Bone based animations</a>.
+
+
+
+
+
+
+
+</li></ol><div class='vspace'></div><h2>To manually export to FBX from 3DS Max</h2>
+
+
+
+
+
+
+
+<ol><li>Download the latest fbx exporter from <a class='urllink' href='http://autodesk.com/fbx' rel='nofollow'>Autodesk website</a> and install it.
+
+
+
+
+
+
+
+</li><li>Export your scene (<span class='doc-menu'>File-&gt;Export</span> or <span class='doc-menu'>File-&gt;Export Selected</span>) in <b>.fbx</b> format. Using default export options should be okay.
+
+
+
+
+
+
+
+</li><li>Move the exported fbx file into your Unity project folder.
+
+
+
+
+
+
+
+</li><li>When you switch back into Unity, the <b>.fbx</b> file is imported automatically.
+
+
+
+
+
+
+
+</li><li>Drag the file from the <span class='doc-keyword'>Project View</span> into the <span class='doc-keyword'>Scene View</span>.
+
+
+
+
+
+
+
+</li></ol><div class='vspace'></div><h2>Exporter options</h2>
+
+
+
+
+
+
+
+<p>Using default FBX exporter options (that basically export everything) should be okay in all cases.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/HOWTO-ImportObjectMax-0.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'><em>Default FBX exporter options (for fbx plugin version 2009.3)</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='bones' id='bones'></a>
+
+
+
+
+
+
+
+</p><h2>Exporting Bone-based Animations</h2>
+
+
+
+
+
+
+
+<p>There is a procedure you should follow when you want to export bone-based animations:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ol><li>Set up the bone structure as you please.
+
+
+
+
+
+
+
+</li><li>Create the animations you want, using FK and/or IK
+
+
+
+
+
+
+
+</li><li>Select all bones and/or IK solvers
+
+
+
+
+
+
+
+</li><li>Go to <span class='doc-menu'>Motion-&gt;Trajectories</span> and press <span class='doc-menu'>Collapse</span>. Unity makes a key filter, so the amount of keys you export is irrelevant
+
+
+
+
+
+
+
+</li><li>"Export" or "Export selected" as newest FBX format
+
+
+
+
+
+
+
+</li><li>Drop the FBX file into <span class='doc-keyword'>Assets</span> as usual
+
+
+
+
+
+
+
+</li><li>In Unity you must reassign the Texture to the Material in the root bone
+
+
+
+
+
+
+
+</li></ol><p class='vspace'>When exporting a bone hierarchy with mesh and animations from 3ds Max to Unity, the GameObject hierarchy produced will correspond to the hierarchy you can see in "Schematic view" in 3ds Max. One difference is Unity will place a GameObject as the new root, containing the animations, and will place the mesh and material information in the root bone.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you prefer to have animation and mesh information in the same Unity GameObject, go to the Hierarchy view in 3ds Max, and parent the mesh node to a bone in the bone hierarchy. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='twouvs' id='twouvs'></a>
+
+
+
+
+
+
+
+</p><h2>Exporting Two UV Sets for Lightmapping</h2>
+
+
+
+
+
+
+
+<p>3ds Max' Render To Texture and automatic unwrapping functionality can be used to create lightmaps. Note that Unity has built-in <a href="../Manual/Lightmapping.html">lightmapper</a>, but you might prefer using 3dsmax if that fits your workflow better. Usually one UV set is used for main texture and/or normal maps, and another UV set is used for the lightmap texture. For both UV sets to come through properly, the material in 3ds Max has to be Standard and both Diffuse (for main texture) and Self-Illumination (for lightmap) map slots have to be set up:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/HOWTO-ImportObjectMax-1.jpg' /></div>
+
+
+
+
+
+
+
+<p><em>Material setup for Lightmapping in 3ds Max, using self-illumination map</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Note that if object uses a Shell material type, then current Autodesk's FBX exporter will <b>not export UVs correctly</b>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Alternatively, you can use Multi/Sub Object material type and setup two sub-materials, using the main texture and the lightmap in their diffuse map slots, like shown below. However, if faces in your model use different sub-material IDs, this will result in multiple materials being imported, which is not optimal for performance.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/HOWTO-ImportObjectMax-2.jpg' /></div>
+
+
+
+
+
+
+
+<p><em>Alternate Material setup for Lightmapping in 3ds Max, using multi/sub object material</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Troubleshooting</h2>
+
+
+
+
+
+
+
+<p>If you have any issues with importing some models: ensure that you have the latest FBX plugin installed. It can be downloaded <a class='urllink' href='http://autodesk.com/fbx' rel='nofollow'>Autodesk website</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-16</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/HOWTO-ImportObjectCinema4D.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/HOWTO-ImportObjectCheetah3D.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

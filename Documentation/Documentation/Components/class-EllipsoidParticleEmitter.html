@@ -1,0 +1,2506 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Ellipsoid Particle Emitter</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Ellipsoid Particle Emitter</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/Components.html">Components</a> &gt; <a href="../Components/comp-ParticlesGroup.html">Particle Components</a> &gt; <a href="../Components/class-EllipsoidParticleEmitter.html">Ellipsoid Particle Emitter</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/comp-ParticlesGroup.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-LineRenderer.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Ellipsoid Particle Emitter</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Ellipsoid Particle Emitter</span> spawns particles inside a sphere. Use the <span class='doc-prop'>Ellipsoid</span> property below to scale &amp; stretch the sphere.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-EllipsoidParticleEmitter-0.jpg' /><br /><em>The Ellipsoid Particle Emitter <span class='doc-keyword'>Inspector</span></em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Emit</span></td><td  align='left'>If enabled, the emitter will emit particles.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Min Size</span></td><td  align='left'>The minimum size each particle can be at the time when it is spawned.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Max Size</span></td><td  align='left'>The maximum size each particle can be at the time when it is spawned.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Min Energy</span></td><td  align='left'>The minimum lifetime of each particle, measured in seconds.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Max Energy</span></td><td  align='left'>The maximum lifetime of each particle, measured in seconds.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Min Emission</span></td><td  align='left'>The minimum number of particles that will be spawned every second.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Max Emission</span></td><td  align='left'>The maximum number of particles that will be spawned every second.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>World Velocity</span></td><td  align='left'>The starting speed of particles in world space, along X, Y, and Z.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Local Velocity</span></td><td  align='left'>The starting speed of particles along X, Y, and Z, measured in the object's orientation.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Rnd Velocity</span></td><td  align='left'>A random speed along X, Y, and Z that is added to the velocity.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Emitter Velocity Scale</span></td><td  align='left'>The amount of the emitter's speed that the particles inherit.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Tangent Velocity</span></td><td  align='left'>The starting speed of particles along X, Y, and Z, across the Emitter's surface.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Simulate In World Space</span></td><td  align='left'>If enabled, the particles don't move when the emitter moves. If false, when you move the emitter, the particles follow it around.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>One Shot</span></td><td  align='left'>If enabled, the particle numbers specified by min &amp; max emission is spawned all at once. If disabled, the particles are generated in a long stream.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Ellipsoid</span></td><td  align='left'>Scale of the sphere along X, Y, and Z that the particles are spawned inside.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>MinEmitterRange</span></td><td  align='left'>Determines an empty area in the center of the sphere - use this to make particles appear on the edge of the sphere.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Details</h2>
+
+
+
+
+
+
+
+<p>Ellipsoid Particle Emitters (EPEs) are the basic emitter, and are included when you choose to add a <span class='doc-keyword'>Particle System</span> to your scene from <span class='doc-menu'>Components-&gt;Particles-&gt;Particle System</span>.  You can define the boundaries for the particles to be spawned, and give the particles an initial velocity.  From here, use the <a href="../Components/class-ParticleAnimator.html">Particle Animator</a> to manipulate how your particles will change over time to achieve interesting effects.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Particle Emitters work in conjunction with <a href="../Components/class-ParticleAnimator.html">Particle Animators</a> and <a href="../Components/class-ParticleRenderer.html">Particle Renderers</a> to create, manipulate, and display Particle Systems. All three Components must be present on an object before the particles will behave correctly.  When particles are being emitted, all different velocities are added together to create the final velocity.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Spawning Properties</h3>
+
+
+
+
+
+
+
+<p>Spawning properties like <span class='doc-prop'>Size</span>, <span class='doc-prop'>Energy</span>, <span class='doc-prop'>Emission</span>, and <span class='doc-prop'>Velocity</span> will give your particle system distinct personality when trying to achieve different effects.  Having a small <span class='doc-prop'>Size</span> could simulate fireflies or stars in the sky.  A large <span class='doc-prop'>Size</span> could simulate dust clouds in a musky old building.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><span class='doc-prop'>Energy</span> and <span class='doc-prop'>Emission</span> will control how long your particles remain onscreen and how many particles can appear at any one time.  For example, a rocket might have high <span class='doc-prop'>Emission</span> to simulate density of smoke, and high <span class='doc-prop'>Energy</span> to simulate the slow dispersion of smoke into the air.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><span class='doc-prop'>Velocity</span> will control how your particles move.  You might want to change your <span class='doc-prop'>Velocity</span> in scripting to achieve interesting effects, or if you want to simulate a constant effect like wind, set your X and Z <span class='doc-prop'>Velocity</span> to make your particles blow away.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Simulate in World Space</h3>
+
+
+
+
+
+
+
+<p>If this is disabled, the position of each individual particle will always translate relative to the <span class='doc-prop'>Position</span> of the emitter.  When the emitter moves, the particles will move along with it.  If you have <span class='doc-prop'>Simulate in World Space</span> enabled, particles will not be affected by the translation of the emitter.  For example, if you have a fireball that is spurting flames that rise, the flames will be spawned and float up in space as the fireball gets further away.  If <span class='doc-prop'>Simulate in World Space</span> is disabled, those same flames will move across the screen along with the fireball.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Emitter Velocity Scale</h3>
+
+
+
+
+
+
+
+<p>This property will only apply if <span class='doc-prop'>Simulate in World Space</span> is enabled.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If this property is set to 1, the particles will inherit the exact translation of the emitter at the time they are spawned.  If it is set to 2, the particles will inherit double the emitter's translation when they are spawned.  3 is triple the translation, etc.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>One Shot</h3>
+
+
+
+
+
+
+
+<p><span class='doc-prop'>One Shot</span> emitters will create all particles within the <span class='doc-prop'>Emission</span> property all at once, and cease to emit particles over time.  Here are some examples of different particle system uses with <span class='doc-prop'>One Shot</span> <span class='doc-prop'>Enabled</span> or <span class='doc-prop'>Disabled</span>:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><span class='doc-prop'>Enabled</span>:
+
+
+
+
+
+
+
+</p><ul><li>Explosion
+
+
+
+
+
+
+
+</li><li>Water splash
+
+
+
+
+
+
+
+</li><li>Magic spell
+
+
+
+
+
+
+
+</li></ul><p class='vspace'><span class='doc-prop'>Disabled</span>:
+
+
+
+
+
+
+
+</p><ul><li>Gun barrel smoke
+
+
+
+
+
+
+
+</li><li>Wind effect
+
+
+
+
+
+
+
+</li><li>Waterfall
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>Min Emitter Range</h3>
+
+
+
+
+
+
+
+<p>The <span class='doc-prop'>Min Emitter Range</span> determines the depth within the ellipsoid that particles can be spawned.  Setting it to 0 will allow particles to spawn anywhere from the center core of the ellipsoid to the outer-most range.  Setting it to 1 will restrict spawn locations to the outer-most range of the ellipsoid.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-EllipsoidParticleEmitter-1.jpg' /><br /><em><span class='doc-prop'>Min Emitter Range</span> of 0</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-EllipsoidParticleEmitter-2.jpg' /><br /><em><span class='doc-prop'>Min Emitter Range</span> of 1</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Hints</h2>
+
+
+
+
+
+
+
+<ul><li>Be careful of using many large particles. This can seriously hinder performance on low-level machines. Always try to use the minimum number of particles to attain an effect.
+
+
+
+
+
+
+
+</li><li>The <span class='doc-prop'>Emit</span> property works in conjunction with the <span class='doc-prop'>AutoDestruct</span> property of the Particle Animator.  Through scripting, you can cease the emitter from emitting, and then <span class='doc-prop'>AutoDestruct</span> will automatically destroy the Particle System and the GameObject it is attached to.
+
+
+
+
+
+
+
+</li></ul>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2007-09-17</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/comp-ParticlesGroup.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-LineRenderer.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

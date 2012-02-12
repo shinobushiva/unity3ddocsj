@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<!-- #BeginTemplate "/Templates/manual-page.dwt" -->		<meta charset="utf-8" />
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - Asset Workflow</title>
+<!-- #TemplateEndEditable -->		<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+	</head>
+	<body onload="DocLoaded();">
+		<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+			<tbody>
+				<tr>
+					<td class="titleleft">
+						<img src="../images/top/left.png" /></td>
+					<td>
+						<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+					<td class="titlemid">
+						<table>
+							<tbody>
+								<tr>
+									<td class="doctitle">
+										Asset Workflow</td>
+									<td>
+										<table align="right">
+											<tbody>
+												<tr>
+<!-- #TemplateBeginEditable name="sections-nav" -->													<td class="Manual">
+														<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+													<td class="Manual">
+														<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+													<td class="Manual">
+														<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+<!-- #TemplateEndEditable -->												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<table class="docpath" width="100%">
+											<tbody>
+												<tr>
+													<td>
+<!-- #TemplateBeginEditable name="path" -->														<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Unity Basics.html">Unity Basics</a> &gt; <a href="../Manual/Asset Workflow.html">Asset Workflow</a> <!-- #TemplateEndEditable --></td>
+													<td class="switchlink">
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td class="titleright" width="9">
+						<img src="../images/top/right.png" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="manual">
+			<div class="main">
+<!-- #TemplateBeginEditable name="unofficial translation" -->				<p>
+					&nbsp;</p>
+				<center>
+					<table border="1">
+						<tbody>
+							<tr>
+								<td bgcolor="yellow">
+									<center>
+										このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br />
+										This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br />
+										<br />
+										翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br />
+										Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center>
+								</td>
+								<td>
+									<a href="toedit_proxy.php?url=Asset Workflow.html"><img src="../Images/pencil.png" /></a><br />
+									編集</td>
+							</tr>
+						</tbody>
+					</table>
+				</center>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->				<div class="nav">
+					<div class="nav-prev">
+						<a href="../Manual/Customizing Your Workspace.html"> </a>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<a href="../Manual/Customizing Your Workspace.html">Previous</a></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+					<div class="nav-next">
+						<a href="../Manual/Creating Scenes.html"> </a>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<a href="../Manual/Creating Scenes.html">Next</a></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+				</div>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->				<h1>
+					Asset ワークフロー</h1>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->				<p>
+					ここでは、UnityにおけるAssetの使い方を学習します。一般的で概略的な基本操作を解説します. たとえば、3次元メッシュの使い方について説明します。</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					ラフなAssetの作成</h2>
+				<p>
+					&nbsp;サポートれている3Dモデリングツールを使って、ラフバージョンのAssetを作成します。ここではMayaを使っています。準備ができるまで、Assetの準備を行ってください。Unityによってサポートされているアプリケーションのリストは、<a href="http://juug.org/unity3docsj/Documentation/Documentation/Manual/HOWTO-importObject.html">ここ</a>を参照してください。</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					インポート(Import)</h2>
+				<p>
+					Assetを初めて保存するときは、 プロジェクトフォルダの中の<strong>Assets</strong>フォルダに保存すれば大丈夫です。Unityプロジェクトを開くとAssetが検出されプロジェクトにインポートされます。<span class="doc-keyword">プロジェクトビュー(Project View)</span>をみると、保存した場所にAssetがあることを確認できます。 Please note that Unity uses the FBX exporter provided by your modeling package to convert your models to the FBX file format. You will need to have the FBX exporter of your modeling package available for Unity to use. Alternatively, you can directly export as FBX from your application and save in the Projects folder. For a list of applications that are supported by Unity, please see <a href="../Manual/HOWTO-importObject.html">this page</a>.</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					Import Settings</h2>
+				<p>
+					If you select the asset in the <span class="doc-keyword">Project View</span> the import settings for this asset will appear in the <span class="doc-keyword">Inspector</span>. The options that are displayed will change based on the type of asset that is selected.</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					Adding Asset to the Scene</h2>
+				<p>
+					Simply click and drag the mesh from the Project View to the <span class="doc-keyword">Hierarchy</span> or <span class="doc-keyword">Scene View</span> to add it to the Scene. When you drag a mesh to the scene, you are creating a <span class="doc-keyword">GameObject</span> that has a <span class="doc-prop">Mesh Renderer</span> <span class="doc-keyword">Component</span>. If you are working with a texture or a sound file, you will have to add it to a GameObject that already exists in the Scene or Project.</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					Putting Different Assets Together</h2>
+				<p>
+					Here is a brief description of the relationships between the most common assets</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<ul>
+					<li>
+						A Texture is applied to a <span class="doc-keyword">Material</span></li>
+					<li>
+						A Material is applied to a GameObject (with a Mesh Renderer Component)</li>
+					<li>
+						An <span class="doc-prop">Animation</span> is applied to a GameObject (with an Animation Component)</li>
+					<li>
+						A sound file is applied to a GameObject (with an <span class="doc-prop">Audio Source</span> Component)</li>
+				</ul>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					Creating a Prefab</h2>
+				<p>
+					<span class="doc-keyword">Prefabs</span> are a collection of GameObjects &amp; Components that can be re-used in your scenes. Several identical objects can be created from a single Prefab, called instancing. Take trees for example. Creating a tree Prefab will allow you to instance several identical trees and place them in your scene. Because the trees are all linked to the Prefab, any changes that are made to the Prefab will automatically be applied to all tree instances. So if you want to change the mesh, material, or anything else, you just make the change once in the Prefab and all the other trees inherit the change. You can also make changes to an instance, and choose <span class="doc-menu">GameObject-&gt;Apply Changes to Prefab</span> from the main menu. This can save you lots of time during setup and updating of assets.</p>
+				<p class="vspace">
+					When you have a GameObject that contains multiple Components and a hierarchy of child GameObjects, you can make a Prefab of the top-level GameObject (or <span class="doc-keyword">root</span>), and re-use the entire collection of GameObjects.</p>
+				<p class="vspace">
+					Think of a Prefab as a blueprint for a structure of GameObjects. All the Prefab clones are identical to the blueprint. Therefore, if the blueprint is updated, so are all the clones. There are different ways you can update the Prefab itself by changing one of its clones and applying those changes to the blueprint. To read more about using and updating Prefabs, please view the <a href="../Manual/Prefabs.html">Prefabs</a> page.</p>
+				<p class="vspace">
+					To actually create a Prefab from a GameObject in your scene, first create a new Prefab in your Project View. Name the new Prefab whatever you like. Then, click on the Game Object in the scene that you want to make into a Prefab. Drag it to the new Prefab, and you should see the Game Object&#39;s name text turn blue. You have now created a re-usable prefab.</p>
+				<div class="vspace">
+					&nbsp;</div>
+				<h2>
+					Updating Assets</h2>
+				<p>
+					You have imported, instantiated, and linked your asset to a Prefab. Now when you want to edit your source asset, just double-click it from the Project View. The appropriate application will launch, and you can make any changes you want. When you&#39;re done updating it, just Save it. Then, when you switch back to Unity, the update will be detected, and the asset will be re-imported. The asset&#39;s link to the Prefab will also be maintained. So the effect you will see is that your Prefab will update. That&#39;s all you have to know to update assets. Just open it and save! <a id="AssetLabels" name="AssetLabels"></a></p>
+				<h2>
+					Optional - Adding Labels to the Assets.</h2>
+				<p>
+					Is always a good idea to add labels to your assets if you want to keep organized all your assets, with this you can search for the labels associated to each asset in the search field in the project view or in the object selector.</p>
+				<p class="vspace">
+					Steps for adding a label to an asset:</p>
+				<ul>
+					<li>
+						Select the asset you want to add the label to (From the project view).</li>
+					<li>
+						In the inspector click on the &quot;Add Label&quot; icon (<img class="figure" src="../Images/manual/Asset Workflow-0.jpg" />) if you dont have any Labels associated to that asset.
+						<ul>
+							<li>
+								If you have a label associated to an asset then just click where the labels are.</li>
+						</ul>
+					</li>
+					<li>
+						Start writing your labels.</li>
+				</ul>
+				<p class="vspace">
+					<b>Notes:</b></p>
+				<ul>
+					<li>
+						You can have more than one label for any asset.</li>
+					<li>
+						To separate/create labels, just press <b>space</b> or <b>enter</b> when writing asset label names.</li>
+				</ul>
+				<small>Page last updated: 2010-07-21 <script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script><!-- #TemplateEndEditable --></small>
+				<div class="nav">
+					<div class="nav-prev">
+						<small><a href="../Manual/Customizing Your Workspace.html"> </a></small>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<small><a href="../Manual/Customizing Your Workspace.html">Previous</a></small></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+					<div class="nav-next">
+						<small><a href="../Manual/Creating Scenes.html"> </a></small>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<small><a href="../Manual/Creating Scenes.html">Next</a></small></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- #EndTemplate -->	</body>
+</html>

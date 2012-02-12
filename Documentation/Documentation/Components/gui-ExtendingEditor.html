@@ -1,0 +1,2970 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Extending the Editor</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Extending the Editor</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/GUI Scripting Guide.html">GUI Scripting Guide</a> &gt; <a href="../Components/gui-ExtendingEditor.html">Extending the Editor</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Extending.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/Network Reference Guide.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Extending the Editor</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<h2>Introduction</h2>
+
+
+
+
+
+
+
+<p>You can create your own custom design tools inside Unity through <span class='doc-keyword'>Editor Windows</span>.  Scripts that derive from <a class='urllink' href='../ScriptReference/EditorWindow.html' rel='nofollow'>EditorWindow</a> instead of <a class='urllink' href='../ScriptReference/MonoBehaviour.html' rel='nofollow'>MonoBehaviour</a> can leverage both <a class='urllink' href='../ScriptReference/EditorGUI.html' rel='nofollow'>GUI</a>/<a class='urllink' href='../ScriptReference/GUI.html' rel='nofollow'>GUILayout</a> and <a class='urllink' href='../ScriptReference/GUILayout.html' rel='nofollow'>EditorGUI</a>/<a class='urllink' href='../ScriptReference/EditorGUILayout.html' rel='nofollow'>EditorGUILayout</a> controls. Alternatively, you can use <span class='doc-keyword'>Custom Inspectors</span> to expose these GUI controls in your GameObject Inspector.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Editor Windows</h2>
+
+
+
+
+
+
+
+<p>You can create any number of custom windows in your app. These behave just like the Inspector, Scene or any other built-in ones. This is a great way to add a user interface to a sub-system for your game.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/gui-ExtendingEditor-0.jpg' /><br /><em>Custom Editor Interface by Serious Games Interactive used for scripting cutscene actions</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Making a custom Editor Window involves the following simple steps:
+
+
+
+
+
+
+
+</p><ul><li>Create a script that derives from EditorWindow.
+
+
+
+
+
+
+
+</li><li>Use code to trigger the window to display itself.
+
+
+
+
+
+
+
+</li><li>Implement the GUI code for your tool.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>Derive From EditorWindow</h3>
+
+
+
+
+
+
+
+<p>In order to make your Editor Window, your script must be stored inside a folder called "Editor".  Make a class in this script that derives from EditorWindow. Then write your GUI controls in the inner OnGUI function.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+class MyWindow extends EditorWindow {
+
+
+
+
+
+
+
+    function OnGUI () {
+
+
+
+
+
+
+
+        // The actual window code goes here
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p><em>MyWindow.js - placed in a folder called 'Editor' within your project.</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Showing the window</h3>
+
+
+
+
+
+
+
+<p>In order to show the window on screen, make a menu item that displays it. This is done by creating a function which is activated by the 
+
+
+
+
+
+
+
+<span class='doc-keyword'>MenuItem</span> property. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The default behavior in Unity is to recycle windows (so selecting the menu item again would show existing windows. This is done by using the function <a class='urllink' href='../ScriptReference/EditorWindow.GetWindow.html' rel='nofollow'>EditorWindow.GetWindow</a> Like this:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>
+
+
+
+
+
+
+
+class MyWindow extends EditorWindow {
+
+
+
+
+
+
+
+    @MenuItem ("Window/My Window")
+
+
+
+
+
+
+
+    static function ShowWindow () {
+
+
+
+
+
+
+
+        EditorWindow.GetWindow (MyWindow);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function OnGUI () {
+
+
+
+
+
+
+
+        // The actual window code goes here
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p><em>Showing the MyWindow</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This will create a standard, dockable editor window that saves its position between invocations, can be used in custom layouts, etc. To have more control over what gets created, you can use <a class='urllink' href='../ScriptReference/EditorWindow.GetWindowWithRect.html' rel='nofollow'>GetWindowWithRect</a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Implementing Your Window's GUI</h3>
+
+
+
+
+
+
+
+<p>The actual contents of the window are rendered by implementing the OnGUI function. You can use the same UnityGUI classes you use for your ingame GUI (<span class='doc-prop'>GUI</span> and <span class='doc-prop'>GUILayout</span>). In addition we provide some additional GUI controls, located in the editor-only classes <span class='doc-prop'>EditorGUI</span> and <span class='doc-prop'>EditorGUILayout</span>. These classes add to the controls already available in the normal classes, so you can mix and match at will.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>For more info, take a look at the example and documentation on the <a class='urllink' href='../ScriptReference/EditorWindow.html' rel='nofollow'>EditorWindow page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Custom Inspectors</h2>
+
+
+
+
+
+
+
+<p>A key to increasing the speed of game creation is to create custom inspectors for commonly used components. For the sake of example, we'll use this very simple script that always keeps an object looking at a point.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+var lookAtPoint = Vector3.zero;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+    transform.LookAt (lookAtPoint);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre><em>LookAtPoint.js</em>
+
+
+
+
+
+
+
+<p class='vspace'>This will keep an object oriented towards a world-space point. Let's make it cool!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The first step to making it work nicely in the editor is to make the script run even when you're not testing the game. We do this by adding an ExecuteInEditMode attribute to it:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+@script ExecuteInEditMode()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var lookAtPoint = Vector3.zero;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+    transform.LookAt (lookAtPoint);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>Try adding the script to your main camera and drag it around in the Scene view.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Making a Custom Editor</h3>
+
+
+
+
+
+
+
+<p>This is all well and good, but we can make the inspector for it a lot nicer by customizing the inspector. To do that we need to create an <span class='doc-prop'>Editor</span> for it. Create a JavaScript called LookAtPointEditor in a folder called Editor.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+@CustomEditor (LookAtPoint)
+
+
+
+
+
+
+
+class LookAtPointEditor extends Editor {
+
+
+
+
+
+
+
+    function OnInspectorGUI () {
+
+
+
+
+
+
+
+        target.lookAtPoint = EditorGUILayout.Vector3Field ("Look At Point", target.lookAtPoint);
+
+
+
+
+
+
+
+        if (GUI.changed)
+
+
+
+
+
+
+
+            EditorUtility.SetDirty (target);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>This class has to derive from Editor. The @CustomEditor attribute informs Unity which component it should act as an editor for.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The code in OnInspectorGUI is exectued whenever Unity displays the inspector. You can put any GUI code in here - it works just like OnGUI does for games, but is run inside the inspector. Editor defines the target property that you can use to access the object being inspected.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The EditorUtility.SetDirty code is executed if the user has changed any of the values by checking GUI.changed.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In this case, we make one of the Vector3 fields like is used in the Transform Inspector - like so:
+
+
+
+
+
+
+
+</p><div><img class='figure' src='../Images/manual/gui-ExtendingEditor-1.jpg' /><br /><em>Yay for shiny inspectors</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>There's a lot more that can be done here, but this will do for now - We've got bigger fish to fry...
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Scene View Additions</h3>
+
+
+
+
+
+
+
+<p>You can add extra code to the Scene View by implementing an OnSceneGUI in your custom editor. In this case, we'll add a second set of position handles, letting users drag the look-at point around in the Scene view.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+@CustomEditor (LookAtPoint)
+
+
+
+
+
+
+
+class LookAtPointEditor extends Editor {
+
+
+
+
+
+
+
+    function OnInspectorGUI () {
+
+
+
+
+
+
+
+        target.lookAtPoint = EditorGUILayout.Vector3Field ("Look At Point", target.lookAtPoint);
+
+
+
+
+
+
+
+        if (GUI.changed)
+
+
+
+
+
+
+
+            EditorUtility.SetDirty (target);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function OnSceneGUI () {
+
+
+
+
+
+
+
+        target.lookAtPoint = Handles.PositionHandle (target.lookAtPoint, Quaternion.identity);
+
+
+
+
+
+
+
+        if (GUI.changed)
+
+
+
+
+
+
+
+            EditorUtility.SetDirty (target);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>OnSceneGUI works just like OnInspectorGUI - except it gets run in the scene view. To help you make your editing interface, you can use the functions defined in <a class='urllink' href='../ScriptReference/Handles.html' rel='nofollow'>Handles</a> class. All functions in there are designed for working in 3D Scene views.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you want to put 2D GUI objects (GUI, EditorGUI and friends), you need to wrap them in calls to Handles.BeginGUI() and Handles.EndGUI().
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-07-19</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Extending.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/Network Reference Guide.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

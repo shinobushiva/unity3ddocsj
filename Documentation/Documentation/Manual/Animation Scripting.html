@@ -1,0 +1,3602 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Animation Scripting</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Animation Scripting</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Creating Gameplay.html">Creating Gameplay</a> &gt; <a href="../Manual/Animation Scripting.html">Animation Scripting</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Animation.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Sound.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Animation Scripting</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>Unity's Animation System allows you to create beautifully animated skinned characters. The Animation System supports animation blending, mixing, additive animations, walk cycle time synchronization, animation layers, control over all aspects of the animation playback (time, speed, blend-weights), mesh skinning with 1, 2 or 4 bones per vertex as well as supporting physically based rag-dolls and procedural animation. To obtain the best results, it is recommended that you read about the best practices and techniques for creating a rigged character with optimal performance in Unity on the <a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a> page.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Making an animated character involves two things; <em>moving</em> them through the world and <em>animating</em> them accordingly. If you want to learn more about moving characters around, take a look at the <a href="../Components/class-CharacterController.html">Character Controller page</a>. This page focuses on the animation. The actual animating of characters is done through Unity's scripting interface.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can download <a class='urllink' href='http://www.unity3d.com/examples/' rel='nofollow'>example demos</a> showing pre-setup animated characters. Once you have learned the basics on this page you can also see the <a class='urllink' href='../ScriptReference/Animation.html' rel='nofollow'>animation script interface</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you like, quickly jump to one of the topics covered on this page:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><a href='#AnimBlend'>Animation Blending</a>
+
+
+
+
+
+
+
+</li><li><a href='#AnimLayers'>Animation Layers</a>
+
+
+
+
+
+
+
+</li><li><a href='#AnimMixing'>Animation Mixing</a>
+
+
+
+
+
+
+
+</li><li><a href='#Additive'>Additive Animation</a>
+
+
+
+
+
+
+
+</li><li><a href='#Procedural'>Procedural Animation</a>
+
+
+
+
+
+
+
+</li><li><a href='#Playback'>Animation Playback and Sampling</a>
+
+
+
+
+
+
+
+</li></ul><p class='vspace'><a name='AnimBlend' id='AnimBlend'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Animation Blending</h2>
+
+
+
+
+
+
+
+<p>In today's games, animation blending is an essential feature to ensure that characters have smooth animations. Animators create separate animations, e.g. a walk cycle, run cycle, idle animation or shoot animation. At any point in time in your game you need to be able to transition from the idle animation into the walk cycle and vice versa. Of course you don't want any sudden jumps in the motion, you want the animation to smoothly transition.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This is where animation blending comes in. In Unity you can have an arbitrary amount of animations playing on the same character. All animations are blended or added together to generate the final animation.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Our first step will be to make a character smoothly blend between the idle and walk animations.  In order to make our job simpler when scripting, we will first set the <span class='doc-prop'>Wrap Mode</span> of the animation to <span class='doc-prop'>Loop</span>. Then we will turn off <span class='doc-prop'>Play Automatically</span> to make sure our script is the only one playing animations.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Our first script for animating the character is quite simple; we only need some way to detect how fast our character is moving, and then fade between walk and idle animation. For this simple test we use the pre-setup input axes.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>function Update () {
+
+
+
+
+
+
+
+   if (Input.GetAxis("Vertical") &gt; 0.2)
+
+
+
+
+
+
+
+       animation.CrossFade ("walk");
+
+
+
+
+
+
+
+   else
+
+
+
+
+
+
+
+      animation.CrossFade ("idle");
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>To get this script running:
+
+
+
+
+
+
+
+</p><ol><li>Create a javascript using <span class='doc-menu'>Assets-&gt;Create Other-&gt;Javascript</span>.
+
+
+
+
+
+
+
+</li><li>Copy &amp; Paste the code into it
+
+
+
+
+
+
+
+</li><li>Drag the script onto the character (It needs to be the same <span class='doc-keyword'>GameObject</span> as the animation)
+
+
+
+
+
+
+
+</li></ol><p class='vspace'>When you hit the Play button, the character will start walking in place when you hold the up arrow key and return to the idle pose when you release it.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='AnimLayers' id='AnimLayers'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Animation Layers</h2>
+
+
+
+
+
+
+
+<p>Layers are an incredibly useful concept that allow you to group animations and prioritize weighting.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In Unity's animation system, you can blend between as many animation clips as you want. You can assign blend weights manually or simply use <span class='doc-prop'>animation.CrossFade()</span>, which will animate the weight automatically.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Blend weights are always normalized before being applied</h3>
+
+
+
+
+
+
+
+<p>Let's say you have a walk cycle and a run cycle, both have a weight of 1 (100%). When Unity generates the final animation it will normalize the weights, which means walk will contribute 50% to the animation, the run cycle will also contribute 50%.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This is all very nice, but often you want to prioritize which animation receives most weight when there are two animations playing. Surely you could just make sure that the weight sums up to 100% manually, but it is a lot easier to use layers for this purpose.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='LayerExample' id='LayerExample'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Layering Example</h3>
+
+
+
+
+
+
+
+<p>As an example, you might have a shoot animation, an idle and a walk cycle. You will want to continously fade between the walk and idle animation based on the player's speed. But when the player shoots you want to only show the shoot animation. Thus the shoot animation essentially has a higher priority.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The easiest way to do this is to simply keep playing the walk and idle animations while shooting. Then we need to make sure that the shoot animation is in a higher layer than idle and walk. This means the shoot animation will receive blend weights first. The walk and idle animation will receive weights only if the shoot animation doesn't use all of the 100% blend weights. So when CrossFading the shoot animation in, the weight will start out at zero and over a short period become 100%. In the beginning the walk and idle layer will still receive blend weights but when the shoot animation is completely faded in, they will receive no weights at all.  This is exactly what we need!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>function Start () {
+
+
+
+
+
+
+
+   // Set all animations to loop
+
+
+
+
+
+
+
+   animation.wrapMode = WrapMode.Loop;
+
+
+
+
+
+
+
+   // except shooting
+
+
+
+
+
+
+
+   animation["shoot"].wrapMode = WrapMode.Once;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Put idle and walk into lower layers (The default layer is always 0)
+
+
+
+
+
+
+
+   // This will do two things
+
+
+
+
+
+
+
+   // - Since shoot and idle/walk are in different layers they will not affect
+
+
+
+
+
+
+
+   //   each other's playback when calling CrossFade.
+
+
+
+
+
+
+
+   // - Since shoot is in a higher layer, the animation will replace idle/walk
+
+
+
+
+
+
+
+   //   animations when faded in.
+
+
+
+
+
+
+
+   animation["shoot"].layer = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Stop animations that are already playing
+
+
+
+
+
+
+
+   //(In case user forgot to disable play automatically)
+
+
+
+
+
+
+
+   animation.Stop();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+   // Based on the key that is pressed,
+
+
+
+
+
+
+
+   // play the walk animation or the idle animation
+
+
+
+
+
+
+
+   if (Mathf.Abs(Input.GetAxis("Vertical")) &gt; 0.1)
+
+
+
+
+
+
+
+      animation.CrossFade("walk");
+
+
+
+
+
+
+
+   else
+
+
+
+
+
+
+
+      animation.CrossFade("idle");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Shoot
+
+
+
+
+
+
+
+   if (Input.GetButtonDown ("Fire1"))
+
+
+
+
+
+
+
+      animation.CrossFade("shoot");
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>By default the <span class='doc-prop'>animation.Play()</span> and <span class='doc-prop'>animation.CrossFade()</span> will stop or fade out animations that are in the same layer. This is exactly what we want in most cases. In our shoot, idle, run example, playing idle and run will not affect the shoot animation and vice versa (you can change this behavior with an optional parameter to animation.CrossFade if you like).
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='AnimMixing' id='AnimMixing'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Animation Mixing</h2>
+
+
+
+
+
+
+
+<p>Animation mixing allow you to cut down on the number of animations you have to create for your game by having some animations apply to part of the body only. This means such animations can be used together with other animations in various combinations.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You add an animation mixing transform to an animation by calling <span class='doc-prop'>AddMixingTransform()</span> on the given AnimationState.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='MixingExample' id='MixingExample'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Mixing Example</h3>
+
+
+
+
+
+
+
+<p>For example you might have a hand-waving animation. You might want to play the hand waving animation on a idle character or on a walking character. Without animation mixing you would have to create two hand waving animations: One for idle, and one for walking. However, if you add the shoulder transform as a mixing transform to the hand waving animation, the hand waving animation will have full control only from the shoulder and out. The rest of the body will  not be affected by it, and will continue playing the idle or walk animation. Thus you only need one hand waving animation.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>/// Adds a mixing transform using a Transform variable
+
+
+
+
+
+
+
+var shoulder : Transform;
+
+
+
+
+
+
+
+animation["wave_hand"].AddMixingTransform(shoulder);</pre>
+
+
+
+
+
+
+
+<p class='vspace'>Another example using a path.
+
+
+
+
+
+
+
+</p><pre class='codelisting'>function Start () {
+
+
+
+
+
+
+
+   // Adds a mixing transform using a path instead
+
+
+
+
+
+
+
+   var mixTransform : Transform = transform.Find("root/upper_body/left_shoulder");
+
+
+
+
+
+
+
+   animation["wave_hand"].AddMixingTransform(mixTransform);
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<p class='vspace'><a name='Additive' id='Additive'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Additive Animations</h2>
+
+
+
+
+
+
+
+<p>Additive Animations and Animation mixing allow you to cut down on the number of animations you have to create for your game, and are important for creating facial animations.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Let's say you want to create a character that leans to the sides when running and turning.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You already made a walk and run cycle, now you could make individual walk-lean-left, walk-lean-right, run-lean-left, run-lean-right animations.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>But that means you just quadrupled the amount of animation work! Creating a huge amount of animations is not feasible. Additive animations and Mixing to the rescue!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Additive Animation Example</h3>
+
+
+
+
+
+
+
+<p>Additive animations allow you to overlay the effects of animation on top of any others that may be playing. When making additive animations, Unity will calculate the difference between the first frame in the animation clip and the current frame. Then it will apply this difference on top of all other playing animations.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Now you only have to make a lean-left and lean-right animation. Unity will then layer this animation on top of the walk, idle or run cycle.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Here is the code to make that happen:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>private var leanLeft : AnimationState;
+
+
+
+
+
+
+
+private var leanRight : AnimationState;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Start () {
+
+
+
+
+
+
+
+   leanLeft = animation["leanLeft"];
+
+
+
+
+
+
+
+   leanRight = animation["leanRight"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Put the leaning animation in a separate layer
+
+
+
+
+
+
+
+   // So that other calls to CrossFade won't affect it.
+
+
+
+
+
+
+
+   leanLeft.layer = 10;
+
+
+
+
+
+
+
+   leanRight.layer = 10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Set the lean animation to be additive
+
+
+
+
+
+
+
+   leanLeft.blendMode = AnimationBlendMode.Additive;
+
+
+
+
+
+
+
+   leanRight.blendMode = AnimationBlendMode.Additive;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Set the lean animation ClampForever
+
+
+
+
+
+
+
+   // With ClampForever animations will not stop 
+
+
+
+
+
+
+
+   // automatically when reaching the end of the clip
+
+
+
+
+
+
+
+   leanLeft.wrapMode = WrapMode.ClampForever;
+
+
+
+
+
+
+
+   leanRight.wrapMode = WrapMode.ClampForever;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // Enable the animation and fade it in completely
+
+
+
+
+
+
+
+   // We don't use animation.Play here because we manually adjust the time
+
+
+
+
+
+
+
+   // in the Update function.
+
+
+
+
+
+
+
+   // Instead we just enable the animation and set it to full weight
+
+
+
+
+
+
+
+   leanRight.enabled = true;
+
+
+
+
+
+
+
+   leanLeft.enabled = true;
+
+
+
+
+
+
+
+   leanRight.weight = 1.0;
+
+
+
+
+
+
+
+   leanLeft.weight = 1.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // For testing just play "walk" animation and loop it
+
+
+
+
+
+
+
+   animation["walk"].wrapMode = WrapMode.Loop;
+
+
+
+
+
+
+
+   animation.Play("walk");
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Every frame just set the normalized time
+
+
+
+
+
+
+
+// based on how much lean we want to apply
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+   var lean = Input.GetAxis("Horizontal");
+
+
+
+
+
+
+
+   // normalizedTime is 0 at the first frame and 1 at the last frame in the clip
+
+
+
+
+
+
+
+   leanLeft.normalizedTime = -lean;
+
+
+
+
+
+
+
+   leanRight.normalizedTime = lean;
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div class='property-Tip'>Tip:</div>
+
+
+
+
+
+
+
+<p>When using Additive animations it is critical that you are also playing some other non-additive animation on every transform that is also used in the additive animation, otherwise the animations will add on top of the last frame's result. This is most certainly not what you want.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='Procedural' id='Procedural'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Procedurally Animating Characters</h2>
+
+
+
+
+
+
+
+<p>Sometimes you want to animate the bones of your character procedurally. For example you might want the head of your character to look at a specific point in 3D space. This is best done with a script. Fortunately, Unity makes this very easy. In Unity all bones are just Transforms which drive the skinned mesh. Thus you can script bones of a character just like any other GameObject.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>One important thing to know is that the animation system updates the Transforms after the <span class='doc-prop'>Update()</span> function and before the <span class='doc-prop'>LateUpdate()</span> function is called. Thus if you want to do a <span class='doc-prop'>LookAt()</span> function you should do that in <span class='doc-prop'>LateUpdate()</span> to make sure that you are really overriding the animation.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Ragdolls are created in the same way. You simply have to attach Rigidbodies, Character Joints and Capsule Colliders to the different bones. This will then physically animate your skinned character.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='Playback' id='Playback'></a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Animation Playback and Sampling</h2>
+
+
+
+
+
+
+
+<p>This section explains how animations in Unity are sampled when they are played back by the engine.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>AnimationClips are typically authored at a fixed frame rate. For example, you may create your animation in 3ds Max or Maya at a frame rate of 60 frames per second (fps). When importing the animation in Unity, this frame rate will be read by the importer, so the data of the imported animation is also sampled at 60 fps.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>However, games typically run at a variable frame rate. The frame rate may be higher on some computers than on others, and it may also vary from one second to the next based on the complexity of the view the camera is looking at at any given moment. Basically this means that we can make no assumptions about the exact frame rate the game is running at. What this means is that even if an animation is authored at 60 fps, it may be played back at a different frame rate, such as 56.72 fps, or 83.14 fps. It can be anything.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Unity samples animation at this variable frame rate, not at the frame rate they were authored with. Luckily, animations for 3d computer graphics do not consist of discrete frames, but rather of continuous curves. These curves are well suited for being sampled at any point in time; not just at those points in time that corresponds to one of the original frames. It also means that if the game runs at a higher frame rate than the animation was authored with, the animation will actually look smoother and more fluid in the game.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>For most practical purposes, the fact that Unity samples animations at this variable frame rate is not something you need to be concerned with. However, if you have gameplay logic that relies on animations that animate transforms or properties into very specific configurations, then you need to be aware of it. For example, if you have an animation that rotates an object from 0 to 180 degrees over 30 frames, and you want to know from your code when it has reached half way there, you should not do it by having a conditional statement in your code that checks if the current rotation is 90 degrees. Because Unity samples the animation according to the variable frame rate of the game, it may sample it when the rotation is just below 90 degrees, and the next time right after it reached 90 degrees. If you need to be notified when a specific point in an animation is reached, you should use an <a class='urllink' href='http://docwiki.unity3d.com/index.php?n=Main.animeditor-AnimationEvents' rel='nofollow'>AnimationEvent</a> instead.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Note also that as a consequence of the variable frame rate sampling, an animation that is played back using <span class='doc-prop'>WrapMode.Once</span> may not be sampled at the exact time of the last frame. In one frame of the game the animation may be sampled just before the end of the animation, and in the next frame the time can have exceeded the length of the animation, so it is disabled and not sampled further. If you absolutely need the last frame of the animation to be sampled exactly, you have to use <span class='doc-prop'>WrapMode.ClampForever</span>. In that case the animation will keep sampling the last frame infinitely until you stop the animation yourself.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-17</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Animation.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Sound.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

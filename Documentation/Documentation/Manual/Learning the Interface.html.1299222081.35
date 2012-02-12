@@ -1,0 +1,371 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<!-- #TemplateBeginEditable name="doctitle" -->
+		<title>Unity - Learning the Interface</title>
+	<!-- #TemplateEndEditable -->
+</head>
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+<body onLoad="DocLoaded();">
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+	<td class="titlemid">
+		<table><tr>
+			<td class="doctitle">Learning the Interface</td>
+			<td><table align="right"><tr>
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+			<!-- #TemplateEndEditable -->	
+			</tr></table></td>
+		</tr><tr>
+			<td colspan="4">
+				<table width="100%" class="docpath"><tr><td >
+		<!-- #TemplateBeginEditable name="path" -->
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Unity Basics.html">Unity Basics</a> &gt; <a href="../Manual/Learning the Interface.html">Learning the Interface</a>
+		<!-- #TemplateEndEditable -->	
+				</td>
+				</td><td class="switchlink">
+					<!-- #TemplateBeginEditable name="switchLink" -->
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+					<!-- #TemplateEndEditable -->	
+				</td></tr></table>
+			</td>
+		</tr></table>
+	</td>
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+</tr></table>
+<div class="manual">
+	<div class="main">
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<p><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<td><a href="toedit_proxy.php?url=Learning the Interface.html"><img src="../Images/pencil.png"/></a><br/>編集</td>
+</tr></table></center></p>
+<!-- #TemplateEndEditable -->
+		<!-- #TemplateBeginEditable name="navigation" -->
+		<div class="nav">
+		<div class="nav-prev">
+			<a href='../Manual/Unity Basics.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Previous</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	
+		<div class="nav-next">
+			<a href='../Manual/Customizing Your Workspace.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Next</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	</div>
+		<!-- #TemplateEndEditable -->	
+		<!-- #TemplateBeginEditable name="title" -->
+			<h1>Learning the Interface</h1>
+		<!-- #TemplateEndEditable -->	
+		<!-- #TemplateBeginEditable name="body" -->
+			
+<h2>First Launch</h2>
+<p>Let's begin learning Unity.  If you have not yet opened Unity, you can find it inside <span class='doc-menu'>Start-&gt;Programs-&gt;Unity</span> on Windows, or <span class='doc-menu'>Applications-&gt;Unity</span> on Mac.  The Unity <span class='doc-keyword'>Editor</span> will appear. Take your time to look over the Unity Editor interface and familiarize yourself with it.  The <span class='doc-keyword'>Main Editor Window</span> is made up of several <span class='doc-keyword'>Tabbed Windows</span>, called <span class='doc-keyword'>Views</span>. There are several types of Views in Unity, each with a specific purpose.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-0.jpg' /></div>
+<div class='vspace'></div><h2>Project View</h2>
+<div><img class='figure' src='../Images/manual/Learning the Interface-1.jpg' /></div>
+<p class='vspace'>Every Unity project contains an <span class='doc-keyword'>Assets</span> folder.  The contents of this folder are presented in the Project View. This is where you store all the assets that make up your game, like scenes, <a href="../Manual/Scripting.html">scripts</a>, <a href="../Manual/Meshes.html">3D models</a>, <a href="../Manual/Textures.html">textures</a>, <a href="../Manual/Audio Files.html">audio files</a>, and <a href="../Manual/Prefabs.html">Prefabs</a>. If you right-click on any asset in the Project View, you can choose <span class='doc-menu'>Reveal in Explorer</span> (<span class='doc-menu'>Reveal in Finder</span> on Mac) to actually see the asset itself in your file system. 
+</p>
+<p class='vspace'><b>Important Note:</b> You should <b>never</b> move project assets around using the OS since this will break any metadata associated with the asset. <b>Always</b> use the Project View to organize your assets.
+</p>
+<p class='vspace'>To add assets to your project, you can drag any file from your OS into the Project View, or use <span class='doc-menu'>Assets-&gt;Import New Asset</span>.  Your asset is now ready to be used in your game.  For more information about working with assets, skip ahead to the <a href="../Manual/Asset Workflow.html">Asset Workflow</a> section of the manual.
+</p>
+<p class='vspace'><span class='doc-keyword'>Scenes</span> are also stored in the Project View. Think of these as individual levels.  For example, the Islands Scene loads by default when Unity first launches.  To create a new Scene, use <span class='doc-menu'>Control-N</span> (<span class='doc-menu'>Command-N</span> on Mac).  To save the current Scene into the Project View, use <span class='doc-menu'>Control-S</span> (<span class='doc-menu'>Command-S</span> on Mac).
+</p>
+<p class='vspace'>Some game assets need to be created from within Unity.  To do this, use the <span class='doc-menu'>Create</span> drop-down, or <span class='doc-menu'>right click-&gt;Create</span>.  
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-2.jpg' /><br /><em>The Create drop-down</em></div>
+<p class='vspace'>This will allow you to add scripts, Prefabs, or folders to keep your project organized.  You can rename any asset/folder by pressing <span class='doc-menu'>F2</span> on Windows, or <span class='doc-menu'>Enter</span> on Mac, or with two paced clicks on the asset name.  If you hold the <span class='doc-menu'>Alt</span> key while you expand or contract a directory, all subdirectories will also be expanded or contracted.
+</p>
+<div class='vspace'></div><h2>Hierarchy</h2>
+<div><img class='figure' src='../Images/manual/Learning the Interface-3.jpg' /><br /></div>
+<p>The <span class='doc-keyword'>Hierarchy</span> contains every <span class='doc-keyword'>GameObject</span> in the current Scene. Some of these are direct instances of asset files like 3D models, and others are instances of Prefabs -- custom objects that will make up much of your game.  You can select and Parent objects in the Hierarchy. As objects are added and removed from the scene, they will appear and disappear from the Hierarchy as well.
+</p>
+<div class='vspace'></div><h3>Parenting</h3>
+<p>Unity uses a concept called <span class='doc-keyword'>Parenting</span>. To make any GameObject the child of another, drag the desired child onto the desired parent in the Hierarchy.  A child will inherit the movement and rotation of its parent. You can now expand and contract the parent to see its children in the Hierarchy without affecting your game.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-4.jpg' /><br /><em>Two unparented objects</em></div>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-5.jpg' /><br /><em>One object parented to another</em></div>
+<p class='vspace'>To learn more about Parenting, please review the Parenting section of the <a href="../Components/class-Transform.html#Parenting">Transform Component page</a>.
+</p>
+<div class='vspace'></div><h2>Toolbar</h2>
+<div><img class='figure' src='../Images/manual/Learning the Interface-6.jpg' /></div>
+<p class='vspace'>The Toolbar consists of five basic controls.  Each relate to different parts of the Editor.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-7.jpg' /> Transform Tools -- used with the Scene View <br /><img class='figure' src='../Images/manual/Learning the Interface-8.jpg' /> Transform Gizmo Toggles -- affect the Scene View display <br /><img class='figure' src='../Images/manual/Learning the Interface-9.jpg' /> Play/Pause/Step Buttons -- used with the Game View <br /><img class='figure' src='../Images/manual/Learning the Interface-10.jpg' /> <a href="../Components/Layers.html">Layers</a> Drop-down -- controls which objects are displayed in Scene View <br /><img class='figure' src='../Images/manual/Learning the Interface-11.jpg' /> Layout Drop-down -- controls arrangement of all Views</div>
+<div class='vspace'></div><h2>Scene View</h2>
+<div><img class='figure' src='../Images/manual/Learning the Interface-12.jpg' /><br /><em>The <span class='doc-keyword'>Scene View</span></em></div>
+<p class='vspace'>The <span class='doc-keyword'>Scene View</span> is your interactive sandbox. You will use the Scene View to select and position environments, the player, the camera, enemies, and all other <span class='doc-keyword'>GameObjects</span>. Maneuvering and manipulating objects within the Scene View are some of the most important functions in Unity, so it's important to be able to do them quickly.
+</p>
+<div class='vspace'></div><h3>Scene View Navigation</h3>
+<p>See <a href="../Manual/Scene View Navigation.html">Scene View Navigation</a> for full details on navigating the scene view. Here's a brief overview of the essentials:
+</p>
+<div class='vspace'></div><ul><li>Hold the right mouse button to enter <span class='doc-keyword'>Flythrough</span> mode.  This turns your mouse and <span class='doc-menu'>WASD</span> keys (plus <span class='doc-menu'>Q</span> and <span class='doc-menu'>E</span> for up and down) into quick first-person view navigation.
+</li><li>Select any GameObject and press the <span class='doc-menu'>F</span> key.  This will center the Scene View and pivot point on the selection.
+</li><li>Use the arrow keys to move around on the X/Z plane.
+</li><li>Hold <span class='doc-menu'>Alt</span> and click-drag to orbit the camera around the current pivot point.
+</li><li>Hold <span class='doc-menu'>Alt</span> and middle click-drag to drag the Scene View camera around.
+</li><li>Hold <span class='doc-menu'>Alt</span> and right click-drag to zoom the Scene View. This is the same as scrolling with your mouse wheel.
+</li></ul><p class='vspace'>You might also find use in the <span class='doc-keyword'>Hand Tool</span> (shortcut: <span class='doc-menu'>Q</span>), especially if you are using a one-button mouse. With the Hand tool is selected,
+</p><div><img class='figure' src='../Images/manual/Learning the Interface-13.jpg' /> Click-drag to drag the camera around. <br /><img class='figure' src='../Images/manual/Learning the Interface-14.jpg' /> Hold <span class='doc-menu'>Alt</span> and click-drag to orbit the camera around the current pivot point. <br /><img class='figure' src='../Images/manual/Learning the Interface-15.jpg' /> Hold <span class='doc-menu'>Control</span> (<span class='doc-menu'>Command</span> on Mac) and click-drag to zoom the camera.</div>
+<p class='vspace'>In the upper-right corner of the Scene View is the <span class='doc-keyword'>Scene Gizmo</span>.  This displays the Scene Camera's current orientation, and allows you to quickly modify the viewing angle.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-16.jpg' /></div>
+<p class='vspace'>You can click on any of the arms to snap the Scene Camera to that direction and change it to <span class='doc-keyword'>Isometric Mode</span>.  While in Isometric Mode, you can right-click drag to orbit, and Alt-click drag to pan.  To exit this mode, click the middle of the Scene Gizmo. You can also Shift-click the middle of the Scene Gizmo any time to toggle <span class='doc-keyword'>Isometric Mode</span>.
+</p>
+<div class='vspace'></div><h3>Positioning GameObjects</h3>
+<p>See <a href="../Manual/Positioning GameObjects.html">Positioning GameObjects</a> for full details on positioning GameObjects in the scene. Here's a brief overview of the essentials:
+</p>
+<p class='vspace'>When building your games, you'll place lots of different objects in your game world.  To do this use the Transform Tools in the Toolbar to Translate, Rotate, and Scale individual GameObjects.  Each has a corresponding Gizmo that appears around the selected GameObject in the Scene View.  You can use the mouse and manipulate any Gizmo axis to alter the <span class='doc-keyword'>Transform</span> Component of the GameObject, or you can type values directly into the number fields of the Transform Component in the Inspector.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-17.jpg' /><br /></div>
+<div class='vspace'></div><h3>Scene View Control Bar</h3>
+<div><img class='figure' src='../Images/manual/Learning the Interface-18.jpg' /><br /></div>
+<p>The Scene View control bar lets you see the scene in various view modes - Textured, Wireframe, RGB, Overdraw, and many others. It will also enable you to see (and hear) in-game lighting, game elements, and sound in the Scene View. See <a href="../Manual/View Modes.html">View Modes</a> for all the details.
+</p>
+<div class='vspace'></div><h2>Game View</h2>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-19.jpg' /><br /></div>
+<p>The <span class='doc-keyword'>Game View</span> is rendered from the Camera(s) in your game. It is representative of your final, published game. You will need to use one or more <span class='doc-keyword'>Cameras</span> to control what the player actually sees when they are playing your game. For more information about Cameras, please view the <a href="../Components/class-Camera.html">Camera Component page</a>.
+</p>
+<div class='vspace'></div><h3>Play Mode</h3>
+<div><img class='figure' src='../Images/manual/Learning the Interface-20.jpg' /></div>
+<p class='vspace'>Use the buttons in the Toolbar to control the Editor <span class='doc-keyword'>Play Mode</span> and see how your published game will play. While in Play mode, any changes you make are temporary, and will be reset when you exit Play mode. The Editor UI will darken to remind you of this.
+</p>
+<div class='vspace'></div><h3>Game View Control Bar</h3>
+<div><img class='figure' src='../Images/manual/Learning the Interface-21.jpg' /></div>
+<p class='vspace'>The first drop-down on the Game View control bar is the <span class='doc-keyword'>Aspect Drop-down</span>. Here, you can force the aspect ratio of the Game View window to different values. It can be used to test how your game will look on monitors with different aspect ratios.
+</p>
+<p class='vspace'>Further to the right is the <span class='doc-menu'>Maximize on Play</span> toggle.  While enabled, the Game View will maximize itself to 100% of your Editor Window for a nice full-screen preview when you enter Play mode.
+</p>
+<p class='vspace'>Continuing to the right is the <span class='doc-menu'>Gizmos</span> toggle. While enabled, all Gizmos that appear in Scene View will also be drawn in Game View. This includes Gizmos drawn using any of the <span class='doc-prop'>Gizmos</span> class functions.
+</p>
+<p class='vspace'>Finally we have the <span class='doc-menu'>Stats</span> button. This shows <a href="../Manual/RenderingStatistics.html">Rendering Statistics</a> window that is very useful for <a href="../Manual/Optimizing Graphics Performance.html">Optimizing Graphics Performance</a>.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-22.jpg' /></div>
+<p><em>Game View Stats of your game.</em>
+</p>
+<div class='vspace'></div><h2>Inspector</h2>
+<div><img class='figure' src='../Images/manual/Learning the Interface-23.jpg' /><br /></div>
+<p>Games in Unity are made up of multiple <span class='doc-keyword'>GameObjects</span> that contain meshes, scripts, sounds, or other graphical elements like <span class='doc-keyword'>Lights</span>. The <span class='doc-keyword'>Inspector</span> displays detailed information about your currently selected GameObject, including all attached <span class='doc-keyword'>Components</span> and their properties. Here, you modify the functionality of GameObjects in your scene. You can read more about the <a href="../Manual/GameObjects.html">GameObject-Component relationship</a>, as it is very important to understand.
+</p>
+<p class='vspace'>Any property that is displayed in the Inspector can be directly modified.  Even script variables can be changed without modifying the script itself.  You can use the Inspector to change variables at runtime to experiment and find the magic gameplay for your game.  In a script, if you define a public variable of an object type (like GameObject or Transform), you can drag and drop a GameObject or Prefab into the Inspector to make the assignment.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-24.jpg' /></div>
+<p class='vspace'>Click the question mark beside any Component name in the Inspector to load its Component Reference page. Please view the  <a href="../Components/Components.html">Component Reference</a> for a complete and detailed guide to all of Unity's Components.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-25.jpg' /><br /><em>Add Components from the <span class='doc-menu'>Component</span> menu</em></div>
+<p class='vspace'>You can click the tiny gear icon (or right-click the Component name) to bring up a context menu for the specific Component.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-26.jpg' /></div>
+<p class='vspace'>The Inspector will also show any Import Settings for a selected asset file.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-27.jpg' /><br /><em>Click <span class='doc-menu'>Apply</span> to reimport your asset.</em></div>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Learning the Interface-28.jpg' /></div>
+<p class='vspace'>Use the <span class='doc-menu'>Layer</span> drop-down to assign a rendering Layer to the GameObject.  Use the <span class='doc-menu'>Tag</span> drop-down to assign a Tag to this GameObject.
+</p>
+<div class='vspace'></div><h3>Prefabs</h3>
+<p>If you have a Prefab selected, some additional buttons will be available in the Inspector.  For more information about Prefabs, please view the <a href="../Manual/Prefabs.html">Prefab manual page</a>.
+</p>
+<div class='vspace'></div><h2>Other Views</h2>
+<p>The Views described on this page covers the basics of the interface in Unity. The other Views in Unity are described elsewhere on separate pages:
+</p>
+<div class='vspace'></div><ul><li>The <a href="../Manual/Console.html">Console</a> shows logs of messages, warnings, and errors.
+</li><li>The <a href="../Manual/Animation.html">Animation View</a> can be used to animate objects in the scene.
+</li><li>The <a href="../Manual/Profiler.html">Profiler</a> can be used to investigate and find the performance bottle-necks in your game.
+</li><li>The <a href="../Manual/Asset Server.html">Asset Server View</a> can be used to manage version control of the project using Unity's Asset Server.
+</li><li>The <a href="../Manual/Lightmapping.html">Lightmapping View</a> can be used to manage lightmaps using Unity's built-in lightmapping.
+</li><li>The <a href="../Manual/Occlusion Culling.html">Occlusion Culling View</a> can be used to manage Occlusion Culling for improved performance.
+</li></ul>
+</p><small>Page last updated: 2010-09-14</p>
+    <script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script>
+    
+		<!-- #TemplateEndEditable -->	
+
+		<div class="nav">
+		<div class="nav-prev">
+			<a href='../Manual/Unity Basics.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Previous</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	
+		<div class="nav-next">
+			<a href='../Manual/Customizing Your Workspace.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Next</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	</div>
+	</div>
+</div>
+</body></html>
+<!-- #EndTemplate -->

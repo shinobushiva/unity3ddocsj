@@ -1,0 +1,3794 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Input</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Input</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/android-GettingStarted.html">Getting Started with Android Development</a> &gt; <a href="../Manual/android-API.html">Android Scripting</a> &gt; <a href="../Manual/Android-Input.html">Input</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/android-API.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Android-Keyboard.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Input</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/Android-Input-0.jpg' /> Desktop </h1> </a>
+
+
+
+
+
+
+
+<div class='specific-desktop' style='display: block;' id='specific-desktop' > 
+
+
+
+
+
+
+
+<p class='vspace'><b>Note:</b> Keyboard, joystick and gamepad input works only on the desktop version of Unity.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Unity supports keyboard, joystick and gamepad input.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Virtual axes and buttons can be created in the <span class='doc-keyword'>Input Manager</span>, and end users can configure Keyboard input in a nice screen configuration dialog.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Android-Input-1.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>You can setup joysticks, gamepads, keyboard, and mouse, then access them all through one simple scripting interface.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>From scripts, all virtual axes are accessed by their name.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Every project has the following default input axes when it's created:
+
+
+
+
+
+
+
+</p><ul><li><span class='doc-prop'>Horizontal</span> and <span class='doc-prop'>Vertical</span> are mapped to w, a, s, d and the arrow keys.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Fire1</span>, <span class='doc-prop'>Fire2</span>, <span class='doc-prop'>Fire3</span> are mapped to Control, Option (Alt), and Command, respectively.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Mouse X</span> and <span class='doc-prop'>Mouse Y</span> are mapped to the delta of mouse movement.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Window Shake X</span> and <span class='doc-prop'>Window Shake Y</span> is mapped to the movement of the window.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>Adding new Input Axes</h3>
+
+
+
+
+
+
+
+<p>If you want to add new virtual axes go to the <span class='doc-menu'>Edit-&gt;Project Settings-&gt;Input</span> menu. Here you can also change the settings of each axis.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Android-Input-2.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>You map each axis to two buttons either on a joystick, mouse, or keyboard keys.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Name</span></td><td  align='left'>The name of the string used to check this axis from a script.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Descriptive Name</span></td><td  align='left'>Positive value name displayed in the input tab of the configuration dialog for standalone builds.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Descriptive Negative Name</span></td><td  align='left'>Negative value name displayed in the Input tab of the Configuration dialog for standalone builds.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Negative Button</span></td><td  align='left'>The button used to push the axis in the negative direction.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Positive Button</span></td><td  align='left'>The button used to push the axis in the positive direction.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Alt Negative Button</span></td><td  align='left'>Alternative button used to push the axis in the negative direction.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Alt Positive Button</span></td><td  align='left'>Alternative button used to push the axis in the positive direction.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Gravity</span></td><td  align='left'>Speed in units per second that the axis falls toward neutral when no buttons are pressed.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Dead</span></td><td  align='left'>Size of the analog dead zone.  All analog device values within this range result map to neutral.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Sensitivity</span></td><td  align='left'>Speed in units per second that the the axis will move toward the target value.  This is for digital devices only.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Snap</span></td><td  align='left'>If enabled, the axis value will reset to zero when pressing a button of the opposite direction.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Invert</span></td><td  align='left'>If enabled, the <b>Negative Buttons</b> provide a positive value, and vice-versa.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Type</span></td><td  align='left'>The type of inputs that will control this axis.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Axis</span></td><td  align='left'>The axis of a connected device that will control this axis.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Joy Num</span></td><td  align='left'>The connected Joystick that will control this axis.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>Use these settings to fine tune the look and feel of input. They are all documented with tooltips in the Editor as well.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Using Input Axes from Scripts</h3>
+
+
+
+
+
+
+
+<p>You can query the current state from a script like this:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><code class='escaped'>value = Input.GetAxis ("Horizontal"); </code>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>An axis has a value between -1 and 1. The neutral position is 0.
+
+
+
+
+
+
+
+This is the case for joystick input and keyboard input.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>However, Mouse Delta and Window Shake Delta are how much the mouse or window moved during the last frame. This means it can be larger than 1 or smaller than -1 when the user moves the mouse quickly.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>It is possible to create multiple axes with the same name. When getting the input axis, the axis with the largest absolute value will be returned. This makes it possible to assign more than one input device to one axis name. For example, create one axis for keyboard input and one axis for joystick input with the same name. If the user is using the joystick, input will come from the joystick, otherwise input will come from the keyboard. This way you don't have to consider where the input comes from when writing scripts.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Button Names</h3>
+
+
+
+
+
+
+
+<p>To map a key to an axis, you have to enter the key's name in the <span class='doc-prop'>Positive Button</span> or <span class='doc-prop'>Negative Button</span> property in the <span class='doc-keyword'>Inspector</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The names of keys follow this convention:
+
+
+
+
+
+
+
+</p><ul><li>Normal keys: "a", "b", "c" ...
+
+
+
+
+
+
+
+</li><li>Number keys: "1", "2", "3",  ...
+
+
+
+
+
+
+
+</li><li>Arrow keys: "up", "down", "left", "right"
+
+
+
+
+
+
+
+</li><li>Keypad keys: "[1]", "[2]", "[3]", "[+]", "[equals]"
+
+
+
+
+
+
+
+</li><li>Modifier keys: "right shift", "left shift", "right ctrl", "left ctrl", "right alt", "left alt", "right cmd", "left cmd"
+
+
+
+
+
+
+
+</li><li>Mouse Buttons: "mouse 0", "mouse 1", "mouse 2", ...
+
+
+
+
+
+
+
+</li><li>Joystick Buttons (from any joystick): "joystick button 0", "joystick button 1", "joystick button 2",  ...
+
+
+
+
+
+
+
+</li><li>Joystick Buttons (from a specific joystick): "joystick button 0", "joystick button 1", "joystick 1 button 0", ...
+
+
+
+
+
+
+
+</li><li>Special keys: "backspace", "tab", "return", "escape", "space", "delete", "enter", "insert", "home", "end", "page up", "page down"
+
+
+
+
+
+
+
+</li><li>Function keys: "f1", "f2", "f3", ...
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>The names used to identify the keys are the same in the scripting interface and the Inspector.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><code class='escaped'>value = Input.GetKey ("a"); </code>
+
+
+
+
+
+
+
+</p></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h1>Mobile Input</h1>
+
+
+
+
+
+
+
+<p>Unity iOS/Android offers you access to iPhone's, iPad's and Android's input systems via
+
+
+
+
+
+
+
+<a class='urllink' href='../ScriptReference/Input.html' rel='nofollow'>Input</a> and
+
+
+
+
+
+
+
+<a class='urllink' href='../ScriptReference/iPhoneInput.html' rel='nofollow'>iOS Input</a> scripting interfaces.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a class='urllink' href='../ScriptReference/Input.html' rel='nofollow'>Input</a>
+
+
+
+
+
+
+
+provides access to the multi-touch screen, accelerometer and device orientation.
+
+
+
+
+
+
+
+<a class='urllink' href='../ScriptReference/iPhoneInput.html' rel='nofollow'>iOS Input</a> provides access to geographical location.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Access to keyboard on mobile devices is provided via the <a href="../Manual/iOS-Keyboard.html#iOS">iOS keyboard</a>.
+
+
+
+
+
+
+
+</p><h2>Multi-Touch Screen</h2>
+
+
+
+
+
+
+
+<p>The iPhone and iPod Touch devices are capable of tracking up to five fingers touching the screen simultaneously. You can retrieve the status of each finger touching the screen during the last frame by accessing the <a class='urllink' href='../ScriptReference/Input-touches.html' rel='nofollow'>Input.touches</a> property array.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div class='specific-android' style='display: block;' id='specific-android' > 
+
+
+
+
+
+
+
+<p>Android devices don't have a unified limit on how many fingers they track. Instead, it varies from device to device and can be anything from two-touch on older devices to five fingers on some newer devices.
+
+
+
+
+
+
+
+</p></div>
+
+
+
+
+
+
+
+<p class='vspace'>Each finger touch is represented by an <a class='urllink' href='../ScriptReference/Touch.html' rel='nofollow'>Input.Touch</a> data structure:
+
+
+
+
+
+
+
+</p><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>fingerId</span></td><td >The unique index for a touch.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>position</span></td><td >The screen position of the touch.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>deltaPosition</span></td><td >The screen position change since the last frame.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>deltaTime</span></td><td >Amount of time that has passed since the last state change.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>tapCount</span></td><td >The iPhone/iPad screen is able to distinguish quick finger taps by the user. This counter will let you know how many times the user has tapped the screen without moving a finger to the sides. <span class='specific-android' style='display: block;' id='specific-android'>Android devices do not count number of taps, this field is always 1.</span></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>phase</span></td><td >Describes so called "phase" or the state of the touch. It can help you determine if touch just began, if user moved the finger or if he just lifted the finger.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>Phase can be one of the following:
+
+
+
+
+
+
+
+</p><table ><tr ><td  align='left'><span class='doc-prop'>Began</span></td><td >A finger just touched the screen.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Moved</span></td><td >A finger moved on the screen.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Stationary</span></td><td >A finger is touching the screen but hasn't moved since last frame.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Ended</span></td><td >A finger was lifted from the screen. This is the final phase of a touch.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Canceled</span></td><td >The system cancelled tracking for the touch, as when (for example) the user puts the device to her face or more than five touches happened simultaneously. This is the final phase of a touch.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>Following is an example script which will shoot a ray whenever the user taps on the screen:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>
+
+
+
+
+
+
+
+var particle : GameObject;
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+	for (var touch : Touch in Input.touches) {
+
+
+
+
+
+
+
+		if (touch.phase == TouchPhase.Began) {
+
+
+
+
+
+
+
+			// Construct a ray from the current touch coordinates
+
+
+
+
+
+
+
+			var ray = Camera.main.ScreenPointToRay (touch.position);
+
+
+
+
+
+
+
+			if (Physics.Raycast (ray)) {
+
+
+
+
+
+
+
+				// Create a particle if hit
+
+
+
+
+
+
+
+				Instantiate (particle, transform.position, transform.rotation);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Mouse Simulation</h3>
+
+
+
+
+
+
+
+<p>On top of native touch support Unity iOS/Android provides a mouse simulation. You can use mouse functionality from the standard <a class='urllink' href='../ScriptReference/Input.html' rel='nofollow'>Input</a> class.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Device Orientation</h2>
+
+
+
+
+
+
+
+<p>Unity iOS/Android allows you to get discrete description of the device physical orientation in three-dimensional space. Detecting a change in orientation can be useful if you want to create game behaviors depending on how the user is holding the device.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can retrieve device orientation by accessing the  <a class='urllink' href='../ScriptReference/Input-deviceOrientation.html' rel='nofollow'>Input.deviceOrientation</a> property. Orientation can be one of the following:
+
+
+
+
+
+
+
+</p><table ><tr ><td  align='left'><span class='doc-prop'>Unknown</span></td><td >The orientation of the device cannot be determined. For example when device is rotate diagonally.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Portrait</span></td><td >The device is in portrait mode, with the device held upright and the home button at the bottom.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>PortraitUpsideDown</span></td><td >The device is in portrait mode but upside down, with the device held upright and the home button at the top.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>LandscapeLeft</span></td><td >The device is in landscape mode, with the device held upright and the home button on the right side.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>LandscapeRight</span></td><td >The device is in landscape mode, with the device held upright and the home button on the left side.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>FaceUp</span></td><td >The device is held perpendicular to the ground with the screen facing upwards.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>FaceDown</span></td><td >The device is held perpendicular to the ground with the screen facing downwards.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Accelerometer</h2>
+
+
+
+
+
+
+
+<p>As the mobile device moves, a built-in accelerometer reports linear acceleration
+
+
+
+
+
+
+
+changes along the three primary axes in three-dimensional space. Acceleration
+
+
+
+
+
+
+
+along each axis is reported directly by the hardware as G-force values. A value
+
+
+
+
+
+
+
+of 1.0 represents a load of about +1g along a given axis while a value of -1.0
+
+
+
+
+
+
+
+represents -1g. If you hold the device upright (with the home button at the
+
+
+
+
+
+
+
+bottom) in front of you, the X axis is positive along the right, the Y axis is
+
+
+
+
+
+
+
+positive directly up, and the Z axis is positive pointing toward you.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can retrieve accelerometer value by accessing the <a class='urllink' href='../ScriptReference/Input-acceleration.html' rel='nofollow'>Input.acceleration</a> property.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Following is an example script which will move an object using accelerometer:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>
+
+
+
+
+
+
+
+var speed = 10.0;
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+	var dir : Vector3 = Vector3.zero;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// we assume that device is held parallel to the ground
+
+
+
+
+
+
+
+	// and Home button is in the right hand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// remap device acceleration axis to game coordinates:
+
+
+
+
+
+
+
+	//  1) XY plane of the device is mapped onto XZ plane
+
+
+
+
+
+
+
+	//  2) rotated 90 degrees around Y axis
+
+
+
+
+
+
+
+	dir.x = -Input.acceleration.y;
+
+
+
+
+
+
+
+	dir.z = Input.acceleration.x;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// clamp acceleration vector to unit sphere
+
+
+
+
+
+
+
+	if (dir.sqrMagnitude &gt; 1)
+
+
+
+
+
+
+
+		dir.Normalize();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Make it move 10 meters per second instead of 10 meters per frame...
+
+
+
+
+
+
+
+	dir *= Time.deltaTime;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Move object
+
+
+
+
+
+
+
+	transform.Translate (dir * speed);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Low-Pass Filter</h3>
+
+
+
+
+
+
+
+<p>Accelerometer readings can be jerky and noisy. Applying low-pass filtering on the signal allows you to smooth it and get rid of high frequency noise.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The following script shows you how to apply low-pass filtering to accelerometer readings:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>
+
+
+
+
+
+
+
+var AccelerometerUpdateInterval : float = 1.0 / 60.0;
+
+
+
+
+
+
+
+var LowPassKernelWidthInSeconds : float = 1.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private var LowPassFilterFactor : float = AccelerometerUpdateInterval / LowPassKernelWidthInSeconds; // tweakable
+
+
+
+
+
+
+
+private var lowPassValue : Vector3 = Vector3.zero;
+
+
+
+
+
+
+
+function Start () {
+
+
+
+
+
+
+
+	lowPassValue = Input.acceleration;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function LowPassFilterAccelerometer() : Vector3 {
+
+
+
+
+
+
+
+	lowPassValue = Mathf.Lerp(lowPassValue, Input.acceleration, LowPassFilterFactor);
+
+
+
+
+
+
+
+	return lowPassValue;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>The greater the value of <code>LowPassKernelWidthInSeconds</code>, the slower the filtered value will converge towards current input sample (and vice versa). You should be able to use <code>LowPassFilter()</code> function instead of <code>avgSamples()</code>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>I'd like as much precision as possible when reading the accelerometer. What should I do?</h3>
+
+
+
+
+
+
+
+<p>Reading the <a class='urllink' href='../ScriptReference/Input-acceleration.html' rel='nofollow'>Input.acceleration</a> variable does not equal sampling the hardware. Put simply, Unity samples the hardware at a frequency of 60Hz and stores the result into the variable. In reality, things are a little bit more complicated -- accelerometer sampling doesn't occur at consistent time intervals, if under significant CPU loads. As a result, the system might report 2 samples during one frame, then 1 sample during the next frame.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can access all measurements executed by accelerometer during the frame. The following code will illustrate a simple average of all the accelerometer events that were collected within the last frame:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+var period : float = 0.0;
+
+
+
+
+
+
+
+var acc : Vector3 = Vector3.zero;
+
+
+
+
+
+
+
+for (var evnt : iPhoneAccelerationEvent  in iPhoneInput.accelerationEvents) {
+
+
+
+
+
+
+
+	acc += evnt.acceleration * evnt.deltaTime;
+
+
+
+
+
+
+
+	period += evnt.deltaTime;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+if (period &gt; 0)
+
+
+
+
+
+
+
+	acc *= 1.0/period;
+
+
+
+
+
+
+
+return acc;
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Further Reading</h2>
+
+
+
+
+
+
+
+<p>The Unity mobile input API is originally based on Apple's API. It may help to learn more about the native API to better understand Unity's Input API.
+
+
+
+
+
+
+
+You can find the Apple input API documentation here:
+
+
+
+
+
+
+
+</p><ul><li><a class='urllink' href='file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/EventHandling/chapter_8_section_1.html' rel='nofollow'>Programming Guide: Event Handling (Apple iPhone SDK documentation)</a>
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='file:///Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.AppleiPhone2_0.iPhoneLibrary.docset/Contents/Resources/Documents/documentation/UIKit/Reference/UITouch_Class/Reference/Reference.html' rel='nofollow'>UITouch Class Reference (Apple iOS SDK documentation)</a>
+
+
+
+
+
+
+
+</li></ul><p class='vspace'><b>Note:</b> The above links reference your locally installed iPhone SDK Reference Documentation and will contain native ObjectiveC code. It is not necessary to understand these documents for using Unity on mobile devices, but may be helpful to some!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><a class='iosRef' id='iosRef' href="javascript:ShowHideDiv('iosRef','specific-ios', 'iOS');"><h1><img class='figure' src='../Images/manual/Android-Input-3.jpg' /> iOS</h1></a>
+
+
+
+
+
+
+
+<p><a name='iPhoneInput' id='iPhoneInput'></a>
+
+
+
+
+
+
+
+</p><div class='specific-ios' style='display: block;' id='specific-ios' > 
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Device geographical location</h2>
+
+
+
+
+
+
+
+<p>Device geographical location can be obtained via the <a class='urllink' href='../ScriptReference/iPhoneInput-lastLocation.html' rel='nofollow'>iPhoneInput.lastLocation</a> property. Before calling this property you should start location service updates using <a class='urllink' href='../ScriptReference/iPhoneSettings.StartLocationServiceUpdates.html' rel='nofollow'>iPhoneSettings.StartLocationServiceUpdates()</a> and check the service status via <a class='urllink' href='../ScriptReference/iPhoneSettings-locationServiceStatus.html' rel='nofollow'>iPhoneSettings.locationServiceStatus</a>. See the <a class='urllink' href='../ScriptReference/iPhoneSettings.StartLocationServiceUpdates.html' rel='nofollow'>scripting reference</a> for details.
+
+
+
+
+
+
+
+</p></div>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-24</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/android-API.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Android-Keyboard.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

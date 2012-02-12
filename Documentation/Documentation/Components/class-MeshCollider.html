@@ -1,0 +1,2682 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Mesh Collider</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Mesh Collider</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/Components.html">Components</a> &gt; <a href="../Components/comp-DynamicsGroup.html">Physics Components</a> &gt; <a href="../Components/class-MeshCollider.html">Mesh Collider</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/class-HingeJoint.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-PhysicMaterial.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Mesh Collider</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Mesh Collider</span> takes a <a href="../Components/class-Mesh.html">Mesh Asset</a> and builds its Collider based on that mesh.  It is far more accurate for collision detection than using primitives for complicated meshes.  Mesh Colliders that are marked as <span class='doc-prop'>Convex</span> can collide with other Mesh Colliders.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-MeshCollider-0.jpg' /><br /><em>A Mesh Collider used on level geometry</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Material</span></td><td  align='left'>Reference to the <a href="../Components/class-PhysicMaterial.html">Physic Material</a> that determines how this Collider interacts with others.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Is Trigger</span></td><td  align='left'>If enabled, this Collider is used for triggering events, and is ignored by the physics engine.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Mesh</span></td><td  align='left'>Reference to the Mesh to use for collisions.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Smooth Sphere Collisions</span></td><td  align='left'>When this is enabled, collision mesh normals are smoothed. You should enable this on smooth surfaces eg. rolling terrain without hard edges to make sphere rolling smoother.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Convex</span></td><td  align='left'>If enabled, this Mesh Collider will collide with other Mesh Colliders. Convex Mesh Colliders are limited to 255 triangles.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Details</h2>
+
+
+
+
+
+
+
+<p>The Mesh Collider builds its collision representation from the <a href="../Components/class-Mesh.html">Mesh</a> attached to the GameObject, and reads the properties of the attached <a href="../Components/class-Transform.html">Transform</a> to set its position and scale correctly.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Collision meshes use backface culling. If an object collides with a mesh that will be backface culled graphically it will also not collide with it physically.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>There are some limitations when using the Mesh Collider.  Usually, two Mesh Colliders cannot collide with each other.  All Mesh Colliders can collide with any primitive Collider.  If your mesh is marked as <span class='doc-prop'>Convex</span>, then it can collide with other Mesh Colliders.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Colliders work with Rigidbodies to bring physics in Unity to life.  Whereas Rigidbodies allow objects to be controlled by physics, Colliders allow objects to collide with each other.  Colliders must be added to objects independently of Rigidbodies.  A Collider does not necessarily need a Rigidbody attached, but a Rigidbody <b>must</b> be attached in order for the object to move as a result of collisions.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>When a collision between two Colliders occurs and if at least one of them has a Rigidbody attached, <a class='urllink' href='../ScriptReference/Collider.OnCollisionEnter.html' rel='nofollow'>three</a> <a class='urllink' href='../ScriptReference/Collider.OnCollisionExit.html' rel='nofollow'>collision</a> <a class='urllink' href='../ScriptReference/Collider.OnCollisionStay.html' rel='nofollow'>messages</a> are sent out to the objects attached to them. These events can be handled in scripting, and allow you to create unique behaviors with or without making use of the built-in NVIDIA PhysX engine.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Triggers</h3>
+
+
+
+
+
+
+
+<p>An alternative way of using Colliders is to mark them as a <span class='doc-keyword'>Trigger</span>, just check the IsTrigger property checkbox in the Inspector.  Triggers are effectively ignored by the physics engine, and have a unique set of <a class='urllink' href='../ScriptReference/Collider.OnTriggerEnter.html' rel='nofollow'>three</a> <a class='urllink' href='../ScriptReference/Collider.OnTriggerExit.html' rel='nofollow'>trigger</a> <a class='urllink' href='../ScriptReference/Collider.OnTriggerStay.html' rel='nofollow'>messages</a> that are sent out when a collision with a Trigger occurs.  Triggers are useful for triggering other events in your game, like cutscenes, automatic door opening, displaying tutorial messages, etc.  Use your imagination!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Be aware that in order for two Triggers to send out trigger events when they collide, one of them must include a Rigidbody as well. For a Trigger to collide with a normal Collider, one of them must have a Rigidbody attached.  For a detailed chart of different types of collisions, see the collision action matrix in the Advanced section below.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Friction and bouncyness</h3>
+
+
+
+
+
+
+
+<p>Friction, bouncyness and softness are defined in the <a href="../Components/class-PhysicMaterial.html">Physic Material</a>. The <a href="../Manual/HOWTO-InstallStandardAssets.html">Standard Assets</a> contain the most common physics materials. To use one of them click on the Physic Material drop-down and select one, eg. Ice. You can also <a href="../Components/class-PhysicMaterial.html">create</a> your own physics materials and tweak all friction values.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Hints</h2>
+
+
+
+
+
+
+
+<ul><li>Mesh Colliders <b>cannot</b> collide with each other unless they are marked as <span class='doc-prop'>Convex</span>.  Therefore, they are most useful for background objects like environment geometry.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Convex</span> Mesh Colliders must be fewer than 255 triangles. 
+
+
+
+
+
+
+
+</li><li>Primitive Colliders are less costly for objects under physics control.
+
+
+
+
+
+
+
+</li><li>When you attach a Mesh Collider to a <span class='doc-keyword'>GameObject</span>, its Mesh property will default to the mesh being rendered. You can change that by assigning a different Mesh.
+
+
+
+
+
+
+
+</li><li>To add multiple Colliders for an object, create child GameObjects and attach a Collider to each one.  This allows each Collider to be manipulated independently.
+
+
+
+
+
+
+
+</li><li>You can look at the gizmos in the <span class='doc-keyword'>Scene View</span> to see how the Collider is being calculated on your object.
+
+
+
+
+
+
+
+</li><li>Colliders do their best to match the scale of an object. If you have a non-uniform scale (a scale which is different in each direction), only the Mesh Collider can match completely.
+
+
+
+
+
+
+
+</li><li>If you are moving an object through its Transform component but you want to receive Collision/Trigger messages, you must attach a Rigidbody to the object that is moving.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>Advanced</h2>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Collider combinations</h3>
+
+
+
+
+
+
+
+<p>There are numerous different combinations of collisions that can happen in Unity.  Each game is unique, and different combinations may work better for different types of games.  If you're using physics in your game, it will be very helpful to understand the different basic Collider types, their common uses, and how they interact with other types of objects.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h4>Static Collider</h4>
+
+
+
+
+
+
+
+<p>These are GameObjects that do <b>not</b> have a Rigidbody attached, but <b>do</b> have a Collider attached.  These objects should remain still, or move very little.  These work great for your environment geometry.  They will not move if a Rigidbody collides with them.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h4>Rigidbody Collider</h4>
+
+
+
+
+
+
+
+<p>These GameObjects contain both a Rigidbody and a Collider.  They are completely affected by the physics engine through scripted forces and collisions.  They might collide with a GameObject that only contains a Collider.  These will likely be your primary type of Collider in games that use physics.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h4>Kinematic Rigidbody Collider</h4>
+
+
+
+
+
+
+
+<p>This GameObject contains a Collider and a Rigidbody which is marked <span class='doc-prop'>IsKinematic</span>.  To move this GameObject, you modify its <a href="../Components/class-Transform.html">Transform</a> Component, rather than applying forces. They're similar to Static Colliders but will work better when you want to move the Collider around frequently.  There are some other specialized scenarios for using this GameObject.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This object can be used for circumstances in which you would normally want a Static Collider to send a trigger event.  Since a Trigger must have a Rigidbody attached, you should add a Rigidbody, then enable <span class='doc-prop'>IsKinematic</span>.  This will prevent your Object from moving from physics influence, and allow you to receive trigger events when you want to.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Kinematic Rigidbodies can easily be turned on and off.  This is great for creating ragdolls, when you normally want a character to follow an animation, then turn into a ragdoll when a collision occurs, prompted by an explosion or anything else you choose.  When this happens, simply turn all your Kinematic Rigidbodies into normal Rigidbodies through scripting.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you have Rigidbodies come to rest so they are not moving for some time, they will "fall asleep".  That is, they will not be calculated during the physics update since they are not going anywhere.  If you move a Kinematic Rigidbody out from underneath normal Rigidbodies that are at rest on top of it, the sleeping Rigidbodies will "wake up" and be correctly calculated again in the physics update.  So if you have a lot of Static Colliders that you want to move around and have different object fall on them correctly, use Kinematic Rigidbody Colliders.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Collision action matrix</h3>
+
+
+
+
+
+
+
+<p>Depending on the configurations of the two colliding Objects, a number of different actions can occur.  The chart below outlines what you can expect from two colliding Objects, based on the components that are attached to them.  Some of the combinations only cause one of the two Objects to be affected by the collision, so keep the standard rule in mind - physics will not be applied to objects that do not have Rigidbodies attached.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div>
+
+
+
+
+
+
+
+<table class='bordered' ><tr ><td  align='center' colspan='7'><b>Collision detection occurs and messages are sent upon collision</b></td></tr>
+
+
+
+
+
+
+
+<tr ><td >&nbsp;</td><td  align='left'>Static Collider</td><td  align='left'>Rigidbody Collider</td><td  align='left'>Kinematic <br clear='all' /> Rigidbody Collider</td><td  align='left'>Static <br clear='all' /> Trigger Collider</td><td  align='left'>Rigidbody <br clear='all' /> Trigger Collider</td><td  align='left'>Kinematic Rigidbody <br clear='all' /> Trigger Collider</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Static Collider</td><td >&nbsp;</td><td  align='center'>Y</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Rigidbody Collider</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Kinematic Rigidbody Collider</td><td >&nbsp;</td><td  align='center'>Y</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Static Trigger Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Rigidbody Trigger Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Kinematic Rigidbody Trigger Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div>
+
+
+
+
+
+
+
+<table class='bordered' ><tr ><td  align='center' colspan='7'><b>Trigger messages are sent upon collision</b></td></tr>
+
+
+
+
+
+
+
+<tr ><td >&nbsp;</td><td  align='left'>Static Collider</td><td  align='left'>Rigidbody Collider</td><td  align='left'>Kinematic <br clear='all' /> Rigidbody Collider</td><td  align='left'>Static <br clear='all' /> Trigger Collider</td><td  align='left'>Rigidbody <br clear='all' /> Trigger Collider</td><td  align='left'>Kinematic Rigidbody <br clear='all' /> Trigger Collider</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Static Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Rigidbody Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Kinematic Rigidbody Collider</td><td >&nbsp;</td><td >&nbsp;</td><td >&nbsp;</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Static Trigger Collider</td><td >&nbsp;</td><td  align='center'>Y</td><td  align='center'>Y</td><td >&nbsp;</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Rigidbody Trigger Collider</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'>Kinematic Rigidbody Trigger Collider</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td><td  align='center'>Y</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3><a href="../Components/Layer Based Collision detection.html">Layer-Based Collision Detection</a></h3>
+
+
+
+
+
+
+
+<p>In Unity 3.x we introduce something called <span class='doc-keyword'>Layer-Based Collision Detection</span>, and is that you can now selectively tell Unity GameObjects to collide with specific layers they are attached to. For more info, you can click <a href="../Components/Layer Based Collision detection.html">here</a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2009-07-16</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/class-HingeJoint.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-PhysicMaterial.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

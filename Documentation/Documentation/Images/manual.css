@@ -1,0 +1,201 @@
+body {
+	background-color:    white;
+	margin: 0px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/* Cells where nothing is specified */
+td {
+	font-size:   12px;
+	vertical-align:   top;
+}
+.main {
+	padding-left:5px;
+	padding-right:5px;
+}
+th {
+	border:   1px solid #8CACBB;
+	padding-left:   2px;
+	padding-right:   5px;
+}
+a {
+	color: #900000;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color: #cc0000;
+	text-decoration: underline;
+}
+
+.navigation {
+	width:100%;
+	height:2em;
+	border:1px;
+	text-align:right;
+	vertical-align:middle;
+}
+.navigation a {
+	color:   #666666;
+	vertical-align:middle;
+}
+.navigation a:hover {
+	color:   #cc0000;
+	text-decoration: none;
+}
+.navigation img {
+	vertical-align:middle;	
+}
+
+img {
+	border: 0px;
+}
+
+
+h1 {
+	font-size: 20px;
+	color: #222;
+	margin-bottom: 0px;
+	clear: both;
+}
+h2 {
+	font-size: 18px;
+	color: #222;
+	font-weight: bold;
+	clear: both;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 1px solid #cccccc;
+}
+
+h3 {
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+	clear: both;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 1px solid #cccccc;
+}
+
+h4 {
+	font-size: 12px;
+	color: black;
+	font-weight: bold;	
+}
+
+.doctitle p {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	margin-top: 0px;
+}
+p {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+table {
+	margin-bottom:10px;
+}
+dt {
+	font-weight: bold;
+}
+th {
+	border: none;
+	border-bottom: 1px solid black;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 12px;
+	font-style: italic;
+}
+.reftable {
+	border: none;
+	border-top: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	text-align: left;
+}
+
+pre, tt, code {
+	font-family: "Monaco", "Lucida Console", "Courier New", Monospace;
+}
+.codelisting {
+	font-family: "Verdana", "Arial";
+	font-size: 8pt;
+	background-color: #eee;
+	padding: 7px;
+	margin: 10px 20px 10px 30px;
+	border: 1px solid #c9c9c9;
+	color: #222;
+	white-space: pre;
+	width: 85%;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+
+.doc-keyword {
+	font-weight: bold;
+}
+.doc-prop {
+	font-family: "monaco", "Courier", "Courier New";	
+	font-size: 0.9em;
+}
+.doc-menu {
+	font-style: italic;
+}
+
+
+td.doctitle {
+	height:50px;
+}
+
+.doctitle h1 {
+	color: #333333;
+	font-size: 24px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.doctitle p {
+	padding: 0px 5px 0px 15px;
+	font-weight: bold;
+	color: #666666;
+}
+
+.doctitle a {
+	color:    #666666;
+}
+
+.doctitle a:hover {
+	color:    #cc0000;
+}
+
+.sep {
+	height:20px;
+}
+
+.navbuttons {
+	text-align:right;
+	width: 264px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.botalign {
+	vertical-align:   bottom;
+}
+
+
+.titlebar {
+	width: 100%;
+	border-width: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}

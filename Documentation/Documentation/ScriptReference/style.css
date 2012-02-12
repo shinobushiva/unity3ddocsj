@@ -1,0 +1,407 @@
+html {
+	height: 100%;
+}
+body {
+	background-color: white;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 100%;
+	overflow: auto;
+	color: #222;
+}
+img {
+	border: 0px;
+}
+.main {
+	padding-top:0px;
+	padding-left:185px;
+	padding-right:5px;
+}
+
+a {
+	color: #900000;
+	text-decoration:underline;
+}
+
+.classlink {
+	text-decoration:none;
+}
+.itemlink {
+	text-decoration:none;
+}
+
+
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+th {
+	border-bottom: 1px solid #c9c9c9;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+}
+
+table.parameters {
+	margin: 0px 20px 0px 20px;
+	padding: 7px;
+//	border: 1px solid #ededed;
+	width: 87%;
+	border-collapse: collapse;
+}
+
+table.parameters th {
+	padding-left:2px;
+	padding-right:2px;
+	margin: 0px;
+	border-bottom: 1px solid #666666;
+}
+
+table.parameters td {
+	padding-left:2px;
+	padding-right:2px;
+	border: 0px;
+	margin: 0px;
+}
+
+table.parameters th {
+	color: #222;
+//	background: #eee;
+}
+
+tr.even-row {
+//	background: #edf3fe;
+}
+tr.even-row td{
+//	border-left: 1px solid #dcdfe4;
+}
+tr.odd-row td {
+	padding-right: 20px;
+//	border-left: 1px solid #ededed;
+}
+
+td.param-name {
+	font-weight: bold;
+	padding-left: 0px;
+}
+
+
+dt {
+	font-weight: bold;
+}
+
+h1{
+	font-size:    20px;
+	margin-bottom: 1px;
+	clear: both;
+}
+
+.script-section-hardheading {
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	clear: both;
+	color:   #666666;
+	margin-bottom: 1px;
+	margin-top: 20px;
+}
+
+.script-section-softheading {
+	display: block;
+	width: 70%;
+	font-size: 12px;
+	font-weight: bold;
+	clear: both;
+	color: black;
+	margin-bottom: 1px;
+	margin-top: 10px;
+	border-bottom: 1px solid #c9c9c9;
+}
+
+h3 {
+	font-size:    12px;
+	font-weight: bold;
+	clear: both;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	color: black;
+}
+.manual-entry h3 {
+	padding-left: 40px;
+	text-indent: -40px;
+}
+
+h3.soft {
+	color: #666666;
+	margin-top:10px;
+	margin-bottom:0px;
+	font-weight: normal;
+}
+p {
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom:10px;
+}
+
+
+p.details {
+	padding-left:20px;
+	padding-right:20px;
+}
+p.basic {
+}
+p.first {
+	margin-top: 10px;
+}
+.toplink {
+}
+
+.synopsis {
+	font-family: "monaco", "Courier", "Courier New";
+	font-size: 11px;
+	font-weight: normal;
+	padding-left:20px;
+	margin-bottom:10px;
+}
+.synopsis .doc-comment {
+	font: italic 12px;
+}
+.note {
+	font-weight: bold;
+	color: #666666;
+}
+.editorclass {
+	color: #666666;
+}
+.code {
+	font-family: "Verdana", "Arial";
+	font-size: 8pt;
+	margin: 10px 20px 10px 30px;
+	padding: 7px;
+	background-color: #eee;
+	color: #222;
+	border: 1px solid #c9c9c9;
+	white-space: pre;
+	width: 85%;
+}
+.comment {
+	color: #006600;
+}
+.hl-comment {
+	color: #666666;
+	color: #006600;
+}
+.hl-datatype {
+	color: #0000a0;
+}
+.hl-keyword {
+	color: #000066;
+}
+.hl-operator {
+	font-weight: bold;
+	color: #444;
+}
+.hl-string {
+	color: #0000a0;
+}
+
+.refimg {
+	display: block;
+	border: 1px solid #c9c9c9;
+	margin: 5px 20px 5px 30px;
+	padding: 1px;
+}
+
+.toc {
+	width:180;
+	font-size:12px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	float: left;
+	margin-top: 1px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	text-align: left;
+	font-weight:bold;
+}
+.tocclear {
+	clear: both;
+}
+.toc p {
+	margin-bottom:0px;
+	margin-left: 10px;
+}
+.toc p.tocheader {
+	background-color: white;
+	border-bottom: 1px solid #c9c9c9;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 12px;
+}
+.toc a {
+	font-weight: normal;
+	text-decoration:none;	
+}
+
+.class-member-list {
+	width: 100%;
+}
+.class-member-list-name {
+	width: 200px;
+	text-align: left;
+}
+.class-member-list-name a {
+	text-decoration:none;
+}
+.class-member-description {
+	display: inline;
+}
+.class-member-list-inherited .class-member-list-name {
+	font-style: italic;
+}
+
+/* NAVIGATION BAR STUFF */
+
+
+td.doctitle {
+	height:50px;
+}
+td.doctitle p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px 5px 0px 15px;
+	font-weight: bold;
+	color: #666666;
+}
+td.doctitle p a {
+	color:    #666666;
+	text-decoration: none;
+}
+
+td.doctitle p a:hover {
+	color:    #cc0000;
+	text-decoration: underline;
+}
+
+form.apisearch {
+	padding: 0px;
+	padding-top: 5px;
+	margin: 0px;
+}
+form.apisearch input {
+	width: 120px;
+	font-size: 12px;
+}
+
+.doctitle .heading {
+	margin-bottom: 1px;
+	color:   #333333;
+	font-size: 24px;
+	font-weight:bold;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.doctitle .text {
+	padding: 0px 5px 0px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.titlebar {
+	width: 100%;
+	border-width:0px;
+	margin-bottom:20px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+.navbuttons {
+	text-align:right;
+	width:194px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.variable {
+	font-style: italic;
+}
+.parameter {
+	font-style: italic;
+}
+
+
+ul.left-menu {
+	position: absolute;
+	left: 5px;
+	top: 50px;
+	
+	width: 139px;
+	padding: 0px 0px 0px 20px;
+	margin: 0px;
+	
+	list-style-type: none;
+}
+.left-menu a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+.left-menu-item,  .left-menu-item a {
+	color: #900000;
+}
+.left-menu-inherited-item,  .left-menu-inherited-item a {
+	color: #900000;
+	font-style: oblique;
+}
+
+.left-menu-seperator {
+	height: 10px;
+	display: block;
+}
+.left-menu-heading {
+	padding-top: 0px;
+	font-weight: bold;
+	margin-left: -18px;
+	display: block;
+}
+.left-menu-subheading {
+	padding-top: 4px;
+	font-weight: bold;
+	border-bottom: 1px solid #c9c9c9;
+	display: block;
+}
+.left-menu-softheading {
+	padding-top: 4px;
+	border-bottom: 1px solid #c9c9c9;
+	display: block;
+	color: #666666;
+	font-style: italic;
+}
+.left-menu-seperator, .left-menu-heading, a.left-menu-heading {
+	color:black;
+}
+
+.left-menu-current {
+	color: #cc0000;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.pre-next-link a {
+	width: 180px;
+	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: -3px;
+	text-decoration: none;
+}
+div.pre-next-link  {
+	margin-bottom: 10px;
+}
+
+a:hover {
+	color: #cc0000;
+	text-decoration: underline;
+}

@@ -1,0 +1,2906 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Occlusion Culling</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Occlusion Culling</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/Advanced.html">Advanced</a> &gt; <a href="../Manual/Occlusion Culling.html">Occlusion Culling</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/LightmappingUV.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Loading Resources at Runtime.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Occlusion Culling</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>Occlusion Culling is a feature that disables rendering of objects when they are not currently seen by the camera because they are obscured by other objects. This does not happen automatically in 3D computer graphics since most of the time objects farthest away from the camera are drawn first and closer objects are drawn over the top of them (this is called "overdraw"). Occlusion Culling is different from Frustum Culling. Frustum Culling only disables the renderers for objects that are outside the camera's viewing area but does not disable anything hidden from view by overdraw.  Note that when you use Occlusion Culling you will still benefit from Frustum Culling.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-0.jpg' /><br /><em>To the left, a scene with occlusion culling. To the right, the same scene without occlusion culling.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>The occlusion culling process will go through the scene using a virtual camera to build a hierarchy of potentially visible sets of objects. This data is used at runtime by each camera to identify what is visible and what is not. Equipped with this information, Unity will ensure only visible objects get sent to be rendered. This reduces the number of draw calls and increases the performance of the game.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The data for occlusion culling is composed of cells. Each cell is a subdivision of the entire bounding volume of the scene. More specifically the cells form an binary tree. Occlusion Culling uses two trees, one for View Cells (Static Objects) and the other for Target Cells (Moving Objects). View Cells map to a list of indices that define the visible static objects which gives more accurate culling results for static objects.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>It is important to keep this in mind when creating your objects because you need a good balance between the size of your objects and the size of the cells. Ideally, you shouldn't have cells that are too small in comparison with your objects but equally you shouldn't have objects that cover many cells. You can sometimes improve the culling by breaking large objects into smaller pieces. However, you can still merge small objects together to reduce draw calls and, as long as they all belong to the same cell, occlusion culling will not be affected.  The collection of cells and the visibility information that determines which cells are visible from any other cell is known as a PVS (<b>P</b>otentially <b>V</b>isible <b>S</b>et).
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Setting up Occlusion Culling</h2>
+
+
+
+
+
+
+
+<p>In order to use Occlusion Culling, there is some manual setup involved.  First, your level geometry must be broken into sensibly sized pieces. It is also helpful to lay out your levels into small, well defined areas that are occluded from each other by large objects such as walls, buildings, etc.  The idea here is that each individual mesh will be turned on or off based on the occlusion data.  So if you have one object that contains all the furniture in your room then either all or none of the entire set of furniture will be culled.  This doesn't make nearly as much sense as making each piece of furniture its own mesh, so each can individually be culled based on the camera's view point.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You need to tag all scene objects that you want to be part of the occlusion to Static in the <span class='doc-keyword'>Inspector</span>. The fastest way to do this is to parent the objects you want to be Static to an Empty <span class='doc-keyword'>GameObject</span> and set the parent as <b>Static</b>, choosing to affect children also when the option dialog appears on the screen. After they are tagged as Static you can unparent them from the Empty <span class='doc-keyword'>GameObject</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-1.jpg' /><br /><em>The Static checkbox in the Inspector</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Next, open the Occlusion Culling inspector by clicking in <span class='doc-menu'>Tools-&gt;Occlusion Culling</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In the Inspector, you will find several values to tweak. These values are described below:-
+
+
+
+
+
+
+
+</p><h2>Occlusion Culling - Object</h2>
+
+
+
+
+
+
+
+<div><img class='figure' src='../Images/manual/Occlusion Culling-2.jpg' /><br /><em>Occlusion culling inspector object tab.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>The Object tab lets you create <span class='doc-keyword'>Occlusion Areas</span> GameObjects. These areas let you specify where you want to use Occlusion culling.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><b>NOTE:</b> By default if you don't create any occlusion areas, occlusion culling will be applied to the whole scene.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span class='doc-prop'>Quick Select</span></td><td >Lets you select/create an Occlusion Area and quickly modify it.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>None</span></span></td><td >This is the default value.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Create New</span></span></td><td >Creates a new Occlusion Area GameObject.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>When you hit <em>Create New</em> in the Quick Select drop down, Unity will automatically create a Occlusion Area and will <em>remove</em> the default area (the whole scene).
+
+
+
+
+
+
+
+Now you can start tweaking your Occlusion Area(s) to suit your needs.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-3.jpg' /><br /><em>Occlusion Area inspector.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Size</span></td><td >Defines the size of the Occlusion Area.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Center</span></td><td >Sets the center of the Occlusion Area. By default it is 0,0,0 and is located at the center of the box.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Is View Volume</span></td><td >Defines where the camera can be. Check this in order to occlude static objects that are inside this <em>Occlusion Area</em>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Is Target Volume</span></td><td >Select this if you want to occlude moving objects.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Target Resolution</span></td><td  align='left'>Determines how accurate the Occlusion Culling inside the area will be. This affects the size of the cells in an Occlusion Area. <b>NOTE: This only affects Target Areas.</b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Low</span></span></td><td >This takes less time to calculate but is less accurate.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Medium</span></span></td><td >This gives a balance between accuracy and time taken to process the Occlusion culling data.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>High</span></span></td><td >This takes longer time to calculate but has the better accuracy.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Very High</span></span></td><td >Use this value when you want to have more accuracy than high resolutions, be aware it takes more time.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Extremely High</span></span></td><td >Use this value when you want to have almost exact occlusion culling on your moveable objects. Note: This setting takes a lot of time to calculate.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>If the camera is out of a given occlusion area or any objects are outside the area, these objects will not be occluded.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Occlusion Culling - Bake</h2>
+
+
+
+
+
+
+
+<div><img class='figure' src='../Images/manual/Occlusion Culling-4.jpg' /><br /><em>Occlusion culling inspector bake tab.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>View Cell Size</span></td><td >Size of each view area cell, a smaller value produces more accurate occlusion culling. This value is a tradeoff between occlusion accuracy and storage size</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Near Clip Plane</span></td><td >Near clip plane should be set to the smallest near clip plane that will be used in the game of all the cameras.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Far Clip Plane</span></td><td >Far Clip Plane used to cull the objects. Any object whose distance is greater than this value will be occluded automatically.(Should be set to the largest far clip planed that will be used in the game of all the cameras)</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Quality</span></td><td >Determines the quality/accuracy when occluding objects.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Preview</span></span></td><td >Use this during development (ie, it is inaccurate but will give you an idea of how the occlusion culling will behave in your game)</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Production</span></span></td><td >Use this when you are deploying your game (it takes more time but is more accurate)</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>When you have finished tweaking these values you can click on the <span class='doc-menu'>Bake</span> Button to start processing the Occlusion Culling data. If you are not satisfied with the results, you can click on the <span class='doc-menu'>Clear</span> button to remove previously calculated data.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Occlusion Culling - Visualization</h2>
+
+
+
+
+
+
+
+<div><img class='figure' src='../Images/manual/Occlusion Culling-5.jpg' /><br /><em>Occlusion culling inspector visualization tab.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Properties</h2>
+
+
+
+
+
+
+
+<table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Quick Select</span></td><td >Lets you quickly select any camera in the scene to see how its Occlusion Culling will behave.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>The near and far planes define a virtual camera that is used to calculate the occlusion data. If you have several cameras with different near or far planes, you should use the smallest near plane and the largest far plane distance of all cameras for correct inclusion of objects. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>All the objects in the scene affect the size of the bounding volume so try to keep them all within the visible bounds of the scene.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>When you're ready to generate the occlusion data, click the <span class='doc-menu'>Bake</span> button. Remember to decide between <span class='doc-menu'>Preview</span> and <span class='doc-menu'>Production</span> on the Quality selection box in the Bake tab. <span class='doc-menu'>Preview</span> is the quickest way to generate data and should be used to test your view areas in the authoring tool. <span class='doc-menu'>Production</span> should be used for a test run on your target platfrom (e.g. iPhone) when are you ready to release.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Bear in mind that the time taken to build the occlusion data will depend on the cell levels, the data size and the quality you have chosen.  Unity will show the status of the PVS generation at the bottom of the main window.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>After the processing is done, you should see some colorful cubes in the View Area.  The colored areas are regions that share the same occlusion data.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Click on <span class='doc-menu'>Clear</span> if you want to remove all the pre-calculated data for Occlusion Culling.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Moving Objects</h2>
+
+
+
+
+
+
+
+<p>To apply occlusion culling to moving objects you have to create a <span class='doc-keyword'>Occlusion Area</span> and then modify its size to fit the space where the moving objects will be located (of course the moving objects cannot be marked as static). 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>After creating the <span class='doc-keyword'>Occlusion Area</span>, just check the <em>Is Target Volume</em> checkbox to occlude moving Objects. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-6.jpg' /><br /><em>Occlusion Area properties for Moving Objects.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Size</span></td><td >Defines the size of the Occlusion Area.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Center</span></td><td >Sets the center of the Occlusion Area. By default this is 0,0,0 and is located in the center of the box.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Is View Volume</span></td><td >Defines where the camera can be. Check this in order to occlude static objects that are inside this <em>Occlusion Area</em>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Is Target Volume</span></td><td ><b>Select this when you want to occlude moving objects.</b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Target Resolution</span></td><td  align='left'>Determines how accurate the Occlusion Culling inside the area will be. This affects the size of the cells in an Occlusion Area. <b>NOTE: This only affects Target Areas.</b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Low</span></span></td><td >This takes less time to calculate but is less accurate.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Medium</span></span></td><td >This gives a balance between accuracy and time taken to process the Occlusion culling data.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>High</span></span></td><td >This takes longer time to calculate but has the better accuracy.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Very High</span></span></td><td >Use this value when you want to have more accuracy than high resolutions, be aware it takes more time.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Extremely High</span></span></td><td >Use this value when you want to have almost exact occlusion culling on your moveable objects. Note: This setting takes a lot of time to calculate.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<p class='vspace'>After you have added the Occlusion Area, you need to see how it divides the box in cells. To see how the occlusion area will be calculated on moving Objects, you must select the <span class='doc-menu'>Target</span> and <b>deselect</b> the <span class='doc-menu'>View</span> button 
+
+
+
+
+
+
+
+in the <span class='doc-keyword'>Scene View</span> while you have the Occlusion Culling Inspector open.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-7.jpg' /><br /><em>Selecting Target (moving objects) or View (static objects) lets you preview how the calculated data behaves.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Testing the generated occlusion</h2>
+
+
+
+
+
+
+
+<p>After your occlusion is set up, you can test it by enabling the <em>Cull Geometry</em> option (in the <span class='doc-keyword'>Occlusion Culling</span> window) and moving the <span class='doc-keyword'>Main Camera</span> around in the scene view.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Occlusion Culling-8.jpg' /><br /><em>The Occlusion View mode in Scene View</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>As you move the Main Camera around (whether or not you are in Play mode), you'll see various objects disable themselves.  The thing you are looking for here is any error in the occlusion data.  You'll recognize an error if you see objects suddenly popping into view as you move around.  If this happens, your options for fixing the error are either to change the resolution (if you are playing with target volumes), or to move objects around to cover up the error.  To debug problems with occlusion, you can move the Main Camera to the problematic position for spot-checking.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>When the processing is done, you should see some colorful cubes in the View Area. The blue cubes represent the cell divisions  for <span class='doc-keyword'>Target Volumes</span>. The white cubes represent cell divisions for <span class='doc-keyword'>View Volumes</span>. If the parameters were set correctly you should see some objects not being rendered. This will be because they are either outside of the view frustum of the camera or else occluded from view by other objects.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If, after occlusion is completed, you don't see anything being occluded in your scene, try breaking your objects into smaller pieces so they can be completely contained inside the cells.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-24</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/LightmappingUV.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Loading Resources at Runtime.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

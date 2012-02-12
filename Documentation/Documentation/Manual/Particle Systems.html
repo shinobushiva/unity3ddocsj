@@ -1,0 +1,6746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - パーティクルシステム</title>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->	</head>
+
+
+
+
+
+
+
+	<body>
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+		<tbody>
+
+
+
+
+
+
+
+			<tr>
+
+
+
+
+
+
+
+				<td class="titleleft">
+
+
+
+
+
+
+
+					<img src="../Images/top/left.png" /></td>
+
+
+
+
+
+
+
+				<td>
+
+
+
+
+
+
+
+					<a href="../../Documentation.html"><img src="../Images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+				<td class="titlemid">
+
+
+
+
+
+
+
+					<table>
+
+
+
+
+
+
+
+						<tbody>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td class="doctitle">
+
+
+
+
+
+
+
+									パーティクルシステム</td>
+
+
+
+
+
+
+
+								<td>
+
+
+
+
+
+
+
+									<table align="right">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../Images/spacer.gif" /><span class="manual-text">マニュアル</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../Images/spacer.gif" /><span class="components-text">リファレンス</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../Images/spacer.gif" /><span class="scripting-text">スクリプト &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td colspan="4">
+
+
+
+
+
+
+
+									<table class="docpath" width="100%">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+												<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Manual/index.html">Unityマニュアル</a> &gt; <a href="../Manual/User Guide.html">ユーザガイド</a> &gt; <a href="../Manual/Building Scenes.html">シーンの構築</a> &gt; <a href="../Manual/Particle Systems.html">パーティクルシステム</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+												<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+
+
+
+
+
+
+
+											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+						</tbody>
+
+
+
+
+
+
+
+					</table>
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				<td class="titleright" width="9">
+
+
+
+
+
+
+
+					<img src="../Images/top/right.png" /></td>
+
+
+
+
+
+
+
+			</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+
+
+
+
+
+
+	</table>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<a href="../Manual/Cameras.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Cameras.html">Previous</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<a href="../Manual/Terrains.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Terrains.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+
+
+
+
+
+
+
+				パーティクルシステム(Particle Systems)</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">パーティクルは</span> ３D空間に描かれた２Dの画像です。煙や炎、水飛沫や葉っぱの効果に用いられます。 <span class="doc-prop">パーティクルシステム</span>は３つのコンポーネントからなります。<span class="doc-prop">パーティクルエミッタ(Particle Emitter)</span>、<span class="doc-prop">パーティクルアニメータ(Particle Animator)</span>、<span class="doc-prop">パーティクルレンダラ(Particle Renderer)</span>です。 パーティクルエミッタとレンダラを一緒に使う事で、静止したパーティクルを表現できます。パーティクルアニメータはパーティクルを様々な方向に動かし、色を変化させます。スクリプトからパーティクルシステムの、各パーティクルにアクセスする事が出来ます。それにより、ユニークな動きをする独自のパーティクルを作る事も可能です。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<a class="urllink" href="../ScriptReference/ParticleEmitter.html" rel="nofollow">ここ</a>の、パーティクルスクリプトリファレンスを参照してください。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				以下は、<a href="../Components/comp-ParticlesGroup.html">パーティクルコンポーネントリファレンス</a>ページの内容と同じです。</p>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				パーティクルコンポーネント(Particle Components)</h1>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				パーティクルシステム(Particle Systems)</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Unityの<span class="doc-keyword">パーティクルシステム</span>は、煙の雲、湯気、火や大気の効果を作るのに用いられます。パーティクルシステムは１つか２つの<span class="doc-keyword">テクスチャ</span>のを使い、何度も描画する事で、無秩序な効果を生み出します。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-0.jpg" /><br />
+
+
+
+
+
+
+
+				<em>基本Assetに含まれるパーティクルシステム</em></div>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				Unityの基本的なパーティクルシステムは、<span class="doc-keyword">パーティクルエミッタ(Particle Emitter)</span>、<span class="doc-keyword">パーティクルアニメータ(Particle Animator)</span>、<span class="doc-keyword">パーティクルレンダラ(Particle Renderer)</span>を持った、オブジェクトです。. The <a href="../Components/class-EllipsoidParticleEmitter.html">パーティクルエミッタ</a>はパーティクルを生成し、<a href="../Components/class-ParticleAnimator.html">パーティクルアニメータ</a>が動かし、<a href="../Components/class-ParticleRenderer.html">パーティクルレンダラ</a>ニより、スクリーンに描画されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				パーティクルをワールドに作用させたい場合、<a href="../Components/class-WorldParticleCollider.html">パーティクルコライダ(Particle Collider)</a> <span class="doc-keyword">コンポーネント</span>を<span class="doc-keyword">ゲームオブジェクト</span>に追加します。</p>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				円形パーティクルエミッタ(Ellipsoid Particle Emitter)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">円形パーティクルエミッタ</span>は球体の中に、パーティクルを生成します。球体のスケール(scale)と引き延ばし(stretch)の下にある<span class="doc-prop">円形(Ellipsoid)</span>属性を使います。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-1.jpg" /><br />
+
+
+
+
+
+
+
+				<em>円形パーティクルエミッタ<span class="doc-keyword">インスペクタ</span></em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				属性</h2>
+
+
+
+
+
+
+
+			<table width="100%">
+
+
+
+
+
+
+
+				<tbody>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Emit</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効であれば、エミッタはパーティクルを生成します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Size</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが生成された時の最小サイズです。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Size</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが生成された際の最大サイズです。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Energy</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの最小寿命で、秒で設定されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Energy</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの最大寿命で、秒で設定されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Emission</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							毎秒生成されるパーティクルの最小数です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Emission</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							毎秒生成されるパーティクルの最大数です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">World Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							ワールド空間におけるパーティクルの初速で、X,Y,Z軸にそった値です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Local Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの初速で、オブジェクトの向きに対してX,Y,Z軸にそった値です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Rnd Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							X,Y,Z軸にそってランダムに付加される速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Emitter Velocity Scale</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが受け継ぐエミッタの速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Tangent Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							X,Y,Z軸にそって、エミッタの表面を横切る速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Simulate In World Space</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルは、エミッタが移動しても移動します。無効な場合、エミッタが移動すると、パーティクルも追従します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">One Shot</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、Min(Max) Emissionで定義されたパーティクルの数が、一度に生成されます。無効な場合、パーティクルは徐々に生成されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Ellipsoid</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが内部で生成される、球体のサイズを、X,Y,Zにそって指定します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">MinEmitterRange</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							中心部分の空洞を定義します。パーティクルが球体の表層部分に現れるようになります。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				詳細</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				円形パーティクルエミッタ(EPEs)は基本的なエミッタで、<span class="doc-keyword">パーティクルシステム(Particle System)</span>を<span class="doc-menu">Components-&gt;Particles-&gt;Particle System</span>からシーンに追加する事を選択した時に含まれています。 パーティクルが生成される範囲を定義し、パーティクルの初期速度を与える事が出来ます。ここからは、<a href="../Components/class-ParticleAnimator.html">パーティクルアニメータ(Particle Animator)</a>を用いて、パーティクルが時間とともにどのように変化する事で、興味深い効果を生み出すのかを設定します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				パーティクルエミッタは<a href="../Components/class-ParticleAnimator.html">パーティクルアニメータ(Particle Animators)</a>と<a href="../Components/class-ParticleRenderer.html">パーティクルレンダラ(Particle Renderers)</a>と共同で、パーティクルシステムを作り、操作し、表示します。 この３つのコンポーネントは、パーティクルが動作し始める前に、正しくオブジェクトに設定されていなければなりません。パーティクルが生成されるとき、全て異なる速度と最終速度が与えられます。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Spawning Properties</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Spawning Propertiesは<span class="doc-prop">Size</span>, <span class="doc-prop">Energy</span>, <span class="doc-prop">Emission</span>, と<span class="doc-prop">Velocity</span>で、パーティクルシステムが様々な効果を生み出すための、個性のようなものです。 小さな <span class="doc-prop">Size</span>であれば、炎を表現したり、空の星を表現します。大きな<span class="doc-prop">Size</span>であれば、ホコリっぽい古い建物のチリの雲を表現します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Energy</span>と<span class="doc-prop">Emission</span>はパーティクルがシーンにどのぐらい長くのこり、また、どのぐらいの数が一度に生成されるかを制御します。 たとえば、ロケットは高い<span class="doc-prop">Emission</span>で、濃い煙を表現しますし、高い<span class="doc-prop">Energy</span>で、ゆっくりと空気に消える煙を表現します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Velocity</span>はパーティクルの動きを制御します。<span class="doc-prop">Velocity</span>をスクリプトの中で変える事で、興味深い効果を出せます。また、風のように、一定の効果を生み出したい場合は、XとZの<span class="doc-prop">Velocity</span>をパーティクルが吹き飛ばされるように設定します。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Simulate in World Space</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				無効であれば、パーティクル１つ１つは、エミッタの<span class="doc-prop">位置(Position)</span>にあわせて、移動します。 有効であれば、パーティクルはエミッタが移動しても、追従しません。たとえば、炎を出す火の玉があった場合、一度立ち上った炎は、火の玉が遠くに移動しても、その場所に残ります。もし無効であれば、炎は火の玉とともにスクリーン内で移動します。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Emitter Velocity Scale</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				この属性は<span class="doc-prop">Simulate in World Space</span>が有効な場合のみ適用されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				この属性が１に設定されていると、パーティクルはエミッタの動作と、完全に同期して移動します。２に設定されていると、パーティクルはエミッタの移動の倍を２倍にします。３であれば、３倍となります。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				One Shot</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">One Shot</span>が設定されたエミッタは、<span class="doc-prop">Emission</span> 属性で設定された、全てのパーティクルを一度に発生させ、修了します。以下に、<span class="doc-prop">One Shot</span>が<span class="doc-prop">有効</span>、または、<span class="doc-prop">無効</span>の場合の、いくつかのパーティクルシステムの使い方を示します:</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">有効</span>:</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					爆発</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					水しぶき</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					魔法の呪文</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">無効</span>:</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					発砲時の煙</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					風の効果</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					滝</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Min Emitter Range</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">Min Emitter Range</span> 円にたいしてパーティクルが発生する深度を決定します。０に設定すると、パーティクルは円の中心から、外側いっぱいまで、どこからでも発生します。１に設定すると、円の外周のみで発生します。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-2.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-prop">Min Emitter Range</span>が０</em></div>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-3.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-prop">Min Emitter Range</span>が１</em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ヒント</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					多くの大きなパーティクルを使うときは気をつけてください。パフォーマンスの低いコンピュータでは、処理速度が低下します。なるべく、最小のパーティクルで、効果が出るようにするべきです。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-prop">Emit</span>属性は、<span class="doc-prop">AutoDestruct</span>パーティクルアニメータの属性とともに、作用します。 スクリプトで、エミッタを停止すると、<span class="doc-prop">AutoDestruct</span>は自動的に、パーティクルシステムとゲームオブジェクトを破棄します。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				メッシュパーティクルエミッタ(Mesh Particle Emitter)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">メッシュパーティクルエミッタ</span>はパーティクルをメッシュの周りに発生させます。パーティクルはメッシュの表面から発生します。パーティクルに、オブジェクトに合わせ他複雑な作用をさせたい場合に、有効です。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-4.jpg" /><br />
+
+
+
+
+
+
+
+				<em>メッシュパーティクルエミッタ<span class="doc-keyword">インペクタ</span></em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				属性</h2>
+
+
+
+
+
+
+
+			<table width="100%">
+
+
+
+
+
+
+
+				<tbody>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Emit</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、エミッタはパーティクルを生成します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Size</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが生成された時の最小サイズです。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Size</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが生成された際の最大サイズです。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Energy</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの最小寿命で、秒で設定されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Energy</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの最大寿命で、秒で設定されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Emission</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							毎秒生成されるパーティクルの最小数です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Emission</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							毎秒生成されるパーティクルの最大数です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">World Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							ワールド空間におけるパーティクルの初速で、X,Y,Z軸にそった値です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Local Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの初速で、オブジェクトの向きに対してX,Y,Z軸にそった値です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Rnd Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							X,Y,Z軸にそってランダムに付加される速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Emitter Velocity Scale</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが受け継ぐエミッタの速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Tangent Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							X,Y,Z軸にそって、エミッタの表面を横切る速度です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Simulate In World Space</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルは、エミッタが移動しても移動します。無効な場合、エミッタが移動すると、パーティクルも追従します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">One Shot</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、Min(Max) Emissionで定義されたパーティクルの数が、一度に生成されます。無効な場合、パーティクルは徐々に生成されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Interpolate Triangles</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルはメッシュの表面全てから発生します。無効の場合、パーティクルはメッシュの頂点のみから発生します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Systematic</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルはメッシュで定義された頂点の順に、発生します。頂点の順序を直接制御することはまれですが、３Dモデリングアプリケーションは通常、プリミティブを使う際、非常に鶏痘だった設定を行います。メッシュが面を持っていない場合に限り、動作します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Normal Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルがメッシュから離れる、最小値。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Max Normal Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルがメッシュから離れる、最大値。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				詳細</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				メッシュパーティクルエミッタ(MPEs)は、発生する場所や向きを、<span class="doc-keyword">円形パーティクルエミッタ</span>より正確に制御したい場合に用います。応用的な効果を出すことができます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				MPEsはパーティクルをメッシュに負荷された頂点から発生させることができます。そのため、メッシュが疎なポリゴンを用いれば、パーティクルの発生場所も疎なります。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				パーティクルエミッタは<a href="../Components/class-ParticleAnimator.html">パーティクルアニメータ</a>及び<a href="../Components/class-ParticleRenderer.html">パーティクルレンダラ</a>と共に動作し、パーティクルを生成、操作、表示します。 この３つのコンポーネントは、パーティクルが動作し始める前に、正しくオブジェクトに設定されていなければなりません。パーティクルが生成されるとき、全て異なる速度と最終速度が与えられます。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Spawning Properties</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Spawning Propertiesは<span class="doc-prop">Size</span>, <span class="doc-prop">Energy</span>, <span class="doc-prop">Emission</span>, と<span class="doc-prop">Velocity</span>で、パーティクルシステムが様々な効果を生み出すための、個性のようなものです。 小さな <span class="doc-prop">Size</span>であれば、炎を表現したり、空の星を表現します。大きな<span class="doc-prop">Size</span>であれば、ホコリっぽい古い建物のチリの雲を表現します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Energy</span>と<span class="doc-prop">Emission</span>はパーティクルがシーンにどのぐらい長くのこり、また、どのぐらいの数が一度に生成されるかを制御します。 たとえば、ロケットは高い<span class="doc-prop">Emission</span>で、濃い煙を表現しますし、高い<span class="doc-prop">Energy</span>で、ゆっくりと空気に消える煙を表現します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Velocity</span>はパーティクルの動きを制御します。<span class="doc-prop">Velocity</span>をスクリプトの中で変える事で、興味深い効果を出せます。また、風のように、一定の効果を生み出したい場合は、XとZの<span class="doc-prop">Velocity</span>をパーティクルが吹き飛ばされるように設定します。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Simulate in World Space</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				無効であれば、パーティクル１つ１つは、エミッタの<span class="doc-prop">位置(Position)</span>にあわせて、移動します。 有効であれば、パーティクルはエミッタが移動しても、追従しません。たとえば、炎を出す火の玉があった場合、一度立ち上った炎は、火の玉が遠くに移動しても、その場所に残ります。もし無効であれば、炎は火の玉とともにスクリーン内で移動します。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Emitter Velocity Scale</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				この属性は<span class="doc-prop">Simulate in World Space</span>が有効な場合のみ適用されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				この属性が１に設定されていると、パーティクルはエミッタの動作と、完全に同期して移動します。２に設定されていると、パーティクルはエミッタの移動の倍を２倍にします。３であれば、３倍となります。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				One Shot</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">One Shot</span>が設定されたエミッタは、<span class="doc-prop">Emission</span> 属性で設定された、全てのパーティクルを一度に発生させ、修了します。以下に、<span class="doc-prop">One Shot</span>が<span class="doc-prop">有効</span>、または、<span class="doc-prop">無効</span>の場合の、いくつかのパーティクルシステムの使い方を示します:</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">有効</span>:</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					爆発</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					水しぶき</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					魔法の呪文</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Disabled</span>:</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					発砲時の煙</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					風の効果</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					滝</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				Interpolate Triangles</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">Interpolate Triangles</span>を有効にすると、 パーティクルはメッシュの頂点の間で発生するようになります。デフォルトでは、無効となっているため、パーティクルは頂点でのみ発生します。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-5.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-prop">Interpolate Triangles</span>を設定していない球体(デフォルト)</em></div>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				有効にすると、パーティクルは頂点の間で発生します。結果的に、メッシュの表面全体から発生します。(下図)</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-6.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-prop">Interpolate Triangles</span>が有効な球体</em></div>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				It bears repeating that even with <span class="doc-prop">Interpolate Triangles</span>を有効にしても、そなポリンゴンであるため、範囲に比べて、依然として疎です。</p>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				Systematic</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Enabling <span class="doc-prop">Systematic</span> は、パーティクルがメッシュの頂点順に沿って発生するようにします。頂点順は３Dモデリングアプリケーションで設定できます。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-7.jpg" /><br />
+
+
+
+
+
+
+
+				<em>MPEを付加した球体に<span class="doc-prop">Systematic</span> を有効にした場合。</em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				Normal Velocity</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">Normal Velocity</span> はパーティクルが法線に沿って発生する速度をコントロールします。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				例えば、メッシュパーティクルシステムを作り、立方体をエミッタとして用いる場合、<span class="doc-prop">Interpolate Triangles</span>を有効にし、<span class="doc-prop">Normal Velocity Min</span>と<span class="doc-prop">Max</span>を１に設定します。 パーティクルが立方体の表面で一直線に発生することを確認できるでしょう。</p>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				参考</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<a href="../Manual/HOWTO-MeshParticleEmitter.html">メッシュパーティクルエミッタの作り方</a></li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ヒント</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					多くの大きなパーティクルを使うときは気をつけてください。パフォーマンスの低いコンピュータでは、処理速度が低下します。なるべく、最小のパーティクルで、効果が出るようにするべきです。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-prop">Emit</span>属性は、<span class="doc-prop">AutoDestruct</span>パーティクルアニメータの属性とともに、作用します。 スクリプトで、エミッタを停止すると、<span class="doc-prop">AutoDestruct</span>は自動的に、パーティクルシステムとゲームオブジェクトを破棄します。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					MPEは、シーンに配置された多くのランプが光っている様子を再現する事にも使用できます。 ランプの中心に頂点を持つメッシュを作り、MPEをhaloマテリアルとして作成します。悪魔的な空想世界に最適です。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				パーティクルアニメータ(Particle Animator)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">パーティクルアニメータ</span>は パーティクルを時間に沿って動かします。風や、色の変化に使用します。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-8.jpg" /><br />
+
+
+
+
+
+
+
+				<em>パーティクルアニメータ<span class="doc-keyword">インスペクタ</span></em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				属性</h2>
+
+
+
+
+
+
+
+			<table width="100%">
+
+
+
+
+
+
+
+				<tbody>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Does Animate Color</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効であれば、パーティクルは色を生存期間に応じて変化させます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Color Animation</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルは５つの色に変化します。全てのパーティクルはこれに従いますー寿命の短いパーティクルは変化が早くなります。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">World Rotation Axis</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが周りを回転する、オプショナルな、ワールド軸です。魔法の効果や、石灰の泡などに用います。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Local Rotation Axis</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが周りを回転する、オプショナルな、ローカル空間軸です。魔法の効果や、石灰の泡などに用います。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Size Grow</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの生存期間により、サイズを大きくします。ランダム効果によって、パーティクルが散らばってしまうため、サイズを大きくして離れないようにするのは良いことです。立ち上る煙や、風のシミュレートに使えます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Rnd Force</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							フレームごとにパーティクルに作用するランダムな力です。煙がより自然になります。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Force</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							フレームごとにパーティクルに作用する力です。ワールドに相対です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Damping</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							フーレムごとに減少するパーティクルの速度です。１であれば、減少しません。値が小さいほど速度が減少します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Autodestruct</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルアニメータが負荷されたゲームオブジェクトは、全てのパーティクルが消えると、破棄されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				詳細</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルアニメータはパーティクルシステムをダイナミックにします。パーティクルの色を変化させたり、力や回転を負荷したり、パーティクルを生成し終えたら、オブジェクトを破棄したりします。 パーティクルシステムに関する情報は、<a href="../Components/class-MeshParticleEmitter.html">メッシュパーティクルエミッタ</a>、<a href="../Components/class-EllipsoidParticleEmitter.html">円形パーティクルエミッタ</a>、<a href="../Components/class-ParticleRenderer.html">パーティクルレンダラ</a>を参照してください。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				色のアニメーション(Animating Color)</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルの色を変更したり、フェードイン・アウトさせたい場合、<span class="doc-prop">Animate Color</span>を有効にし、色の順序を指定します。選択した５つの色にしたがって、パーティクルは色を変化させます。 エミッタの<span class="doc-prop">Energy</span>値に応じて、色の変化の速度が決まります。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				パーティクルをフェードインさせたい場合、最初と最後の色が、低いアルファ値を持つように、設定すると良いでしょう。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-9.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-prop">色の変化する</span>パーティクルシステム</em></div>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				回転軸(Rotation Axes)</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				ローカル、または、ワールドの<span class="doc-prop">回転軸</span>を設定すると、発生したパーティクルは軸の周りを回るようになります。(<span class="doc-keyword">トランスフォーム(Transform)</span>の位置を中心として) ひとつの軸を大きな値にすると、早く回転します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				ローカル軸を設定すると、回転するパーティクルは、トランスフォームの回転が変わると、伴って変化します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				ワールド軸を設定すると、パーティクルはトランスフォームの回転に関わらず、回転します。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Forces &amp; Damping</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				特定の方向にパーティクルを加速するのに、力(Force)を使います。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Damping</span>は軸に関わらず、加速したり、減速したりするのに用いられます：</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					１であれば<span class="doc-prop">Damping</span>は適用されず、加速も減速もしません。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					０であれば、パーティクルは即座に停止します。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					２であれば、パーティクルは毎秒速度が２倍になります。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				パーティクルに付加されたゲームオブジェクトの破棄</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルシステムと付加された<span class="doc-keyword">ゲームオブジェクト</span>を<span class="doc-prop">AutoDestruct</span>属性を有効化することで、破棄することができます。 例えば、オイル缶があったとき、パーティクルシステムの<span class="doc-prop">Emit</span>を無効化し<span class="doc-prop">AutoDestruct</span>を有効化します。衝突すると、パーティクルエミッタを有効化します。爆発が起こり、パーティクルシステムとオイル缶は破棄されシーンから削除されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				自動破棄は、パーティクルが発生した後でのみ、動作することに気をつけてください。<span class="doc-prop">AutoDestruct</span>が有効で、オブジェクトが破棄される、正確なルールは:</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					パーティクルがすでに発生しているが、全てが消えていない場合、<em>または</em>、</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<a href="../Components/class-EllipsoidParticleEmitter.html">エミッタ</a>が<span class="doc-prop">発生</span>させたが、今は、<span class="doc-prop">発生</span>が止められている。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ヒント</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-prop">Color Animation</span>を使い、パーティクルがフェードイン・アウトさせてください。そうしないと、美しくない破裂が発生します。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-prop">Rotation Axes</span>を使い、ぐるぐる回る渦巻きを作れます。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				パーティクルコライダ(Particle Collider)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">ワールドパーティクルコライダ(World Particle Collider)</span>はパーティクルを他の<span class="doc-keyword">衝突物</span>と衝突させる場合に用います。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-10.jpg" /><br />
+
+
+
+
+
+
+
+				<em><span class="doc-keyword">メッシュコライダ</span>と衝突する<span class="doc-keyword">パーティクルシステム</span></em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				属性</h2>
+
+
+
+
+
+
+
+			<table width="100%">
+
+
+
+
+
+
+
+				<tbody>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Bounce Factor</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルは、他のオブジェクトに衝突すると、加速したり、減速したりします。 この値は、<span class="doc-keyword">パーティクルアニメータの</span> <span class="doc-prop">Damping</span>属性と似ています。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Collision Energy Loss</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが商と地に失う（秒間に）エネルギー量です。 エネルギーが０になると、パーティクルは削除されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Min Kill Velocity</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルの<span class="doc-prop">速度</span>が、衝突により<span class="doc-prop">Min Kill Velocity</span>以下になると、パーティクルは削除されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Collides with</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							どの<a href="../Components/Layers.html">レイヤ</a>とパーティクルが衝突するかを設定します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Send Collision Message</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							有効な場合、パーティクルは衝突メッセージを送出します。スクリプトで捕捉できます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				詳細</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルコライダを持ったパーティクルシステムの生成：</p>
+
+
+
+
+
+
+
+			<ol>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-menu">GameObject-&gt;Create Other-&gt;Particle System</span>から、パーティクルシステムを生成します。 <span class="doc-menu">Component-&gt;Particles-&gt;World Particle Collider</span>から、パーティクルコライダを追加します。</li>
+
+
+
+
+
+
+
+			</ol>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				メッセージング</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-prop">Send Collision Message</span>が有効な場合、 パーティクルが章とすると、<span class="doc-prop">OnParticleCollision()</span>メッセージが、パーティクルの属する<span class="doc-keyword">ゲームオブジェクト</span>と衝突したゲームオブジェクト両方に送出されます。</p>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ヒント</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-prop">Send Collision Message</span>は、銃弾があたったときにダメージを受ける効果に使用できます。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					パーティクル衝突判定は、多くのパーティクルに対して行うと速度が低下します。慎重に使ってください。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					メッセージ送出は大きなオーバヘッドをうみますので、通常のパーティクルシステムでは使うべきではありません。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<h1>
+
+
+
+
+
+
+
+				パーティクルレンダラ(Particle Renderer)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">パーティクルレンダラ</span>はスクリーンに<span class="doc-keyword">パーティクルシステム</span>を描画します。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-11.jpg" /><br />
+
+
+
+
+
+
+
+				<em>パーティクルレンダラ<span class="doc-keyword">インスペクタ</span></em></div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				属性</h2>
+
+
+
+
+
+
+
+			<table width="100%">
+
+
+
+
+
+
+
+				<tbody>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Materials</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルに表示される<span class="doc-keyword">マテリアル(Materials)</span>のリストへの参照です。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Camera Velocity Scale</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<a href="../Components/class-Camera.html">Camera</a>の移動によってパーティクルが引き伸ばされる量を指定します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Stretch Particles</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルがどのようにレンダリングされるかを決定します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">Billboard</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							カメラの方向に向いているように、パーティクルをレンダリングします。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">Stretched</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルが動いてる方向に向きます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">SortedBillboard</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							パーティクルは深度に応じて並べられます。マテリアルをブレンドする際に使用できます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">VerticalBillboard</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							全てのパーティクルが、X/Z軸に水平に並びます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">HorizontalBillboard</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							全てのパーティクルが、X/Y軸に水平に並びます。 All particles are aligned flat along the X/Y axes.</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Length Scale</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Stretch Particles</span>が<span class="doc-prop">Stretched</span>に設定されていれば、この値によって、パーティクルが向いた向きに動くかを決定します。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Velocity Scale</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">Stretch Particles</span>が<span class="doc-prop">Stretched</span>に設定されていれば、この値によって、どの程度のパーティクルが引き伸ばされるかが、パーティクルの速度を基準に設定されます。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span class="doc-prop">UV Animation</span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							この中のどれかが設定されていれば、パーティクルのUV座標が生成され、タイル上にアニメーションするテクスチャとして使用できます。下記の、<a href="#AnimatedTextures">Animated Textures</a>セクションを参照してください。</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">X Tile</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							X軸に沿って位置するフレーム数</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">Y Tile</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							Y軸に沿って位置するフレーム数</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+					<tr>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							<span style="padding-left: 1.5em;"><span class="doc-prop">Cycles</span></span></td>
+
+
+
+
+
+
+
+						<td align="left">
+
+
+
+
+
+
+
+							アニメーションシーケンスの繰り返し数</td>
+
+
+
+
+
+
+
+					</tr>
+
+
+
+
+
+
+
+				</tbody>
+
+
+
+
+
+
+
+			</table>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				詳細</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルシステムにおいて、パーティクルレンダラはスクリーン表示のために必ず必要です。</p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Particle Systems-12.jpg" /><br />
+
+
+
+
+
+
+
+				<em> ガンシップのエンジンが噴射されている様子が、パーティクルレンダラによってスクリーンに表示されている</em></div>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				マテリアルの選択</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルレンダラを設定するとき、適切なマテリアルを使用することが重要です。多くの場合に、準備されたパーティクルシェーダを用いて、マテリアルを使用するでしょう。<span class="doc-menu">Standard Assets-&gt;Particles-&gt;Sources</span>フォルダの中に、いくつかのマテリアルが、準備されています。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				新しいマテリアルの作成は簡単です:</p>
+
+
+
+
+
+
+
+			<ol>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<span class="doc-menu">Assets-&gt;Create Other-&gt;Material</span>をメニューバーから選択します。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					<a href="../Components/class-Material.html">マテリアル</a>はシェーダポップアップを持っているので、パーティクルグループから、ひとつのシェーダを選んでください。<span class="doc-menu">Particles-&gt;Multiply</span>から、選べます。</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					テクスチャが適用されました。異なるシェーダは、テクスチャのアルファチャネルを、少しちがう方法で使用しますが、通常、黒の値は透明、白の値を持った部分がスクリーンに表示されます。</li>
+
+
+
+
+
+
+
+			</ol>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				パーティクルのディストーション</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				デフォルトではパーティクルは<span class="doc-prop">Billboard</span>でレンダリングされます。シンプルな矩形のスプライトです。これは、煙や爆発、また大部分のパーティクル効果に適しています。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				パーティクルは速度に応じて引き伸ばせます。これは、火花や、雷、レーザービームに有効です。<span class="doc-prop">Length Scale</span>と<span class="doc-prop">Velocity Scale</span>により、パーティクルがどの程度引き伸ばされるかが決定されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Sorted Billboard</span> は、パーティクルを深度に応じて並べます。<span class="doc-menu">Alpha Blended</span>パーティクルシェーダを使用する場合などに使われます。これは、処理に負担がかかるため、特別にクオリティを異なるものにしたい場合のみに用いるべきです。</p>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Animated textures</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				パーティクルシステムは、アニメーションするテクスチャタイルの上にレンダリングできます。この効果を用いるには、テクスチャを画像のグリッドにします。パーティクルのライフサイクルに伴って、画像のをめぐります。パーティクルの動きを豊かにたり、小さなホコリが回転したりする様子を表現できます。</p>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ヒント</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					パーティクルシェーダはパーティクルレンダラと共に使ってください。</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<a href="../Manual/Cameras.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Cameras.html">Previous</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<a href="../Manual/Terrains.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Terrains.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="analytics tracking code" --><script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-7119528-3");pageTracker._trackPageview();} catch(err) {}</script><!-- #TemplateEndEditable --></body>
+
+
+
+
+
+
+

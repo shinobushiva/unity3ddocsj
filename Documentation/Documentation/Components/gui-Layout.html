@@ -1,0 +1,3186 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Layout Modes</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Layout Modes</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/GUI Scripting Guide.html">GUI Scripting Guide</a> &gt; <a href="../Components/gui-Layout.html">Layout Modes</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Customization.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Extending.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Layout Modes</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Fixed Layout vs Automatic Layout</h2>
+
+
+
+
+
+
+
+<p>There are two different modes you can use to arrange and organize your GUIs: Fixed and Automatic.  Up until now, every UnityGUI example provided in this guide has used Fixed Layout.  To use Automatic Layout, write <span class='doc-prop'>GUILayout</span> instead of <span class='doc-prop'>GUI</span> when calling control functions.  You do not have to use one Layout mode over the other, and you can use both modes at once in the same <span class='doc-prop'>OnGUI()</span> function.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Fixed Layout makes sense to use when you have a pre-designed interface to work from.  Automatic Layout makes sense to use when you don't know how many elements you need up front, or don't want to worry about hand-positioning each Control.  For example, if you are creating a number of different buttons based on Save Game files, you don't know exactly how many buttons will be drawn.  In this case Automatic Layout might make more sense.  It is really dependent on the design of your game and how you want to present your interface.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>There are two key differences when using Automatic Layout:
+
+
+
+
+
+
+
+</p><ul><li><span class='doc-prop'>GUILayout</span> is used instead of <span class='doc-prop'>GUI</span>
+
+
+
+
+
+
+
+</li><li>No <span class='doc-prop'>Rect()</span> function is required for Automatic Layout Controls
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* Two key differences when using Automatic Layout */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI () {
+
+
+
+
+
+
+
+	// Fixed Layout
+
+
+
+
+
+
+
+	GUI.Button (Rect (25,25,100,30), "I am a Fixed Layout Button");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Automatic Layout
+
+
+
+
+
+
+
+	GUILayout.Button ("I am an Automatic Layout Button");
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Arranging Controls</h2>
+
+
+
+
+
+
+
+<p>Depending on which Layout Mode you're using, there are different hooks for controlling where your Controls are positioned and how they are grouped together.  In Fixed Layout, you can put different Controls into <span class='doc-keyword'>Groups</span>.  In Automatic Layout, you can put different Controls into <span class='doc-keyword'>Areas</span>, <span class='doc-keyword'>Horizontal Groups</span>, and <span class='doc-keyword'>Vertical Groups</span>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Fixed Layout - Groups</h3>
+
+
+
+
+
+
+
+<p>Groups are a convention available in Fixed Layout Mode.  They allow you to define areas of the screen that contain multiple Controls.  You define which Controls are inside a Group by using the <span class='doc-prop'>GUI.BeginGroup()</span> and <span class='doc-prop'>GUI.EndGroup()</span> functions. All Controls inside a Group will be positioned based on the Group's top-left corner instead of the screen's top-left corner.  This way, if you reposition the group at runtime, the relative positions of all Controls in the group will be maintained.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>As an example, it's very easy to center multiple Controls on-screen.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* Center multiple Controls on the screen using Groups */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI () {
+
+
+
+
+
+
+
+	// Make a group on the center of the screen
+
+
+
+
+
+
+
+	GUI.BeginGroup (Rect (Screen.width / 2 - 50, Screen.height / 2 - 50, 100, 100));
+
+
+
+
+
+
+
+	// All rectangles are now adjusted to the group. (0,0) is the topleft corner of the group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// We'll make a box so you can see where the group is on-screen.
+
+
+
+
+
+
+
+	GUI.Box (Rect (0,0,100,100), "Group is here");
+
+
+
+
+
+
+
+	GUI.Button (Rect (10,40,80,30), "Click me");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// End the group we started above. This is very important to remember!
+
+
+
+
+
+
+
+	GUI.EndGroup ();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/gui-Layout-0.jpg' /><br /><em>The above example centers controls regardless of the screen resolution</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>You can also nest multiple Groups inside each other. When you do this, each group has its contents clipped to its parent's space.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* Using multiple Groups to clip the displayed Contents */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var bgImage : Texture2D; // background image that is 256 x 32
+
+
+
+
+
+
+
+var fgImage : Texture2D; // foreground image that is 256 x 32
+
+
+
+
+
+
+
+var playerEnergy = 1.0; // a float between 0.0 and 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI () {
+
+
+
+
+
+
+
+	// Create one Group to contain both images
+
+
+
+
+
+
+
+	// Adjust the first 2 coordinates to place it somewhere else on-screen
+
+
+
+
+
+
+
+	GUI.BeginGroup (Rect (0,0,256,32));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Draw the background image
+
+
+
+
+
+
+
+	GUI.Box (Rect (0,0,256,32), bgImage);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Create a second Group which will be clipped
+
+
+
+
+
+
+
+	// We want to clip the image and not scale it, which is why we need the second Group
+
+
+
+
+
+
+
+	GUI.BeginGroup (Rect (0,0,playerEnergy * 256, 32));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Draw the foreground image
+
+
+
+
+
+
+
+	GUI.Box (Rect (0,0,256,32), fgImage);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// End both Groups
+
+
+
+
+
+
+
+	GUI.EndGroup ();
+
+
+
+
+
+
+
+	GUI.EndGroup ();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/gui-Layout-1.jpg' /><br /><em>You can nest Groups together to create clipping behaviors</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Automatic Layout - Areas</h3>
+
+
+
+
+
+
+
+<p>Areas are used in Automatic Layout mode only.  They are similar to Fixed Layout Groups in functionality, as they define a finite portion of the screen to contain GUILayout Controls.  Because of the nature of Automatic Layout, you will nearly always use Areas.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In Automatic Layout mode, you do not define the area of the screen where the Control will be drawn at the Control level.  The Control will automatically be placed at the upper-leftmost point of its containing area.  This might be the screen.  You can also create manually-positioned Areas.  GUILayout Controls inside an area will be placed at the upper-leftmost point of that area.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* A button placed in no area, and a button placed in an area halfway across the screen. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI () {
+
+
+
+
+
+
+
+	GUILayout.Button ("I am not inside an Area");
+
+
+
+
+
+
+
+	GUILayout.BeginArea (Rect (Screen.width/2, Screen.height/2, 300, 300));
+
+
+
+
+
+
+
+	GUILayout.Button ("I am completely inside an Area");
+
+
+
+
+
+
+
+	GUILayout.EndArea ();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>Notice that inside an Area, Controls with visible elements like Buttons and Boxes will stretch their width to the full length of the Area.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Automatic Layout - Horizontal and Vertical Groups</h3>
+
+
+
+
+
+
+
+<p>When using Automatic Layout, Controls will by default appear one after another from top to bottom.  There are plenty of occasions you will want finer level of control over where your Controls are placed and how they are arranged.  If you are using the Automatic Layout mode, you have the option of Horizontal and Vertical Groups.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Like the other layout Controls, you call separate functions to start or end these groups.  The specific functions are <span class='doc-prop'>GUILayout.BeginHoriztontal()</span>, <span class='doc-prop'>GUILayout.EndHorizontal()</span>, <span class='doc-prop'>GUILayout.BeginVertical()</span>, and <span class='doc-prop'>GUILayout.EndVertical()</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Any Controls inside a Horizontal Group will always be laid out horizontally.  Any Controls inside a Vertical Group will always be laid out vertically.  This sounds plain until you start nesting groups inside each other.  This allows you to arrange any number of controls in any imaginable configuration.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* Using nested Horizontal and Vertical Groups */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var sliderValue = 1.0;
+
+
+
+
+
+
+
+var maxSliderValue = 10.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI()
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+	// Wrap everything in the designated GUI Area
+
+
+
+
+
+
+
+	GUILayout.BeginArea (Rect (0,0,200,60));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Begin the singular Horizontal Group
+
+
+
+
+
+
+
+	GUILayout.BeginHorizontal();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Place a Button normally
+
+
+
+
+
+
+
+	if (GUILayout.RepeatButton ("Increase max\nSlider Value"))
+
+
+
+
+
+
+
+	{
+
+
+
+
+
+
+
+		maxSliderValue += 3.0 * Time.deltaTime;
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Arrange two more Controls vertically beside the Button
+
+
+
+
+
+
+
+	GUILayout.BeginVertical();
+
+
+
+
+
+
+
+	GUILayout.Box("Slider Value: " + Mathf.Round(sliderValue));
+
+
+
+
+
+
+
+	sliderValue = GUILayout.HorizontalSlider (sliderValue, 0.0, maxSliderValue);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// End the Groups and Area
+
+
+
+
+
+
+
+	GUILayout.EndVertical();
+
+
+
+
+
+
+
+	GUILayout.EndHorizontal();
+
+
+
+
+
+
+
+	GUILayout.EndArea();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/gui-Layout-2.jpg' /><br /><em>Three Controls arranged with Horizontal &amp; Vertical Groups</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Using GUILayoutOptions to define some controls</h2>
+
+
+
+
+
+
+
+<p>You can use GUILayoutOptions to override some of the Automatic Layout parameters.  You do this by providing the options as the final parameters of the GUILayout Control.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Remember in the Areas example above, where the button stretches its width to 100% of the Area width?  We can override that if we want to.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+/* Using GUILayoutOptions to override Automatic Layout Control properties */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OnGUI () {
+
+
+
+
+
+
+
+	GUILayout.BeginArea (Rect (100, 50, Screen.width-200, Screen.height-100));
+
+
+
+
+
+
+
+	GUILayout.Button ("I am a regular Automatic Layout Button");
+
+
+
+
+
+
+
+	GUILayout.Button ("My width has been overridden", GUILayout.Width (95));
+
+
+
+
+
+
+
+	GUILayout.EndArea ();
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<p class='vspace'>For a full list of possible GUILayoutOptions, please read the <a class='urllink' href='../ScriptReference/GUILayoutOption.html' rel='nofollow'>GUILayoutOption Scripting Reference page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2007-10-24</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Customization.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/gui-Extending.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

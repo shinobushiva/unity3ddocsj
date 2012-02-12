@@ -1,0 +1,457 @@
+body {
+	background-color:    white;
+	margin: 10px;
+}
+body, p, ul, ol, td, li {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+body, p { color: #352f28; line-height: 17px;}
+
+table {
+	border: 0px;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+td, th {
+	vertical-align: top;
+	padding: 0px;
+}
+em {
+	color:#111;
+}
+h1 {
+	clear:both;
+	font-size:18px;
+	font-weight:bold;
+	color:black;
+	margin: .7em  0px  0px  0px;
+	line-height: 25px;
+}
+
+h2 {
+	font-size:14px;
+	font-weight:bold;
+	color:black;
+	margin: 1em  0px  0px  0px;
+}
+
+h3 {
+	font-size:12px;
+	color:#171411;
+	font-weight:bold;
+	margin: 1em  0px  0px  0px;
+}
+h4{	margin: 1em  0px  0px  0px;}
+
+p {
+	margin:0px 0px 1.5em 0px;
+}
+
+.doc-prop, .doc-keyword, .doc-menu {
+	font-weight:bold;
+}
+
+a {
+	color: #145d7b;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+ul, li { margin-left:0px; }
+a img {
+	border: 0px;
+}
+
+/* Property tables */
+.prop { width:20%; visibility:hidden; height:1px;}
+.function { width:80%; visibility:hidden;height:1px;}
+.tableheader { visibility:hidden; }
+
+/* Previous & Next buttons */
+/* Previous + Next style navigation */
+
+.nav {
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.nav .nav-prev,
+.nav .nav-next {
+}
+
+.nav .nav-prev .nav-left {
+	float: left;
+	background: url(../images/navigation/prev_left.png) top;
+	height: 22px;
+	width: 20px;
+}
+.nav .nav-prev .nav-right {
+	float: left;
+	background: url(../images/navigation/prev_right.png) top;
+	height: 22px;
+	width: 11px;
+}
+.nav .nav-next .nav-left {
+	float: right;
+	background: url(../images/navigation/next_right.png) top;
+	height: 22px;
+	width: 20px;
+}
+.nav .nav-next .nav-right {
+	float: right;
+	background: url(../images/navigation/next_left.png) top;
+	height: 22px;
+	width: 11px;
+}
+.nav .nav-prev .nav-main,
+.nav .nav-next .nav-main {
+	height: 22px;
+	background: url(../images/navigation/nav_back.png) top repeat-x;
+	white-space: nowrap;
+
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+
+	color: #333;
+}
+.nav .nav-prev .nav-main {
+	float: left;
+	text-align: left;
+}
+.nav .nav-next .nav-main {
+	float: right;
+	text-align: right;
+}
+.nav a {
+	text-decoration: none;
+}
+.nav a:hover {
+	text-decoration: underline;
+}
+
+
+/* Styles for the title bar */
+.titlebar {
+	width:100%;
+	background: url(../images/top/stretch.png) top;
+	font-weight:bold;
+	color:#a4abae;
+	vertical-align:middle;
+}
+.titleleft {
+	vertical-align: top;
+	width:80px;
+	height:64px;
+}
+.titleright {
+	background: url(../images/top/right.png);
+	width:9px;
+	height:64px;
+}
+
+.titlemid {
+	background: url(../images/top/stretch.png) top;
+	height:64px;
+	width:100%;
+}
+
+.titlemid .doctitle {
+	height:30px;
+	font-size: 15px;
+	padding-top:3px;
+	padding-left:9px;
+	vertical-align:middle;
+	width:100%;
+	color:#c7c7c7;
+	white-space: nowrap;	
+}
+
+.titlemid .docpath {
+	white-space: nowrap;
+	color:#a4abae;
+	margin-top:2px;
+	margin-left:9px;
+	width:100%;
+}
+
+.titlemid .switchlink {
+	white-space: nowrap;
+	color:#a4abae;
+	vertical-align:middle;
+	text-align:right;
+}
+
+.titlemid a {
+	color: #a4abae;
+	text-decoration:none;
+}
+
+.titlemid a:hover {
+	text-decoration:underline;
+}
+
+.switchlink {
+	text-align:right;
+	padding-right:16px;
+	padding-left:10px;
+}
+
+.manual {
+	margin-left:74px;
+	margin-right:20px;
+}
+
+.vspace {
+	margin-top:10px;
+}
+
+/* Buttons the containing style (.Components) is the location of the current page
+    I use this to select between on and off images */
+.Components .manual {	width:72px; height:36px;  background: url(../images/top/manual.png) top right;  margin:0px;}
+.Components .reference {	width:94px; height:36px; background: url(../images/top/reference_on.png) top right; }
+.Components .scripting {	width:82px; height:36px; background: url(../images/top/scripting.png) top right; }
+.Components .manual:hover {	background: url(../images/top/manual_hover.png) top right; margin:0px;}
+.Components .reference:hover {	background: url(../images/top/reference_onhover.png) top right; }
+.Components .scripting:hover {	background: url(../images/top/scripting_hover.png) top right; }
+
+.Manual .manual {	width:72px; height:36px;	background: url(../images/top/manual_on.png) top right; margin:0px;}
+.Manual .reference {	width:94px; height:36px; background: url(../images/top/reference.png) top right; }
+.Manual .scripting {	width:82px; height:36px; background: url(../images/top/scripting.png) top right; }
+.Manual .manual:hover {	background: url(../images/top/manual_onhover.png) top right; margin:0px;}
+.Manual .reference:hover {	background: url(../images/top/reference_hover.png) top right; }
+.Manual .scripting:hover {	background: url(../images/top/scripting_hover.png) top right; }
+
+.Scripting .manual { width:72px; height:36px;	background: url(../images/top/manual.png) top right; margin:0px;}
+.Scripting .reference {	width:94px; height:36px; background: url(../images/top/reference.png) top right; }
+.Scripting .scripting {	width:82px; height:36px; background: url(../images/top/scripting_on.png) top right; }
+.Scripting .manual:hover {	background: url(../images/top/manual_hover.png) top right; margin:0px;}
+.Scripting .reference:hover {	background: url(../images/top/reference_hover.png) top right; }
+.Scripting .scripting:hover {	background: url(../images/top/scripting_onhover.png) top right; }
+
+.docs-navigation {display:none;}
+.manual-text {display:none;}
+.components-text {display:none;}
+.scripting-text {display:none;}
+/* scriptref styles 
+   ======================================================*/
+    
+/* left navigation menu*/
+form.apisearch {
+	padding: 0px;
+	margin: 0px;
+}
+
+ul.left-menu {
+	position: absolute;
+	left: 5px;
+	top: 90px;
+	
+	width: 159px;
+	padding: 0px 0px 0px 20px;
+	margin: 0px;
+	line-height: 15px;
+	list-style-type: none;
+}
+.left-menu-heading, .left-menu-softheading, .left-menu-subheading {
+	padding-top: 10px;
+	font-weight: bold;
+	color:black;
+	display: block;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;    /* Opera */
+    text-overflow: ellipsis;   /* IE, Safari (WebKit) */
+}
+.left-menu-indent {
+	margin-left: 2em; /* this needs to be margin; otherwise .left-menu-current wont work */
+}
+.left-menu a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.left-menu a:hover {
+	text-decoration: underline;
+	color: #145d7b;
+}
+
+.left-menu-current {
+	position: relative;
+	background-color: #e8e8e8;
+	padding: 0px 5px 0px 5px;
+	left: -5px;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+
+.left-menu-item,  .left-menu-item a {
+	color: #352f28;
+	display: block;
+	width: 159px;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;    /* Opera */
+    text-overflow: ellipsis;   /* IE, Safari (WebKit) */
+}
+.left-menu-inherited-item,  .left-menu-inherited-item a {
+	color: #352f28;
+	display: block;
+	width: 159px;
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;    /* Opera */
+    text-overflow: ellipsis;   /* IE, Safari (WebKit) */
+}
+
+
+/* class page */
+.scriprefmain {
+	padding-top:0px;
+	padding-left:185px;
+	padding-right:5px;
+}
+.scriprefmain ul {
+ 	list-style-type: none;
+
+ }
+.heading {
+	clear:both;
+	font-size:18px;
+	font-weight:bold;
+	color:black;
+	margin: .9em  0px  0px  0px;
+	display:block;
+	line-height: 25px;
+}
+
+.text {
+	display:block;
+	margin-bottom: 1.5em;
+}
+
+.script-section-softheading {
+	font-size:12px;
+	font-weight:bold;
+	margin: 1em  0px  0px  0px;
+}
+
+.script-section-hardheading {
+	font-size:14px;
+	font-weight:bold;
+	color:black;
+	margin: 1em  0px  0px  0px;
+}
+
+.class-member-list, .class-member-list-inherited {
+	width: 100%;
+	border-bottom:1px solid #888580;
+	border-top:1px solid #888580;
+	margin-bottom:2em;
+}
+.class-member-list-name {
+	width: 20%;
+	text-align: left;
+}
+.class-member-description {
+	display: inline;
+}
+
+.scriprefmain ul.list {
+	list-style-type: disc;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.scriprefmain .editorclass {
+	color: #666;
+	background-color: #ccc;
+	background-color: #f8f8f8;
+	padding: 2px 5px 2px 5px;
+	-moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+
+
+/* function page */
+.manual-entry h3 { margin-top: 0px; text-indent: -60px; margin-left:60px;}
+.manual-entry h3 .hl-keyword,
+.manual-entry h3 .hl-datatype,
+.manual-entry h3 .classlink
+ {
+	font-weight:normal;
+}
+
+h3.soft { margin-top:1em;}
+table.parameters { 
+	margin-top:-12px;
+	width:100%;
+}
+table.parameters thead { visibility:hidden; height:0px; display:block;}
+table.parameters tbody { 	border-bottom:1px solid #888580;
+	border-top:1px solid #888580;
+}
+td.param-name {font-weight:bold; margin-right:10px; 	padding-right: 10px; width:20%;}
+.code, .codelisting {
+	font-family: "Verdana", "Arial";
+	font-size: 8pt;
+	padding: 7px;
+	background-color: #eee;
+	color: #222;
+	white-space: pre;
+	margin-bottom: 1.5em;
+	margin-top:0em;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+
+.comment {
+	color: #006600;
+}
+.hl-comment {
+	color: #006600;
+}
+
+
+/* Scripting overview stuff */
+.toc {
+	float: left;
+	margin-top: 1px;
+	margin-bottom: 1em;
+	vertical-align: top;
+	text-align: left;
+}
+.tocclear {
+	clear: both;
+}
+.toc p {
+	margin-bottom:0px;
+}
+.toc p.tocheader {
+	font-weight:bold;
+	background-color: white;
+	text-align: left;
+	font-size: 12px;
+}
+
+
+dd {
+	margin-left:0em;
+	margin-bottom:1em;
+}
+
+dt {	font-weight:bold;	}
+th { text-align:left; padding-right:20px;}
+
+.pre-next-link a {
+	width: 180px;
+	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: -3px;
+}
+
+.main ul {
+	padding-left:20px;
+}
+

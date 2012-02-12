@@ -1,0 +1,2778 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Using Scripts</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Using Scripts</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Asset Import and Creation.html">Asset Import and Creation</a> &gt; <a href="../Manual/Scripting.html">Using Scripts</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Tracker Modules.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Asset Server.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Using Scripts</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>This is a short introduction on how to create and utilize scripts in a project.  For detailed information about the Scripting API, please view the <a class='urllink' href='../ScriptReference/index.html' rel='nofollow'>Scripting Reference</a>.  For detailed information about creating game play through scripting, please view the <a href="../Manual/Creating Gameplay.html">Creating Gameplay</a> page of this manual.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Scripting inside Unity is done by writing simple behaviour scripts in <span class='doc-keyword'>JavaScript</span>, <span class='doc-keyword'>C#</span>, or <span class='doc-keyword'>Boo</span>. You can use one or all scripting languages in a single project, there is no penalty for using more than one. Unless stated otherwise, all the scripting examples are in JavaScript.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Creating New Scripts</h2>
+
+
+
+
+
+
+
+<p>Unlike other assets like Meshes or Textures, Script files can be created from within Unity. To create a new script, open the <span class='doc-menu'>Assets-&gt;Create-&gt;JavaScript</span> (or <span class='doc-menu'>Assets-&gt;Create-&gt;C Sharp Script</span> or <span class='doc-menu'>Assets-&gt;Create-&gt;Boo Script</span>) from the main menu. This will create a new script called <span class='doc-prop'>NewBehaviourScript</span> and place it in the selected folder in <span class='doc-keyword'>Project View</span>.  If no folder is selected in Project View, the script will be created at the root level.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-0.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>You can edit the script by double-clicking on it in the Project View.  This will launch your default selected editor in Unity's preferences.  You do all your scripting in an external text editor, and not in Unity directly. To set the default script editor, change the drop-down item in <span class='doc-menu'>Unity-&gt;Preferences-&gt;External Script editor</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>These are the contents of a new, empty behaviour script:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>function Update () {
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>A new, empty script does not do a lot on its own, so let's add some functionality.  Change the script to read the following:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>function Update () {
+
+
+
+
+
+
+
+    print("Hello World");
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>When executed, this code will print "Hello World" to the console.  But there is nothing that causes the code to be executed yet.  We have to attach the script to an active <span class='doc-keyword'>GameObject</span> in the <span class='doc-keyword'>Scene</span> before it will be executed.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Attaching scripts to objects</h2>
+
+
+
+
+
+
+
+<p>Save the above script and create a new object in the Scene by selecting <span class='doc-menu'>GameObject-&gt;Create Other-&gt;Cube</span>. This will create a new GameObject called "Cube" in the current Scene.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-1.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>Now drag the script from the Project View to the Cube (in the Scene or <span class='doc-keyword'>Hierarchy View</span>, it doesn't matter). You can also select the Cube and choose <span class='doc-menu'>Component-&gt;Scripts-&gt;New Behaviour Script</span>.  Either of these methods will attach the script to the Cube.  Every script you create will appear in the <span class='doc-menu'>Component-&gt;Scripts</span> menu.  If you have changed the name of your script, you will that name instead.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-2.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>If you select the Cube and look at the <span class='doc-keyword'>Inspector</span>, you will see that the script is now visible.  This means it has been attached.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-3.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>Press <span class='doc-keyword'>Play</span> to test your creation. You should see the text "Hello World" appear beside the Play/Pause/Step buttons. Exit play mode when you see it.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-4.jpg' /></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Manipulating the GameObject</h2>
+
+
+
+
+
+
+
+<p>A <span class='doc-prop'>print()</span> statement can be very handy when debugging your script, but it does not manipulate the GameObject it is attached to. Let's change the script to add some functionality:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>function Update () {
+
+
+
+
+
+
+
+    transform.Rotate(0, 5*Time.deltaTime, 0);
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>If you're new to scripting, it's okay if this looks confusing.  These are the important concepts to understand:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ol><li><span class='doc-prop'>function Update () {}</span> is a container for code that Unity executes multiple times per second (once per frame).
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>transform</span> is a reference to the GameObject's <a href="../Components/class-Transform.html">Transform Component</a>.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Rotate()</span> is a function contained in the Transform <span class='doc-keyword'>Component</span>.
+
+
+
+
+
+
+
+</li><li>The numbers in-between the commas represent the degrees of rotation around each axis of 3D space: X, Y, and Z.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>Time.deltaTime</span> is a member of the Time class that evens out movement over one second, so the cube will rotate at the same speed no matter how many frames per second your machine is rendering.  Therefore, <span class='doc-prop'>5 * Time.deltaTime</span> means 5 degrees per second.
+
+
+
+
+
+
+
+</li></ol><p class='vspace'>With all this in mind, we can read this code as "every frame, rotate this GameObject's Transform component a small amount so that it will equal five degrees around the Y axis each second."
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can access lots of different Components the same way as we accessed <span class='doc-prop'>transform</span> already.  You have to add Components to the GameObject using the <span class='doc-menu'>Component</span> menu.  All the Components you can easily access are listed under <span class='doc-keyword'>Variables</span> on the <a class='urllink' href='../ScriptReference/GameObject.html' rel='nofollow'>GameObject Scripting Reference Page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>For more information about the relationship between GameObjects, Scripts, and Components, please jump ahead to the <a href="../Manual/GameObjects.html">GameObjects</a> page or <a href="../Manual/Using Components.html">Using Components</a> page of this manual.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>The Power of Variables</h2>
+
+
+
+
+
+
+
+<p>Our script so far will always rotate the Cube 5 degrees each second.  We might want it to rotate a different number of degrees per second.  We could change the number and save, but then we have to wait for the script to be recompiled and we have to enter Play mode before we see the results.  There is a much faster way to do it.  We can experiment with the speed of rotation in real-time during Play mode, and it's easy to do.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Instead of typing <span class='doc-prop'>5</span> into the <span class='doc-prop'>Rotate()</span> function, we will declare a <span class='doc-prop'>speed</span> variable and use that in the function.  Change the script to the following code and save it:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>var speed = 5.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Update () {
+
+
+
+
+
+
+
+    transform.Rotate(0, speed*Time.deltaTime, 0);
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<p class='vspace'>Now select the Cube and look at the Inspector. Notice how our <span class='doc-prop'>speed</span> variable appears.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Scripting-5.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>This variable can now be modified directly in the Inspector, just like renaming a file in the file explorer.  Select it, press <span class='doc-menu'>Return</span> and change the value.  You can also right- or option-click on the value and drag the mouse up or down.  You can change the variable at any time, even while the game is running.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Hit Play and try modifying the <span class='doc-prop'>speed</span> value. The Cube's rotation speed will change instantly.  When you exit Play mode, you'll see that your changes are reverted back to their value before entering Play mode.  This way you can play, adjust, and experiment to find the best value, then apply that value permanently.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Using this method of changing a variable's value in the Inspector means that you can re-use one script on many objects, each with a different variable value.  If you attach the script to multiple Cubes, and change the <span class='doc-prop'>speed</span> of each cube, they will all rotate at different speeds even though they use the same script.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Accessing Other Components</h2>
+
+
+
+
+
+
+
+<p>When writing a script Component, you can access other components on the GameObject from within that script.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Using the GameObject members</h3>
+
+
+
+
+
+
+
+<p>You can directly access any member of the <span class='doc-prop'>GameObject</span> class.  You can see a list of all the <span class='doc-prop'>GameObject</span> class members <a href="../Components/class-GameObject.html">here</a>.  If any of the indicated classes are attached to the GameObject as a Component, you can access that Component directly through the script by simply typing the member name.  For example, typing <span class='doc-prop'>transform</span> is equivalent to <span class='doc-prop'>gameObject.transform</span>.  The <span class='doc-prop'>gameObject</span> is assumed by the compiler, unless you specifically reference a different GameObject.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Typing <span class='doc-prop'>this</span> will be accessing the script Component that you are writing.  Typing <span class='doc-prop'>this.gameObject</span> is referring to the GameObject that the script is attached to.  You can access the same GameObject by simply typing <span class='doc-prop'>gameObject</span>.  Logically, typing <span class='doc-prop'>this.transform</span> is the same as typing <span class='doc-prop'>transform</span>.  If you want to access a Component that is not included as a GameObject member, you have to use <span class='doc-prop'>gameObject.GetComponent()</span> which is explained on the next page.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>There are many Components that can be directly accessed in any script.  For example, if you want to access the <span class='doc-prop'>Translate</span> function of the Transform component, you can just write <span class='doc-prop'>transform.Translate()</span> or <span class='doc-prop'>gameObject.transform.Translate()</span>.  This works because all scripts are attached to a GameObject.  So when you write <span class='doc-prop'>transform</span> you are implicitly accessing the Transform Component of the GameObject that is being scripted.  To be explicit, you write <span class='doc-prop'>gameObject.transform</span>.  There is no advantage in one method over the other, it's all a matter of preference for the scripter.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>To see a list of all the Components you can access implicitly, take a look at the <a class='urllink' href='../ScriptReference/GameObject.html' rel='nofollow'>GameObject</a> page in the <a class='urllink' href='../ScriptReference/index.html' rel='nofollow'>Scripting Reference</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Using <span class='doc-prop'>GetComponent()</span></h3>
+
+
+
+
+
+
+
+<p>There are many Components which are not referenced directly as members of the <span class='doc-prop'>GameObject</span> class.  So you cannot access them implicitly, you have to access them explicitly.  You do this by calling the <span class='doc-prop'>GetComponent("component name")</span> and storing a reference to the result.  This is most common when you want to make a reference to another script attached to the GameObject.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Pretend you are writing <em>Script B</em> and you want to make a reference to <em>Script A</em>, which is attached to the same GameObject.  You would have to use <span class='doc-prop'>GetComponent()</span> to make this reference.  In Script B, you would simply write:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><span class='doc-prop'>scriptA = GetComponent("ScriptA");</span>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Then you would be able access any of the Script A variables by writing <span class='doc-prop'>scriptA.variableName</span> within Script B.  For more help with using <span class='doc-prop'>GetComponent()</span>, take a look at the <a class='urllink' href='../ScriptReference/GameObject.GetComponent.html' rel='nofollow'>GetComponent() Script Reference page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Where to go from here</h2>
+
+
+
+
+
+
+
+<p>This was just a short introduction on how to use scripts inside the Editor. For more examples, check out the <a href="../Manual/Tutorials.html">Tutorials</a> that come with Unity. You should also read through <a class='urllink' href='../ScriptReference/index.html' rel='nofollow'>Scripting Overview</a> inside the Script Reference, which contains a more thorough introduction into scripting with Unity plus pointers into the reference itself for in-depth information. If you're really stuck, be sure to visit the <a class='urllink' href='http://answers.unity3d.com' rel='nofollow'>Unity Answers</a> or <a class='urllink' href='http://forum.unity3d.com' rel='nofollow'>Unity Forums</a> and ask questions there.  Someone is always willing to help.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-14</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Tracker Modules.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Asset Server.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

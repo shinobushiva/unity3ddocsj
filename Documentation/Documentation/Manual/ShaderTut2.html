@@ -1,0 +1,3482 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Shaders: Vertex and Fragment Programs</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Shaders: Vertex and Fragment Programs</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/Advanced.html">Advanced</a> &gt; <a href="../Manual/Shaders.html">Shaders</a> &gt; <a href="../Manual/ShaderTut2.html">Shaders: Vertex and Fragment Programs</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/ShaderTut1.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/GraphicsEmulation.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Shaders: Vertex and Fragment Programs</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>This tutorial will teach you how to write custom vertex and fragment programs in Unity shaders. For a basic introduction to <span class='doc-keyword'>ShaderLab</span> see the <a href="../Manual/ShaderTut1.html">Getting Started tutorial</a>. If you want to write shaders that interact with lighting, read about <b><a href="../Components/SL-SurfaceShaders.html">Surface Shaders</a></b> instead.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Lets start with a small recap of the general structure of a shader:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "MyShaderName" {
+
+
+
+
+
+
+
+    Properties {
+
+
+
+
+
+
+
+        // ... properties here ...
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    SubShader {
+
+
+
+
+
+
+
+        // ... subshader for graphics hardware A ...
+
+
+
+
+
+
+
+        Pass {
+
+
+
+
+
+
+
+            // ... pass commands ...
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        // ... more passes if needed ...
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    SubShader {
+
+
+
+
+
+
+
+        // ... subshader for graphics hardware B ...
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    // ... Optional fallback ...
+
+
+
+
+
+
+
+    FallBack "VertexLit"
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>Here at the end we introduce a new command:
+
+
+
+
+
+
+
+</p><pre>    <span class='doc-prop'>FallBack "VertexLit"</span>
+
+
+
+
+
+
+
+</pre><p class='vspace'>The <span class='doc-prop'><a href="../Components/SL-Fallback.html">Fallback</a></span> command can be used at the end of the shader; it tells which shader should be used if no <span class='doc-keyword'>SubShaders</span> from the current shader can run on user's graphics hardware. The effect is the same as including all SubShaders from the fallback shader at the end. For example, if you were to write a normal-mapped shader, then instead of writing a very basic non-normal-mapped subshader for old graphics cards you can just fallback to built-in <span class='doc-keyword'>VertexLit</span> shader.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The basic building blocks of the shader are introduced in the <a href="../Manual/ShaderTut1.html">first shader tutorial</a> while the full documentation of <a href="../Components/SL-Properties.html">Properties</a>, <a href="../Components/SL-SubShader.html">SubShaders</a> and <a href="../Components/SL-Pass.html">Passes</a> are also available.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>A quick way of building SubShaders is to use passes defined in other shaders. The command <span class='doc-prop'><a href="../Components/SL-UsePass.html">UsePass</a></span> does just that, so you can reuse shader code in a neat fashion. As an example the following command uses the pass with the name "BASE" from the built-in <span class='doc-keyword'>Specular</span> shader:
+
+
+
+
+
+
+
+</p><pre>    <span class='doc-prop'>UsePass "Specular/BASE"</span>
+
+
+
+
+
+
+
+</pre><p class='vspace'>In order for <span class='doc-prop'>UsePass</span> to work, a name must be given to the pass one wishes to use. The <span class='doc-prop'><a href="../Components/SL-Name.html">Name</a></span> command inside the pass gives it a name:
+
+
+
+
+
+
+
+</p><pre>    <span class='doc-prop'>Name "MyPassName"</span>
+
+
+
+
+
+
+
+</pre><div class='vspace'></div><h2>Vertex and fragment programs</h2>
+
+
+
+
+
+
+
+<p>We described a pass that used just a single texture combine instruction in the <a href="../Manual/ShaderTut1.html">first tutorial</a>. Now it is time to demonstrate how we can use vertex and fragment programs in our pass.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>When you use vertex and fragment programs (the so called "programmable pipeline"), most of the hardcoded functionality ("fixed function pipeline") in the graphics hardware is switched off. For example, using a vertex program turns off standard 3D transformations, lighting and texture coordinate generation completely. Similarly, using a fragment program replaces any texture combine modes that would be defined in SetTexture commands; thus SetTexture commands are not needed.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Writing vertex/fragment programs requires a thorough knowledge of 3D transformations, lighting and coordinate spaces - because you have to rewrite the fixed functionality that is built into API's like OpenGL yourself. On the other hand, you can do much more than what's built in!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Using Cg in ShaderLab</h2>
+
+
+
+
+
+
+
+<p>Shaders in ShaderLab are usually written in <a class='urllink' href='http://developer.nvidia.com/page/cg_main.html' rel='nofollow'>Cg programming language</a> by embedding "Cg snippets" in the shader text. Cg snippets are compiled into low-level shader assembly by the Unity editor, and the final shader that is included in your game's data files only contains this low-level assembly. When you select a shader in the <span class='doc-keyword'>Project View</span>, the <span class='doc-keyword'>Inspector</span> shows shader text after Cg compilation, which might help as a debugging aid. Unity automatically compiles Cg snippets for both OpenGL and Direct3D, so your shaders that use Cg will just work on both. Note that because Cg code is compiled by the editor, you can't create Cg shaders from scripts at runtime.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In general, Cg snippets are placed inside Pass blocks. They look like this:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre>  Pass {
+
+
+
+
+
+
+
+      <em>// ... the usual pass state setup ...</em>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <b>CGPROGRAM</b>
+
+
+
+
+
+
+
+      <em>// compilation directives for this snippet, e.g.:</em>
+
+
+
+
+
+
+
+      <b>#pragma vertex</b> vert
+
+
+
+
+
+
+
+      <b>#pragma fragment</b> frag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <em>// the Cg code itself</em>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <b>ENDCG</b>
+
+
+
+
+
+
+
+      <em>// ... the rest of pass setup ...</em>
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+</pre><p class='vspace'>The following example demonstrates a complete shader with Cg programs that renders object normals as colors:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "Tutorial/Display Normals" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+#pragma fragment frag
+
+
+
+
+
+
+
+#include "UnityCG.cginc"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : SV_POSITION;
+
+
+
+
+
+
+
+    float3 color : COLOR0;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v2f vert (appdata_base v)
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+
+
+
+
+
+
+
+    o.color = v.normal * 0.5 + 0.5;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+half4 frag (v2f i) : COLOR
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    return half4 (i.color, 1);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+Fallback "VertexLit"
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>When applied on an object it will result in an image like this (if your graphics card supports vertex &amp; fragment programs of course):
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/ShaderTut2-0.jpg' /></div>
+
+
+
+
+
+
+
+<p class='vspace'>Our "Display Normals" shader does not have any properties, contains a single SubShader with a single Pass that is empty except for the Cg code. Finally, a fallback to the built-in <span class='doc-keyword'>VertexLit</span> shader is defined. Let's dissect the Cg code part by part:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre>    <b>CGPROGRAM</b>
+
+
+
+
+
+
+
+    <b>#pragma vertex</b> vert
+
+
+
+
+
+
+
+    <b>#pragma fragment</b> frag
+
+
+
+
+
+
+
+    <em>// ... snip ...</em>
+
+
+
+
+
+
+
+    <b>ENDCG</b>
+
+
+
+
+
+
+
+</pre><p class='vspace'>The whole Cg snippet is written between <span class='doc-prop'>CGPROGRAM</span> and <span class='doc-prop'>ENDCG</span> keywords. At the start compilation directives are given as <span class='doc-prop'>#pragma</span> statements:
+
+
+
+
+
+
+
+</p><ul><li><span class='doc-prop'>#pragma vertex</span> <span class='doc-keyword'>name</span> tells that the code contains a vertex program in the given function (<span class='doc-prop'>vert</span> here).
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>#pragma fragment</span> <span class='doc-keyword'>name</span> tells that the code contains a fragment program in the given function (<span class='doc-prop'>frag</span> here).
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>Following the compilation directives is just plain Cg code. We start by including a builtin Cg file:
+
+
+
+
+
+
+
+</p><pre>    #include <span class='doc-keyword'>UnityCg.cginc</span>
+
+
+
+
+
+
+
+</pre><p class='vspace'>The <span class='doc-keyword'>UnityCg.cginc</span> file contains commonly used declarations and functions so that the shaders can be kept smaller. The file itself is found inside Unity application (<span class='doc-menu'>{unity install path}/Data/CGIncludes/UnityCG.cginc</span> on Windows, <span class='doc-menu'>/Applications/Unity/Unity.app/Contents/CGIncludes/UnityCG.cginc</span> on Mac). Here we'll use <span class='doc-prop'>appdata_base</span> structure from that file. We could just define them directly in the shader and not include the file of course.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Next we define a "vertex to fragment" structure (here named <span class='doc-prop'>v2f</span>) - what information is passed from the vertex to the fragment program. We pass the position and color parameters. The color will be computed in the vertex program and just output in the fragment program.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>We proceed by defining the vertex program - <span class='doc-prop'>vert</span> function. Here we compute the position and output input normal as a color:
+
+
+
+
+
+
+
+</p><pre>    o.color = v.normal * 0.5 + 0.5;
+
+
+
+
+
+
+
+</pre><p class='vspace'>Normal components are in -1..1 range, while colors are in 0..1 range, so we scale and bias the normal in the code above. Next we define a fragment program - <span class='doc-prop'>frag</span> function that just outputs the calculated color and 1 as the alpha component:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre>    half4 frag (v2f i) : COLOR
+
+
+
+
+
+
+
+    {
+
+
+
+
+
+
+
+        return half4 (i.color, 1);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+</pre><p class='vspace'>That's it, our shader is finished! Even this simple shader is very useful to visualize mesh normals.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Of course, this shader does not respond to lights at all, and that's where things get a bit more interesting; read about <a href="../Components/SL-SurfaceShaders.html">Surface Shaders</a> for details.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Using shader properties in Cg code</h2>
+
+
+
+
+
+
+
+<p>When you define properties in the shader, you give them a name like <span class='doc-prop'>_Color</span> or <span class='doc-prop'>_MainTex</span>. To use them in Cg you just have to define a variable of a matching name and type. Unity will automatically set Cg variables that have names matching with shader properties.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Here is a complete shader that displays a texture modulated by a color. Of course, you could easily do the same in a texture combiner call, but the point here is just to show how to use properties in Cg:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "Tutorial/Textured Colored" {
+
+
+
+
+
+
+
+Properties {
+
+
+
+
+
+
+
+    _Color ("Main Color", Color) = (1,1,1,0.5)
+
+
+
+
+
+
+
+    _MainTex ("Texture", 2D) = "white" { }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+#pragma fragment frag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include "UnityCG.cginc"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+float4 _Color;
+
+
+
+
+
+
+
+sampler2D _MainTex;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4  pos : SV_POSITION;
+
+
+
+
+
+
+
+    float2  uv : TEXCOORD0;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+float4 _MainTex_ST;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v2f vert (appdata_base v)
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+
+
+
+
+
+
+
+    o.uv = TRANSFORM_TEX (v.texcoord, _MainTex);
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+half4 frag (v2f i) : COLOR
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    half4 texcol = tex2D (_MainTex, i.uv);
+
+
+
+
+
+
+
+    return texcol * _Color;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+Fallback "VertexLit"
+
+
+
+
+
+
+
+} </pre>
+
+
+
+
+
+
+
+<p class='vspace'>The structure of this shader is the same as in the previous example. Here we define two properties, namely <span class='doc-prop'>_Color</span> and <span class='doc-prop'>_MainTex</span>. Inside Cg code we define corresponding variables:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre>    float4 <span class='doc-prop'>_Color</span>;
+
+
+
+
+
+
+
+    sampler2D <span class='doc-prop'>_MainTex</span>;
+
+
+
+
+
+
+
+</pre><p class='vspace'>See <a href="../Components/SL-PropertiesInPrograms.html">Accessing Shader Properties in Cg</a> for more information.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The vertex and fragment programs here don't do anything fancy; vertex program uses the <span class='doc-prop'>TRANSFORM_TEX</span> macro from UnityCG.cginc to make sure texture scale&amp;offset is applied correctly, and fragment program just samples the texture and multiplies by the color property.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Note that because we're writing our own fragment program here, we don't need any <a href="../Components/SL-SetTexture.html">SetTexture</a> commands. How the textures are applied in the shader is entirely controlled by the fragment program.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Summary</h2>
+
+
+
+
+
+
+
+<p>We have shown how custom shader programs can be generated in a few easy steps. While the examples shown here are very simple, there's nothing preventing you to write arbitrarily complex shader programs! This can help you to take the full advantage of Unity and achieve optimal rendering results.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The complete ShaderLab reference manual is <a href="../Components/SL-Reference.html">here</a>.  We also have a forum for shaders at <a class='urllink' href='http://forum.unity3d.com' rel='nofollow'>forum.unity3d.com</a> so go there to get help with your shaders!  Happy programming, and enjoy the power of Unity and Shaderlab.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-25</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/ShaderTut1.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/GraphicsEmulation.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

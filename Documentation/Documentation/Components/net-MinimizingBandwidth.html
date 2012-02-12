@@ -1,0 +1,2434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - Minimizing Network Bandwidth</title>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+		<tbody>
+
+
+
+
+
+
+
+			<tr>
+
+
+
+
+
+
+
+				<td class="titleleft">
+
+
+
+
+
+
+
+					<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+				<td>
+
+
+
+
+
+
+
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+				<td class="titlemid">
+
+
+
+
+
+
+
+					<table>
+
+
+
+
+
+
+
+						<tbody>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td class="doctitle">
+
+
+
+
+
+
+
+									Minimizing Network Bandwidth</td>
+
+
+
+
+
+
+
+								<td>
+
+
+
+
+
+
+
+									<table align="right">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td colspan="4">
+
+
+
+
+
+
+
+									<table class="docpath" width="100%">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+												<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/net-MinimizingBandwidth.html">Minimizing Network Bandwidth</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+												<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+
+
+
+
+
+
+
+											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+						</tbody>
+
+
+
+
+
+
+
+					</table>
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				<td class="titleright" width="9">
+
+
+
+
+
+
+
+					<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+			</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+
+
+
+
+
+
+	</table>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<a href="../Components/net-MasterServerBuild.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Components/net-MasterServerBuild.html">Previous</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<a href="../Components/Asset Server Guide.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Components/Asset Server Guide.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+
+
+
+
+
+
+
+				ネットワーク帯域幅の最小化</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<p>
+
+
+
+
+
+
+
+				ネットワーク経由で送信されるデータの種類を考えることは重要です。理想的には、ゲームがすべてのクライアントで正しく動作させるためのデータの絶対的な最小量を送信することです。</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				データの同期について</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				どのようにデータを同期するかを決定することは帯域幅に使用について影響を与えます。各ネットワークビューのいずれかで<span class="doc-prop">Unreliable</span>か<span class="doc-prop">Reliable Delta Compression</span>のどちらかを使用することができます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Unreliable</span> means everything is sent during each iteration of the network update loop. This update loop is executed according to what is set by <span class="doc-prop">Network.sendRate</span>, by default 15 times per second. By using <span class="doc-prop">Unreliable</span> you ensure frequent updates of information and you don&#39;t care if updates are dropped or delayed. Dropped or delayed packets are ignored. For objects which frequently change state this might be the best way of synchronizing.</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				Bear in mind amount of data that is constantly being sent out. For example, if you are synchronizing a transform you are sending 9 float values, 36 Bytes per update or 288 Bytes per second. For the server, if running with 8 clients, this means he receives (8*36*15) 4,320 KBytes/s or 34,6Kbits/s and has to transmit (8*7*36*15) 30,2 KBytes/s or 242Kbits/s.</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				You can have a dramatic effect on the bandwidth by decreasing the send rate of the network updates. This depends on you game but for fast paced game this should be quite high (like 15).</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span class="doc-prop">Reliable Delta Compressed</span> means that data is sent reliably and in order, if out of order packets arrive they are held back until the correct packet is there. Data is also delta compressed which means only the difference between the last sent state and the current state is sent. If the difference is nothing then nothing is sent. This greatly decreases the bandwidth used by objects depending on how static they are during a game. A static object send no updates at all. This can however affect the latency of the state synchronization, packets might arrive delayed because they needed to be resent. In this case nothing is received at all until the dropped packet arrives. Using interpolation decreases the effect of dropped packets.</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				What data is synchronized</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				It is important to try and think creatively on how your game can be synchronized so it appears to be the same on all clients. It might not be necessary for everything to be exactly the same, a good example is synchronizing animation. When you have, for example, a character which has all sorts of animation, like walking, running, jumping etc. You want all this to appear the same but it isn&#39;t necessary to be exactly the same. If you directly put an <span class="doc-prop">Animation</span> component as an observed component in a Network View then it is exactly synchronized. It sends time, state and the enable boolean. This generates a lot of traffic as time constantly changes but there is an easy and efficient alternative way of doing this. You can make a network animation script which is serializes only a single <em>char</em> variable, and then in the animation script you send a message to this network script and tell it what the current animation state is. Only the single char variable is sent each time that animation changes, which is nothing compared to brute force synchronizing the animation.</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				When to synchronize data</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Is it really necessary to always keep a game completely in sync on all clients? Think about a game where there are large buildings all over the place or big race tracks which go into forests or over and under hills. When one client is nowhere in sight of another client there is no need to keep them synchronized with each other. This can greatly decrease the load on the server as he no longer needs to tell everyone about everyone else. This is sometimes called using <span class="doc-keyword">Relevant Sets</span>. You have a set of relevancy for each client which defines what data he needs to receive. At the moment this can, however, only be done with RPCs as their destination scope has greater control. You can direct them to specific network players, based on your own logic on who should get them.</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h3>
+
+
+
+
+
+
+
+				Level loading</h3>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				One exception for when to worry about bandwidth is during startup or level loading. Here it is fine to send bulks of data to initialize the game, each client just waits until everybody is ready. You could even send textures or picture data so players can really customize their avatars.</p>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+			<small>Page last updated: 2009-11-23</small>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/DesktopNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/iPhoneNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/AndroidNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src="../Images/PlatformArrowRight.png" alt=""> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidNO.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidYES.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<small><a href="../Components/net-MasterServerBuild.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Components/net-MasterServerBuild.html">Previous</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<small><a href="../Components/Asset Server Guide.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Components/Asset Server Guide.html">Next</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+

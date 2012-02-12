@@ -1,0 +1,2674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<title>Unity - Asset Workflow</title>
+
+
+
+
+
+
+
+<!-- #BeginTemplate "/Templates/manual-page.dwt" -->		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" --><!-- #TemplateEndEditable -->		<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+		<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+			<tbody>
+
+
+
+
+
+
+
+				<tr>
+
+
+
+
+
+
+
+					<td class="titleleft">
+
+
+
+
+
+
+
+						<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+					<td>
+
+
+
+
+
+
+
+						<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+					<td class="titlemid">
+
+
+
+
+
+
+
+						<table>
+
+
+
+
+
+
+
+							<tbody>
+
+
+
+
+
+
+
+								<tr>
+
+
+
+
+
+
+
+									<td class="doctitle">
+
+
+
+
+
+
+
+										Asset Workflow</td>
+
+
+
+
+
+
+
+									<td>
+
+
+
+
+
+
+
+										<table align="right">
+
+
+
+
+
+
+
+											<tbody>
+
+
+
+
+
+
+
+												<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->													<td class="Manual">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+													<td class="Manual">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+													<td class="Manual">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->												</tr>
+
+
+
+
+
+
+
+											</tbody>
+
+
+
+
+
+
+
+										</table>
+
+
+
+
+
+
+
+									</td>
+
+
+
+
+
+
+
+								</tr>
+
+
+
+
+
+
+
+								<tr>
+
+
+
+
+
+
+
+									<td colspan="4">
+
+
+
+
+
+
+
+										<table class="docpath" width="100%">
+
+
+
+
+
+
+
+											<tbody>
+
+
+
+
+
+
+
+												<tr>
+
+
+
+
+
+
+
+													<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->														<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Unity Basics.html">Unity Basics</a> &gt; <a href="../Manual/Asset Workflow.html">Asset Workflow</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+													<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->													</td>
+
+
+
+
+
+
+
+												</tr>
+
+
+
+
+
+
+
+											</tbody>
+
+
+
+
+
+
+
+										</table>
+
+
+
+
+
+
+
+									</td>
+
+
+
+
+
+
+
+								</tr>
+
+
+
+
+
+
+
+							</tbody>
+
+
+
+
+
+
+
+						</table>
+
+
+
+
+
+
+
+					</td>
+
+
+
+
+
+
+
+					<td class="titleright" width="9">
+
+
+
+
+
+
+
+						<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+				</tr>
+
+
+
+
+
+
+
+			</tbody>
+
+
+
+
+
+
+
+		</table>
+
+
+
+
+
+
+
+		<div class="manual">
+
+
+
+
+
+
+
+			<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->				<div class="nav">
+
+
+
+
+
+
+
+					<div class="nav-prev">
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<a href="../Manual/Customizing Your Workspace.html">Previous</a></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+					<div class="nav-next">
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<a href="../Manual/Creating Scenes.html">Next</a></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->				<h1>
+
+
+
+
+
+
+
+					Asset ワークフロー</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->				<p>
+
+
+
+
+
+
+
+					ここでは、UnityにおけるAssetの使い方を学習します。一般的で概略的な基本操作を解説します. たとえば、3次元メッシュの使い方について説明します。</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					ラフなAssetの作成</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					&nbsp;サポートれている3Dモデリングツールを使って、ラフバージョンのAssetを作成します。ここではMayaを使っています。準備ができるまで、Assetの準備を行ってください。Unityによってサポートされているアプリケーションのリストは、<a href="http://juug.org/unity3docsj/Documentation/Documentation/Manual/HOWTO-importObject.html">ここ</a>で確認できます。</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					インポート(Import)</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					Assetを初めて保存するときは、 プロジェクトフォルダの中の<strong>Assets</strong>フォルダに保存すれば大丈夫です。Unityプロジェクトを開くとAssetが検出されプロジェクトにインポートされます。<span class="doc-keyword">プロジェクトビュー(Project View)</span>をみると、保存した場所にAssetがあることを確認できます。 UnityはFBXファイル形式にモデルを変換するために、モデリングパッテージによって提供されるFBXエクスポータを使用していることに注意してください。Unityがモデリングパッケージを利用するためには、FBXエクスポータを持っている必要があります。また、FBXとして直接アプリケーションから書き出してプロジェクトフォルダに保存することができます。Unityによってサポートされているアプリケーションの一覧は、<a href="../Manual/HOWTO-importObject.html">このページ</a>を参照してください。</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					インポート設定(Import Settings)</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					<span class="doc-keyword">プロジェクトビュー</span>においてAssetを選択すると、インポート設定が<span class="doc-keyword">インスペクタ(Inspector)</span>に表示されます。選択したAssetの種類により表示されるオプションは異なります。</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					Assetをシーンに追加</h2>
+
+
+
+
+
+
+
+				プロジェクトビューから<span class="doc-keyword">階層(Hierarchy)</span>、または、<span class="doc-keyword">シーンビュー(Scene View)</span>にメッシュをドラッグすれば、シーンに追加できます。 メッシュをシーンにドラッグすると、<span class="doc-prop">メッシュレンダラ(Mesh Renderer)</span><span class="doc-keyword">コンポーネント</span>を持つ<span class="doc-keyword">ゲームオブジェクト(GameObject)</span> が作られます。テクスチャやサウンドファイルを使っている場合は、既にシーンやプロジェクトにあるゲームオブジェクトに追加しなければなりません。
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					異なるAssetを一緒に追加</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					ここでは、一般的なAsset間の関係を説明します。</p>
+
+
+
+
+
+
+
+				<ul>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						テクスチャは<span class="doc-keyword">マテリアル(Material)</span>に適用されます</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						マテリアルはゲームオブジェクトに(メッシュレンダラコンポーネントとともに)適用されます</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						<span class="doc-prop">アニメーション(Animation)</span>はゲームオブジェクトに(アニメーションコンポーネントとともに)適用されます</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						サウンドファイルはゲームオブジェクトに(<span class="doc-prop">オーディオソース(Audio Source)</span>コンポーネントとともに)適用されます</li>
+
+
+
+
+
+
+
+				</ul>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					プレハブ(Prefab)の作成</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					<span class="doc-keyword">プレハブ</span>はゲームオブジェクトとコンポーネントを集めたものです。コンポーネントはシーン中で再利用できるものです。特徴的なオブジェクトがプレハブから生成されます。これをインスタンシングと呼びます。木を例にしましょう。プレハブから木を生成すると、同じ木をシーン中に複数配置することができます。それぞれの木はプレハブに関連づけられているため、プレハブを変更するとすべての木が自動的に変更されます。つまり、メッシュ、マテリアルやその他なんでも、プレハブを変更するだけで、すべての生成された木が変更されることになります。また、インスタンスを変更してから<span class="doc-menu">GameObject-&gt;Apply Changes to Prefab</span>をメインメニューから選択して変更をプレハブに適用することもできます。これを使えばAssetの設定や更新が容易に行えます。</p>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					複数のコンポーネントや階層化されたゲームオブジェクトを含むゲームオブジェクトに対して、最上位のゲームオブジェクト(または<span class="doc-keyword">root</span>)をプレハブにすることができます。これにより、ゲームオブジェクト全体を再利用できるようになります。</p>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					プレハブはゲームオブジェクトの構造設計図だと考えられます。すべてのプレハブのクローンは設計図と同一です。設計図が更新されるとすべてのクローンも更新されます。プレハブを更新する方法として、クローンを更新してからそれを設計図に適用する方法もあります。プレハブの更新に関しては<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Prefabs.html">プレハブ(Prefabs)</a>のページを参照してください。</p>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					実際にシーン中でゲームオブジェクトからプレハブを作るには、まず、新しいプレハブをプロジェクトビューで作ります。プレハブの名前を変更します。次に、プレハブにしたいシーン中のゲームオブジェクトをクリックします。新しいプレハブにドラッグすると、ゲームオブジェクトの名前が青に変わります。これで再利用可能なプレハブを作ることができました。</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					Assetの更新</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					インポートし実体化したAssetをプレハブに関連づけました。もし、元となるAssetを編集したい場合、プロジェクトビューからダブルクリックしてください。適切なアプリケーションが起動し、変更を行えます。更新が終了したら、アプリケーション上で保存してください。Unityに戻ると、更新が自動的に検出されAssetは再インポートされます。プレハブに関連づけられたAssetも同様に変更されます。プレハブが更新されたことが確認できます。Assetの更新について知らなければならないことはこれだけです。開いて保存するだけなのです！</p>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					オプション - Assetにラベルを追加する</h2>
+
+
+
+
+
+
+
+				<p>
+
+
+
+
+
+
+
+					もしAssetを整理しておきたいのなら、Assetにラベルを追加することをお勧めします。これにより、プロジェクトビューの検索フィールド、またはオブジェクトセレクターで各Asset に関連付けられているラベルを検索することができます。</p>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					Asset にラベルを追加する手順：</p>
+
+
+
+
+
+
+
+				<ul>
+
+
+
+
+
+
+
+					<li style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; margin-left: 0px; ">
+
+
+
+
+
+
+
+						ラベルを追加するAssetを（プロジェクトビューから）選択します。</li>
+
+
+
+
+
+
+
+					<li style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; margin-left: 0px; ">
+
+
+
+
+
+
+
+						Assetに関するラベルを持ってない場合、インスペクタの&rdquo;ラベルに追加&rdquo;（&rdquo;Add Label&quot;）アイコン(<img class="figure" src="../Images/manual/Asset Workflow-0.jpg" />)をクリックします。
+
+
+
+
+
+
+
+						<ul>
+
+
+
+
+
+
+
+							<li>
+
+
+
+
+
+
+
+								ラベルをAssetに関連付けさせるなら、ラベルがあるところをクリクしてください。</li>
+
+
+
+
+
+
+
+						</ul>
+
+
+
+
+
+
+
+					</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						ラベルの書き込みが始まります。</li>
+
+
+
+
+
+
+
+				</ul>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					<b>Notes:</b></p>
+
+
+
+
+
+
+
+				<ul>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						任意のAsset に複数のラベルをもたせることができます。</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						ラベルを分離・作成するために、Assetラベル名を書き込むときに<strong>space</strong>または<strong>enter</strong>を押してください。</li>
+
+
+
+
+
+
+
+				</ul>
+
+
+
+
+
+
+
+				<small>Page last updated: 2010-07-21 <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable --></small>
+
+
+
+
+
+
+
+				<div class="nav">
+
+
+
+
+
+
+
+					<div class="nav-prev">
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<small><a href="../Manual/Customizing Your Workspace.html">Previous</a></small></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+					<div class="nav-next">
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<small><a href="../Manual/Creating Scenes.html">Next</a></small></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+		<p>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->		</p>
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+

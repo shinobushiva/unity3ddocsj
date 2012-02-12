@@ -1,0 +1,2930 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Optimizing Graphics Performance</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Optimizing Graphics Performance</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/iphone-GettingStarted.html">Getting Started with iOS Development</a> &gt; <a href="../Manual/iphone-performance.html">Optimizing Performance in iOS.</a> &gt; <a href="../Manual/iPhone Optimizing Graphics Performance.html">Optimizing Graphics Performance</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/iphone-performance.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/iphone-DrawCall-Batching.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Optimizing Graphics Performance</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p><a name='DesktopOptimizingGraphicsPerformance' id='DesktopOptimizingGraphicsPerformance'></a>
+
+
+
+
+
+
+
+</p><a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/iPhone Optimizing Graphics Performance-0.jpg' /> Desktop </h1> </a>
+
+
+
+
+
+
+
+<div class='specific-desktop' style='display: block;' id='specific-desktop' > 
+
+
+
+
+
+
+
+<p>Making your game run smoothly is critical to its success.  Thankfully Unity is there for you!  We have spent a lot of time and energy making Unity iOS run fast on a wide variety of hardware. Below are some simple guidelines to maximizing the speed of your game.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>In Summary - Combine, Combine, Combine</h2>
+
+
+
+
+
+
+
+<ul><li>If you care about performance, combine meshes.
+
+
+
+
+
+
+
+</li><li>If you care about performance, make sure all of your combined meshes also share the same material and texture.
+
+
+
+
+
+
+
+</li><li>The <a href="../Manual/Profiler.html">Profiler</a> and <a href="../Manual/RenderingStatistics.html">Rendering Statistics</a> window are very helpful!
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>In Detail:</h3>
+
+
+
+
+
+
+
+<p>Modern graphics cards are really good at pushing a lot of polygons, but they have quite a bit of overhead for every batch that you submit to the graphics card. So if you have a 100-triangle object it is going to be just as expensive to render as a 1500-triangle object. The "sweet spot" for optimal rendering performance is somewhere around 1500-4000 triangles per mesh.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You only pay a rendering cost for objects that have a <span class='doc-keyword'>Mesh Renderer</span> attached. And you only pay for those that are within the view frustum. There is no rendering cost from having a lot of empty <span class='doc-keyword'>GameObjects</span> in your scene.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li>The best way to improve rendering performance is to combine objects together so each mesh has around 1500 or more triangles and uses only one <span class='doc-keyword'>Material</span> for the entire mesh.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>It is important to understand that just combining two objects which don't share a material does not give you any performance increase at all. If you want to combine effectively, you need to make sure your mesh uses only one material after you have combined it.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>There is, however, one thing to be aware of when combining objects: if you use a lot of small lights in your scene, it might make sense to combine only objects that are close to each other.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The rendering cost for a mesh that has multiple materials is the same as having multiple renderers for each material. The most common reason why you have multiple materials is that two meshes don't share the same textures. So, if you want to optimize rendering performance, you need to make sure that the objects you combine share textures.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li>Unity is very good at pushing lots of polygons. Unity uploads all geometry to the graphics card for good cache utilization and optimal data alignment.
+
+
+
+
+
+
+
+</li><li>You simply have to make sure that the graphics card doesn't have to handle large numbers of batches.
+
+
+
+
+
+
+
+</li><li>If you use <a href="../Components/RenderTech-ForwardRendering.html">Forward rendering path</a>, the number of <span class='doc-keyword'>Pixel Lights</span> affecting an object heavily affects performance.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>Pixel Lights in Forward Rendering Path</h2>
+
+
+
+
+
+
+
+<p><em>Note: this applies only to <a href="../Components/RenderTech-ForwardRendering.html">Forward rendering path</a>.</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you use pixel lighting, then each <code>GameObject</code> has to be rendered as many times as there are pixel lights that affect the object. If you combine two objects that are very far apart, it might increase the size of the object and now you have a lot of lights affecting this big object. If your objects were separate however, the light won't have to be applied on the part of the mesh which is far away. This can result in rendering the combined mesh as many times as the uncombined mesh (thus not saving anything).  For this reason, you should keep <code>GameObjects</code> that are very far away as individual Meshes.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>When rendering a mesh, Unity finds all lights surrounding the mesh. It then figures out what lights affect the mesh the most. The <a href="../Components/class-QualitySettings.html">QualitySettings</a> are used to modify how many of the lights end up as pixel lights and how many as vertex lights.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Every light calculates its importance based on how far away it is from the mesh and how intense it is.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Some lights are more important than others depending on the game context. For this reason, every light has a <span class='doc-prop'>Render Mode</span> setting which can be set to <span class='doc-prop'>Important</span> or <span class='doc-prop'>Not Important</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Imagine the player's car with head lights driving through the night. The head lights are the most important light in the game. For this reason, the head lights Render Mode should be set to <span class='doc-prop'>Important</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you have a light that is not very important and also visually doesn't gain much from being a pixel light, set the lights Render Mode to <span class='doc-prop'>Not Important</span>. This way, you don't waste rendering performance or lose any visual quality.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Per-Layer Cull Distances</h2>
+
+
+
+
+
+
+
+<p>You might want to cull small objects earlier to reduce number of draw calls. For example, small rocks and debris could be made invisible at much smaller distance than large buildings. To do that, put small objects into a <a href="../Components/Layers.html">separate layer</a> and setup per-layer cull distances using the <a class='urllink' href='../ScriptReference/Camera-layerCullDistances.html' rel='nofollow'>Camera.layerCullDistances</a> script function.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Shadows</h2>
+
+
+
+
+
+
+
+<p>If you are deploying for Desktop platforms then you should pay attention to shadows; shadows are generally expensive. They can add a lot of performance overhead to your game if they are not used correctly. For more details about shadows, please read the <a href="../Manual/Shadows.html">Shadows page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><b>Note:</b> Remember that shadows are not currently supported on iOS or Android devices.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>See Also</h2>
+
+
+
+
+
+
+
+<ul><li class='toclink'><a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a>
+
+
+
+
+
+
+
+</li><li class='toclink'><a href="../Manual/RenderingStatistics.html">Rendering Statistics Window</a>
+
+
+
+
+
+
+
+</li></ul></div>
+
+
+
+
+
+
+
+<p><a name='iPhoneOptimizingGraphicsPerformance' id='iPhoneOptimizingGraphicsPerformance'></a>
+
+
+
+
+
+
+
+</p><a class='iosRef' id='iosRef' href="javascript:ShowHideDiv('iosRef','specific-ios', 'iOS');"><h1><img class='figure' src='../Images/manual/iPhone Optimizing Graphics Performance-1.jpg' /> iOS</h1></a>
+
+
+
+
+
+
+
+<div class='specific-ios' style='display: block;' id='specific-ios' > 
+
+
+
+
+
+
+
+<p>If you want to optimize your content for iOS, then it is beneficial for you to <a href="../Manual/iphone-Hardware.html">learn more about iOS hardware devices</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Alpha-Testing</h2>
+
+
+
+
+
+
+
+<p>Contrary to the desktop, alpha-testing is very expensive on iOS. If you can replace your alpha-test shader with alpha-blend, do so. Make sure your alpha-blended shaders do <b>NOT</b> contain "a very small cut-off value" alpha-test based "optimization" as such "optimization" will have negative performance impact on iOS.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you absolutely need to use alpha-testing, make sure to minimize its usage.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Vertex Performance</h2>
+
+
+
+
+
+
+
+<p>Generally, you should aim at 10K or less vertices visible per frame on iPhone, iPhone 3G, iPod Touch 1st and 2nd Generation. You should aim at 30K or less vertices visible per frame on iPhone 3GS or newer devices.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Per-vertex dynamic lighting can add significant cost to vertex transformations. Avoid multiple lights affecting single objects. Bake lighting for static objects.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Optimize Model Geometry</h2>
+
+
+
+
+
+
+
+<p>When optimizing the geometry of a model, there are two basic rules:
+
+
+
+
+
+
+
+</p><ul><li>Don't use excessive amount of faces if you don't have to
+
+
+
+
+
+
+
+</li><li>Keep the number of UV mapping seams and hard edges as low as possible
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>Note that the actual number of vertices that graphics hardware has to process is usually not the same as what is displayed in a 3D application. Modeling applications usually display the geometric vertex count, i.e. number of points that make up a model.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>For a graphics card however, some vertices have to be split into separate ones. If a vertex has multiple normals (it's on a "hard edge"), or has multiple UV coordinates, or has multiple vertex colors, it has to be split. So the vertex count you see in Unity is almost always different from the one displayed in 3D application.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Texture Compression</h2>
+
+
+
+
+
+
+
+<p>Use iOS native <a href="../Components/class-Texture2D.html">PVRT compression formats</a>. They will not only decrease the size of your textures (resulting in faster load times and smaller memory footprint), but also can dramatically increase your rendering performance! Compressed texture requires only a fraction of memory bandwidth compared to full blown 32bit RGBA textures. For performance comparison check <a href="../Manual/iphone-Hardware.html">iOS Hardware Guide</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If PVRTC formats do not deliver enough visual quality and you need extra crisp imaging (for example UI textures), then you should consider using 16bit texture over full 32bit RGBA texture. At least you will reduce memory bandwidth by half.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Bake Lighting into Lightmaps</h2>
+
+
+
+
+
+
+
+<p>Bake your scene static lighting into textures using Unity built-in <a href="../Manual/Lightmapping.html">Lightmapper</a>. The process of generating a lightmapped environment takes only a little longer than just placing a light in the scene in Unity, <b>but</b>:
+
+
+
+
+
+
+
+</p><ul><li>It is going to run a lot faster (2-3 times for eg. 2 lights)
+
+
+
+
+
+
+
+</li><li>And look a lot better since you can bake global illumination and the lightmapper can smooth the results
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>Share Materials</h2>
+
+
+
+
+
+
+
+<p>If a number of objects being rendered by the same camera uses the same material, then Unity iOS will be able to employ a large variety of internal optimizations such as:
+
+
+
+
+
+
+
+</p><ul><li>Avoiding setting various render states to OpenGL ES.
+
+
+
+
+
+
+
+</li><li>Avoiding calculation of different parameters required to setup vertex and pixel processing
+
+
+
+
+
+
+
+</li><li>Batching small moving objects to reduce draw calls
+
+
+
+
+
+
+
+</li><li>Batching both big and small objects with enabled "static" property to reduce draw calls
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>All these optimizations will save you precious CPU cycles. Therefore, putting extra work to combine textures into single atlas and making number of objects to use the same material will always pay off. Do it!
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Simple Checklist to make Your Game Faster</h2>
+
+
+
+
+
+
+
+<ul><li>Keep the vertex count below 10K per frame.
+
+
+
+
+
+
+
+</li><li>Keep the number of different materials per scene low - share as many materials between different objects as possible.
+
+
+
+
+
+
+
+</li><li>Set <span class='doc-prop'>Static</span> property on a non-moving objects to allow internal optimizations.
+
+
+
+
+
+
+
+</li><li>Use PVRTC texture compression where possible, otherwise choose 16bit textures over 32bit.
+
+
+
+
+
+
+
+</li><li>Use combiners or pixel shaders to mix several textures per fragment instead of multi-pass approach.
+
+
+
+
+
+
+
+</li><li>Choose to use less textures per fragment.
+
+
+
+
+
+
+
+</li><li>Do not use dynamic lights when it is not necessary -- choose baking lighting instead.
+
+
+
+
+
+
+
+</li><li>Avoid alpha-testing, choose alpha-blending instead.
+
+
+
+
+
+
+
+</li><li>Avoid fog (especially on newer than iPhone 3GS devices).
+
+
+
+
+
+
+
+</li><li>Learn benefits of Occlusion culling and use it to reduce amount of visible geometry and draw-calls in case of complex static scenes with lots of occlusion. Plan your levels to benefit from Occlusion culling.
+
+
+
+
+
+
+
+</li><li>Use skyboxes to "fake" distant geometry.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>See Also</h2>
+
+
+
+
+
+
+
+<ul><li><a href="../Manual/iphone-performance.html">Optimizing iOS Performance</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/iphone-Hardware.html">iOS Hardware Guide</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/iphone-DrawCall-Batching.html">iOS Automatic Draw Call Batching</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/RenderingStatistics.html#RenderingStatisticsIPhone">Rendering Statistics</a>
+
+
+
+
+
+
+
+</li></ul></div>
+
+
+
+
+
+
+
+<p class='vspace'><a name='AndroidOptimizingGraphicsPerformance' id='AndroidOptimizingGraphicsPerformance'></a>
+
+
+
+
+
+
+
+</p><a class='androidRef' id='androidRef' href="javascript:ShowHideDiv('androidRef','specific-android', 'Android');"><h1><img class='figure' src='../Images/manual/iPhone Optimizing Graphics Performance-2.jpg' /> Android</h1></a>
+
+
+
+
+
+
+
+<div class='specific-android' style='display: block;' id='specific-android' > 
+
+
+
+
+
+
+
+<p>Unity Android is currently in preparation for Unity 3.  Therefore, this documentation is not yet complete.  Please watch this space for proper Unity Android documentation as it is added.
+
+
+
+
+
+
+
+</p></div>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-24</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/iphone-performance.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/iphone-DrawCall-Batching.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

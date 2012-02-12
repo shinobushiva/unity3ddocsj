@@ -1,0 +1,3154 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Working with UnityObject</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Working with UnityObject</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/Web Player Deployment.html">Web Player Deployment</a> &gt; <a href="../Manual/Working with UnityObject.html">Working with UnityObject</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/HTML code to load Unity Web Player content.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Customizing the Unity Web Player loading screen.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Working with UnityObject</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/Working with UnityObject-0.jpg' /> Desktop </h1> </a>
+
+
+
+
+
+
+
+<div class='specific-desktop' style='display: block;' id='specific-desktop' > 
+
+
+
+
+
+
+
+<p><span class='doc-keyword'>UnityObject</span> is a JavaScript script that simplifies Unity content embedding into HTML. It has functions to detect the Unity <span class='doc-keyword'>Web Player</span> plugin, initiate Web Player installation and embed Unity content. Although it's possible to deploy <span class='doc-prop'>UnityObject.js</span> file on the web server alongside the HTML file it's best to load it directly from the Unity server at <span class='doc-prop'>http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js</span>. That way you will always reference the most up to date version of UnityObject. Please note that the <span class='doc-prop'>UnityObject.js</span> file hosted on the Unity server is minified to make it smaller and save traffic. If you want to explore the source code you can find the original file in the <span class='doc-prop'>Data\Resources</span> folder on Windows and the <span class='doc-prop'>Contents/Resources</span> folder on Mac OS X.  UnityObject by defaults sends anonymous data to GoogleAnalytics which is used to help us identify installation type and conversion rate.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Functions</h2>
+
+
+
+
+
+
+
+<h3>embedUnity</h3>
+
+
+
+
+
+
+
+<p>Embeds Unity content into HTML.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>id</span> - HTML element (placeholder) to be replaced by Unity content.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>src</span> - Path to the web player data file. Can be relative or absolute.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>width</span> - Width of Unity content. Can be specified in pixel values (i.e. <span class='doc-prop'>600</span>, <span class='doc-prop'>"450"</span>) or in percentage values (i.e. <span class='doc-prop'>"50%"</span>, <span class='doc-prop'>"100%"</span>).
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>height</span> - Height of Unity content. Can be specified in pixel values (i.e. <span class='doc-prop'>600</span>, <span class='doc-prop'>"450"</span>) or in percentage values (i.e. <span class='doc-prop'>"50%"</span>, <span class='doc-prop'>"100%"</span>).
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>params</span> - <em>Optional.</em> Object containing list of parameters. See <a href="../Manual/Customizing the Unity Web Player loading screen.html">Customizing the Unity Web Player loading screen</a> and <a href="../Manual/WebPlayerBehaviorTags.html">Customizing the Unity Web Player's Behavior</a> for possible values.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>attributes</span> - <em>Optional.</em> Object containing list of attributes. These will be added to underlying <span class='doc-prop'>&lt;object&gt;</span> or <span class='doc-prop'>&lt;embed&gt;</span> tag depending on the browser.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>callback</span> - <em>Optional.</em> Function that will be called once Web Player is loaded. Function must accept single argument that contains following properties:
+
+
+
+
+
+
+
+<ul><li><span class='doc-prop'>success</span> - Boolean value indicating whether operation has succeeded.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>id</span> - Identifier of the Web Player object that has been loaded (same as placeholder).
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>ref</span> - Web Player object that has been loaded.
+
+
+
+
+
+
+
+</li></ul></li></ul><p class='vspace'><em>Notes:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This function usually returns before the operation fully completes. Thus it is not safe to access the Web Player object immediately. A callback function can be provided to get notification on completion. Alternatively call <span class='doc-prop'>getObjectById</span> repeatedly until it doesn't return a <span class='doc-prop'>null</span> value.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Example:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+
+
+
+
+
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+
+
+
+
+
+
+	&lt;head&gt;
+
+
+
+
+
+
+
+		&lt;title&gt;Unity Web Player | Example&lt;/title&gt;
+
+
+
+
+
+
+
+		&lt;script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer/3.0/uo/UnityObject.js"&gt;&lt;/script&gt;
+
+
+
+
+
+
+
+		&lt;script type="text/javascript"&gt;
+
+
+
+
+
+
+
+		&lt;!--
+
+
+
+
+
+
+
+		if (typeof unityObject != "undefined") {
+
+
+
+
+
+
+
+			unityObject.embedUnity("unityPlayer", "Example.unity3d", 600, 450, null, null, unityLoaded);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		function unityLoaded(result) {
+
+
+
+
+
+
+
+			if (result.success) {
+
+
+
+
+
+
+
+				var unity = result.ref;
+
+
+
+
+
+
+
+				var version = unity.GetUnityVersion("3.x.x");
+
+
+
+
+
+
+
+				alert("Unity Web Player loaded!\nId: " + result.id + "\nVersion: " + version);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+			else {
+
+
+
+
+
+
+
+				alert("Please install Unity Web Player!");
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		--&gt;
+
+
+
+
+
+
+
+		&lt;/script&gt;
+
+
+
+
+
+
+
+	&lt;/head&gt;
+
+
+
+
+
+
+
+	&lt;body&gt;
+
+
+
+
+
+
+
+		&lt;!-- This will be replaced by Unity content. --&gt;
+
+
+
+
+
+
+
+		&lt;div id="unityPlayer"&gt;Unity content can't be played. Make sure you are using compatible browser with JavaScript enabled.&lt;/div&gt;
+
+
+
+
+
+
+
+	&lt;/body&gt;
+
+
+
+
+
+
+
+&lt;/html&gt;
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>getObjectById</h3>
+
+
+
+
+
+
+
+<p>Retrieves the Web Player object.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>id</span> - Identifier of the Web Player object.
+
+
+
+
+
+
+
+</li><li><span class='doc-prop'>callback</span> - <em>Optional.</em> Function that will be called once Web Player is retrieved. This function must accept a single parameter that contains the Web Player object.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>Returns the Web Player object or <span class='doc-prop'>null</span> if the Web Player is not loaded yet.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Example:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+
+
+
+
+
+
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+
+
+
+
+
+
+	&lt;head&gt;
+
+
+
+
+
+
+
+		&lt;title&gt;Unity Web Player | Example&lt;/title&gt;
+
+
+
+
+
+
+
+		&lt;script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer/3.0/uo/UnityObject.js"&gt;&lt;/script&gt;
+
+
+
+
+
+
+
+		&lt;script type="text/javascript"&gt;
+
+
+
+
+
+
+
+		&lt;!--
+
+
+
+
+
+
+
+		if (typeof unityObject != "undefined") {
+
+
+
+
+
+
+
+			unityObject.embedUnity("unityPlayer", "Example.unity3d", 600, 450, null, null, function(result) {
+
+
+
+
+
+
+
+				if (result.success) {
+
+
+
+
+
+
+
+					var versionButton = document.getElementById("versionButton");
+
+
+
+
+
+
+
+					versionButton.disabled = false;
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			});
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		function versionButtonClick() {
+
+
+
+
+
+
+
+			var unity = unityObject.getObjectById("unityPlayer");
+
+
+
+
+
+
+
+			var version = unity.GetUnityVersion("3.x.x");
+
+
+
+
+
+
+
+			alert(version);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		--&gt;
+
+
+
+
+
+
+
+		&lt;/script&gt;
+
+
+
+
+
+
+
+	&lt;/head&gt;
+
+
+
+
+
+
+
+	&lt;body&gt;
+
+
+
+
+
+
+
+		&lt;!-- This will be replaced by Unity content. --&gt;
+
+
+
+
+
+
+
+		&lt;div id="unityPlayer"&gt;Unity content can't be played. Make sure you are using compatible browser with JavaScript enabled.&lt;/div&gt;
+
+
+
+
+
+
+
+		&lt;div&gt;
+
+
+
+
+
+
+
+			&lt;input id="versionButton" type="button" value="Version" disabled="disabled" onclick="versionButtonClick();" /&gt;
+
+
+
+
+
+
+
+		&lt;/div&gt;
+
+
+
+
+
+
+
+	&lt;/body&gt;
+
+
+
+
+
+
+
+&lt;/html&gt;
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>enableFullInstall</h3>
+
+
+
+
+
+
+
+<p>Installs the full Web Player if not available. Normally only a small part of the Web Player is installed and the remaining files are automatically downloaded later. The default value is <span class='doc-prop'>false</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>value</span> - Boolean value that enables or disables the feature.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>enableAutoInstall</h3>
+
+
+
+
+
+
+
+<p>Automatically starts Web Player installation if not available. Some platforms don't support this feature. Default value is <span class='doc-prop'>false</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>value</span> - Boolean value that enables or disables the feature.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>enableJavaInstall</h3>
+
+
+
+
+
+
+
+<p>Enables Java based installation. Some platforms doesn't support this feature. Default value is <span class='doc-prop'>true</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>value</span> - Boolean value that enables or disables the feature.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>enableClickOnceInstall</h3>
+
+
+
+
+
+
+
+<p>Enables ClickOnce based installation. Some platforms doesn't support this feature. Default value is <span class='doc-prop'>true</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>value</span> - Boolean value that enables or disables the feature.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>enableGoogleAnalytics</h3>
+
+
+
+
+
+
+
+<p>Notifies Unity about Web Player installation. This doesn't do anything if the Web Player is already installed. Default value is <span class='doc-prop'>true</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>value</span> - Boolean value that enables or disables the feature.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>addLoadEvent</h3>
+
+
+
+
+
+
+
+<p>Registers a function that will be called once the web page is loaded.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>event</span> - Function that will be called once the web page is loaded. This function does not expect any parameters.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>addDomLoadEvent</h3>
+
+
+
+
+
+
+
+<p>Registers a function that will be called once the web page's DOM is loaded.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Parameters:</em>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><span class='doc-prop'>event</span> - Function that will be called once web page's DOM is loaded. This function does not expect any parameters.
+
+
+
+
+
+
+
+</li></ul></div>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-08-06</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/HTML code to load Unity Web Player content.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Customizing the Unity Web Player loading screen.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

@@ -1,0 +1,786 @@
+<!-- #BeginTemplate "/Templates/manual-scriptref-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+			<title>Unity Script Reference &ndash; Camera.layerCullDistances</title>
+
+	<!-- #TemplateEndEditable -->
+
+<link rel="StyleSheet"  href="docs.css" type="text/css" />
+
+<script type="text/javascript" src="../Images/jquery-1.4.2.js"></script>
+
+<script type="text/javascript" src="../Images/jquery.cookie.js"></script>
+
+
+
+<style>
+
+/* 
+
+Unity standard fonts 
+
+*/
+
+body{ font-family:Helvetica, Arial, sans-serif; font-size:.9em; }
+
+
+
+/*
+
+simple format for code, using fixed width
+
+and a nice border
+
+*/
+
+pre { font-family:"Courier New", Courier, monospace; font-size:.8em; }
+
+pre { padding:10px; margin:10px; border:1px #d8d8d8 solid; }
+
+pre { -moz-border-radius:10px; -webkit-border-radius:10px; }
+
+pre { background:#f8f8f8; }
+
+
+
+/*
+
+aligns the selection dialog on the top right
+
+*/
+
+.selectLang { margin-right:10px; text-align:right; float:right; }
+
+
+
+
+
+.cSelect,
+
+.cSelect ul,
+
+.cSelect li { font-size:12px; }
+
+
+
+/*.cSelect { border:1px solid #d0d0d0; }
+
+.cSelect { background:#ddf; }*/
+
+/*
+
+.cSelect { -moz-border-radius:10px; -webkit-border-radius:10px; }*/
+
+
+
+.cSelect { display:inline-block; position:relative; float:right; margin-right:20px;}
+
+.cSelect { padding-top:.4em; padding-bottom:.2em;}
+
+.cSelect-Selected,
+
+.cSelect-ArrowDown,
+
+.cSelect li { cursor:pointer; }
+
+
+
+.cSelect,
+
+.roundTop { -webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; }
+
+.cSelect,
+
+.roundTop { -moz-border-radius-topleft:10px; -moz-border-radius-topright:10px; }
+
+
+
+.roundBottom,
+
+.cSelect ul { -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; }
+
+.roundBottom,
+
+.cSelect ul { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; }
+
+
+
+
+
+.cSelectWidth { width:10em; display:block;}
+
+
+
+.cSelect-wrapper { position:relative; }
+
+
+
+.cSelect ul { background:#fff; padding:0px; margin:0px; display:inline-block; }
+
+.cSelect ul { z-index:10; position:absolute; top:1.3em; }
+
+.cSelect ul { padding-bottom:.5em; padding-top:.5em; padding-left:0px; padding-right:0px; }
+
+/*.cSelect ul { border:1px solid #d0d0d0; }*/
+
+
+
+
+
+.cSelect li { padding:.1em; margin:0px; text-align:right; list-style-type:none; }
+
+.cSelect li { padding-left:.7em; padding-right:24px; }
+
+
+
+.cSelect-highlight { background:#f0f0f0; }
+
+
+
+.cSelect-Selected { margin-left:.5em; margin-right:.5em; text-align:right; float:right; width:75%}
+
+
+
+.cSelect-ArrowDown { width:18px; height:18px; display:inline-block; float:right}
+
+.cSelect-ArrowDown { background:url('../Images/down-arrow.png'); text-align:center; }
+
+.cSelect-ArrowDown { -moz-border-radius:9px; -webkit-border-radius:9px; }
+
+
+
+.monoCompatibility-roweven { background-color:#DCDDDF; }
+
+.monoCompatibility-rowodd { background-color:#F3F3F4; }
+
+.monoCompatibility-cell { border:1px solid #ffffff;}
+
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+	<td class="titlemid">
+
+		<table><tr>
+
+			<td class="doctitle"><a href='Camera.html' class='classlink' title='Go to Camera scripting documentation'>Camera</a>.layerCullDistances</td>
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+			<td class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+			<td class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+			<td class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting&nbsp;&nbsp;</span></a></td>
+
+			<!-- #TemplateEndEditable -->	
+
+		</tr><tr>
+
+			<td colspan="4">
+
+				<table width="100%" class="docpath"><tr><td >
+
+					<!-- #TemplateBeginEditable name="path" -->
+
+						<a href="index.html">Scripting</a> &gt <a href='20_class_hierarchy.html'>Runtime Classes</a> &gt <a href='Camera.html'>Camera</a>
+
+					<!-- #TemplateEndEditable -->	
+
+				</td>
+
+				</td><td class="switchlink">
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+					<!-- #TemplateEndEditable -->	
+
+				</td></tr></table>
+
+			</td>
+
+		</tr></table>
+
+	</td>
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+</tr></table>
+
+<div class="scriprefmain">
+
+		<span class="heading">
+
+			<!-- #TemplateBeginEditable name="title" -->
+
+				<a href='Camera.html' class='classlink' title='Go to Camera scripting documentation'>Camera</a>.layerCullDistances
+
+			<!-- #TemplateEndEditable -->	
+
+		</span>
+
+<!-- #TemplateBeginEditable name="details" -->
+
+	<span class="text"></span>
+
+<!-- #TemplateEndEditable -->	
+
+
+
+	<!-- #TemplateBeginEditable name="manual-top-nav" --><div class="left-menu-container"><ul class="left-menu"><li>
+
+<form class="apisearch" action="30_search.html" method="GET">
+
+	<input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q" />
+
+				
+
+	<script type="text/javascript" language="JavaScript">
+
+	<!--
+
+	function detect() {
+
+		// simplify things
+
+		var agent 	= navigator.userAgent.toLowerCase();
+
+		
+
+		// detect platform
+
+		this.isMac		= (agent.indexOf('mac') != -1);
+
+		this.isWin		= (agent.indexOf('win') != -1);
+
+		this.isWin2k	= (this.isWin && (
+
+				agent.indexOf('nt 5') != -1));
+
+		this.isWinSP2	= (this.isWin && (
+
+				agent.indexOf('xp') != -1 || 
+
+				agent.indexOf('sv1') != -1));
+
+		this.isOther	= (
+
+				agent.indexOf('unix') != -1 || 
+
+				agent.indexOf('sunos') != -1 || 
+
+				agent.indexOf('bsd') != -1 ||
+
+				agent.indexOf('x11') != -1 || 
+
+				agent.indexOf('linux') != -1);
+
+		
+
+		// detect browser
+
+		this.isSafari	= (agent.indexOf('safari') != -1);
+
+		this.isSafari2 = (this.isSafari && (parseFloat(agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).substring(0,agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).indexOf(' '))) >=  300));
+
+		this.isOpera	= (agent.indexOf('opera') != -1);
+
+		this.isNN		= (agent.indexOf('netscape') != -1);
+
+		this.isIE		= (agent.indexOf('msie') != -1);
+
+	}
+
+	var browser = new detect();
+
+	var str = "Search";
+
+	var q=document.getElementById('q');
+
+	if (!browser.isSafari2) {q.value=str;q.onfocus=function(){q.value="";q.style.color="#000";};}
+
+	//-->
+
+	</script>
+
+</form>
+
+</li><li><span class="left-menu-heading">Menu</span></li><li><a title="Scripting overview" class="left-menu-item" href="index.html">Overview</a></li><li><a title="List of scripting classes" class="left-menu-item" href="20_class_hierarchy.html">Runtime Classes</a></li><li><a title="List of attributes" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Attributes.html">Attributes</a></li><li><a title="List of enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Enumerations.html">Enumerations</a></li><li><a title="Classes for extending Unity editor" class="left-menu-item" href="20_class_hierarchy.Editor_Classes.html">Editor Classes</a></li><li><a title="List of editor enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Editor_Enumerations.html">Enumerations</a></li><li><a title="Scripting change history" class="left-menu-item" href="40_history.html">History</a></li><li><a title="Alphabetical index" class="left-menu-item" href="10_reference.html">Index</a></li><li><span class="left-menu-seperator"></span></li><li><a class="left-menu-heading" href="Camera.html">Camera</a></li><li><a class="left-menu-item" href="Camera.html">All Members</a></li><li><span class="left-menu-subheading">Variables</span></li><li><a class="left-menu-item" href="Camera-actualRenderingPath.html">actualRenderingPath</a></li><li><a class="left-menu-item" href="Camera-aspect.html">aspect</a></li><li><a class="left-menu-item" href="Camera-backgroundColor.html">backgroundColor</a></li><li><a class="left-menu-item" href="Camera-cameraToWorldMatrix.html">cameraToWorldMatrix</a></li><li><a class="left-menu-item" href="Camera-clearFlags.html">clearFlags</a></li><li><a class="left-menu-item" href="Camera-cullingMask.html">cullingMask</a></li><li><a class="left-menu-item" href="Camera-depth.html">depth</a></li><li><a class="left-menu-item" href="Camera-depthTextureMode.html">depthTextureMode</a></li><li><a class="left-menu-item" href="Camera-farClipPlane.html">farClipPlane</a></li><li><a class="left-menu-item" href="Camera-fieldOfView.html">fieldOfView</a></li><li><span class="left-menu-item left-menu-current">layerCullDistances</span></li><li><a class="left-menu-item" href="Camera-nearClipPlane.html">nearClipPlane</a></li><li><a class="left-menu-item" href="Camera-orthographic.html">orthographic</a></li><li><a class="left-menu-item" href="Camera-orthographicSize.html">orthographicSize</a></li><li><a class="left-menu-item" href="Camera-pixelHeight.html">pixelHeight</a></li><li><a class="left-menu-item" href="Camera-pixelRect.html">pixelRect</a></li><li><a class="left-menu-item" href="Camera-pixelWidth.html">pixelWidth</a></li><li><a class="left-menu-item" href="Camera-projectionMatrix.html">projectionMatrix</a></li><li><a class="left-menu-item" href="Camera-rect.html">rect</a></li><li><a class="left-menu-item" href="Camera-renderingPath.html">renderingPath</a></li><li><a class="left-menu-item" href="Camera-targetTexture.html">targetTexture</a></li><li><a class="left-menu-item" href="Camera-velocity.html">velocity</a></li><li><a class="left-menu-item" href="Camera-worldToCameraMatrix.html">worldToCameraMatrix</a></li><li><span class="left-menu-subheading">Functions</span></li><li><a class="left-menu-item" href="Camera.CopyFrom.html">CopyFrom</a></li><li><a class="left-menu-item" href="Camera.Render.html">Render</a></li><li><a class="left-menu-item" href="Camera.RenderToCubemap.html">RenderToCubemap</a></li><li><a class="left-menu-item" href="Camera.RenderWithShader.html">RenderWithShader</a></li><li><a class="left-menu-item" href="Camera.ResetAspect.html">ResetAspect</a></li><li><a class="left-menu-item" href="Camera.ResetProjectionMatrix.html">ResetProjectionMatrix</a></li><li><a class="left-menu-item" href="Camera.ResetReplacementShader.html">ResetReplacementShader</a></li><li><a class="left-menu-item" href="Camera.ResetWorldToCameraMatrix.html">ResetWorldToCameraMatrix</a></li><li><a class="left-menu-item" href="Camera.ScreenPointToRay.html">ScreenPointToRay</a></li><li><a class="left-menu-item" href="Camera.ScreenToViewportPoint.html">ScreenToViewportPoint</a></li><li><a class="left-menu-item" href="Camera.ScreenToWorldPoint.html">ScreenToWorldPoint</a></li><li><a class="left-menu-item" href="Camera.SetReplacementShader.html">SetReplacementShader</a></li><li><a class="left-menu-item" href="Camera.ViewportPointToRay.html">ViewportPointToRay</a></li><li><a class="left-menu-item" href="Camera.ViewportToScreenPoint.html">ViewportToScreenPoint</a></li><li><a class="left-menu-item" href="Camera.ViewportToWorldPoint.html">ViewportToWorldPoint</a></li><li><a class="left-menu-item" href="Camera.WorldToScreenPoint.html">WorldToScreenPoint</a></li><li><a class="left-menu-item" href="Camera.WorldToViewportPoint.html">WorldToViewportPoint</a></li><li><span class="left-menu-subheading">Messages Sent</span></li><li><a class="left-menu-item" href="Camera.OnPostRender.html">OnPostRender</a></li><li><a class="left-menu-item" href="Camera.OnPreCull.html">OnPreCull</a></li><li><a class="left-menu-item" href="Camera.OnPreRender.html">OnPreRender</a></li><li><a class="left-menu-item" href="Camera.OnRenderImage.html">OnRenderImage</a></li><li><a class="left-menu-item" href="Camera.OnRenderObject.html">OnRenderObject</a></li><li><a class="left-menu-item" href="Camera.OnWillRenderObject.html">OnWillRenderObject</a></li><li><span class="left-menu-subheading">Class Variables</span></li><li><a class="left-menu-item" href="Camera-allCameras.html">allCameras</a></li><li><a class="left-menu-item" href="Camera-current.html">current</a></li><li><a class="left-menu-item" href="Camera-main.html">main</a></li><li><span class="left-menu-softheading">Inherited Variables</span></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-animation.html?from=Camera">animation</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-audio.html?from=Camera">audio</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-camera.html?from=Camera">camera</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-collider.html?from=Camera">collider</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-constantForce.html?from=Camera">constantForce</a></li><li><a title="Inherited from Behaviour" class="left-menu-inherited-item" href="Behaviour-enabled.html?from=Camera">enabled</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-gameObject.html?from=Camera">gameObject</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-guiText.html?from=Camera">guiText</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-guiTexture.html?from=Camera">guiTexture</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object-hideFlags.html?from=Camera">hideFlags</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-hingeJoint.html?from=Camera">hingeJoint</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-light.html?from=Camera">light</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object-name.html?from=Camera">name</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-networkView.html?from=Camera">networkView</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-particleEmitter.html?from=Camera">particleEmitter</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-renderer.html?from=Camera">renderer</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-rigidbody.html?from=Camera">rigidbody</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-tag.html?from=Camera">tag</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component-transform.html?from=Camera">transform</a></li><li><span class="left-menu-softheading">Inherited Functions</span></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.BroadcastMessage.html?from=Camera">BroadcastMessage</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.CompareTag.html?from=Camera">CompareTag</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.GetComponent.html?from=Camera">GetComponent</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.GetComponentInChildren.html?from=Camera">GetComponentInChildren</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.GetComponents.html?from=Camera">GetComponents</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.GetComponentsInChildren.html?from=Camera">GetComponentsInChildren</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.GetInstanceID.html?from=Camera">GetInstanceID</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.SendMessage.html?from=Camera">SendMessage</a></li><li><a title="Inherited from Component" class="left-menu-inherited-item" href="Component.SendMessageUpwards.html?from=Camera">SendMessageUpwards</a></li><li><span class="left-menu-softheading">Inherited Class Functions</span></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.Destroy.html?from=Camera">Destroy</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.DestroyImmediate.html?from=Camera">DestroyImmediate</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.DontDestroyOnLoad.html?from=Camera">DontDestroyOnLoad</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.FindObjectOfType.html?from=Camera">FindObjectOfType</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.FindObjectsOfType.html?from=Camera">FindObjectsOfType</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object.Instantiate.html?from=Camera">Instantiate</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object-operator_ne.html?from=Camera">operator !=</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object-operator_eq.html?from=Camera">operator ==</a></li><li><a title="Inherited from Object" class="left-menu-inherited-item" href="Object-operator_bool.html?from=Camera">operator bool</a></li></ul></div>
+
+	<!-- #TemplateEndEditable -->
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+			<!-- #TemplateBeginEditable name="body" -->
+
+			<div class="manual-entry"><h3><span class="hl-keyword">var</span> layerCullDistances : <span class="hl-datatype">float</span>[]
+
+</h3><h3 class="soft">Description</h3>
+
+   <p class="details"> Per-layer culling distances.</p>
+
+   <p class="details"> 
+
+Normally Camera skips rendering of objects that are further away than <a href="Camera-farClipPlane.html" class="itemlink">farClipPlane</a>.
+
+You can set up some <a href="../Components/Layers.html" class="classlink">Layers</a> to use smaller culling distances using layerCullDistances.
+
+This is very useful to cull small objects early on, if you put them into appropriate layers.
+
+</p><p class="details">
+
+When assigning layerCullDistances, you need to assign float array that has 32 values.
+
+Zero values in cull distances means "use far plane distance".
+
+<div class="example">
+
+  <div style="clear:both;">
+
+    <div class="cSelect cSelectWidth roundBottom">
+
+      <div class="cSelect-wrapper">
+
+        <div class="cSelect-ArrowDown"></div>
+
+	 <span class="cSelect-Selected">
+
+	 JavaScripts
+
+	 </span>
+
+	 <ul class="cSelectWidth" style="display:none;">
+
+		<li>JavaScript</li>
+
+		<li>C#</li>
+
+		<li>Boo</li>
+
+	 </ul>
+
+      </div>
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+  </div>
+
+<div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-keyword">var</span> distances = <span class="hl-keyword">new</span> <span class="hl-datatype">float</span>[32];<br/>    <span class="hl-comment">// Set up layer 10 to cull at 15 meters distance.</span><span class="hl-comment"><br/></span>    <span class="hl-comment">// All other layers use the far clip plane distance.</span><span class="hl-comment"><br/></span>    distances[10] = 15;<br/>    camera.layerCullDistances = distances;<br/>}<br/><p class="details"></div>
+
+<div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        <span class="hl-datatype">float</span>[] distances = <span class="hl-keyword">new</span> <span class="hl-datatype">float</span>[32];<br/>        distances[10] = 15;<br/>        camera.layerCullDistances = distances;<br/>    }<br/>}<br/><p class="details"></div>
+
+<div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        distances as (single) = array(typeof(single), 32)<br/>        distances[10] = 15<br/>        camera.layerCullDistances = distances<br/><p class="details"></div>
+
+</div>
+
+<span class="note">See Also:</span> <a href="Camera-farClipPlane.html" class="itemlink">farClipPlane</a>.</p>
+
+<div class="entry-sep"></div>
+
+</div>	
+
+	</div><!-- #TemplateEndEditable -->
+
+    <script type="text/javascript">
+
+
+
+    //prevent an error on older versions of IE(x) < IE7 who did not have a javascript console.
+
+    if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
+
+
+
+
+
+    var $j = jQuery.noConflict();
+
+    $j(document).ready(function($){
+
+
+
+    	var languages = [];
+
+    	function getCookie(cookieName){
+
+    //a wrapper, because google chrome does not allow for security reasons cookies on local files.
+
+    //an option can be set while loading chrome to allow cookies on local files
+
+    		try {
+
+    			return $.cookie(cookieName);
+
+    		}catch(e){
+
+    			console.log(e);
+
+    		}
+
+    	}
+
+
+
+    	function setCookie(cookieName, cookieValue){
+
+    //a wrapper, because google chrome does not allow for security reasons cookies on local files.
+
+    //an option can be set while loading chrome to allow cookies on local files
+
+    		try{
+
+    			return $.cookie(cookieName, cookieValue);
+
+    		}catch(e){
+
+    			console.log(e);
+
+    		}
+
+    	}
+
+    
+
+    /*
+
+    decectLangauges looks at all of the div(s) containing a class of "code"
+
+    it then creates a list of languages in that list to generate the drop down.
+
+    to ad a language, ad an example with that language defined 
+
+    in the attribute "code_lang_name" for that div
+
+    */
+
+    	function detectLanguages(){
+
+    		languages = [];
+
+    		$("div.code").each(
+
+    			function(){
+
+    				var isThere = false;
+
+    //set the value of the attribute
+
+    				var isNewLang = $(this).attr("code_lang_name");
+
+    				for ( i in languages ){
+
+    					if( isNewLang == languages[i] ){
+
+    						isThere = true;
+
+    					}
+
+    				}				
+
+    				if( !isThere ){
+
+    //adds a new language to the stack/ array
+
+    				   languages.push(isNewLang);
+
+    				}
+
+    			});
+
+    		console.log("languages detected", languages);
+
+    	}
+
+    
+
+    //execute the function detectLanguages just after we defined it, this should only happen once and on page load after the document object model is ready
+
+    	detectLanguages();
+
+
+
+    	function buildListCSelect(){
+
+    //finds the doc element with an id of selectedLangauge, base on css3 rules, then removes all children
+
+    		$(".cSelect ul").empty();
+
+    		$(".cSelect .cSelect-Selected").text("");
+
+    		var langCookie = getCookie("codeLanguage");		
+
+    		for( i in languages ){
+
+    //inserts a new child with the included html
+
+    			$(".cSelect ul").append("<li>" + languages[i] + "</li>");
+
+    		}
+
+    
+
+    //if the cookie is there, set that item to selected.
+
+    		for( i in languages ){
+
+    			if(langCookie !== null && languages[i] == langCookie){
+
+    				$(".cSelect .cSelect-Selected").text(languages[i]);
+
+    			}
+
+    		}
+
+
+
+    		if( $(".cSelect .cSelect-Selected").text().length == 0){
+
+    			var first = $(".cSelect li:first").text();
+
+    			$(".cSelect .cSelect-Selected").text(first);
+
+    		}
+
+
+
+    	}
+
+    	buildListCSelect();
+
+    
+
+    	function showCSelectedLanguage(){
+
+    		var selected = $(".cSelect .cSelect-Selected:first").text();
+
+    		var langAvail = false;
+
+    		var langCookie = getCookie("codeLanguage");
+
+    		for( i in languages ){
+
+    			if(langCookie == languages[i]){
+
+    				langAvail = true;
+
+    			}
+
+    		}
+
+    		if(langAvail) {
+
+    			selected = langCookie;
+
+    		} else {
+
+    			console.log("the language stored in the cookie is not availible", langCookie);
+
+    		}
+
+    		$("div.code[code_lang_name]").hide();
+
+    		$("div.code[code_lang_name='"+ selected +"']").show();
+
+    	}
+
+    	showCSelectedLanguage(); //set the default.
+
+           $(".cSelect").addClass("roundBottom");
+
+    	$(".cSelect ul").hide();
+
+    /* 	$(".cSelect").hover(
+
+     		function(){
+
+     			$(this).find("ul").show();
+
+     		},
+
+     		function(){
+
+     			$(this).find("ul").hide();
+
+     		}
+
+     	);
+
+*/
+
+    	$(".cSelect").hover(
+
+    		function(){
+
+    			$(document).unbind("click.cSelect");
+
+    		},
+
+    		function(){
+
+    			$(document).bind("click.cSelect", function(event){
+
+                                   $(".cSelect").addClass("roundBottom");
+
+    				$(".cSelect ul").hide();
+
+    				$(this).unbind(event);
+
+    			});
+
+    		}
+
+    	);
+
+
+
+
+
+    	$(".cSelect li").hover(
+
+    		function(){
+
+    			$(this).addClass("cSelect-highlight");
+
+    		},
+
+    		function(){
+
+    			$(this).removeClass("cSelect-highlight");
+
+    		}
+
+    	);
+
+
+
+    	var suppress = false;
+
+    	function enable(){
+
+    		suppress = false;
+
+    	}
+
+
+
+
+
+    	$(".cSelect li").click(function(){
+
+    		var value = $(this).text();
+
+    		console.log( "new selection ", value );
+
+    		$(this).parents(".cSelect").find(".cSelect-Selected").text(value);
+
+    		suppress = true;
+
+                   $(".cSelect").addClass("roundBottom");
+
+    		$(".cSelect ul").hide();
+
+    		$(this).parents(".cSelect").trigger("change");
+
+    		setTimeout(enable, 300 );
+
+    	});
+
+
+
+
+
+           $(".cSelect-ArrowDown")
+
+     		.add(".cSelect-Selected")
+
+     		.add(".cSelect").click(
+
+     		function(){
+
+     			var visible = $(this).parents(".cSelect").find("ul").css("display") == "block" ? true : false;
+
+     			if( !visible ){
+
+     				$(this).parents(".cSelect").removeClass("roundBottom");
+
+     				$(this).parents(".cSelect").find("ul").show();
+
+     			}else{
+
+     				$(this).parents(".cSelect").addClass("roundBottom");
+
+     				$(".cSelect ul").hide();
+
+     			}
+
+     		});
+
+
+
+
+
+    	$(".cSelect").click(function(){if(!suppress){}});
+
+ 
+
+    	$(".cSelect").change(function(){
+
+    		console.log("selected",$(this).find(".cSelect-Selected").text());
+
+    		selected = $(this).find(".cSelect-Selected").text();
+
+    		$(".cSelect").find(".cSelect-Selected").text(selected);
+
+    		$("div.code[code_lang_name]").hide();
+
+    		$("div.code[code_lang_name='"+ selected +"']").show();
+
+    		setCookie("codeLanguage", selected);
+
+    	});
+
+    });
+
+    </script>
+
+</body>
+
+</html><!-- #EndTemplate -->
+
+
+

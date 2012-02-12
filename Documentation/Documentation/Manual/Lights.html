@@ -1,0 +1,2706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - Lights</title>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+		<tbody>
+
+
+
+
+
+
+
+			<tr>
+
+
+
+
+
+
+
+				<td class="titleleft">
+
+
+
+
+
+
+
+					<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+				<td>
+
+
+
+
+
+
+
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+				<td class="titlemid">
+
+
+
+
+
+
+
+					<table>
+
+
+
+
+
+
+
+						<tbody>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td class="doctitle">
+
+
+
+
+
+
+
+									Lights</td>
+
+
+
+
+
+
+
+								<td>
+
+
+
+
+
+
+
+									<table align="right">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td colspan="4">
+
+
+
+
+
+
+
+									<table class="docpath" width="100%">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+												<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Building Scenes.html">Building Scenes</a> &gt; <a href="../Manual/Lights.html">Lights</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+												<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+
+
+
+
+
+
+
+											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+						</tbody>
+
+
+
+
+
+
+
+					</table>
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				<td class="titleright" width="9">
+
+
+
+
+
+
+
+					<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+			</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+
+
+
+
+
+
+	</table>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<a href="../Manual/Prefabs.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Prefabs.html">Previous</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<a href="../Manual/Cameras.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/Cameras.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+
+
+
+
+
+
+
+				ライト(Lights)</h1>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword"><span class="Apple-style-span" style="font-weight: normal; "><span class="doc-keyword" style="font-weight: bold; ">ライト</span>は、全てのシーンで重要な要素です。 メッシュとテクスチャがシーンの形状と見え方を定義するとすれば、ライトは３D環境の色と雰囲気を定義します。シーンに１つではなく、複数のライトを配置する事が多いと思います。それらを効果的に機能させるには、少し練習が必要ですが、その結果は驚くべきものになります。</span></span></p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Lights-0.jpg" /></div>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="Apple-style-span" style="color: rgb(17, 17, 17); "><i><em style="color: rgb(17, 17, 17); ">シンプルな２つのライトを設定</em></i></span></p>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+
+
+
+
+
+
+
+				<font class="Apple-style-span" color="#111111"><i>ライトは<span class="doc-menu" style="font-weight: bold; ">GameObject-&gt;Create Other</span>メニューからシーンに追加できます。後ほど、３つの種類のライトについて説明します。ライトを追加した後は、他のゲームオブジェクトと同様に操作できます。加えて、ライトコンポーネント(Light Component)を、<span class="doc-menu" style="font-weight: bold; ">Component-&gt;Rendering-&gt;Light</span>を使って、選択したゲームオブジェクトに追加する事も出来ます。</i></font></p>
+
+
+
+
+
+
+
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+
+
+
+
+
+
+
+				<font class="Apple-style-span" color="#111111"><i>ライトコンポーネントの<span class="doc-keyword" style="font-weight: bold; ">インスペクタ</span>には、様々なオプションが有ります。</i></font></p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Lights-1.jpg" /></div>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="Apple-style-span" style="color: rgb(17, 17, 17); "><i><em style="color: rgb(17, 17, 17); ">インスペクタ上のライトコンポーネントの属性</em></i></span></p>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+
+
+
+
+
+
+
+				<font class="Apple-style-span" color="#111111"><i>ライトの<span class="doc-prop" style="font-weight: bold; ">色(Color)</span>を変更するだけで、シーンの雰囲気はがらりと変化します。</i></font></p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Lights-2.jpg" /></div>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<span class="Apple-style-span" style="color: rgb(17, 17, 17); "><i><em style="color: rgb(17, 17, 17); ">明るい、太陽のようなライト</em></i></span></p>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Lights-3.jpg" /></div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+<meta charset="utf-8" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<em><span class="Apple-style-span" style="color: rgb(53, 47, 40); font-style: normal; "><em style="color: rgb(17, 17, 17); ">暗い、中世のようなライト</em></span></em></p>
+
+
+
+
+
+
+
+			<div>
+
+
+
+
+
+
+
+				<img class="figure" src="../Images/manual/Lights-4.jpg" /></div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+<meta charset="utf-8" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				<em><span class="Apple-style-span" style="color: rgb(53, 47, 40); font-style: normal; "><em style="color: rgb(17, 17, 17); ">気味の悪い夜の明かり</em></span></em></p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				この手法で作成するライトは<strong>リアルタイム</strong>ライトです。ライティングは毎フレーム計算されます。もしライトが変化しない場合は、<a href="../Manual/Lightmapping.html">ライトマッピング(Lightmapping)</a>を使用することで、高速に、かつ、見栄えを良くすることができます。</p>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				レンダリングパス(Rendering paths)</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				Unityは異なるレンダリングパスをサポートします。このパスは主にライトと影に作用します。ゲームの要求に応じた、正しいレンダリングパスを選択することでパフォーマンスを向上できます。詳しい情報は、<a href="../Manual/RenderingPaths.html">レンダリングパスのセクション(Rendering paths section)</a>を参照してください。</p>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+<meta charset="utf-8" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+
+
+
+
+
+
+
+				詳しい情報</h2>
+
+
+
+
+
+
+
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+
+
+
+
+
+
+
+				ライトの使い方に関する詳しい情報は、<a href="../Components/index.html" style="color: rgb(20, 93, 123); text-decoration: none; ">リファレンスマニュアル</a>の<a href="../Components/class-Light.html" style="color: rgb(20, 93, 123); text-decoration: none; ">ライトのページ</a>を参照してください。</p>
+
+
+
+
+
+
+
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+
+
+
+
+
+
+
+				<span class="Apple-style-span" style="font-size: 10px; font-weight: normal; ">Page last updated: 2010-09-08</span></p>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<small><a href="../Manual/Prefabs.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Manual/Prefabs.html">Previous</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<small><a href="../Manual/Cameras.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Manual/Cameras.html">Next</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+

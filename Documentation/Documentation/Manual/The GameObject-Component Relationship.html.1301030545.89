@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - The GameObject-Component Relationship</title>
+<!-- #TemplateEndEditable -->	</head>
+	<body onload="DocLoaded();">
+	</body>
+</html>
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+<body onload="DocLoaded();">
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+		<tbody>
+			<tr>
+				<td class="titleleft">
+					<img src="../images/top/left.png" /></td>
+				<td>
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+				<td class="titlemid">
+					<table>
+						<tbody>
+							<tr>
+								<td class="doctitle">
+									The GameObject-Component Relationship</td>
+								<td>
+									<table align="right">
+										<tbody>
+											<tr>
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Manual">
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+												<td class="Manual">
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+												<td class="Manual">
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+<!-- #TemplateEndEditable -->											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<table class="docpath" width="100%">
+										<tbody>
+											<tr>
+												<td>
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Building Scenes.html">Building Scenes</a> &gt; <a href="../Manual/GameObjects.html">GameObjects</a> &gt; <a href="../Manual/The GameObject-Component Relationship.html">The GameObject-Component Relationship</a> <!-- #TemplateEndEditable --></td>
+												<td class="switchlink">
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="titleright" width="9">
+					<img src="../images/top/right.png" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="manual">
+		<div class="main">
+<!-- #TemplateBeginEditable name="unofficial translation" -->			<p>
+				&nbsp;</p>
+			<center>
+				<table border="1">
+					<tbody>
+						<tr>
+							<td bgcolor="yellow">
+								<center>
+									このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br />
+									This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br />
+									<br />
+									翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br />
+									Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center>
+							</td>
+							<td>
+								<a href="toedit_proxy.php?url=The GameObject-Component Relationship.html"><img src="../Images/pencil.png" /></a><br />
+								編集</td>
+						</tr>
+					</tbody>
+				</table>
+			</center>
+			<p>
+				&nbsp;</p>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+				<div class="nav-prev">
+					<a href="../Manual/GameObjects.html"> </a>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<a href="../Manual/GameObjects.html">Previous</a></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+				<div class="nav-next">
+					<a href="../Manual/Using Components.html"> </a>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<a href="../Manual/Using Components.html">Next</a></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+			</div>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+				ゲームオブジェクトとコンポーネントの関係(The GameObject-Component Relationship)</h1>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<p>
+				<a href="../Manual/GameObjects.html">ゲームオブジェクト(GameObjects)</a>のページで述べられたように、ゲームオブジェクトはコンポーネントを持っています。これから、最も一般的なコンポーネントである、<span class="doc-prop" style="font-weight: bold; ">移動(Transform)</span>コンポーネントについて話しながら、ゲームオブジェクトの関係を見ていく事にします。Unityのシーンを開き、<span class="doc-menu" style="font-weight: bold; ">Shift-Command-N[Mac]</span>(<span class="doc-menu" style="font-weight: bold; ">Shift-Control-N[Win]</span>)キーで新しいゲームオブジェクトを作成します。それを選択して<span class="doc-keyword" style="font-weight: bold; ">インスペクタ</span>を見てみましょう。</p>
+			<div>
+				<img class="figure" src="../Images/manual/The GameObject-Component Relationship-0.jpg" /><br />
+				<em>空のゲームオブジェクトのインスペクタ</em></div>
+			<p class="vspace">
+				空のゲームオブジェクトであっても、名前と<a href="../Components/Tags.html" style="color: rgb(20, 93, 123); text-decoration: none; ">タグ(Tag)</a>と<a href="../Components/Layers.html" style="color: rgb(20, 93, 123); text-decoration: none; ">レイヤ(Layer)</a>が有る事が解ります。 全てのゲームオブジェクトは、また、<a href="../Components/class-Transform.html" style="color: rgb(20, 93, 123); text-decoration: underline; ">移動コンポーネント</a>も含みます。</p>
+		</div>
+	</div>
+	<div class="manual">
+		<div class="main">
+			<h2>
+				移動コンポーネント(The Transform Component)</h2>
+			<p>
+				Unityにおいて、移動コンポーネントを持たないゲームオブジェクトを作る事は出来ません。移動コンポーネントは最も重要なコンポーネントの一つです。全てのゲームオブジェクトの移動属性は移動コンポーネントを使用する事で有効になります。これは、ゲームの世界／シーンビューにおける、ゲームオブジェクトの位置、回転、サイズを定義します。ゲームオブジェクトが移動コンポーネントを持たなければ、メモリ上の何らかの情報でしかなく、存在しないことと同じです。</p>
+			<p>
+				移動コンポーネントは&nbsp;<span class="doc-keyword" style="font-weight: bold; ">親子化(Parenting)</span>も提供します。これは、ゲームオブジェクトを扱うのに非常に重要で<span class="doc-keyword" style="font-weight: bold; ">Unityエディタ(Unity Editor)</span>を通じて利用する事が出来ます。移動コンポーネントと親子化について知りたければ<a href="../Components/class-Transform.html" style="color: rgb(20, 93, 123); text-decoration: none; ">移動コンポーネントリファレンスページ</a>を参照してください。</p>
+			<h2>
+				その他のコンポーネント(Other Components)</h2>
+			<p>
+				移動コンポーネントはすべてのゲームオブジェクトに無ければなりませんので、必ず存在します。しかし、ゲームオブジェクトはそれ以外のコンポーネントを持つこともできます。</p>
+			<div>
+				<img class="figure" src="../Images/manual/The GameObject-Component Relationship-1.jpg" /><br />
+				<em>シーンにデフォルトで追加されるメインカメラ(Main Camera)</em></div>
+			<p class="vspace">
+				メインカメラゲームオブジェクトを見てみましょう。 異なるコンポーネントを保持している事が解ります。<a href="../Components/class-Camera.html" style="color: rgb(20, 93, 123); text-decoration: none; ">カメラコンポーネント(Camera Component)</a>、<a href="../Components/class-GUILayer.html" style="color: rgb(20, 93, 123); text-decoration: none; ">GUIレイヤ(GUILayer)</a>、<a href="../Components/class-FlareLayer.html" style="color: rgb(20, 93, 123); text-decoration: none; ">フレアレイヤ(Flare Layer)</a>、<a href="../Components/class-AudioListener.html" style="color: rgb(20, 93, 123); text-decoration: none; ">オーディオリスナ(Audio Listener)</a>が有ります。コンポーネントはゲームオブジェクトに追加の機能を与えます。 これらが無ければ、プレイする時に何もグラフィックがレンダリングされません！リッジドボディ(Rigidbodies)、衝突物(Colliders)、パーティクル(Particles)、オーディオ(Audio)は全て異なるコンポーネント(または、それらの組み合わせ)で、ゲームオブジェクトに追加する事が出来ます。</p>
+		</div>
+	</div>
+	<div class="manual">
+		<div class="main">
+			<p class="vspace">
+				<span class="Apple-style-span" style="font-size: 10px; ">Page last updated: 2010-09-14</span></p>
+<script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+				<div class="nav-prev">
+					<small><a href="../Manual/GameObjects.html"> </a></small>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<small><a href="../Manual/GameObjects.html">Previous</a></small></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+				<div class="nav-next">
+					<small><a href="../Manual/Using Components.html"> </a></small>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<small><a href="../Manual/Using Components.html">Next</a></small></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

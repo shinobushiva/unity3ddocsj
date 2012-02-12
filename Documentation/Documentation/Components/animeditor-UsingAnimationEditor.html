@@ -1,0 +1,2458 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Using the Animation View</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Using the Animation View</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/AnimationEditorGuide.html">Animation View Guide</a> &gt; <a href="../Components/animeditor-UsingAnimationEditor.html">Using the Animation View</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/AnimationEditorGuide.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/animeditor-AnimationCurves.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Using the Animation View</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Animation View</span> can be used to preview and edit <span class='doc-keyword'>Animation Clips</span> for animated <span class='doc-keyword'>Game Objects</span> in Unity. The <span class='doc-keyword'>Animation View</span> can be opened from the <span class='doc-menu'>Window-&gt;Animation</span> menu.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-0.jpg' /></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Viewing Animations on a GameObject</h2>
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Animation View</span> is tightly integrated with the <span class='doc-keyword'>Hierarchy View</span>, the <span class='doc-keyword'>Scene View</span>, and the <span class='doc-keyword'>Inspector</span>. Like the Inspector, the Animation View will show whatever <span class='doc-keyword'>Game Object</span> is selected. You can select a Game Object to view using the <span class='doc-keyword'>Hierarchy View</span> or the <span class='doc-keyword'>Scene View</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-1.jpg' /><br /><em>The <span class='doc-keyword'>Animation View</span> shows the <span class='doc-keyword'>Game Object</span> selected in the <span class='doc-keyword'>Hierarchy View</span>.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>At the left side of the <span class='doc-keyword'>Animation View</span> is a hierarchical list of the animatable properties of the selected <span class='doc-keyword'>Game Object</span>. The list is ordered by the <span class='doc-keyword'>Components</span> and <span class='doc-keyword'>Materials</span> attached to the Game Object, just like in the <span class='doc-keyword'>Inspector</span>. Components and Materials can be folded and unfolded by clicking the small triangles next to them. If the selected Game Object has any child Game Objects, these will be shown after all of the Components and Materials.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-2.jpg' /><br /><em>The property list to the left in the <span class='doc-keyword'>Animation View</span> shows the Components and Materials of the selected <span class='doc-keyword'>Game Object</span>, just like the <span class='doc-keyword'>Inspector</span>.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Creating a New Animation Clip</h2>
+
+
+
+
+
+
+
+<p>Animated <span class='doc-keyword'>Game Objects</span> in Unity need an <span class='doc-keyword'>Animation Component</span> that controls the animations. If a Game Object doesn't already have an Animation Component, the <span class='doc-keyword'>Animation View</span> can add one for you automatically when creating a new <span class='doc-keyword'>Animation Clip</span> or when entering <span class='doc-keyword'>Animation Mode</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>To create a new <span class='doc-keyword'>Animation Clip</span> for the selected <span class='doc-keyword'>Game Object</span>, click the right of the two selection boxes at the upper right of the <span class='doc-keyword'>Animation View</span> and select <span class='doc-menu'>[Create New Clip]</span>. You will then be prompted to save an Animation Clip somewhere in your <span class='doc-keyword'>Assets</span> folder. If the Game Object doesn't have an <span class='doc-keyword'>Animation Component</span> already, it will be automatically added at this point. The new <span class='doc-keyword'>Animation Clip</span> will automatically be added to the list of Animations in the Animation Component.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-3.jpg' /><br /><em>Create a new <span class='doc-keyword'>Animation Clip</span>.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>In the <span class='doc-keyword'>Animation View</span> you can always see which <span class='doc-keyword'>Game Object</span> you are animating and which <span class='doc-keyword'>Animation Clip</span> you are editing. There are two selection boxes in the upper left of the Animation View. The left selection box shows the <span class='doc-keyword'>Game Object</span> with the <span class='doc-keyword'>Animation Component</span> attached, and the right selection box shows the <span class='doc-keyword'>Animation Clip</span> you are editing.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-4.jpg' /><br /><em>The left selection box shows the <span class='doc-keyword'>Game Object</span> with the <span class='doc-keyword'>Animation Component</span> attached, and the right selection box shows the <span class='doc-keyword'>Animation Clip</span> you are editing.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Animating a Game Object</h2>
+
+
+
+
+
+
+
+<p>To begin editing an Animation Clip for the selected Game Object, click on the <span class='doc-menu'>Animation Mode button</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-5.jpg' />  Click the <span class='doc-menu'>Animation Mode button</span> to enter <span class='doc-keyword'>Animation Mode</span>.</div>
+
+
+
+
+
+
+
+<p class='vspace'>This will enter <span class='doc-keyword'>Animation Mode</span>, where changes to the Game Object are stored into the <span class='doc-keyword'>Animation Clip</span>. (If the Game Object doesn't have an <span class='doc-keyword'>Animation Component</span> already, it will be automatically added at this point. If there is not an existing <span class='doc-keyword'>Animation Clip</span>, you will be prompted to save one somewhere in your <span class='doc-keyword'>Assets</span> folder.)
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can stop the <span class='doc-keyword'>Animation Mode</span> at any time by clicking the <span class='doc-menu'>Animation Mode button</span> again. This will revert the <span class='doc-keyword'>Game Object</span> to the state it was in prior to entering the Animation Mode.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can animate any of the properties shown in the property list of the <span class='doc-keyword'>Animation View</span>. To animate a property, click on the <span class='doc-menu'>Key Indicator</span> for that property and choose <span class='doc-menu'>Add Curve</span> from the menu. You can also select multiple properties and right click on the selection to add curves for all the selected properties at once. (<span class='doc-prop'>Transform</span> properties are special in that the <span class='doc-prop'>.x</span>, <span class='doc-prop'>.y</span>, and <span class='doc-prop'>.z</span> properties are linked, so that curves are added three at a time.)
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-6.jpg' />  <img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-7.jpg' /><br /><em>Any property can be animated by clicking on its <span class='doc-menu'>Key Indicator</span> or by right clicking on its name. For <span class='doc-prop'>Transform</span> properties, curves for <span class='doc-menu'>.x</span>, <span class='doc-menu'>.y</span>, and <span class='doc-menu'>.z</span> are added together.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>When in <span class='doc-keyword'>Animation Mode</span>, a red vertical line will show which frame of the <span class='doc-keyword'>Animation Clip</span> is currently previewed. The <span class='doc-keyword'>Inspector</span> and <span class='doc-keyword'>Scene View</span> will show the Game Object at that frame of the Animation Clip. The values of the animated properties at that frame are also shown in a column to the right of the property names.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-8.jpg' /><br /><em>In <span class='doc-keyword'>Animation Mode</span> a red vertical line shows the currently previewed frame. The animated values at that frame are previewed in the <span class='doc-keyword'>Inspector</span> and <span class='doc-keyword'>Scene View</span> and to the right of the property names in the <span class='doc-keyword'>Animation View</span>.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>You can click anywhere on the <span class='doc-menu'>Time Line</span> to preview or modify that frame in the Animation Clip. The numbers in the <span class='doc-menu'>Time Line</span> are shown as seconds and frames, so 1:30 means 1 second and 30 frames.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-9.jpg' /> Click in the <span class='doc-menu'>Time Line</span> to preview a given frame.<br /><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-10.jpg' /> You can go directly to a specific frame by typing it in, or use the buttons to go to the previous or next <span class='doc-keyword'>keyframe</span>.</div>
+
+
+
+
+
+
+
+<p class='vspace'>You can also use the following keyboard shortcuts to navigate between frames:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li>Press <span class='doc-menu'>Comma</span> (<span class='doc-menu'>,</span>) to go to the previous frame.
+
+
+
+
+
+
+
+</li><li>Press <span class='doc-menu'>Period</span> (<span class='doc-menu'>.</span>) to go to the next frame.
+
+
+
+
+
+
+
+</li><li>Hold Alt and press <span class='doc-menu'>Comma</span> (<span class='doc-menu'>,</span>) to go to the previous <span class='doc-keyword'>keyframe</span>.
+
+
+
+
+
+
+
+</li><li>Hold Alt and press <span class='doc-menu'>Period</span> (<span class='doc-menu'>.</span>) to go to the next <span class='doc-keyword'>keyframe</span>.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>In <span class='doc-keyword'>Animation Mode</span> you can move, rotate, or scale the <span class='doc-keyword'>Game Object</span> in the <span class='doc-keyword'>Scene View</span>. This will automatically create <span class='doc-keyword'>Animation Curves</span> for the position, rotation, and scale properties of the <span class='doc-keyword'>Animation Clip</span> if they didn't already exist, and keys on those Animation Curves will automatically be created at the currently previewed frame to store the respective <span class='doc-menu'>Transform</span> values you changed.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>You can also use the <span class='doc-keyword'>Inspector</span> to modify any of the animatable properties of the <span class='doc-keyword'>Game Object</span>. This too will create <span class='doc-keyword'>Animation Curves</span> as needed, and create <span class='doc-keyword'>keys</span> on those Animation Curves at the currently previewed frame to store your changed values. Properties that are not animatable are grayed out in the <span class='doc-keyword'>Inspector</span> while in Animation Mode.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-11.jpg' /> The <span class='doc-menu'>Keyframe button</span> creates a <span class='doc-keyword'>keyframe</span> for the shown curves at the currently previewed frame (shortcut: <span class='doc-menu'>K</span>).</div>
+
+
+
+
+
+
+
+<p class='vspace'>You can also manually create a <span class='doc-keyword'>keyframe</span> using the <span class='doc-menu'>Keyframe button</span>. This will create a key for all the curves that are currently shown in the <span class='doc-keyword'>Animation View</span>. If you want to only show curves for a subset of the properties in the property list, you can select those properties. This is useful for selectively adding keys to specific properties only.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-12.jpg' /><br /><em>When selecting a property in the property list, only the curve for that property is shown.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Playback</h2>
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Animation Clip</span> can be played back at anytime by clicking the <span class='doc-menu'>Play button</span> in the <span class='doc-keyword'>Animation View</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/animeditor-UsingAnimationEditor-13.jpg' />  Click the <span class='doc-menu'>Play button</span> to play back the <span class='doc-keyword'>Animation Clip</span>.</div>
+
+
+
+
+
+
+
+<p class='vspace'>The playback will loop within the time range that is shown in the <span class='doc-menu'>Time Line</span>. This makes it possible to focus on refining a small part of the <span class='doc-keyword'>Animation Clip</span> that is being worked on, without having to play back the entire length of the clip. To play back the whole length of the <span class='doc-keyword'>Animation Clip</span>, zoom out to view the entire time range, or press <span class='doc-menu'>F</span> to Frame Select with no <span class='doc-keyword'>keys</span> selected. To learn more about navigating the <span class='doc-menu'>Curve View</span>, see the section on <a href="../Components/animeditor-AnimationCurves.html">Editing Animation Curves</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2009-11-04</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/AnimationEditorGuide.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/animeditor-AnimationCurves.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

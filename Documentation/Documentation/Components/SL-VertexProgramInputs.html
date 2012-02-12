@@ -1,0 +1,3938 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Providing vertex data to vertex programs</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Providing vertex data to vertex programs</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/SL-Reference.html">Shader Reference</a> &gt; <a href="../Components/SL-ShaderPrograms.html">Writing vertex and fragment shaders</a> &gt; <a href="../Components/SL-VertexProgramInputs.html">Providing vertex data to vertex programs</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/SL-PropertiesInPrograms.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/SL-BuiltinStateInPrograms.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Providing vertex data to vertex programs</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p>For Cg <a href="../Components/SL-ShaderPrograms.html">vertex programs</a>, the vertex data must be passed in as a structure. Several commonly used vertex structures are defined in <span class='doc-keyword'>UnityCG.cginc</span> include file, and in most cases it's enough just to use them. The structures are:
+
+
+
+
+
+
+
+</p><ul><li><span class='doc-keyword'>appdata_base</span>: vertex consists of position, normal and one texture coordinate.
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>appdata_tan</span>: vertex consists of position, tangent, normal and one texture coordinate.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>For example, this shader colors the mesh based on it's normals and just uses <span class='doc-keyword'>appdata_base</span> as vertex program input:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>Shader "VertexInputSimple" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+Pass {
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+#include "UnityCG.cginc"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : SV_POSITION;
+
+
+
+
+
+
+
+    float4 color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v2f vert (appdata_base v)
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+
+
+
+
+
+
+
+    o.color.xyz = v.normal * 0.5 + 0.5;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+} 
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<p class='vspace'>If you want to access different vertex data, you have to declare vertex structure yourself. The structure <b>members must be</b> from the following list:
+
+
+
+
+
+
+
+</p><ul><li><span class='doc-keyword'>float4 vertex</span> is the vertex position
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>float3 normal</span> is the vertex normal
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>float4 texcoord</span> is the first UV coordinate
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>float4 texcoord1</span> is the second UV coordinate
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>float4 tangent</span> is the tangent vector (used for normal mapping)
+
+
+
+
+
+
+
+</li><li><span class='doc-keyword'>float4 color</span> is per-vertex color
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>Examples</h2>
+
+
+
+
+
+
+
+<h3>Visualizing UVs</h3>
+
+
+
+
+
+
+
+<p>The following shader example uses vertex position and first texture coordinate as vertex shader input (defined in structure <span class='doc-keyword'>appdata</span>). It is very useful to debug UV coordinates of the mesh. UV coordinates are visualized as red and green colors, and coordinates outside of 0..1 range have additional blue tint applied.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>
+
+
+
+
+
+
+
+Shader "!Debug/UV 1" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+#pragma fragment frag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, UV
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float4 texcoord : TEXCOORD0;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : POSITION;
+
+
+
+
+
+
+
+    float4 uv : TEXCOORD0;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    o.uv = float4( v.texcoord.xy, 0, 0 );
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+half4 frag( v2f i ) : COLOR {
+
+
+
+
+
+
+
+    half4 c = frac( i.uv );
+
+
+
+
+
+
+
+    if( saturate(i.uv) != i.uv )
+
+
+
+
+
+
+
+        c.b = 0.5;
+
+
+
+
+
+
+
+    return c;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-VertexProgramInputs-0.jpg' /><br /><em>Debug UV1 shader applied to a torus knot model</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Similarly, this shader vizualizes the second UV set of the model:
+
+
+
+
+
+
+
+</p><pre class='codelisting'>Shader "!Debug/UV 2" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+#pragma fragment frag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, second UV
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float4 texcoord1 : TEXCOORD1;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : POSITION;
+
+
+
+
+
+
+
+    float4 uv : TEXCOORD0;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    o.uv = float4( v.texcoord1.xy, 0, 0 );
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+half4 frag( v2f i ) : COLOR {
+
+
+
+
+
+
+
+    half4 c = frac( i.uv );
+
+
+
+
+
+
+
+    if( saturate(i.uv) != i.uv )
+
+
+
+
+
+
+
+        c.b = 0.5;
+
+
+
+
+
+
+
+    return c;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Visualizing vertex colors</h3>
+
+
+
+
+
+
+
+<p>The following shader uses vertex position and per-vertex colors as vertex shader input (defined in structure <span class='doc-keyword'>appdata</span>).
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "!Debug/Vertex color" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, color
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float4 color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : POSITION;
+
+
+
+
+
+
+
+    float4 color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    o.color = v.color;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-VertexProgramInputs-1.jpg' /><br /><em>Debug Colors shader applied to a model that has illumination baked into colors</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Visualizing normals</h3>
+
+
+
+
+
+
+
+<p>The following shader uses vertex position and normal as vertex shader input (defined in structure <span class='doc-keyword'>appdata</span>). Normal's X,Y,Z components are visualized as R,G,B colors. Because the normal components are in -1..1 range, we scale and bias them so that the output colors are in displayable 0..1 range.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "!Debug/Normals" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, normal
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float3 normal : NORMAL;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4 pos : POSITION;
+
+
+
+
+
+
+
+    float4 color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    o.color.xyz = v.normal * 0.5 + 0.5;
+
+
+
+
+
+
+
+    o.color.w = 1.0;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-VertexProgramInputs-2.jpg' /><br /><em>Debug Normals shader applied to a model. You can see that the model has hard shading edges.</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Visualizing tangents and binormals</h3>
+
+
+
+
+
+
+
+<p>Tangent and binormal vectors are used for normal mapping. In Unity only the tangent vector is stored in vertices, and binormal is derived from normal and tangent.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The following shader uses vertex position and tangent as vertex shader input (defined in structure <span class='doc-keyword'>appdata</span>). Tangent's X,Y,Z components are visualized as R,G,B colors. Because the normal components are in -1..1 range, we scale and bias them so that the output colors are in displayable 0..1 range.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "!Debug/Tangents" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, tangent
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float4 tangent : TANGENT;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4    pos : POSITION;
+
+
+
+
+
+
+
+    float4    color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    o.color = v.tangent * 0.5 + 0.5;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-VertexProgramInputs-3.jpg' /><br /><em>Debug Tangents shader applied to a model.</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>The following shader visualizes binormals. It uses vertex position, normal and tangent as vertex input. Binormal is calculated from normal and tangent. Just like normal or tangent, it needs to be scaled and biased into a displayable 0..1 range.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><pre class='codelisting'>Shader "!Debug/Binormals" {
+
+
+
+
+
+
+
+SubShader {
+
+
+
+
+
+
+
+    Pass {
+
+
+
+
+
+
+
+        Fog { Mode Off }
+
+
+
+
+
+
+
+CGPROGRAM
+
+
+
+
+
+
+
+#pragma vertex vert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// vertex input: position, normal, tangent
+
+
+
+
+
+
+
+struct appdata {
+
+
+
+
+
+
+
+    float4 vertex : POSITION;
+
+
+
+
+
+
+
+    float3 normal : NORMAL;
+
+
+
+
+
+
+
+    float4 tangent : TANGENT;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct v2f {
+
+
+
+
+
+
+
+    float4    pos : POSITION;
+
+
+
+
+
+
+
+    float4    color : COLOR;
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+v2f vert (appdata v) {
+
+
+
+
+
+
+
+    v2f o;
+
+
+
+
+
+
+
+    o.pos = mul( UNITY_MATRIX_MVP, v.vertex );
+
+
+
+
+
+
+
+    // calculate binormal
+
+
+
+
+
+
+
+    float3 binormal = cross( v.normal, v.tangent.xyz ) * v.tangent.w;
+
+
+
+
+
+
+
+    o.color.xyz = binormal * 0.5 + 0.5;
+
+
+
+
+
+
+
+    o.color.w = 1.0;
+
+
+
+
+
+
+
+    return o;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+ENDCG
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}</pre>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-VertexProgramInputs-4.jpg' /><br /><em>Debug Binormals shader applied to a model. Pretty!</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-10-01</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/SL-PropertiesInPrograms.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/SL-BuiltinStateInPrograms.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

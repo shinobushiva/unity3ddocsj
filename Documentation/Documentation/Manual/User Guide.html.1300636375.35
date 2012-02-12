@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<!-- #BeginTemplate "/Templates/manual-page.dwt" -->		<meta charset="utf-8" />
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - ユーザーガイド</title>
+<!-- #TemplateEndEditable -->		<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+	</head>
+	<body onload="DocLoaded();">
+		<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+			<tbody>
+				<tr>
+					<td class="titleleft">
+						<img src="../images/top/left.png" /></td>
+					<td>
+						<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+					<td class="titlemid">
+						<table>
+							<tbody>
+								<tr>
+									<td class="doctitle">
+										ユーザーガイド</td>
+									<td>
+										<table align="right">
+											<tbody>
+												<tr>
+<!-- #TemplateBeginEditable name="sections-nav" -->													<td class="Manual">
+														<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+													<td class="Manual">
+														<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+													<td class="Manual">
+														<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+<!-- #TemplateEndEditable -->												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<table class="docpath" width="100%">
+											<tbody>
+												<tr>
+													<td>
+<!-- #TemplateBeginEditable name="path" -->														<a href="../Manual/index.html">Unityマニュアル</a>&nbsp;&gt; <a href="../Manual/User%20Guide.html">ユーザーガイド</a><!-- #TemplateEndEditable --></td>
+													<td class="switchlink">
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td class="titleright" width="9">
+						<img src="../images/top/right.png" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="manual">
+			<div class="main">
+<!-- #TemplateBeginEditable name="unofficial translation" -->				<p>
+					&nbsp;</p>
+				<center>
+					<table border="1">
+						<tbody>
+							<tr>
+								<td bgcolor="yellow">
+									<center>
+										このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br />
+										This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br />
+										<br />
+										翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br />
+										Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center>
+								</td>
+								<td>
+									<a href="toedit_proxy.php?url=User Guide.html"><img src="../Images/pencil.png" /></a><br />
+									編集</td>
+							</tr>
+						</tbody>
+					</table>
+				</center>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->				<div class="nav">
+					<div class="nav-prev">
+						<a href="../Manual/index.html"> </a>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<a href="../Manual/index.html">戻る</a></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+					<div class="nav-next">
+						<a href="../Manual/Unity Basics.html"> </a>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<a href="../Manual/Unity Basics.html">次へ</a></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+				</div>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->				<h1>
+					ユーザーガイド</h1>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->				<p>
+					このセクションでは、Unityの機能と特徴に焦点を当てています。</p>
+				<p>
+					インターフェイス、基礎的要素、アセットのワークフロー、基本的な動作の作成について説明します。</p>
+				<p>
+					ユーザーガイドを読み終えるまでに、Unityインタラクティブシーンの使用方法と公開方法をしっかり理解できます。</p>
+				<div class="vspace">
+					はじめてのユーザーは、<a href="../Manual/Unity%20Basics.html">Unityの基礎</a>を読んでから始めることをお勧めします。</div>
+				<ul>
+					<li class="toclink">
+						<a href="../Manual/Unity Basics.html">Unityの基礎</a>
+						<ul>
+							<li class="toclink">
+								<a href="../Manual/Learning the Interface.html">インターフェイスの学習</a></li>
+							<li class="toclink">
+								<a href="../Manual/Customizing Your Workspace.html">ワークスペースのカスタマイズ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Asset Workflow.html">アセットワークフロー</a></li>
+							<li class="toclink">
+								<a href="../Manual/Creating Scenes.html">シーンの作成</a></li>
+							<li class="toclink">
+								<a href="../Manual/Publishing Builds.html">ビルドと公開</a></li>
+							<li class="toclink">
+								<a href="../Manual/Tutorials.html">チュートリアル</a></li>
+						</ul>
+					</li>
+					<li class="toclink">
+						<a href="../Manual/Building Scenes.html">シーンの構築</a>
+						<ul>
+							<li class="toclink">
+								<a href="../Manual/GameObjects.html">ゲームオブジェクト</a>
+								<ul>
+									<li class="toclink">
+										<a href="../Manual/The GameObject-Component Relationship.html">ゲームオブジェクトコンポーネント関連</a></li>
+									<li class="toclink">
+										<a href="../Manual/Using Components.html">コンポーネントの使用</a></li>
+									<li class="toclink">
+										<a href="../Manual/The Component-Script Relationship.html">コンポーネントスクリプト関連</a></li>
+								</ul>
+							</li>
+							<li class="toclink">
+								<a href="../Manual/Using The Inspector.html">インスペクタの使用</a>
+								<ul>
+									<li class="toclink">
+										<a href="../Manual/Editing Value Properties.html">プロパティ値の編集</a></li>
+									<li class="toclink">
+										<a href="../Manual/Editing Reference Properties.html">参照割り当て</a></li>
+									<li class="toclink">
+										<a href="../Manual/Inspector Options.html">インスペクタオプション</a></li>
+								</ul>
+							</li>
+							<li class="toclink">
+								<a href="../Manual/Using The Scene View.html">シーンビューの使用</a>
+								<ul>
+									<li class="toclink">
+										<a href="../Manual/Scene View Navigation.html">シーンビューナビゲーション</a></li>
+									<li class="toclink">
+										<a href="../Manual/Positioning GameObjects.html">ゲームオブジェクトの配置</a></li>
+									<li class="toclink">
+										<a href="../Manual/View Modes.html">表示モード</a></li>
+								</ul>
+							</li>
+							<li class="toclink">
+								<a href="../Manual/Searching.html">検索</a></li>
+							<li class="toclink">
+								<a href="../Manual/Prefabs.html">プレハブ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Lights.html">光源</a></li>
+							<li class="toclink">
+								<a href="../Manual/Cameras.html">カメラ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Particle Systems.html">パーティクルシステム</a></li>
+							<li class="toclink">
+								<a href="../Manual/Terrains.html">地形エンジンガイド</a></li>
+						</ul>
+					</li>
+					<li class="toclink">
+						<a href="../Manual/Asset Import and Creation.html">アセットのインポートと作成</a>
+						<ul>
+							<li class="toclink">
+								<a href="../Manual/Importing Assets.html">アセットのインポート</a></li>
+							<li class="toclink">
+								<a href="../Manual/Meshes.html">メッシュ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Animations.html">アニメーション</a></li>
+							<li class="toclink">
+								<a href="../Manual/Materials.html">マテリアルとシェーダ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Textures.html">2Dテクスチャ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Video Files.html">ムービーテクスチャ</a></li>
+							<li class="toclink">
+								<a href="../Manual/Audio Files.html">音声ファイル</a>
+								<ul>
+									<li class="toclink">
+										<a href="../Manual/Tracker Modules.html">トラッカーモジュール</a></li>
+								</ul>
+							</li>
+							<li class="toclink">
+								<a href="../Manual/Scripting.html">スクリプトの使用</a></li>
+							<li class="toclink">
+								<a href="../Manual/Asset Server.html">アセットサーバーガイド</a></li>
+							<li class="toclink">
+								<a href="../Manual/Behind the Scenes.html">シーンの背後</a></li>
+						</ul>
+					</li>
+					<li class="toclink">
+						<a href="../Manual/Creating Gameplay.html">ゲーム動作の作成</a>
+						<ul>
+							<li class="toclink">
+								<a href="../Manual/Instantiating Prefabs.html">プレハブの実行時インスタンス化</a></li>
+							<li class="toclink">
+								<a href="../Manual/Input.html">入力</a></li>
+							<li class="toclink">
+								<a href="../Manual/Transforms.html">トランスフォーム</a></li>
+							<li class="toclink">
+								<a href="../Manual/Physics.html">物理</a></li>
+							<li class="toclink">
+								<a href="../Manual/Animation.html">アニメーションビューガイド</a></li>
+							<li class="toclink">
+								<a href="../Manual/Animation Scripting.html">アニメーションスクリプティング</a></li>
+							<li class="toclink">
+								<a href="../Manual/Sound.html">サウンド</a></li>
+							<li class="toclink">
+								<a href="../Manual/Game Interface Elements.html">ゲームインターフェイス</a></li>
+							<li class="toclink">
+								<a href="../Manual/Networked Multiplayer.html">ネットワークマルチプレイ</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="specific-ios" id="specific-ios" style="display: block;">
+					&nbsp;</div>
+				<small>Page last updated: 2010-09-09 <script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script><!-- #TemplateEndEditable --></small>
+				<div class="nav">
+					<div class="nav-prev">
+						<small><a href="../Manual/index.html"> </a></small>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<small><a href="../Manual/index.html">戻る</a></small></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+					<div class="nav-next">
+						<small><a href="../Manual/Unity Basics.html"> </a></small>
+						<div class="nav-left">
+							&nbsp;</div>
+						<div class="nav-main">
+							<small><a href="../Manual/Unity Basics.html">次へ</a></small></div>
+						<div class="nav-right">
+							&nbsp;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- #EndTemplate -->	</body>
+</html>

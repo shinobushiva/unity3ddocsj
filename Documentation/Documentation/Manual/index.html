@@ -1,0 +1,5794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<title>Unity - Unity Manual</title>
+
+
+
+
+
+
+
+		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" --><!-- #TemplateEndEditable -->	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+		<tbody>
+
+
+
+
+
+
+
+			<tr>
+
+
+
+
+
+
+
+				<td class="titleleft">
+
+
+
+
+
+
+
+					<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+				<td>
+
+
+
+
+
+
+
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+				<td class="titlemid">
+
+
+
+
+
+
+
+					<table>
+
+
+
+
+
+
+
+						<tbody>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td class="doctitle">
+
+
+
+
+
+
+
+									Unity Manual</td>
+
+
+
+
+
+
+
+								<td>
+
+
+
+
+
+
+
+									<table align="right">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Manual">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td colspan="4">
+
+
+
+
+
+
+
+									<table class="docpath" width="100%">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+												<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Manual/index.html"><u><font color="#800080">Unityマニュアル</font></u></a><!-- #TemplateEndEditable --><!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+												<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+
+
+
+
+
+
+
+											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+						</tbody>
+
+
+
+
+
+
+
+					</table>
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				<td class="titleright" width="9">
+
+
+
+
+
+
+
+					<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+			</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+
+
+
+
+
+
+	</table>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Manual/User Guide.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+
+
+
+
+
+
+
+				Unityマニュアル</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<p>
+
+
+
+
+
+
+
+				Unityへようこそ</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				Unityはインタラクティブエンターテインメントや、マルチメディア体験ができるアプリケーションの作成を強力にサポートします。このマニュアルは、Unityの基本的な使い方から、応用テクニックまでを学習するのに役立ちます。すべてを通して読むこともできますし、リファレンスとして使うのも良いでしょう。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				このマニュアルは３つのセクションに分かれています。はじめのセクションは<a href="../Manual/User%20Guide.html"><u><font color="#800080">ユーザガイド</font></u></a>で、Unityのインタフェース、Assetワークフロー、基本的なゲームの開発について説明します。もし、初めてUnityを使うのであれば、<a href="../Manual/Unity%20Basics.html"><u><font color="#800080">Unityの基礎</font></u></a> セクションから読み始めると良いでしょう。</p>
+
+
+
+
+
+
+
+			<div class="specific-ios" id="specific-ios" style="display: block">
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					２つ目のセクションは<a href="../Manual/FAQ.html"><u><font color="#800080">FAQ</font></u></a>です。一般的に行われるタスクについて、よくある質問と回答がのってます。</p>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					３つめのセクションは<a href="../Manual/Advanced.html"><u><font color="#800080">応用</font></u></a>です。ゲームの最適化、シェーダ、ファイルサイズ、配布について説明します。</p>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				このマニュアルを読み終わったら、<a href="../Components/index.html"><u><font color="#0066cc">リファレンスマニュアル</font></u></a>と<a class="urllink" href="../ScriptReference/index.html" rel="nofollow"><u><font color="#0066cc">スクリプトリファレンス</font></u></a>に目を通してください。ゲーム開発における手助けになります。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				マニュアルに書かれていない質問がある時は、<a class="urllink" href="http://answers.unity3d.com" rel="nofollow"><u><font color="#0066cc">Unity Answers</font></u></a>か<a class="urllink" href="http://forum.unity3d.com" rel="nofollow"><u><font color="#0066cc">Unity Forums</font></u></a>で聞いてみてください。きっと答えが見つかるはずです。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				楽しく読んでね,<br />
+
+
+
+
+
+
+
+				<em>Unityチーム</em></p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<span id="result_box" lang="ja"><span closure_uid_vlg0g0="64" title="クリックしてその他の翻訳を表示する">Unityの</span><span closure_uid_vlg0g0="65" title="クリックしてその他の翻訳を表示する">マニュアル</span><span closure_uid_vlg0g0="66" title="クリックしてその他の翻訳を表示する">ガイド</span><span closure_uid_vlg0g0="67" title="クリックしてその他の翻訳を表示する">は</span><span closure_uid_vlg0g0="68" title="クリックしてその他の翻訳を表示する">、特定の</span><span closure_uid_vlg0g0="69" title="クリックしてその他の翻訳を表示する">プラットフォームに</span><span closure_uid_vlg0g0="71" title="クリックしてその他の翻訳を表示する">適用される</span><span closure_uid_vlg0g0="72" title="クリックしてその他の翻訳を表示する">セクション</span><span closure_uid_vlg0g0="73" title="クリックしてその他の翻訳を表示する">が含まれています。</span><span closure_uid_vlg0g0="74" title="クリックしてその他の翻訳を表示する">あなた</span><span closure_uid_vlg0g0="75" title="クリックしてその他の翻訳を表示する">が</span><span closure_uid_vlg0g0="76" title="クリックしてその他の翻訳を表示する">見たいと思って</span><span closure_uid_vlg0g0="77" title="クリックしてその他の翻訳を表示する">いるプラットフォーム</span><span closure_uid_vlg0g0="78" title="クリックしてその他の翻訳を表示する">を選択してください。</span><span closure_uid_vlg0g0="79" title="クリックしてその他の翻訳を表示する">プラットフォーム固有の</span><span closure_uid_vlg0g0="80" title="クリックしてその他の翻訳を表示する">情報は三つのイラスト</span><span closure_uid_vlg0g0="85" title="クリックしてその他の翻訳を表示する">をクリックすることで</span><span closure_uid_vlg0g0="86" title="クリックしてその他の翻訳を表示する">見ること</span><span closure_uid_vlg0g0="87" title="クリックしてその他の翻訳を表示する">ができます。</span></span><br />
+
+
+
+
+
+
+
+				<br />
+
+
+
+
+
+
+
+				<a class="desktopRefIMG" href="javascript:ShowHideDiv('desktopRef','specific-desktop','');" id="desktopRef"><img class="figure" src="../Images/manual/Unity Manual-0.jpg" /> </a><a class="iosRefIMG" href="javascript:ShowHideDiv('iosRef','specific-ios','');" id="iosRef"><img class="figure" src="../Images/manual/Unity Manual-1.jpg" /> </a><a class="androidRefIMG" href="javascript:ShowHideDiv('androidRef','specific-android','');" id="androidRef"><img class="figure" src="../Images/manual/Unity Manual-2.jpg" /> </a></p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				Table of Contents</h2>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li class="toclink">
+
+
+
+
+
+
+
+					<a href="../Manual/User Guide.html">ユーザーガイド</a>
+
+
+
+
+
+
+
+					<ul>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Unity Basics.html">Unityの基礎</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Learning the Interface.html">インターフェイスの学習</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Customizing Your Workspace.html">ワークスペースのカスタマイズ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Asset Workflow.html">アセットワークフロー</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Creating Scenes.html">シーンの作成</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Publishing Builds.html">ビルドと公開</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Tutorials.html">チュートリアル</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Building Scenes.html">シーンの構築</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/GameObjects.html">ゲームオブジェクト</a>
+
+
+
+
+
+
+
+									<ul>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/The GameObject-Component Relationship.html">ゲームオブジェクトコンポーネント関連</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Using Components.html">コンポーネントの使用</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/The Component-Script Relationship.html">コンポーネントスクリプト関連</a></li>
+
+
+
+
+
+
+
+									</ul>
+
+
+
+
+
+
+
+								</li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Using The Inspector.html">インスペクタの使用</a>
+
+
+
+
+
+
+
+									<ul>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Editing Value Properties.html">プロパティ値の編集</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Editing Reference Properties.html">参照割り当て</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Inspector Options.html">インスペクタオプション</a></li>
+
+
+
+
+
+
+
+									</ul>
+
+
+
+
+
+
+
+								</li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Using The Scene View.html">シーンビューの使用</a>
+
+
+
+
+
+
+
+									<ul>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Scene View Navigation.html">シーンビューナビゲーション</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Positioning GameObjects.html">ゲームオブジェクトの配置</a></li>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/View Modes.html">表示モード</a></li>
+
+
+
+
+
+
+
+									</ul>
+
+
+
+
+
+
+
+								</li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Searching.html">検索</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Prefabs.html">プレハブ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Lights.html">光源</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Cameras.html">カメラ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Particle Systems.html">パーティクルシステム</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Terrains.html">地形エンジンガイド</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Asset Import and Creation.html">アセットのインポートと作成</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Importing Assets.html">アセットのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Meshes.html">メッシュ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Animations.html">アニメーション</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Materials.html">マテリアルとシェーダ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Textures.html">2Dテクスチャ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Video Files.html">ムービーテクスチャ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Audio Files.html">音声ファイル</a>
+
+
+
+
+
+
+
+									<ul>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Tracker Modules.html">トラッカーモジュール</a></li>
+
+
+
+
+
+
+
+									</ul>
+
+
+
+
+
+
+
+								</li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Scripting.html">スクリプトの使用</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Asset Server.html">アセットサーバーガイド</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Behind the Scenes.html">シーンの背後</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Creating Gameplay.html">ゲーム動作の作成</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Instantiating Prefabs.html">プレハブの実行時インスタンス化</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Input.html">入力</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Transforms.html">トランスフォーム</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Physics.html">物理</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Animation.html">アニメーションビューガイド</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Animation Scripting.html">アニメーションスクリプティング</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Sound.html">サウンド</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Game Interface Elements.html">ゲームインターフェイス</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Networked Multiplayer.html">ネットワークマルチプレイ</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+					</ul>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<div class="specific-ios" id="specific-ios" style="display: block">
+
+
+
+
+
+
+
+				<ul>
+
+
+
+
+
+
+
+					<li class="toclink">
+
+
+
+
+
+
+
+						<a href="../Manual/iphone-GettingStarted.html">Getting Started with iOS Development</a>
+
+
+
+
+
+
+
+						<ul>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-basic.html">Unity iOS Basics</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/unity-remote.html">Unity リモート</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-API.html">iOS スクリプティング</a>
+
+
+
+
+
+
+
+								<ul>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Input.html#iPhoneInput">入力</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-Keyboard.html">モバイルキーボード</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-Advanced.html">Advanced Unity Mobile Scripting</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-DotNet.html">Using .NET API 2.0 compatibility level</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+
+
+
+
+							</li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-Hardware.html">iOS ハードウェアガイド</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-performance.html">Optimizing Performance in iOS.</a>
+
+
+
+
+
+
+
+								<ul>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Optimizing Graphics Performance.html#iPhoneOptimizingGraphicsPerformance">グラフィックスパフォーマンスの最適化</a>
+
+
+
+
+
+
+
+										<ul>
+
+
+
+
+
+
+
+											<li class="toclink">
+
+
+
+
+
+
+
+												<a href="../Manual/iphone-DrawCall-Batching.html">Draw Call Batching</a></li>
+
+
+
+
+
+
+
+											<li class="toclink">
+
+
+
+
+
+
+
+												<a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a></li>
+
+
+
+
+
+
+
+											<li class="toclink">
+
+
+
+
+
+
+
+												<a href="../Manual/RenderingStatistics.html#RenderingStatisticsIPhone">Rendering Statistics Window</a></li>
+
+
+
+
+
+
+
+										</ul>
+
+
+
+
+
+
+
+									</li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iphone-Optimizing-Physics.html">Optimizing Physics Performance</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iphone-Optimizing-Scripts.html">Optimizing Script Performance</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iphone-InternalProfiler.html">Measuring Performance with the Built-in Profiler</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iphone-Optimizing-MainLoop.html">Tuning Main Loop Performance</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iphone-playerSizeOptimization.html">Optimizing iOS Players build Size</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+
+
+
+
+							</li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-accountsetup.html">アカウントセットアップ</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-unsupported.html">Features currently not supported by Unity iOS</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/Plugins.html#iPhonePlugins">Plugins - Pro/Mobile-Only Feature</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-Downloadable-Content.html">Preparing your application for &quot;In App Purchases&quot;</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/MobileCustomizeSplashScreen.html">Customizing your Mobile target&#39;s Splash screen</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/TroubleShooting.html#iPhoneTroubleShooting">トラブルシューティング</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/iphone-bugreporting.html">Reporting crash bugs on iOS</a></li>
+
+
+
+
+
+
+
+						</ul>
+
+
+
+
+
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<div class="specific-android" id="specific-android" style="display: block">
+
+
+
+
+
+
+
+				<ul>
+
+
+
+
+
+
+
+					<li class="toclink">
+
+
+
+
+
+
+
+						<a href="../Manual/android-GettingStarted.html">Getting Started with Android Development</a>
+
+
+
+
+
+
+
+						<ul>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/android-sdksetup.html">Android SDK Setup</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/TroubleShooting.html#AndroidTroubleShooting">トラブルシューティング</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/android-bugreporting.html">Reporting crash bugs under Android</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/android-unsupported.html">Features currently not supported by Unity Android</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Components/class-PlayerSettings.html#Android">Player Settings</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/android-API.html">Android Scripting</a>
+
+
+
+
+
+
+
+								<ul>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Input.html#AndroidInput">入力</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-Keyboard.html#Android">モバイルキーボード</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-Advanced.html#Android">Advanced Unity Mobile Scripting</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/iOS-DotNet.html#Android">Using .NET API 2.0 compatibility level</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+
+
+
+
+							</li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/Plugins.html#AndroidPlugins">Plugins - Pro/Mobile-Only Feature</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/MobileCustomizeSplashScreen.html#Android">Customizing your Mobile target&#39;s Splash screen</a></li>
+
+
+
+
+
+
+
+						</ul>
+
+
+
+
+
+
+
+					</li>
+
+
+
+
+
+
+
+				</ul>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li class="toclink">
+
+
+
+
+
+
+
+					<a href="../Manual/FAQ.html">FAQ</a>
+
+
+
+
+
+
+
+					<ul>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/HowToUpgradeFrom2xTo3x.html">Unityプロジェクトを2.xから3.xにアップグレードする</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/PhysicsUpgradeDetails.html">物理のアップグレード詳細</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/MonoUpgradeDetails.html">Monoのアップグレード詳細</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Security Sandbox.html">webplayer 3.0のセキュリティサンドボックス</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/RenderingUpgradeDetails.html">レンダリングのアップグレード詳細</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/SL-V3Conversion.html">Unity 3.xのシェーダ変換ガイド</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/WhatIsNewInCurrentVersion.html">Unityの新機能</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Activation.html">アクティベーション</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Game Code How-to.html">ゲームコードの質問</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-First Person Walkthrough.html">How to make a simple first person walkthrough</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Graphics how-tos.html">グラフィックの質問</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-alphamaps.html">透過テクスチャのインポートはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-Normalmap.html">ノーマルマップ（法線マップ）を使うにはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-UseDetailTexture.html">ディティールテクスチャを使うにはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-MakeCubemap.html">キューブ環境マップを作るにはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-UseSkybox.html">スカイボックスを作るにはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-MeshParticleEmitter.html">メッシュパーティクルエミッタを作るにはどうすればいいですか？</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-SplashScreen.html">スプラッシュスクリーンを作るにはどうすればいいですか?</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-LightCookie.html">スポットライトクッキー(Spot Light Cookie)を作るにはどうすればいいですか?</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-FixZAxisIsUp.html">How do I fix the rotation of an imported model?</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-Water.html">Water（水面）を作るにはどうすればいいですか?</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/HOWTO-importObject.html">３Dアプリケーションからどのようにオブジェクトをインポートすればいいですか?</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectMaya.html">Mayaからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectCinema4D.html">Cinema 4Dからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectMax.html">3D Studio Maxからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectCheetah3D.html">Cheetah3Dからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectModo.html">Modoからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-importObjectLightwave.html">Lightwaveからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-ImportObjectBlender.html">Blenderからのオブジェクトのインポート</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Workflow.html">ワークフローについての質問</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-MonoDevelop.html">Getting started with Mono Develop</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-exportpackage.html">プロジェクト間でのアセットの再利用はどうすればいいですか?</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/HOWTO-InstallStandardAssets.html">スタンダードアセットをインストールかアップグレードするにはどうすればいいですか?</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+					</ul>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+
+
+				<li class="toclink">
+
+
+
+
+
+
+
+					<a href="../Manual/Advanced.html">アドバンス</a>
+
+
+
+
+
+
+
+					<ul>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="http://202.16.132.23/unity3docsj/Documentation/Documentation/Manual/AssetBundles.html">アセットバンドル(プロのみの機能)</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="http://202.16.132.23/unity3docsj/Documentation/Documentation/Manual/RenderingPaths.html">レンダリングパス</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Profiler.html" style="color: rgb(20, 93, 123); text-decoration: none; ">プロファイラー(プロのみの機能)</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Lightmapping.html">ライトマッピング　クイックスタート</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/LightmappingInDepth.html">ライトマッピング&nbsp;In-Depth</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/LightmappingCustomSettings.html">Custom Beast Settings</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/LightmappingUV.html">ライトマッピング　UVs</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Occlusion Culling.html">Occlusion Culling</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Loading Resources at Runtime.html">Loading Resources at Runtime</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Modifying Source Assets Through Scripting.html">Modifying Source Assets Through Scripting</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Execution Order.html">Execution Order</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Optimizing Graphics Performance.html">グラフィックスパフォーマンスの最適化</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/RenderingStatistics.html">Rendering Statistics Window</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Reducing File size.html">ファイルのサイズを縮小する</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Platform Dependent Compilation.html">プラットフォーム依存のコンパイル</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Debugging.html">デバッグ</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Console.html">コンソール</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Debugger.html">デバッガ</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/Log Files.html">ログファイル</a>
+
+
+
+
+
+
+
+									<ul>
+
+
+
+
+
+
+
+										<li class="toclink">
+
+
+
+
+
+
+
+											<a href="../Manual/Accessing Hidden Folders.html">隠しフォルダへのアクセス</a></li>
+
+
+
+
+
+
+
+									</ul>
+
+
+
+
+
+
+
+								</li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Plugins.html">Plugins - Pro/Mobile-Only Feature</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Command Line Arguments.html">Command line arguments</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Shaders.html">Shaders</a>
+
+
+
+
+
+
+
+							<ul>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/ShaderTut1.html">Shaders: ShaderLab &amp; Fixed Function shaders</a></li>
+
+
+
+
+
+
+
+								<li class="toclink">
+
+
+
+
+
+
+
+									<a href="../Manual/ShaderTut2.html">Shaders: Vertex and Fragment Programs</a></li>
+
+
+
+
+
+
+
+							</ul>
+
+
+
+
+
+
+
+						</li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/GraphicsEmulation.html">グラフィックス　エミュレーション</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/NetworkEmulation.html">ネットワーク　エミュレーション</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/VisualStudioIntegration.html">Visual Studio C# Integration</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/ExternalVersionControlSystemSupport.html">Using External Version Control Systems with Unity</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Analytics.html">Analytics</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/Version Check.html">Check For Updates</a></li>
+
+
+
+
+
+
+
+						<li class="toclink">
+
+
+
+
+
+
+
+							<a href="../Manual/TroubleShooting.html">トラブルシューティング</a></li>
+
+
+
+
+
+
+
+					</ul>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<div class="specific-desktop" id="specific-desktop" style="display: block">
+
+
+
+
+
+
+
+				<dl>
+
+
+
+
+
+
+
+					<dd>
+
+
+
+
+
+
+
+						<ul>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/IME Input.html">IME in Unity</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/Shadows.html">Shadows in Unity</a>
+
+
+
+
+
+
+
+								<ul>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/DirectionalShadowDetails.html">Directional Shadow Details</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Shadow Troubleshooting.html">Troubleshooting Shadows</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Shadow Size Details.html">Shadow Size Computation</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/OptimizeForIntegratedCards.html">Optimizing for integrated graphics cards</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+
+
+
+
+							</li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/Web Player Streaming.html">Web Player Streaming</a></li>
+
+
+
+
+
+
+
+							<li class="toclink">
+
+
+
+
+
+
+
+								<a href="../Manual/Web Player Deployment.html">Web Player Deployment</a>
+
+
+
+
+
+
+
+								<ul>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/HTML code to load Unity Web Player content.html">HTML code to load Unity content</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Working with UnityObject.html">Working with UnityObject</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Customizing the Unity Web Player loading screen.html">Customizing the Unity Web Player loading screen</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/WebPlayerBehaviorTags.html">Customizing the Unity Web Player&#39;s Behavior</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Unity Web Player and browser communication.html">Unity Web Player and browser communication</a></li>
+
+
+
+
+
+
+
+									<li class="toclink">
+
+
+
+
+
+
+
+										<a href="../Manual/Using Web Player templates.html">Using web player templates</a></li>
+
+
+
+
+
+
+
+								</ul>
+
+
+
+
+
+
+
+							</li>
+
+
+
+
+
+
+
+						</ul>
+
+
+
+
+
+
+
+					</dd>
+
+
+
+
+
+
+
+				</dl>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+			<small>Page last updated: 2010-09-09</small>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/DesktopNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/iPhoneNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/AndroidNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src="../Images/PlatformArrowRight.png" alt=""> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidNO.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidYES.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Manual/User Guide.html">Next</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+

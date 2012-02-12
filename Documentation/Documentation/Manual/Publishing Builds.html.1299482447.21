@@ -1,0 +1,347 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+	<!-- #TemplateBeginEditable name="doctitle" -->
+		<title>Unity - Publishing Builds</title>
+	<!-- #TemplateEndEditable -->
+</head>
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+<body onLoad="DocLoaded();">
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+	<td class="titlemid">
+		<table><tr>
+			<td class="doctitle">Publishing Builds</td>
+			<td><table align="right"><tr>
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+			<!-- #TemplateEndEditable -->	
+			</tr></table></td>
+		</tr><tr>
+			<td colspan="4">
+				<table width="100%" class="docpath"><tr><td >
+		<!-- #TemplateBeginEditable name="path" -->
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Unity Basics.html">Unity Basics</a> &gt; <a href="../Manual/Publishing Builds.html">Publishing Builds</a>
+		<!-- #TemplateEndEditable -->	
+				</td>
+				</td><td class="switchlink">
+					<!-- #TemplateBeginEditable name="switchLink" -->
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+					<!-- #TemplateEndEditable -->	
+				</td></tr></table>
+			</td>
+		</tr></table>
+	</td>
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+</tr></table>
+<div class="manual">
+	<div class="main">
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<p><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<td><a href="toedit_proxy.php?url=Publishing Builds.html"><img src="../Images/pencil.png"/></a><br/>編集</td>
+</tr></table></center></p>
+<!-- #TemplateEndEditable -->
+		<!-- #TemplateBeginEditable name="navigation" -->
+		<div class="nav">
+		<div class="nav-prev">
+			<a href='../Manual/Creating Scenes.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Previous</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	
+		<div class="nav-next">
+			<a href='../Manual/Tutorials.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Next</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	</div>
+		<!-- #TemplateEndEditable -->	
+		<!-- #TemplateBeginEditable name="title" -->
+			<h1>Publishing Builds</h1>
+		<!-- #TemplateEndEditable -->	
+		<!-- #TemplateBeginEditable name="body" -->
+			
+<p>At any time while you are creating your game, you might want to see how it looks when you build and run it outside of the editor as a standalone or web player.  This section will explain how to access the <span class='doc-keyword'>Build Settings</span> and how to create different builds of your games.
+</p>
+<p class='vspace'><span class='doc-menu'>File-&gt;Build Settings...</span> is the menu item to access the Build Settings window.  It pops up an editable list of the scenes that will be included when you build your game.
+</p>
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Publishing Builds-0.jpg' /><br /><em>The Build Settings window</em></div>
+<p class='vspace'>The first time you view this window in a project, it will appear blank.  If you build your game while this list is blank, only the currently open scene will be included in the build.  If you want to quickly build a test player with only one scene file, just build a player with a blank scene list.
+</p>
+<p class='vspace'>It is easy to add scene files to the list for multi-scene builds.  There are two ways to add them.  The first way is to click the <span class='doc-menu'>Add Current</span> button.  You will see the currently open scene appear in the list.  The second way to add scene files is to drag them from the <span class='doc-keyword'>Project View</span> to the list.
+</p>
+<p class='vspace'>At this point, notice that each of your scenes has a different index value.  <span class='doc-keyword'>Scene 0</span> is the first scene that will be loaded when you build the game.  When you want to load a new scene, use <a class='urllink' href='../ScriptReference/Application.LoadLevel.html' rel='nofollow'>Application.LoadLevel()</a> inside your scripts.
+</p>
+<p class='vspace'>If you've added more than one scene file and want to rearrange them, simply click and drag the scenes on the list above or below others until you have them in the desired order.
+</p>
+<p class='vspace'>If you want to remove a scene from the list, click to highlight the scene and press <span class='doc-menu'>Command-Delete</span>.  The scene will disappear from the list and will not be included in the build.
+</p>
+<p class='vspace'>When you are ready to publish your build, select a <span class='doc-keyword'>Platform</span> and make sure that the Unity logo is next to the platform; if its not then click in the <span class='doc-menu'>Switch Platform</span> button to let Unity know which platform you want to build for. Finally press the <span class='doc-menu'>Build</span> button. You will be able to select a name and location for the game using a standard Save dialog. When you click <span class='doc-menu'>Save</span>, Unity builds your game pronto. It's that simple. If you are unsure where to save your built game to, consider saving it into the projects root folder.  You cannot save the build into the Assets folder.
+</p>
+<p class='vspace'>Enabling the <span class='doc-keyword'>Debug build</span> checkbox on any standalone player will enable <a class='urllink' href='../ScriptReference/Profiler.html' rel='nofollow'>Profiler</a> functionality. Additionally, the player will be built with debug symbols, so you can use 3rd party profiling or debugging tools.
+</p>
+<div class='vspace'></div><a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/Publishing Builds-1.jpg' /> Desktop </h1> </a>
+<div class='specific-desktop' style='display: block;' id='specific-desktop' > 
+<h2>Web Player Streaming</h2>
+<p>Streaming Web Players allow your Web Player games to begin playing as soon as Scene 0 is finished loading.  If you have a game with 10 levels, it doesn't make much sense to force the player to wait and download all assets for levels 2-10 before they can start playing level 1.  When you publish a Streaming Web Player, the assets that must be downloaded will be sequenced in the order of the <span class='doc-keyword'>Scene</span> file they appear in.  As soon as all assets contained in Scene 0 are finished downloading, the Web Player will begin playing.
+</p>
+<p class='vspace'>Put simply, Streaming Web Players will get players playing your game faster than ever.
+</p>
+<p class='vspace'>The only thing you need to worry about is checking to make sure that the next level you want to load is finished streaming before you load it.
+</p>
+<p class='vspace'>Normally, in a non-streamed player, you use the following code to load a level:
+</p>
+<div class='vspace'></div><pre class='codelisting'>
+Application.LoadLevel("levelName");
+</pre>
+<p class='vspace'>In a Streaming Web Player, you must first check that the level is finished streaming.  This is done through the <a class='urllink' href='../ScriptReference/Application.CanStreamedLevelBeLoaded.html' rel='nofollow'>CanStreamedLevelBeLoaded()</a> function.  This is how it works:
+</p>
+<div class='vspace'></div><pre class='codelisting'>
+var levelToLoad = 1;
+
+function LoadNewLevel () {
+	if (Application.CanStreamedLevelBeLoaded (levelToLoad)) {
+		Application.LoadLevel (levelToLoad);
+	}
+}
+</pre>
+<p class='vspace'>If you would like to display the level streaming progress to the player, for a loading bar or other representation, you can read the progress by accessing <a class='urllink' href='../ScriptReference/Application.GetStreamProgressForLevel.html' rel='nofollow'>GetStreamProgressForLevel()</a>.
+</p>
+<div class='vspace'></div><h2>Building standalone players</h2>
+<p>With Unity you can build standalone applications for Windows and Mac (Intel, PowerPC or Universal, which runs on both architectures). It's simply a matter of choosing the build target in the build settings dialog, and hitting the 'Build' button.
+When building standalone players, the resulting files will vary depending on the build target. On Windows an executable file (.exe) will be built, along with a Data folder which contains all the resources for your application. On Mac an app bundle will be built, containing the file needed to run the application, as well as the resources.
+</p>
+<p class='vspace'>Distributing your standalone on Mac is just to provide the app bundle (everything is packed in there). On Windows you need to provide both the .exe file and the Data folder for others to run it. Think of it like this: Other people must have the same files on their computer, as the resulting files that Unity builds for you, in order to run your game.
+</p>
+<div class='vspace'></div><h2>Inside the build process</h2>
+<p>The building process will place a blank copy of the built game application wherever you specify. Then it will work through the scene list in the build settings, open them in the editor one at a time, optimize them, and integrate them into the application package. It will also calculate all the assets that are required by the included scenes and store that data in a separate file within the application package.
+</p>
+<div class='vspace'></div><ul><li>Any <span class='doc-keyword'>GameObject</span> in a scene that is tagged with 'EditorOnly' will be not be included in the published build. This is useful for debugging scripts that don't need to be included in the final game.
+<div class='vspace'></div></li><li>When a new level loads, all the objects in the previous level are destroyed. To prevent this, use <a class='urllink' href='../ScriptReference/Object.DontDestroyOnLoad.html' rel='nofollow'>DontDestroyOnLoad()</a> on any objects you don't want destroyed. This is most commonly used for keeping music playing while loading a level, or for game controller scripts which keep game state and progress.
+<div class='vspace'></div></li><li>After the loading of a new level is finished, the message: <a class='urllink' href='../ScriptReference/MonoBehaviour.OnLevelWasLoaded.html' rel='nofollow'>OnLevelWasLoaded()</a> will be sent to all active game objects.
+</li><li>For more information on how to best create a game with multiple scenes, for instance a main menu, a high-score screen, and actual game levels, see the Scripting Tutorial.pdf
+</li></ul></div>
+<a class='iosRef' id='iosRef' href="javascript:ShowHideDiv('iosRef','specific-ios', 'iOS');"><h1><img class='figure' src='../Images/manual/Publishing Builds-2.jpg' /> iOS</h1></a>
+<div class='specific-ios' style='display: block;' id='specific-ios' > 
+<h2>Inside the iOS build process</h2>
+<p>The iPhone/iPad application build process is a two step process: 
+</p><ol><li>XCode project is generated with all the required libraries, precompiled .NET code and serialized assets.
+</li><li>XCode project is built and deployed on the actual device.
+</li></ol><p class='vspace'>When "Build" is hit on "Build settings" dialog only the first step is accomplished. Hitting "Build and Run" performs both steps.
+If in the project save dialog the user selects an already existing folder an alert is displayed. Currently there are two XCode project generation modes to select: 
+</p><ul><li><span class='doc-prop'>replace</span> - all the files from target folder are removed and the new content is generated
+</li><li><span class='doc-prop'>append</span> - the "Data", "Libraries" and project root folder are cleaned and filled with newly generated content. The XCode project file is updated according to the latest Unity project changes. XCode project "Classes" subfolder could be considered as safe place to place custom native code, but making regular backups is recommended. Append mode is supported only for the existing XCode projects generated with the same Unity iOS version.
+</li></ul><p class='vspace'>If Cmd+B is hit then the automatic build and run process is invoked and the latest used folder is assumed as the build target. In this case <span class='doc-prop'>append</span> mode is assumed as default. 
+</p></div>
+<div class='vspace'></div><a class='androidRef' id='androidRef' href="javascript:ShowHideDiv('androidRef','specific-android', 'Android');"><h1><img class='figure' src='../Images/manual/Publishing Builds-3.jpg' /> Android</h1></a>
+<div class='specific-android' style='display: block;' id='specific-android' > 
+<p>Unity Android is currently in preview state for Unity 3.  As such this documentation is not yet complete.  Please watch this space for proper Unity Android documentation as it is added.
+</p></div>
+<div class='vspace'></div><h2>Preloading</h2>
+<p>Published builds automatically preload all assets in a scene when the scene loads. The exception to this rule is scene 0. This is because the first scene is usually a splashscreen, which you want to display as quickly as possible.
+</p>
+<p class='vspace'>To make sure all your content is preloaded, you can create an empty scene which calls <span class='doc-prop'>Application.LoadLevel(1)</span>. In the build settings make this empty scene's index 0. All subsequent levels will be preloaded.
+</p>
+<div class='vspace'></div><h2>You're ready to build games</h2>
+<p>By now, you have learned how to use Unity's interface, how to use assets, how to create scenes, and how to publish your builds. There is nothing stopping you from creating the game of your dreams. You'll certainly learn much more along the way, and we're here to help.
+</p>
+<p class='vspace'>To learn more details about using Unity itself, you can <a href="../Manual/Building Scenes.html">continue reading the manual</a> or follow the <a href="../Manual/Tutorials.html">Tutorials</a>.
+</p>
+<p class='vspace'>To learn more about Components, the nuts &amp; bolts of game behaviors, please read the <a href="../Components/Components.html">Component Reference</a>.
+</p>
+<p class='vspace'>To learn more about Scripting, please read the <a class='urllink' href='../ScriptReference/index.html' rel='nofollow'>Scripting Reference</a>.
+</p>
+<p class='vspace'>To learn more about creating Art assets, please read the <a href="../Manual/Asset Import and Creation.html">Assets section</a> of the manual.
+</p>
+<p class='vspace'>To interact with the community of Unity users and developers, visit the <a class='urllink' href='http://forum.unity3d.com' rel='nofollow'>Unity Forums</a>.  You can ask questions, share projects, build a team, anything you want to do.  Definitely visit the forums at least once, because we want to see the amazing games that you make.
+</p>
+</p><small>Page last updated: 2010-09-07</p>
+    <script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script>
+    
+		<!-- #TemplateEndEditable -->	
+
+		<div class="nav">
+		<div class="nav-prev">
+			<a href='../Manual/Creating Scenes.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Previous</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	
+		<div class="nav-next">
+			<a href='../Manual/Tutorials.html'>
+				<div class="nav-left"></div>
+				<div class="nav-main">Next</div>
+				<div class="nav-right"></div>
+			</a>
+		</div>
+	</div>
+	</div>
+</div>
+</body></html>
+<!-- #EndTemplate -->

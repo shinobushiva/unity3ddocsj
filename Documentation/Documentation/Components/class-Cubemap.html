@@ -1,0 +1,2826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+<!-- #BeginTemplate "/Templates/manual-page.dwt" -->		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - Cubemap Texture</title>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->		<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+		<div id="yass_top_edge_dummy" style="width: 1px; height: 1px; padding: 0px; margin: -11px 0px 0px; border-width: 0px; display: block;">
+
+
+
+
+
+
+
+			&nbsp;</div>
+
+
+
+
+
+
+
+		<div id="yass_top_edge" style="background-image: url(&quot;chrome://yass/content/edgebgtop.png&quot;); background-attachment: scroll; background-position: center bottom; padding: 0px; margin: 0px 0px 10px -10px; border-width: 0px; height: 0px; display: block; width: 1px;">
+
+
+
+
+
+
+
+			&nbsp;</div>
+
+
+
+
+
+
+
+		<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+			<tbody>
+
+
+
+
+
+
+
+				<tr>
+
+
+
+
+
+
+
+					<td class="titleleft">
+
+
+
+
+
+
+
+						<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+					<td>
+
+
+
+
+
+
+
+						<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+					<td class="titlemid">
+
+
+
+
+
+
+
+						<table>
+
+
+
+
+
+
+
+							<tbody>
+
+
+
+
+
+
+
+								<tr>
+
+
+
+
+
+
+
+									<td class="doctitle">
+
+
+
+
+
+
+
+										Cubemap Texture</td>
+
+
+
+
+
+
+
+									<td>
+
+
+
+
+
+
+
+										<table align="right">
+
+
+
+
+
+
+
+											<tbody>
+
+
+
+
+
+
+
+												<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->													<td class="Components">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+													<td class="Components">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+													<td class="Components">
+
+
+
+
+
+
+
+														<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->												</tr>
+
+
+
+
+
+
+
+											</tbody>
+
+
+
+
+
+
+
+										</table>
+
+
+
+
+
+
+
+									</td>
+
+
+
+
+
+
+
+								</tr>
+
+
+
+
+
+
+
+								<tr>
+
+
+
+
+
+
+
+									<td colspan="4">
+
+
+
+
+
+
+
+										<table class="docpath" width="100%">
+
+
+
+
+
+
+
+											<tbody>
+
+
+
+
+
+
+
+												<tr>
+
+
+
+
+
+
+
+													<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->														<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/Components.html">Components</a> &gt; <a href="../Components/comp-AssetsGroup.html">Asset Components</a> &gt; <a href="../Components/class-Cubemap.html">Cubemap Texture</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+													<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->													</td>
+
+
+
+
+
+
+
+												</tr>
+
+
+
+
+
+
+
+											</tbody>
+
+
+
+
+
+
+
+										</table>
+
+
+
+
+
+
+
+									</td>
+
+
+
+
+
+
+
+								</tr>
+
+
+
+
+
+
+
+							</tbody>
+
+
+
+
+
+
+
+						</table>
+
+
+
+
+
+
+
+					</td>
+
+
+
+
+
+
+
+					<td class="titleright" width="9">
+
+
+
+
+
+
+
+						<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+				</tr>
+
+
+
+
+
+
+
+			</tbody>
+
+
+
+
+
+
+
+		</table>
+
+
+
+
+
+
+
+		<div class="manual">
+
+
+
+
+
+
+
+			<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->				<div class="nav">
+
+
+
+
+
+
+
+					<div class="nav-prev">
+
+
+
+
+
+
+
+						<a href="../Components/class-AudioClip.html"> </a>
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<a href="../Components/class-AudioClip.html">Previous</a></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+					<div class="nav-next">
+
+
+
+
+
+
+
+						<a href="../Components/class-Flare.html"> </a>
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<a href="../Components/class-Flare.html">Next</a></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->				<h1>
+
+
+
+
+
+
+
+					キューブマップテクスチャ(Cubemap Texture)</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->				<p>
+
+
+
+
+
+
+
+					<span class="doc-keyword">キューブマップテクスチャ</span>は架空のキューブで表現して知らせる６つの面に分けられたテクスチャのコレクションです。ほとんどの場合オブジェクト上の無限遠方の反射を表示するのに使い、バックグラウンド上の遠方風景をどのように<a href="class-Skybox.html">スカイボックス(Skybox)</a>で表示するかに似ています。Unity上のビルトインシェーダの<a href="shader-ReflectiveFamily.html">反射(Reflective)</a>は反射表示のためにキューブマップを使います。</p>
+
+
+
+
+
+
+
+				<div>
+
+
+
+
+
+
+
+					<img class="figure" src="../Images/manual/class-Cubemap-0.jpg" /><br />
+
+
+
+
+
+
+
+					<em>山のシーンのキューブマップはこのスフィア上の反射のように表示されます</em></div>
+
+
+
+
+
+
+
+				<p class="vspace">
+
+
+
+
+
+
+
+					あなたはいくつかの方法からキューブマップを作成できます:</p>
+
+
+
+
+
+
+
+				<ol>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						<span class="doc-menu">Assets-&gt;Create-&gt;Cubemap</span>を使い、 プロパティをセットし、６つの<a href="class-Texture2D.html">テクスチャ(Texture)</a>アセットをキューブマップの&quot;faces&quot;に対応した場所にドラッグします。</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						単一のインポートテクスチャアセットからキューブマップを作成するために<a href="class-Texture2D.html">テクスチャ(Texture)</a>インポートセッティングを使用してください。</li>
+
+
+
+
+
+
+
+					<li>
+
+
+
+
+
+
+
+						スクリプトからキューブマップにシーンをレンダリングします。<a class="urllink" href="../ScriptReference/Camera.RenderToCubemap.html" rel="nofollow">Camera.RenderToCubemap</a>上のコード例は、エディタから直接キューブマップをレンダリングするためのスクリプトが含まれています。</li>
+
+
+
+
+
+
+
+				</ol>
+
+
+
+
+
+
+
+				<h2>
+
+
+
+
+
+
+
+					Properties</h2>
+
+
+
+
+
+
+
+				<table width="100%">
+
+
+
+
+
+
+
+					<tbody>
+
+
+
+
+
+
+
+						<tr class="tableheader">
+
+
+
+
+
+
+
+							<td class="prop">
+
+
+
+
+
+
+
+								&nbsp;</td>
+
+
+
+
+
+
+
+							<td class="function">
+
+
+
+
+
+
+
+								&nbsp;</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Right (+X)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の右(right)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Left (-X)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の上(up)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Top (+Y)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の最上段(top)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Bottom (-Y)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の下(bottom)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Front (+Z)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の前(forward)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Back (-Z)</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								キューブマップ表面の後ろ(rear)のグローバルサイドのためのテクスチャです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Face Size</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								それぞれの個々のキューブマップ表面の向こう側の画素の幅と高さです。テクスチャは内部的にこのサイズに合うようスケールされる、アセットを手動でスケールする必要はありません。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Mipmap</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								ミニマップを作成するために有効にします。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+						<tr>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								<span class="doc-prop">Format</span></td>
+
+
+
+
+
+
+
+							<td align="left">
+
+
+
+
+
+
+
+								作成されたキューブマップのフォーマットです。</td>
+
+
+
+
+
+
+
+						</tr>
+
+
+
+
+
+
+
+					</tbody>
+
+
+
+
+
+
+
+				</table>
+
+
+
+
+
+
+
+				<div class="vspace">
+
+
+
+
+
+
+
+					&nbsp;</div>
+
+
+
+
+
+
+
+				<small>Page last updated: 2007-10-02 <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable --></small>
+
+
+
+
+
+
+
+				<div class="nav">
+
+
+
+
+
+
+
+					<div class="nav-prev">
+
+
+
+
+
+
+
+						<small><a href="../Components/class-AudioClip.html"> </a></small>
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<small><a href="../Components/class-AudioClip.html">Previous</a></small></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+					<div class="nav-next">
+
+
+
+
+
+
+
+						<small><a href="../Components/class-Flare.html"> </a></small>
+
+
+
+
+
+
+
+						<div class="nav-left">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+						<div class="nav-main">
+
+
+
+
+
+
+
+							<small><a href="../Components/class-Flare.html">Next</a></small></div>
+
+
+
+
+
+
+
+						<div class="nav-right">
+
+
+
+
+
+
+
+							&nbsp;</div>
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->		<div id="yass_bottom_edge" style="background-image: url(&quot;chrome://yass/content/edgebgbot.png&quot;); background-position: 0px 0px; position: absolute; margin: 0px; padding: 0px; border-width: 0px; height: 0px; left: 0px; top: 932px; width: 100%; display: block;">
+
+
+
+
+
+
+
+			&nbsp;</div>
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+

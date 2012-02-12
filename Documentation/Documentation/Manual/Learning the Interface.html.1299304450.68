@@ -1,0 +1,803 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body onload="DocLoaded();">
+		<style type="text/css">
+#tweetings_control {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 364px;
+  background: #878787;
+  color: #fff;
+  font-size: 8pt;
+  text-align: left;
+}
+
+#tweetings_control a, #tweetings_control a:visited {
+  float: right;
+  color: #fff;
+  text-decoration: underline;
+  padding-right: 2px;
+}
+
+.tweetings_tweet {
+  width: 350px;
+  padding: 2px 4px 2px 4px;
+  text-align: left;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 10pt;
+}
+
+.tweetings_tweet a, .tweetings_tweet a:visited {
+  color: #665;
+  text-decoration: none;
+}
+
+.tweetings_tweet a:hover {
+  text-decoration: underline;
+}
+
+.tweetings_tweet img {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+}
+
+.tweetings_tweet .text {
+  clear: right;
+  word-wrap: break-word;
+}
+
+.tweetings_tweet .user {
+  font-size: 9pt;
+}
+
+.tweetings_tweet .footer {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-size: 8pt;
+  margin-top: 2px;
+}
+
+.tweetings_tweet img.profile {
+  border: 0;
+  margin-right: 4px;
+  float: left;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+}
+
+.tweetings_tweet img.retweet {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  margin-top: 1px;
+  vertical-align: top;
+}
+
+/* Theme */
+
+.tweetings_tweet {
+  -webkit-border-radius: 5px;
+  background-color: #ffffff;
+  border: 3px solid #e5effe;
+  margin-bottom: 3px;
+}
+
+.tweetings_tweet.unread {
+  border: 1px solid #4b8cdc;
+}
+
+.tweetings_tweet .user {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tweetings_tweet .footer {
+  color: #999;
+}
+
+.tweetings_tweet img.profile {
+  -webkit-border-radius: 5px;
+}
+
+#tweetings_container {
+  position: fixed;
+  top: 0px;
+  right: 2px;
+  z-index: 999;
+}		</style>
+		<style type="text/css">
+#tweetings_control {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 364px;
+  background: #878787;
+  color: #fff;
+  font-size: 8pt;
+  text-align: left;
+}
+
+#tweetings_control a, #tweetings_control a:visited {
+  float: right;
+  color: #fff;
+  text-decoration: underline;
+  padding-right: 2px;
+}
+
+.tweetings_tweet {
+  width: 350px;
+  padding: 2px 4px 2px 4px;
+  text-align: left;
+  margin: 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 10pt;
+}
+
+.tweetings_tweet a, .tweetings_tweet a:visited {
+  color: #665;
+  text-decoration: none;
+}
+
+.tweetings_tweet a:hover {
+  text-decoration: underline;
+}
+
+.tweetings_tweet img {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+}
+
+.tweetings_tweet .text {
+  clear: right;
+  word-wrap: break-word;
+}
+
+.tweetings_tweet .user {
+  font-size: 9pt;
+}
+
+.tweetings_tweet .footer {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-size: 8pt;
+  margin-top: 2px;
+}
+
+.tweetings_tweet img.profile {
+  border: 0;
+  margin-right: 4px;
+  float: left;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+}
+
+.tweetings_tweet img.retweet {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  margin-top: 1px;
+  vertical-align: top;
+}
+
+/* Theme */
+
+.tweetings_tweet {
+  -webkit-border-radius: 5px;
+  background-color: #ffffff;
+  border: 3px solid #e5effe;
+  margin-bottom: 3px;
+}
+
+.tweetings_tweet.unread {
+  border: 1px solid #4b8cdc;
+}
+
+.tweetings_tweet .user {
+  color: #666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tweetings_tweet .footer {
+  color: #999;
+}
+
+.tweetings_tweet img.profile {
+  -webkit-border-radius: 5px;
+}
+
+#tweetings_container {
+  position: fixed;
+  top: 0px;
+  right: 2px;
+  z-index: 999;
+}		</style>
+	</body>
+</html>
+<meta charset="utf-8" />
+<!-- #TemplateBeginEditable name="doctitle" --><title>Unity - Learning the Interface</title>
+<!-- #TemplateEndEditable --><link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+<body onload="DocLoaded();">
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+		<tbody>
+			<tr>
+				<td class="titleleft">
+					<img src="../images/top/left.png" /></td>
+				<td>
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+				<td class="titlemid">
+					<table>
+						<tbody>
+							<tr>
+								<td class="doctitle">
+									Learning the Interface</td>
+								<td>
+									<table align="right">
+										<tbody>
+											<tr>
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Manual">
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+												<td class="Manual">
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+												<td class="Manual">
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+<!-- #TemplateEndEditable -->											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<table class="docpath" width="100%">
+										<tbody>
+											<tr>
+												<td>
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Unity Basics.html">Unity Basics</a> &gt; <a href="../Manual/Learning the Interface.html">Learning the Interface</a> <!-- #TemplateEndEditable --></td>
+												<td class="switchlink">
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="titleright" width="9">
+					<img src="../images/top/right.png" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="manual">
+		<div class="main">
+<!-- #TemplateBeginEditable name="unofficial translation" -->			<p>
+				&nbsp;</p>
+			<center>
+				<table border="1">
+					<tbody>
+						<tr>
+							<td bgcolor="yellow">
+								<center>
+									このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br />
+									This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br />
+									<br />
+									翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br />
+									Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center>
+							</td>
+							<td>
+								<a href="toedit_proxy.php?url=Learning the Interface.html"><img src="../Images/pencil.png" /></a><br />
+								編集</td>
+						</tr>
+					</tbody>
+				</table>
+			</center>
+			<p>
+				&nbsp;</p>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+				<div class="nav-prev">
+					<a href="../Manual/Unity Basics.html"> </a>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<a href="../Manual/Unity Basics.html">Previous</a></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+				<div class="nav-next">
+					<a href="../Manual/Customizing Your Workspace.html"> </a>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<a href="../Manual/Customizing Your Workspace.html">Next</a></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+			</div>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+				&nbsp;</h1>
+			<h1 style="clear: both; font-size: 18px; font-weight: bold; color: black; margin-top: 0.7em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; line-height: 25px; ">
+				インタフェースの学習</h1>
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				初めての起動</h2>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				さあ、Unityの学習を始めましょう。もしUnityをまだ起動していなければ&nbsp;<span class="doc-menu" style="font-weight: bold; ">Applications-&gt;Unity [Mac]</span>、<span class="doc-menu" style="font-weight: bold; ">Start-&gt;Programs-&gt;Unity [Win]</span>から起動してください。初めて起動するとUnity Editorが表示されます。</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				&nbsp;</p>
+			<div>
+				<em style="color: rgb(17, 17, 17); ">デフォルトではTropical Paradiseプロジェクトの&quot;Islands&quot;シーンが表示されています。</em></div>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				Unityエディタインタフェースを眺めてみましょう。<span class="doc-keyword" style="font-weight: bold; ">Main Editor Window</span>には、いくつかの&nbsp;<span class="doc-keyword" style="font-weight: bold; ">ビュー</span>と呼ばれる&nbsp;<span class="doc-keyword" style="font-weight: bold; ">タブ</span>が有ります。Unityには用途に合わせて様々なビューが準備されています。</p>
+			<p>
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-0.jpg" /></div>
+			<div class="vspace">
+				では、それぞれのビューについて見てみましょう。</div>
+			<h2>
+				プロジェクトビュー（Project View）</h2>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-1.jpg" /></div>
+			<p class="vspace">
+				全てのUnityプロジェクトはAssetsフォルダを含みます。このフォルダに含まれているものがProjectビューに表示されます。ゲームで使用する全てのAssetをここに配置します。シーン(scene)や<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Scripting.html" style="color: rgb(20, 93, 123); text-decoration: none; ">スクリプト(scripts)</a>、<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Meshes.html" style="color: rgb(20, 93, 123); text-decoration: none; ">3Dモデル(3D models)</a>、<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Textures.html" style="color: rgb(20, 93, 123); text-decoration: none; ">テクスチャ(texture)</a>、<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Audio%20Files.html" style="color: rgb(20, 93, 123); text-decoration: none; ">オーディオ(audio files)</a>、<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Prefabs.html" style="color: rgb(20, 93, 123); text-decoration: none; ">プレハブ(prefabs)</a>等です。ProjectビューにあるAssetの上で右クリックし、&nbsp;<span class="doc-menu" style="font-weight: bold; ">Reveal in Finder [Mac]</span>&nbsp;(<span class="doc-menu" style="font-weight: bold; ">Reveal in Explorer [Windows]</span>)を選択するとファイルシステム上の実際のファイルを見る事が出来ます。</p>
+			<p class="vspace">
+				<b><b>重要：</b>&nbsp;Project AssetをOS上で動かすとメタデータを破損する可能性があります。<b>必ず</b>プロジェクトビューを使ってAssetを管理してください。</b></p>
+			<p class="vspace">
+				&nbsp;</p>
+			<p class="vspace">
+				ファイルをプロジェクトビューにドラッグすればAssetをプロジェクトに追加できます。または、<span class="doc-menu" style="font-weight: bold; ">Assets-&gt;Import New Asset</span>メニューから行えます。Assetをゲーム内で使う準備ができました。Assetについて詳しく知りたければ、マニュアルの<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Asset%20Workflow.html" style="color: rgb(20, 93, 123); text-decoration: none; ">Asset Workflow</a>の章を読んでください。</p>
+			<p class="vspace">
+				<b><span class="doc-keyword" style="font-weight: bold; ">シーン</span>もProjectビューに配置されます。これらは独立した階層だと考えてください。例えば、はじめにUnityを起動すると、Islandsシーンがデフォルトでロードされます。<span class="doc-menu" style="font-weight: bold; ">Command-N[Mac]</span>&nbsp;(<span class="doc-menu" style="font-weight: bold; ">Control-N[Win]</span>)で新しいシーンを作成します。現在のシーンをProjectビュー内で保存するには<span class="doc-menu" style="font-weight: bold; ">Command-S[Mac]</span>(<span class="doc-menu" style="font-weight: bold; ">Control-S[Win]</span>)を使用します。</b></p>
+			<p class="vspace">
+				<span class="doc-keyword">いくつかのゲームAssetはUnityの中で作成します。<span class="doc-menu" style="font-weight: bold; ">Create</span>ドロップダウンか、<span class="doc-menu" style="font-weight: bold; ">右クリックからCreate</span>を選択してください。</span></p>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-2.jpg" /><br />
+				<em>The Create ドロップダウン</em></div>
+			<p class="vspace">
+				スクリプトやプレハブ、フォルダをプロジェクト内で管理するのに私用します。Assetやフォルダの名前を変更するには<span class="doc-menu" style="font-weight: bold; ">Enter[Mac]</span>(<span class="doc-menu" style="font-weight: bold; ">F2[Win]</span>)、または間隔をあけてAssetの名前を２度クリックします。<span class="doc-menu" style="font-weight: bold; ">Alt<span>キーを押しながらクリックすると、サブフォルダも含めて開いたり閉じたりできます。</span></span></p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				階層(Hierarchy)</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-size: 12px; font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-3.jpg" /></span></h2>
+			<p>
+				&nbsp;</p>
+			<p>
+				<span class="doc-keyword" style="font-weight: bold; ">階層</span>はシーン中のすべての<span class="doc-keyword" style="font-weight: bold; ">ゲームオブジェクト</span>を含みます。ゲームを構成する、３Dモデルのようなファイルから直接使われるインスタンスやプレハブのようなカスタムオブジェクトです。親オブジェクトを階層から選択できます。シーンにオブジェクトが追加されたり削除されたりすると、階層にも追加(削除)が行われます。</p>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				親子関係の設定(Parenting)</h3>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				Unityでは<span class="doc-keyword" style="font-weight: bold; ">親子関係</span>が設定できます。ゲームオブジェクトを他のオブジェクトの子供とするには、階層において、子オブジェクトを親にしたいオブジェクトの上にドラッグします。子供は親の移動や回転を受け継ぎます。親オブジェクトを開く(閉じる)ことで、ゲームに影響を与えずに親子関係を確認できます。</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				<span class="Apple-style-span" style="font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-4.jpg" /></span></p>
+			<div>
+				<font class="Apple-style-span" color="#111111"><i><em style="color: rgb(17, 17, 17); ">２つの親子関係がないオブジェクト</em></i></font></div>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-5.jpg" /><br />
+				<font class="Apple-style-span" color="#111111"><i><em style="color: rgb(17, 17, 17); ">親子関係が設定された</em></i></font></div>
+			<div>
+				&nbsp;</div>
+			<div>
+				親子関係の設定については<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Components/class-Transform.html#Parenting" style="color: rgb(20, 93, 123); text-decoration: none; ">Transform Component ページ</a>の親子関係の章を参照してください。.</div>
+			<p class="vspace">
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				ツールバー(Toolbar)<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-size: 12px; font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-6.jpg" /></span></h2>
+			<p class="vspace">
+				ツールバーは５つのコントロールからなります。それぞれエディタの異なる部分に関連します。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-7.jpg" /> Transform Tools -- シーンビュー移動ギズモとともに用いられます&nbsp;<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-8.jpg" /> Transform Gizmo Toggles -- シーンビュー表示を変更します&nbsp;<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-9.jpg" /> Play/Pause/Step Buttons -- ゲームビューで使用します&nbsp;<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-10.jpg" />&nbsp;<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Components/Layers.html" style="color: rgb(20, 93, 123); text-decoration: none; ">Layers</a>&nbsp;Drop-down -- シーンビューに表示するオブジェクトを制御します&nbsp;<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-11.jpg" /> Layout Drop-down -- ビューの配置をコントロールします</div>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				シーンビュー(Scene View)<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-size: 12px; font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-12.jpg" /></span></h2>
+			<div>
+				<font class="Apple-style-span" color="#111111"><i><em style="color: rgb(17, 17, 17); "><span class="doc-keyword" style="font-weight: bold; ">シーンビュー</span></em></i></font></div>
+			<div>
+				&nbsp;</div>
+			<div>
+				<span class="doc-keyword" style="font-weight: bold; ">シーンビュー</span>はインタラクティブなサンドボックスです。シーンビューを使い環境やプレイヤー、カメラ、敵、その他の<span class="doc-keyword" style="font-weight: bold; ">ゲームオブジェクト</span>を選択し移動します。シーンビューでオブジェクトを扱うことはUnityの重要な機能ですので、効果的に作業できるようになることが重要です。</div>
+			<p class="vspace">
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				シーンビューナビゲーション</h3>
+			<p>
+				シーンの視点を操作するときは<a href="http://juug.org/unity3docsj/Documentation/Documentation/Manual/Scene%20View%20Navigation.html">シーンビューナビゲーション</a>を見てください。ここに不可欠な概観があります。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<ul>
+				<li>
+					マウスの右ボタンを押したままにし<span class="doc-menu" style="font-weight: bold; ">フライスルー</span>モードが開始します。マウスと<span class="doc-menu" style="font-weight: bold; ">WASD</span>キーを用いて一人称視点ナビゲーションが行えます。</li>
+				<li>
+					ゲームオブジェクトを選択し<span class="doc-menu" style="font-weight: bold; ">F</span>キーを押すと、選択したオブジェクトのピボットがビューの中心に表示されます。</li>
+				<li>
+					X/Zを押しながら矢印キーを押すと周りを見ることができます。</li>
+				<li>
+					<span class="doc-menu" style="font-weight: bold; ">Alt</span>キーを押したままドラッグすると現在のピボットを中心にカメラが回転します。</li>
+				<li>
+					<span class="doc-menu" style="font-weight: bold; ">Alt</span>キーを押したまま中ボタンをドラッグすることでシーンビューカメラを移動できます。</li>
+				<li>
+					<span class="doc-menu" style="font-weight: bold; ">Alt</span>キーを押したまま右ボタンをドラッグするとズームします。マウスのホイールをスクロールしてもズームできます。</li>
+			</ul>
+			<p class="vspace">
+				もし１ボタンマウスを使っている場合は<span class="doc-keyword" style="font-weight: bold; ">手ツール(Hand Tool)</span>(ショートカットキー&nbsp;<span class="doc-keyword" style="font-weight: bold; ">Q</span>)を使うとよいでしょう。</p>
+			<p class="vspace">
+				<img class="figure" src="../Images/manual/Learning the Interface-13.jpg" /> クリックし、ドラッグでカメラの周囲を見ます。</p>
+			<div>
+				<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-14.jpg" />&nbsp;<span class="doc-menu" style="font-weight: bold; ">Alt</span>キーを押しながらドラッグすると回転します。&nbsp;<br />
+				<img class="figure" src="../Images/manual/Learning the Interface-15.jpg" />&nbsp;&nbsp;<span class="doc-menu" style="font-weight: bold; ">Command[Mac]</span>(<span class="doc-menu" style="font-weight: bold; ">Control[Win]</span>)キーを押しながらドラッグするとズームします。</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				&nbsp;</div>
+			<div>
+				シーンビューの右上に<span class="doc-keyword" style="font-weight: bold; ">シーンギズモ</span>があります。シーンカメラの向きを表示し、ビューの向きを変更することができます。</div>
+			<p class="vspace">
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-16.jpg" /></div>
+			<p class="vspace">
+				ギズモの腕をクリックすることでシーンカメラを特定の向きにスナップしたり<span class="doc-keyword" style="font-weight: bold; ">平行投影モード(Isometric Mode)</span>に変更したりできます。&nbsp;平行投影モードでは、右ボタンドラッグで回転、Altキーを押しながらドラッグすることでパンします。シーンギズモを中ボタンクリックすることでモードから抜けられます。中ボタンをShiftクリックすると<span class="doc-keyword" style="font-weight: bold; ">平行投影モード</span>を開始します。</p>
+			<p class="vspace">
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				ゲームオブジェクトの配置</h3>
+			<h3 style="font-size: 12px; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				<font class="Apple-style-span" color="#352F28"><span class="Apple-style-span" style="font-weight: normal;">シーンにゲームオブジェクトを置くときは<a href="http://juug.org/unity3docsj/Documentation/Documentation/Manual/Positioning%20GameObjects.html">ゲームオブジェクトの配置</a>を見てください。ここに不可欠な概観があります。</span></font></h3>
+			<h3 style="font-size: 12px; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				<font class="Apple-style-span" color="#352F28"><span class="Apple-style-span" style="font-weight: normal;">ゲームを作成する場合、多くの異なるオブジェクトをゲーム中に配置します。ツールバーの中の移動ツールを用いて移動、回転、サイズ変更がそれぞれのゲームオブジェクトに対して行えます。シーンビューでゲームオブジェクトを選択すると対応するギズモが表示されます。マウスを使ってギズモの軸を使ってゲームオブジェクトを<span class="doc-keyword" style="font-weight: bold; ">移動(Transform)</span>させたり、直接数値をインスペクタの中にある数値フィールドに入力して移動したりできます。</span></font></h3>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-17.jpg" /></div>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				シーンビューコントロールバー(Scene View Control Bar)<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-18.jpg" /></span></h3>
+			<p>
+				The Scene View control bar lets you see the scene in various view modes - Textured, Wireframe, RGB, Overdraw, and many others. It will also enable you to see (and hear) in-game lighting, game elements, and sound in the Scene View. See <a href="../Manual/View Modes.html">View Modes</a> for all the details.</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				ゲームビュー(Game View)</h2>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-19.jpg" /></div>
+			<p>
+				<span class="doc-keyword" style="font-weight: bold; ">ゲームビュー</span>はゲーム中のカメラによりレンダリングされます。ゲーム公開時のビューとなります。プレイヤーがゲームをプレイする場合は複数の<span class="doc-keyword" style="font-weight: bold; ">カメラ</span>をコントロールする必要があるでしょう。カメラに関する情報は<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Components/class-Camera.html" style="color: rgb(20, 93, 123); text-decoration: none; ">Camera Componentのページ</a>を参照してください。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				プレイモード(Play Mode)</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-20.jpg" /></span></h3>
+			<p class="vspace">
+				ツールバー内のブタンを用いてエディタのプレイモードを操作し、公開時のゲームプレイをテストします。<span class="doc-keyword" style="font-weight: bold; ">プレイモード</span>で行った変更は一時的なもので、プレイを終了するとすべてリセットされます。プレイ中は変更が一時的であることを示すため、エディタUIは暗く表示されます。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				ゲームビューコントロールバー(Game View Control Bar)<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-21.jpg" /></span></h3>
+			<p class="vspace">
+				&nbsp;</p>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				ゲームビューコントロールバーの最初のドロップダウンは<span class="doc-keyword" style="font-weight: bold; ">アスペクトドロップダウン(Aspect Drop-down)</span>です。ゲームビューウィンドウのアスペクト比を強制的に変更できます。異なるアスペクト比を持ったディスプレイでの表示をテストすることが可能です。</p>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				右のほうに&nbsp;<span class="doc-menu" style="font-weight: bold; ">プレイ時に最大化(Maximize on Play)</span>トグルがあります。有効化すると、ゲームビューはゲームプレイ時にエディタウィンドウがフルスクリーンで表示されます。</p>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				さらに右に<span class="doc-menu" style="font-weight: bold; ">ギズモ(Gizmos)</span>トグルがあります。有効化するとすべてのギズモがシーンビューに表示され、また、ゲームビューにも表示されます。これはギズモクラス関数を使うすべての<span class="doc-menu" style="font-weight: bold; ">ギズモ</span>を含みます。</p>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				最後に<span class="doc-menu" style="font-weight: bold; ">Stats</span>ボタンがあります。これは&nbsp;<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/RenderingStatistics.html" style="color: rgb(20, 93, 123); text-decoration: none; ">レンダリングのステータス(Rendering Statistics)</a>ウィンドウを表示します。<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Optimizing%20Graphics%20Performance.html" style="color: rgb(20, 93, 123); text-decoration: none; ">描画パフォーマンスの調整(Optimizing Graphics Performance)</a>.に有効です。</p>
+			<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				<img class="figure" src="../Images/manual/Learning the Interface-22.jpg" /></p>
+			<p>
+				<em>ゲームの画面ステータス</em></p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				&nbsp;</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				インスペクタ(Inspector)</h2>
+			<h2 style="font-size: 14px; font-weight: bold; color: black; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				<span class="Apple-style-span" style="color: rgb(53, 47, 40); font-size: 12px; font-weight: normal; "><img class="figure" src="../Images/manual/Learning the Interface-23.jpg" /></span></h2>
+			<p>
+				Unityのゲームはメッシュ、スクリプト、サウンドや&nbsp;<span class="doc-keyword" style="font-weight: bold; ">ライト(Lights)</span>等、グラフィカルな要素を含む<span class="doc-keyword" style="font-weight: bold; ">ゲームオブジェクト</span>からなります。<span class="doc-keyword" style="font-weight: bold; ">インスペクタ</span>は選択しているゲームオブジェクトの詳細を付属<span class="doc-keyword" style="font-weight: bold; ">コンポーネント<span>や属性も含めて表示します。ここで、ゲームオブジェクトのシーン中での機能を編集します。&nbsp;<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/GameObjects.html#Relationship" style="color: rgb(20, 93, 123); text-decoration: none; ">ゲームオブジェクトとコンポーネントの関係</a>について理解することは重要です。</span></span></p>
+			<p>
+				インスペクタに表示されるプロパティは直接編集できます。スクリプトの変巣であってもスクリプト自体を変こすることなく編集できます。インスペクタを使い実行時の環境変数を変更し、ゲームのマジックゲームプレイを発見できます。スクリプトでオブジェクト型(GameObjectやTransform)のpublic変数を定義すると、ドラッグアンドドロップによってゲームオブジェクトやプレハブをインスペクタ上で割り当てることができます。</p>
+			<p class="vspace">
+				&nbsp;</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-24.jpg" /></div>
+			<p class="vspace">
+				インスペクタにおいてコンポーネント傍のはてなマークをクリックすると、コンポーネントのリファレンスページが開きます。Unityのコンポーネントに関する詳細なガイドは<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Components/Components.html" style="color: rgb(20, 93, 123); text-decoration: none; ">Component Reference</a>を参照してください。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-25.jpg" /><br />
+				<div>
+					<font class="Apple-style-span" color="#111111"><i><em style="color: rgb(17, 17, 17); "><span class="doc-menu" style="font-weight: bold; ">コンポーネント(Component)</span>メニューからコンポーネントを追加</em></i></font></div>
+				<p class="vspace" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 10px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+					<font class="Apple-style-span" color="#111111"><i>小さなギアアイコンをクリック(または、コンポーネント名を右クリック)すると、対応するコンテクストメニューが開きます。</i></font></p>
+			</div>
+			<div class="vspace">
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-26.jpg" /></div>
+			<p class="vspace">
+				インスペクタは選択されたAssetファイルのインポート設定も表示します。</p>
+			<p class="vspace">
+				<img class="figure" src="../Images/manual/Learning the Interface-27.jpg" /></p>
+			<div>
+				<font class="Apple-style-span" color="#111111"><i><em style="color: rgb(17, 17, 17); "><span class="doc-menu" style="font-weight: bold; ">Apply</span>をクリックしAssetを再インポートします。</em></i></font></div>
+			<div>
+				&nbsp;</div>
+			<div>
+				<img class="figure" src="../Images/manual/Learning the Interface-28.jpg" /></div>
+			<div>
+				&nbsp;</div>
+			<p class="vspace">
+				<span class="doc-menu" style="font-weight: bold; ">レイヤ(Layer)</span>ドロップダウンを使いレンダリングレイヤをゲームオブジェクトに設定します。<span class="doc-menu" style="font-weight: bold; ">タグ(Tag)</span>ドロップダウンを使いタグをゲームオブジェクトに割り当ててください。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h3>
+				&nbsp;</h3>
+			<h3 style="font-size: 12px; color: rgb(23, 20, 17); font-weight: bold; margin-top: 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
+				プレハブ(Prefabs)</h3>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: rgb(53, 47, 40); line-height: 17px; margin-top: 0px; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; ">
+				プレハブを選択すると、いくつかのボタンがインスペクタに表示されます。プレハブに関しては、<a href="http://ws.cis.sojo-u.ac.jp/~izumi/Unity_Documentation_jp/Documentation/Manual/Prefabs.html" style="color: rgb(20, 93, 123); text-decoration: none; ">プレハブマニュアルページ</a>を参考にしてください。</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<h2>
+				他のビュー</h2>
+			<p>
+				The Views described on this page covers the basics of the interface in Unity. The other Views in Unity are described elsewhere on separate pages:</p>
+			<div class="vspace">
+				&nbsp;</div>
+			<ul>
+				<li>
+					The <a href="../Manual/Console.html">Console</a> shows logs of messages, warnings, and errors.</li>
+				<li>
+					The <a href="../Manual/Animation.html">Animation View</a> can be used to animate objects in the scene.</li>
+				<li>
+					The <a href="../Manual/Profiler.html">Profiler</a> can be used to investigate and find the performance bottle-necks in your game.</li>
+				<li>
+					The <a href="../Manual/Asset Server.html">Asset Server View</a> can be used to manage version control of the project using Unity&#39;s Asset Server.</li>
+				<li>
+					The <a href="../Manual/Lightmapping.html">Lightmapping View</a> can be used to manage lightmaps using Unity&#39;s built-in lightmapping.</li>
+				<li>
+					The <a href="../Manual/Occlusion Culling.html">Occlusion Culling View</a> can be used to manage Occlusion Culling for improved performance.</li>
+			</ul>
+			<p>
+				&nbsp;</p>
+			<small>Page last updated: 2010-09-14</small>
+			<p>
+				&nbsp;</p>
+<script type="text/javascript">
+
+
+    var allHTMLTags = new Array();
+    document.divs = new Array();
+
+    function getElementByClass(theClass) {
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+		    if (allHTMLTags[i].className==theClass) {
+			    return true;
+		    }
+	    }
+	    return false;
+    }
+
+    function ShowHideDiv(containerName, className, content){
+	var container = document.getElementById(containerName);
+	if(container == null)
+		return;
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+		if(containerName == 'desktopRef') {
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'iosRef') {
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}
+		}
+		if(containerName == 'androidRef') {
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+				SetCookie(containerName, 'set', 30);
+			} else {
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+				UnSetCookie(containerName);
+			}	
+		}
+	} else {
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+			SetCookie(containerName, 'set', 30);
+		} else {
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+			UnSetCookie(containerName);
+		}
+	}
+	for(var i = 0; i < document.divs.length; i++) {
+		var divClassName = document.divs[i];
+		var matched = false;
+		if(divClassName.className == className)
+			   matched = true;
+		if(matched) {
+			
+			if(divClassName != null) {
+				if (divClassName.style.display == 'block') {
+					divClassName.style.display = 'none';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					UnSetCookie(containerName);
+				} else {
+					divClassName.style.display = 'block';
+					if(content == '') {
+						if(className == 'specific-desktop')
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+						if(className == 'specific-ios')
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+						if(className == 'specific-android')
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+					} else {
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+					}
+					SetCookie(containerName, 'set', 30);
+				}
+			}
+		}	
+        }			   
+    }
+    function UnSetCookie(cn) {
+    	SetCookie(cn,'',30);
+    }
+
+    function GetCookie(cName) {
+	if (document.cookie.length > 0) {
+            cStart = document.cookie.indexOf(cName + "=");
+	    if(cStart != -1) {
+	        cStart = cStart + cName.length + 1;
+	        cEnd = document.cookie.indexOf(";", cStart);
+	        if (cEnd == -1) {
+	            cEnd = document.cookie.length;
+	        }
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+	    }
+	}
+	return "";
+    }
+
+    function SetCookie(cName, value, expireDays) {
+	var exDate = new Date();
+	exDate.setDate(exDate.getDate()+expireDays);
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+    }
+
+    function DocLoaded() {
+	document.divs = document.getElementsByTagName('div');
+	var prefDesktop = GetCookie('desktopRef');
+	var prefiOS = GetCookie('iosRef');
+	var prefAndroid = GetCookie('androidRef');
+	var firstTime = GetCookie('FT');
+	if (firstTime == null || firstTime == "" ) {
+	    SetCookie('FT', 'no', 30);
+	    SetCookie('desktopRef', 'set', 30)
+	} else if (prefDesktop == null || prefDesktop =="") {
+	    if(getElementByClass('desktopRefIMG')) {
+	        ShowHideDiv('desktopRef','specific-desktop','');
+	    } else {
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+	    }
+	}
+	if (prefiOS == null || prefiOS =="") {
+	    if(getElementByClass('iosRefIMG')) {
+	        ShowHideDiv('iosRef','specific-ios','');
+	    } else {
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+	    }
+	}
+	if (prefAndroid == null || prefAndroid =="") {
+	    if(getElementByClass('androidRefIMG')) {
+	        ShowHideDiv('androidRef','specific-android','');
+	    } else {
+	        ShowHideDiv('androidRef','specific-android','Android');
+	    }
+	}	
+    }
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+				<div class="nav-prev">
+					<small><a href="../Manual/Unity Basics.html"> </a></small>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<small><a href="../Manual/Unity Basics.html">Previous</a></small></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+				<div class="nav-next">
+					<small><a href="../Manual/Customizing Your Workspace.html"> </a></small>
+					<div class="nav-left">
+						&nbsp;</div>
+					<div class="nav-main">
+						<small><a href="../Manual/Customizing Your Workspace.html">Next</a></small></div>
+					<div class="nav-right">
+						&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,2890 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Meshes</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Meshes</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/Components.html">Components</a> &gt; <a href="../Components/comp-AssetsGroup.html">Asset Components</a> &gt; <a href="../Components/class-Mesh.html">Meshes</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/class-Material.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-MovieTexture.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Meshes</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<p><span class='doc-keyword'>Meshes</span> make up a large part of your 3D worlds. You don't build your meshes in Unity, but in another application.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In Unity, we have done everything in our power to make this process as simple as possible. There are a lot of details, but the following pages should address all specificities of the common 3D art packages:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li><a href="../Manual/HOWTO-ImportObjectMaya.html">Maya</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-ImportObjectCinema4D.html">Cinema 4D</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-ImportObjectMax.html">3ds Max</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-ImportObjectCheetah3D.html">Cheetah3D</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-ImportObjectModo.html">Modo</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-importObjectLightwave.html">Lightwave</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-ImportObjectBlender.html">Blender</a>
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h2>Other applications</h2>
+
+
+
+
+
+
+
+<p>Unity can read <b>.FBX</b>, <b>.dae</b> (Collada), <b>.3DS</b>, <b>.dxf</b> and <b>.obj</b> files, so if your program can export to this format you're home free. FBX exporters for popular 3D packages can be found <a class='urllink' href='http://autodesk.com/fbx' rel='nofollow'>here</a>. Many packages also have a Collada exporter available.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Textures</h2>
+
+
+
+
+
+
+
+<p>Unity will attempt to hook up materials to your imported scenes automatically.  To take advantage of this, place your textures in a folder called "Textures" next to the scene file, or in any folder above it.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-Mesh-0.jpg' /><br /><em>Place your textures in a <span class='doc-menu'>Textures</span> folder at or above the asset's level</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Import settings.</h2>
+
+
+
+
+
+
+
+<p>To access the <span class='doc-keyword'>Import Settings</span> for a 3D mesh file, select it and the relevant options will appear in the <span class='doc-keyword'>Inspector</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/class-Mesh-1.jpg' /><br /><em>The Mesh Import Settings dialog</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><b><em>Meshes</em></b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Scale Factor</span></td><td  align='left'>Unity's physics system expects 1 meter in the game world to be 1 unit in the imported file. If you like to model at a different scale, this is the place to fix it.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Use File Units</span></td><td  align='left'>This option is available only for 3dsMax files. If enabled it imports 3dsMax file as 1FileUnit=1UnityUnit, otherwise it imports as 1cm=1UnityUnit.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Mesh Compression</span></td><td  align='left'>Turning this up will reduce the file size of the mesh, but might introduce irregularities.  It's best to turn it up as high as possible without the mesh looking too different from the uncompressed version. This is useful for <a href="../Manual/Reducing File size.html">optimizing game size</a>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Generate Colliders</span></td><td  align='left'>If this is enabled, your meshes will be imported with Mesh Colliders automatically attached. This is useful for quickly generating a collision mesh for environment geometry, but should be avoided for geometry you will be moving. For more info see <a href='#colliders'>Colliders</a> below.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Swap UVs</span></td><td >Use this if lightmapped objects pick up wrong UV channels. This will swap your primary and secondary UV channels.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Generate Lightmap UVs</span></td><td >Use this to create UV2 to be used for Lightmapping.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Advanced Options</span></span></td><td >See <a href="../Manual/LightmappingUV.html">Lightmapping UVs document</a>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><b><em>Normals &amp; Tangents</em></b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Normals</span></td><td  align='left'>Defines if and how normals should be calculated. This is useful for <a href="../Manual/Reducing File size.html">optimizing game size</a>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Import</span></span></td><td  align='left'>Default option. Imports normals from the file.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Calculate</span></span></td><td  align='left'>Calculates normals based on <span class='doc-prop'>Smoothing angle</span>. If selected, the <span class='doc-prop'>Smoothing Angle</span> becomes enabled.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>None</span></span></td><td  align='left'>Disables normals. Use this option if the mesh is neither normal mapped nor affected by realtime lighting.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Tangents</span></td><td  align='left'>Defines if and how tangents and binormals should be calculated. This is useful for <a href="../Manual/Reducing File size.html">optimizing game size</a>.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Import</span></span></td><td  align='left'>Imports tangents and binormals from the file. This option is available only for FBX, Maya and 3dsMax files and only when normals are imported from the file.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Calculate</span></span></td><td  align='left'>Default option. Calculates tangents and binormals. This option is available only when normals are either imported or calculated.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>None</span></span></td><td  align='left'>Disables tangents and binormals. The mesh will have no Tangents, so won't work with normal-mapped shaders.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Smoothing Angle</span></td><td  align='left'>Sets how sharp an edge has to be to be treated as a hard edge. It is also used to split normal map tangents.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Split Tangents</span></td><td  align='left'>Enable this if normal map lighting is broken by seams on your mesh. This usually only applies to characters.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><b><em>Materials</em></b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Generation</span></td><td  align='left'>Controls how materials are generated:</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Off</span></span></td><td  align='left'>This will not generate materials at all.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Per Texture</span></span></td><td  align='left'>Enable this to generate material files near the found texture files. When enabled,  different scenes will share the same material settings when they use the same textures. For the precise rules, see Material Generation below.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Per Material</span></span></td><td  align='left'>This will generate materials per scene, so only this scene uses them.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><b><em>Animations</em></b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Generation</span></td><td  align='left'>Controls how animations are imported:</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Don't Import</span></span></td><td  align='left'>No animation or skinning is imported.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Store in Original Roots</span></span></td><td  align='left'>Animations are stored in root objects of your animation package (these might be different from root objects in Unity).</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Store in Nodes</span></span></td><td  align='left'>Animations are stored together with the objects they animate. Use this when you have a complex animation setup and want full scripting control.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Store in Root</span></span></td><td  align='left'>Animations are stored in the scene's transform root objects. Use this when animating anything that has a hierarchy.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Bake Animations</span></td><td  align='left'>When using IK or simulation in your animation package, enable this. Unity will convert to FK on import. This option is available only for Maya, 3dsMax and Cinema4D files.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Animation Wrap mode</span></td><td  align='left'>The default <span class='doc-keyword'>Wrap Mode</span> for the animation in the mesh being imported</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Split Animations</span></td><td  align='left'>If you have multiple animations in a single file, here you can split it into multiple clips.</td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Name</span></span></td><td >Name of the split animation clip</td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Start</span></span></td><td  align='left'>First frame of this clip in the model file</td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>End</span></span></td><td  align='left'>Last frame of this clip in the model file</td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>WrapMode</span></span></td><td  align='left'>What the split clip does when the end of the animation is reached</td></tr>
+
+
+
+
+
+
+
+<tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Loop</span></span></td><td  align='left'>Depending on how the animation was created, one extra frame of animation may be required for the split clip to loop properly.  If your looping animation doesn't look correct, try enabling this option.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><b><em>Animation Compression</em></b></td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Anim. Compression</span></td><td  align='left'>What type of compression will be applied to this mesh's animation(s)</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Off</span></span></td><td  align='left'>Disables animation compression. This means that Unity doesn't reduce keyframe count on import, which leads to the highest precision animations, but slower performance and bigger file and runtime memory size. It's not recommended to use this option - if you need higher precision animation, you should enable keyframe reduction and lower allowed <span class='doc-prop'>Animation Compression Error</span> values instead.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Keyframe Reduction</span></span></td><td  align='left'>Reduces keyframes on import. If selected, the <span class='doc-prop'>Animation Compression Errors</span> options are displayed.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Keyframe Reduction and Compression</span></span></td><td  align='left'>Reduces keyframes on import and compresses keyframes when storing animations in files. This affects only file size - the runtime memory size is the same as <span class='doc-prop'>Keyframe Reduction</span>. If selected, the <span class='doc-prop'>Animation Compression Errors</span> options are displayed.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span class='doc-prop'>Animation Compression Errors</span></td><td  align='left'>These options are available only when keyframe reduction is enabled.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Rotation Error</span></span></td><td  align='left'>Defines how much rotation curves should be reduced. The smaller value you use - the higher precision you get.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Position Error</span></span></td><td  align='left'>Defines how much position curves should be reduced. The smaller value you use - the higher precision you get.</td></tr>
+
+
+
+
+
+
+
+<tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Scale Error</span></span></td><td  align='left'>Defines how much scale curves should be reduced. The smaller value you use - the higher precision you get.</td></tr>
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Material Generation</h3>
+
+
+
+
+
+
+
+<p>Materials are found based on the following rules:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li>Unity gets the name of the main diffuse material bound to the objects in the scene.
+
+
+
+
+
+
+
+</li><li>Unity looks for a material with this name in a Folder called <span class='doc-menu'>Materials</span> next to the scene.
+
+
+
+
+
+
+
+</li><li>Unity goes up the project folders, looking for the Material in each <span class='doc-menu'>Materials</span> folder along the way.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'>If Unity can't find the Material, it tries to create one from the texture:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ul><li>Unity checks for a texture with the correct name in the same folder as the scene.
+
+
+
+
+
+
+
+</li><li>Unity checks for a texture with the correct name in a folder called <span class='doc-menu'>Textures</span> next to the scene.
+
+
+
+
+
+
+
+</li><li>Unity goes up the project folders, looking for the correct texture in each <span class='doc-menu'>Textures</span> folder along the way.
+
+
+
+
+
+
+
+</li><li>If Unity finds the texture, it creates a <span class='doc-menu'>Materials</span> folder next to it and creates a material in there.
+
+
+
+
+
+
+
+</li></ul><p class='vspace'><a name='colliders' id='colliders'></a>
+
+
+
+
+
+
+
+</p><h3>Colliders</h3>
+
+
+
+
+
+
+
+<p>Unity features two primary types of colliders: <span class='doc-keyword'>Mesh Colliders</span> and <span class='doc-keyword'>Primitive Colliders</span>.  Mesh colliders are components that use imported mesh data and can be used for environment collision. When you enable <span class='doc-keyword'>Generate Colliders</span> in the Import Settings, a Mesh collider is automatically added when the mesh is added to the Scene.  It will be considered solid as far as the physics system is concerned.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you are moving the object around (a car for example), you can not use Mesh colliders. Instead, you will have to use Primitive colliders. In this case you should disable the <span class='doc-prop'>Generate Colliders</span> setting.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Animations</h3>
+
+
+
+
+
+
+
+<p>Animations are automatically imported from the scene. For more details about animation import options see the <a href="../Manual/Animations.html">Animation Import</a> chapter.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Normal mapping and characters</h3>
+
+
+
+
+
+
+
+<p>If you have a character with a normal map that was generated from a high-polygon version of the model, you should import the game-quality version with a <span class='doc-prop'>Smoothing angle</span> of 180 degrees.  This will prevent odd-looking seams in lighting due to tangent splitting.  If the seams are still present with these settings, enable <span class='doc-prop'>Split tangents across UV seams</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you are converting a greyscale image into a normal map, you don't need to worry about this.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Hints</h2>
+
+
+
+
+
+
+
+<ul><li>Merge your meshes together as much as possible. Make them share materials and textures. This has a huge performance benefit.
+
+
+
+
+
+
+
+</li><li>If you need to set up your objects further in Unity (adding physics, scripts or other coolness), save yourself a world of pain and name your objects properly in your 3D application. Working with lots of <em>pCube17</em> or <em>Box42</em>-like objects is not fun.
+
+
+
+
+
+
+
+</li><li>Make your meshes be centered on the world origin in your 3D app. This will make them easier to place in Unity.
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div><h3>The Unity Editor shows too many triangles (compared to what my 3D app says)</h3>
+
+
+
+
+
+
+
+<p>This is correct. What you are looking at is the amount of triangles actually being sent to OpenGLES for rendering. In addition to case where something like the material requires them to be sent twice, other things like hard-normals and non contiguous UV increase vertex/triangle counts significantly compared to what a modeling app or Unity tells you. Triangles need to be contiguous in both 3D and UV space to form a strip, so when you have UV seams, degenerate triangles have to be made to form strips - this bumps up the count.
+
+
+
+
+
+
+
+Previously Unity would report triangle counts incorrectly. This was fixed first in the run-time, and recently in the Editor. Now both will report the correct amount of triangles *actually* being sent to OpenGLES for rendering.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>See Also</h2>
+
+
+
+
+
+
+
+<ul><li><a href="../Manual/Modeling Optimized Characters.html">Modeling Optimized Characters</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-Normalmap.html">How do I use normal maps?</a>
+
+
+
+
+
+
+
+</li><li><a href="../Manual/HOWTO-FixZAxisIsUp.html">How do I fix the rotation of an imported model?</a>
+
+
+
+
+
+
+
+</li></ul><div class='vspace'></div>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-09-16</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Components/class-Material.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Components/class-MovieTexture.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+

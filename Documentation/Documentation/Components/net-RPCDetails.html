@@ -1,0 +1,2858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+	<head>
+
+
+
+
+
+
+
+		<meta charset="utf-8" />
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="doctitle" -->		<title>Unity - RPC Details</title>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->	</head>
+
+
+
+
+
+
+
+	<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<link href="../Images/docs.css" rel="StyleSheet" type="text/css" />
+
+
+
+
+
+
+
+<body onload="DocLoaded();">
+
+
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" class="titlebar">
+
+
+
+
+
+
+
+		<tbody>
+
+
+
+
+
+
+
+			<tr>
+
+
+
+
+
+
+
+				<td class="titleleft">
+
+
+
+
+
+
+
+					<img src="../images/top/left.png" /></td>
+
+
+
+
+
+
+
+				<td>
+
+
+
+
+
+
+
+					<a href="../../Documentation.html"><img src="../images/top/logo.png" /></a></td>
+
+
+
+
+
+
+
+				<td class="titlemid">
+
+
+
+
+
+
+
+					<table>
+
+
+
+
+
+
+
+						<tbody>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td class="doctitle">
+
+
+
+
+
+
+
+									RPC Details</td>
+
+
+
+
+
+
+
+								<td>
+
+
+
+
+
+
+
+									<table align="right">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="sections-nav" -->												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Manual/index.html" title="Go to Unity manual"><img border="0" class="manual" src="../images/spacer.gif" /><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../Components/index.html" title="Go to Reference"><img border="0" class="reference" src="../images/spacer.gif" /><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+												<td class="Components">
+
+
+
+
+
+
+
+													<a class="scripting-anchor" href="../ScriptReference/index.html" title="Go to Scripting Reference"><img border="0" class="scripting" src="../images/spacer.gif" /><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+							<tr>
+
+
+
+
+
+
+
+								<td colspan="4">
+
+
+
+
+
+
+
+									<table class="docpath" width="100%">
+
+
+
+
+
+
+
+										<tbody>
+
+
+
+
+
+
+
+											<tr>
+
+
+
+
+
+
+
+												<td>
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="path" -->													<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/net-RPCDetails.html">RPC Details</a> <!-- #TemplateEndEditable --></td>
+
+
+
+
+
+
+
+												<td class="switchlink">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="switchLink" --><!--BeginSwitchLink--><!--EndSwitchLink--><!-- #TemplateEndEditable -->												</td>
+
+
+
+
+
+
+
+											</tr>
+
+
+
+
+
+
+
+										</tbody>
+
+
+
+
+
+
+
+									</table>
+
+
+
+
+
+
+
+								</td>
+
+
+
+
+
+
+
+							</tr>
+
+
+
+
+
+
+
+						</tbody>
+
+
+
+
+
+
+
+					</table>
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				<td class="titleright" width="9">
+
+
+
+
+
+
+
+					<img src="../images/top/right.png" /></td>
+
+
+
+
+
+
+
+			</tr>
+
+
+
+
+
+
+
+		</tbody>
+
+
+
+
+
+
+
+	</table>
+
+
+
+
+
+
+
+	<div class="manual">
+
+
+
+
+
+
+
+		<div class="main">
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="navigation" -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<a href="../Components/net-NetworkView.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Components/net-NetworkView.html">Previous</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<a href="../Components/net-StateSynchronization.html"> </a>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<a href="../Components/net-StateSynchronization.html">Next</a></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="title" -->			<h1>
+
+
+
+
+
+
+
+				PRCの詳細</h1>
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable --><!-- #TemplateBeginEditable name="body" -->			<p>
+
+
+
+
+
+
+
+				<span class="doc-keyword">リモートプロシージャコール</span>(RPC)を使用すると、リモートマシン上で関数を呼び出すことが出来ます。それは通常の関数を呼び出すのとほぼ同じくらい簡単ですが、理解することの重要性にいくつかの違いがあります。</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<ol>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					RPCコールは、多くのパラメーターを好きなように持つことが出来ます。もちろん全てのパラメーターはネットワークを介して送信されます。これは送るパラメーターの量に伴い、使用する帯域幅が増加します。したがって、可能な限りパラメーターを最少に抑える必要があります。
+
+
+
+
+
+
+
+					<div class="vspace">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					あなたは送信されるRPCの受信者を決定する必要があります。一般的なユースケースをカバーするいくつかのRPCコールのモードがあります。You can easily invoke the RPC function on everyone, on only the server, everyone but yourself or a specific client/player.</li>
+
+
+
+
+
+
+
+			</ol>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				RPC calls are usually used to execute some event on all clients in the game or pass event information specifically between two parties, but you can be creative with it and use it however you want to. For example, a server for a game which only starts after 4 clients have connected could send an RPC call to all clients as soon as the forth one connects, thus starting the game.クライアントは、彼がアイテムを拾っていることを通知するために全ての人へRPCコールを送信することが出来ます。A server could send an RPC to only a particular client to initialize him right after he connects, for example, to give him his player number, spawn location, team color, etc. A client could in turn send an RPC only to the server to specify his starting options, like which color he prefers or what items he has bought.</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				RPCを使用する</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				RPCコールの設定には2つの手順があります：あなたが呼び出すとそれを起動する関数を宣言する。関数を宣言する時、RPC属性を使用し、それをプレフィックする必要があります。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				次のコードは、RPC関数を宣言します。</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<pre class="codelisting">
+
+
+
+
+
+
+
+			// All RPC calls need the @RPC attribute!
+
+
+
+
+
+
+
+@RPC
+
+
+
+
+
+
+
+function PrintText (text : String)
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    Debug.Log(text);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				Once you have declared an RPC call you can invoke it. All network communication goes through the Network View attached to the same GameObject as the script. In other words, you need to attach the scripts containing the RPCs functions to a GameObject that contains a Network View Component.</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				RPCのパラメーターとして以下の変数の型を使用することができます：</p>
+
+
+
+
+
+
+
+			<ul>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					int</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					float</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					string</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					NetworkPlayer</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					NetworkViewID</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					Vector3</li>
+
+
+
+
+
+
+
+				<li>
+
+
+
+
+
+
+
+					Quaternion</li>
+
+
+
+
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				次のコードはRPC関数を呼び出します。</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<pre class="codelisting">
+
+
+
+
+
+
+
+			networkView.RPC (&quot;PrintText&quot;, RPCMode.All, &quot;Hello world&quot;);
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				このコードは&quot;PrintText()&quot;に割り当てられたすべてのゲームオブジェクトのスクリプト関数を接続されたネットワーク内に表示します。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				<strong>RPC()</strong>の最初のパラメーターは起動される機能の名称であり、次のパラメーターは誰がこの機能を呼び出すかの定義です。この場合、サーバーに繋がる全てのクライアントにRPCコールを実行するが、後から繋いできたクライアントに対しては要求のバッファリングを行いません。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				次のすべてのパラメーターは、RPC関数に渡され、ネットワークを介して送信されるパラメーターです。このケースでは、&quot;Hello World&quot;がパラメーターとして送信された場合、PrintTextの機能でテキストパラメーターとして送信されます。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				あなたはRPCの送信者などの詳細を保持する<a href="../ScriptReference/NetworkMessageInfo.html">NetworkMessageInfo</a>構造体などのパラメーターを取得することが出来ます。You can also get hold of You do not need to specifically pass in this information, so the PrintText function shown above will be invoked exactly the same but can be declared as:</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<pre class="codelisting">
+
+
+
+
+
+
+
+			@RPC
+
+
+
+
+
+
+
+function PrintText (text : String, info : NetworkMessageInfo)
+
+
+
+
+
+
+
+{
+
+
+
+
+
+
+
+    Debug.Log(text + &quot; from &quot; + info.sender);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</pre>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				すでに述べたように、RPC機能がスクリプトで機能するために、ネットワークビューはスクリプトを含むゲームオブジェクト内に存在しなければなりません。あなたが同じネットワークビューで状態の同期を行っている場合を除き、ネットワークビューの<strong>状態の同期</strong>は<strong>オフ</strong>に設定することが出来ます。</p>
+
+
+
+
+
+
+
+			<div class="vspace">
+
+
+
+
+
+
+
+				&nbsp;</div>
+
+
+
+
+
+
+
+			<h2>
+
+
+
+
+
+
+
+				ROCバッファ</h2>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				RPCコールもバッファリングすることが出来ます。バッファリングされたRPCコールは蓄積し、新しく接続してくるクライアントのために順次実行されます。それらは既存のゲームセッションに参加するプレイヤーのプロセスを容易に作成するために便利です。共通の課題は、ゲームに参加する全てのプレイヤーのロードレベルが最初の段階で一定に達する必要があるということです。したがって、全てのプレイヤーへRPC機能を送信し、それがバッファリングされるよう設定することになります。バッファリングを行うことで、新たなプレイヤーがゲームに参加するたび、それらは自動的にプレイヤーに送信されます。この方法では、プレイヤーの参加を感知し、プレイヤーのロードレベルに合わせたRPCを手動で送信する必要がありません。</p>
+
+
+
+
+
+
+
+			<p class="vspace">
+
+
+
+
+
+
+
+				Unityでは、RPCのバッファからの呼び出しを削除するための機能をいくつか持っています。In the load level example, if the game has progressed through multiple levels, all you really care about is having a new player join the current level.この場合、RPCバッファから以前に追加されたロードレベルのRPCコールから削除されてしまします。</p>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+			<small>Page last updated: 2010-07-19</small>
+
+
+
+
+
+
+
+			<p>
+
+
+
+
+
+
+
+				&nbsp;</p>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/DesktopNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/DesktopNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/iPhoneNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src="../Images/AndroidNO.png" alt="">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidYES.png" alt="">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src="../Images/AndroidNO.png" alt="">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src="../Images/PlatformArrowRight.png" alt=""> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneNO.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidNO.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowRight.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/DesktopYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/iPhoneYES.png" alt="" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src="../Images/AndroidYES.png" alt="" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src="../Images/PlatformArrowDown.png" alt="" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script><!-- #TemplateEndEditable -->			<div class="nav">
+
+
+
+
+
+
+
+				<div class="nav-prev">
+
+
+
+
+
+
+
+					<small><a href="../Components/net-NetworkView.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Components/net-NetworkView.html">Previous</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+				<div class="nav-next">
+
+
+
+
+
+
+
+					<small><a href="../Components/net-StateSynchronization.html"> </a></small>
+
+
+
+
+
+
+
+					<div class="nav-left">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+					<div class="nav-main">
+
+
+
+
+
+
+
+						<small><a href="../Components/net-StateSynchronization.html">Next</a></small></div>
+
+
+
+
+
+
+
+					<div class="nav-right">
+
+
+
+
+
+
+
+						&nbsp;</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+

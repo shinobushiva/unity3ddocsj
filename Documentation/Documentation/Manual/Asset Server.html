@@ -1,0 +1,2890 @@
+<!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+<meta charset="utf-8">
+
+
+
+
+
+
+
+	<!-- #TemplateBeginEditable name="doctitle" -->
+
+
+
+
+
+
+
+		<title>Unity - Asset Server Guide</title>
+
+
+
+
+
+
+
+	<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
+
+
+
+
+
+
+
+<body onLoad="DocLoaded();">
+
+
+
+
+
+
+
+<table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
+
+
+
+
+
+
+
+	<td class="titleleft"><img src="../images/top/left.png"></td>
+
+
+
+
+
+
+
+	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
+
+
+
+
+
+
+
+	<td class="titlemid">
+
+
+
+
+
+
+
+		<table><tr>
+
+
+
+
+
+
+
+			<td class="doctitle">Asset Server Guide</td>
+
+
+
+
+
+
+
+			<td><table align="right"><tr>
+
+
+
+
+
+
+
+			<!-- #TemplateBeginEditable name="sections-nav" -->
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+
+
+
+
+
+
+
+			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
+
+
+
+
+
+
+
+			<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+			</tr></table></td>
+
+
+
+
+
+
+
+		</tr><tr>
+
+
+
+
+
+
+
+			<td colspan="4">
+
+
+
+
+
+
+
+				<table width="100%" class="docpath"><tr><td >
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="path" -->
+
+
+
+
+
+
+
+					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/User Guide.html">User Guide</a> &gt; <a href="../Manual/Asset Import and Creation.html">Asset Import and Creation</a> &gt; <a href="../Manual/Asset Server.html">Asset Server Guide</a>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td>
+
+
+
+
+
+
+
+				</td><td class="switchlink">
+
+
+
+
+
+
+
+					<!-- #TemplateBeginEditable name="switchLink" -->
+
+
+
+
+
+
+
+					<!--BeginSwitchLink--><!--EndSwitchLink-->
+
+
+
+
+
+
+
+					<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+				</td></tr></table>
+
+
+
+
+
+
+
+			</td>
+
+
+
+
+
+
+
+		</tr></table>
+
+
+
+
+
+
+
+	</td>
+
+
+
+
+
+
+
+	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
+
+
+
+
+
+
+
+</tr></table>
+
+
+
+
+
+
+
+<div class="manual">
+
+
+
+
+
+
+
+	<div class="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- #TemplateBeginEditable name="unofficial translation" -->
+<div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
+<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+</tr></table></center></div>
+<!-- #TemplateEndEditable -->
+
+<!-- #TemplateEndEditable -->
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+<!-- #TemplateEndEditable -->
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="navigation" -->
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Scripting.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Behind the Scenes.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="title" -->
+
+
+
+
+
+
+
+			<h1>Asset Server Guide</h1>
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+		<!-- #TemplateBeginEditable name="body" -->
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+<h2>Unity Asset Server Overview</h2>
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Unity Asset Server</span> is an asset and version control system with a graphical user interface integrated into Unity.  It is meant to be used by team members working together on a project on different computers either in-person or remotely.  The Asset Server is highly optimized for handling large binary assets in order to cope with large multi gigabyte project folders. When uploading assets, <span class='doc-keyword'>Import Settings</span> and other meta data about each asset is uploaded to the asset server as well. Renaming and moving files is at the core of the system and well supported.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>It is available only for Unity Pro, and is an additional license per client.  To purchase an Asset Server Client License, please visit the Unity store at <a class='urllink' href='http://unity3d.com/store' rel='nofollow'>http://unity3d.com/store</a>
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>New to Source Control?</h2>
+
+
+
+
+
+
+
+<p>If you have never used Source Control before, it can be a little unfriendly to get started with any versioning system.  Source Control works by storing an entire collection of all your assets - meshes, textures, materials, scripts, and everything else - in a database on some kind of server.  That server might be your home computer, the same one that you use to run Unity.  It might be a different computer in your local network.  It might be a remote machine colocated in a different part of the world.  It could even be a virtual machine.  There are a lot of options, but the location of the server doesn't matter at all.  The important thing is that you can access it somehow over your network, and that it stores your game data.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>In a way, the Asset Server functions as a backup of your Project Folder.  You do not directly manipulate the contents of the Asset Server while you are developing.  You make changes to your Project locally, then when you are done, you <span class='doc-menu'>Commit Changes</span> to the Project on the Server.  This makes your local Project and the Asset Server Project identical.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Now, when your fellow developers make a change, the Asset Server is identical to their Project, but not yours.  To synchronize your local Project, you request to <span class='doc-menu'>Update from Server</span>.  Now, whatever changes your team members have made will be downloaded from the server to your local Project.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>This is the basic workflow for using the Asset Server.  In addition to this basic functionality, the Asset Server allows for rollback to previous versions of assets, detailed file comparison, merging two different scripts, resolving conflicts, and recovering deleted assets.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Setting up the Asset Server </h2>
+
+
+
+
+
+
+
+<p>The Asset Server requires a one time server setup and a client configuration for each user.  You can read about how to do that in the <a href="../Components/assetserver-Setup.html">Asset Server Setup page</a>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>The rest of this guide explains how to deploy, administrate, and regularly use the Asset Server.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h1>Daily use of the Asset Server</h1>
+
+
+
+
+
+
+
+<p>This section explains the common tasks, workflow and best practices for using the Asset Server on a day-to-day basis.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Getting Started</h2>
+
+
+
+
+
+
+
+<p>If you are joining a team that has a lot of work stored on the Asset Server already, this is the quickest way to get up and running correctly.  If you are starting your own project from scratch, you can skip down to the <a href='#Fundamentals'>Workflow Fundamentals</a> section.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><ol><li>Create a new empty Project with no packages imported
+
+
+
+
+
+
+
+</li><li>From the menubar, select <span class='doc-menu'>Window-&gt;Asset Server</span>
+
+
+
+
+
+
+
+</li><li>Click the <span class='doc-menu'>Connection</span> button
+
+
+
+
+
+
+
+</li><li>Enter your user name and password (provided by your Asset Server administrator)
+
+
+
+
+
+
+
+</li><li>Click <span class='doc-menu'>Show Projects</span> and select the desired project
+
+
+
+
+
+
+
+</li><li>Click <span class='doc-menu'>Connect</span>
+
+
+
+
+
+
+
+</li><li>Click the <span class='doc-menu'>Update</span> tab
+
+
+
+
+
+
+
+</li><li>Click the <span class='doc-menu'>Update</span> button
+
+
+
+
+
+
+
+</li><li>If a conflict occurs, discard all local versions
+
+
+
+
+
+
+
+</li><li>Wait for the update to complete
+
+
+
+
+
+
+
+</li><li>You are ready to go
+
+
+
+
+
+
+
+</li></ol><p class='vspace'>Continue reading for detailed information on how to use the Asset Server effectively every day.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><a name='Fundamentals' id='Fundamentals'></a>
+
+
+
+
+
+
+
+</p><h2>Workflow Fundamentals</h2>
+
+
+
+
+
+
+
+<p>When using the Asset Server with a multi-person team, it is generally good practice to Update all changed assets from the server when you begin working, and Commit your changes at the end of the day, or whenever you're done working.  You should also commit changes when you have made significant progress on something, even if it is in the middle of the day.  Committing your changes regularly and frequently is recommended.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Understanding the Server View</h2>
+
+
+
+
+
+
+
+<p>The <span class='doc-keyword'>Server View</span> is your window into the Asset Server you're connected to. You can open the Server View by selecting <span class='doc-keyword'>"Window-&gt;Asset Server"</span>.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-0.jpg' /><br /><em>The <span class='doc-keyword'>Overview</span> tab</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>The Server View is broken into tabs: <span class='doc-keyword'>Overview</span> <span class='doc-keyword'>Update</span>, and <span class='doc-keyword'>Commit</span>.  <span class='doc-keyword'>Overview</span> will show you any differences between your local project and the latest version on the server with options to quickly commit local changes or download the latest updates.  <span class='doc-keyword'>Update</span> will show you the latest remote changes on the server and allow you to download them to your local project.  <span class='doc-keyword'>Commit</span> allows you to create a <span class='doc-keyword'>Changeset</span> and commit it to the server for others to download.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Connecting to the server</h3>
+
+
+
+
+
+
+
+<p>Before you can use the asset server, you must connect to it.  To do this you click the <span class='doc-menu'>Connection</span> button, which takes you to the connection screen:
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-1.jpg' /><br /><em>The Asset Server connection screen</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Here you need to fill in:
+
+
+
+
+
+
+
+</p><ol><li>Server address
+
+
+
+
+
+
+
+</li><li>Username
+
+
+
+
+
+
+
+</li><li>Password
+
+
+
+
+
+
+
+</li></ol><p class='vspace'>By clicking <span class='doc-menu'>Show projects</span> you can now see the available projects on the asset server, and choose which one to connect to by clicking <span class='doc-menu'>Connect</span>.  Note that the username and password you use can be obtain from your system administrator.  Your system administrator created accounts when they installed Asset Server.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Updating from the Server</h3>
+
+
+
+
+
+
+
+<p>To download all updates from the server, select the <span class='doc-menu'>Update</span> tab from the Overview tab and you will see a list of the latest committed Changesets. By selecting one of these you can see what was changed in the project as well as the provided commit message. Click <span class='doc-menu'>Update</span> and you will begin downloading all Changeset updates.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-2.jpg' /><br /><em>The <span class='doc-keyword'>Update</span> Tab</em></div>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Committing Changes to the Server</h3>
+
+
+
+
+
+
+
+<p>When you have made a change to your local project and you want to store those changes on the server, you use the top <span class='doc-menu'>Commit</span> tab.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-3.jpg' /><br /><em>The <span class='doc-keyword'>Commit</span> tab</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Now you will be able to see all the local changes made to the project since your last update, and will be able to select which changes you wish to upload to the server. You can add changes to the changeset either by manually dragging them into the changeset field, or by using the buttons placed below the commit message field. Remember to type in a commit message which will help you when you compare versions or revert to an earlier version later on, both of which are discussed below. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Resolving conflicts</h3>
+
+
+
+
+
+
+
+<p>With multiple people working on the same collection of data, conflicts will inevitably arise.  Remember, there is no need to panic! If a conflict exists, you will be presented with the <span class='doc-keyword'>Conflict Resolution</span> dialog when updating your project.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-4.jpg' /><br /><em>The <span class='doc-keyword'>Conflict Resolution</span> screen</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Here, you will be informed of each individual conflict, and be presented with different options to resolve each individual conflict. For any single conflict, you can select <span class='doc-menu'>Skip Asset</span> (which will not download that asset from the server), <span class='doc-menu'>Discard My Changes</span> (which will completely overwrite your local version of the asset)  or <span class='doc-menu'>Ignore Server Changes</span> (which will ignore the changes others made to the asset and after this update you will be able to commit your local changes over server ones) for each individual conflict. Additionally, you can select <span class='doc-menu'>Merge</span> for text assets like scripts to merge the server version with the local version.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you run into a conflict while you are committing your local changes, Unity will refuse to commit your changes and inform you that a conflict exists. To resolve the conflicts, select <span class='doc-menu'>Update</span>.  Your local changes will not automatically be overwritten.  At this point you will see the <span class='doc-keyword'>Conflict Resolution</span> dialog, and can follow the instructions in the above paragraph.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Browsing revision history and reverting assets</h3>
+
+
+
+
+
+
+
+<p>The Asset Server retains all uploaded versions of an asset in its database, so you can revert your local version to an earlier version at any time.  You can either select to restore the entire project or single files. To revert to an older version of an asset or a project, select the Overview tab then click <span class='doc-keyword'>Show History</span> listed under Asset Server Actions. You will now see a list of all commits and be able to select and restore any file or all project to an older version. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-5.jpg' /><br /><em>The <span class='doc-keyword'>History</span> dialog</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Here, you can see the version number and added comments with each version of the asset or project. This is one reason why descriptive comments are helpful. Select any asset to see its history or <span class='doc-menu'>Entire Project</span> for all changes made in project. Find revision you need. You can either select whole revision or particular asset in revision. Then click <span class='doc-menu'>Download Selected File</span> to get your local asset replaced with a copy of the selected revision. <span class='doc-menu'>Revert All Project</span> will revert entire project to selected revision.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>Prior to reverting, if there are any differences between your local version and the selected server version, those changes will be lost when the local version is reverted.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'>If you only want to abandon the changes made to the local copy, you don't have to revert.  You can discard those local modifications by selecting <span class='doc-menu'>Discard Changes</span> in the main asset server window.  This will immediately download the current version of the project from the server to your local Project.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h3>Comparing asset versions</h3>
+
+
+
+
+
+
+
+<p>If you're curious to see the differences between two particular versions you can explicitly compare them.  To do this, open <span class='doc-menu'>History</span> window, select revision and asset you want to compare and press <span class='doc-menu'>Compare to Local Version</span>. If you need to compare two different revisions of an asset - right click on it, in the context menu select <span class='doc-menu'>Compare to Another Revision</span> then find revision you want to compare to and select it. 
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<p class='vspace'><em>Note</em>: this feature requires that you have one of supported file diff/merge tools installed. Supported tools are:
+
+
+
+
+
+
+
+</p><ul><li>On Windows:
+
+
+
+
+
+
+
+<ul><li>TortoiseMerge: part of <a class='urllink' href='http://tortoisesvn.net/' rel='nofollow'>TortoiseSVN</a> or a separate download from the <a class='urllink' href='http://sourceforge.net/project/showfiles.php?group_id=138498' rel='nofollow'>project site</a>.
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://winmerge.org/' rel='nofollow'>WinMerge</a>.
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://www.sourcegear.com/diffmerge/' rel='nofollow'>SourceGear Diff/Merge</a>.
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://www.perforce.com/perforce/products/merge.html' rel='nofollow'>Perforce Merge (p4merge)</a>: part of Perforce's visual client suite (P4V).
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://sourceforge.net/projects/tkdiff/' rel='nofollow'>TkDiff</a>.
+
+
+
+
+
+
+
+</li></ul></li><li>On Mac OS X:
+
+
+
+
+
+
+
+<ul><li><a class='urllink' href='http://www.sourcegear.com/diffmerge/' rel='nofollow'>SourceGear Diff/Merge</a>.
+
+
+
+
+
+
+
+</li><li>FileMerge: part of Apple's <a class='urllink' href='http://developer.apple.com' rel='nofollow'>XCode development tools</a>.
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://sourceforge.net/projects/tkdiff/' rel='nofollow'>TkDiff</a>.
+
+
+
+
+
+
+
+</li><li><a class='urllink' href='http://www.perforce.com/perforce/products/merge.html' rel='nofollow'>Perforce Merge (p4merge)</a>: part of Perforce's visual client suite (P4V).
+
+
+
+
+
+
+
+</li></ul></li></ul><div class='vspace'></div><h3>Recovering deleted assets</h3>
+
+
+
+
+
+
+
+<p>Deleting a local asset and committing the delete to the server will in fact not delete an asset permanently. Just as any previous version of an asset can be restored through <span class='doc-menu'>History</span> window from the Overview tab.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><div><img class='figure' src='../Images/manual/Asset Server-6.jpg' /><br /><em>The <span class='doc-keyword'>History</span> dialog</em></div>
+
+
+
+
+
+
+
+<p class='vspace'>Expand <span class='doc-menu'>Deleted Assets</span> item, find and select assets from the list and hit <span class='doc-menu'>Recover</span>, the selected assets will be downloaded and re-added to the local project. If the folder that the asset was located in before the deletion still exists, the asset will be restored to the original location, otherwise it will be added to the root of the Assets folder in the local project.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class='vspace'></div><h2>Asset Server training complete</h2>
+
+
+
+
+
+
+
+<p>You should now be equipped with the knowledge you need to start using the Asset Server effectively.  Get to it, and don't forget the good workflow fundamentals.  Commit changes often, and don't be afraid of losing anything.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+</p><small>Page last updated: 2010-06-30</p>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var allHTMLTags = new Array();
+
+
+
+
+
+
+
+    document.divs = new Array();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getElementByClass(theClass) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    var allHTMLTags=document.getElementsByTagName("*");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    for (var i=0; i<allHTMLTags.length; i++) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    if (allHTMLTags[i].className==theClass) {
+
+
+
+
+
+
+
+			    return true;
+
+
+
+
+
+
+
+		    }
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	    return false;
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function ShowHideDiv(containerName, className, content){
+
+
+
+
+
+
+
+	var container = document.getElementById(containerName);
+
+
+
+
+
+
+
+	if(container == null)
+
+
+
+
+
+
+
+		return;
+
+
+
+
+
+
+
+	if(content == '') {//In case there are no divs in the page we still can change the icons.
+
+
+
+
+
+
+
+		if(containerName == 'desktopRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'iosRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+		if(containerName == 'androidRef') {
+
+
+
+
+
+
+
+			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
+
+
+
+
+
+
+
+				SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+			} else {
+
+
+
+
+
+
+
+				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
+
+
+
+
+
+
+
+				UnSetCookie(containerName);
+
+
+
+
+
+
+
+			}	
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	} else {
+
+
+
+
+
+
+
+		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
+
+
+
+
+
+
+
+		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+		} else {
+
+
+
+
+
+
+
+			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
+
+
+
+
+
+
+
+			UnSetCookie(containerName);
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	for(var i = 0; i < document.divs.length; i++) {
+
+
+
+
+
+
+
+		var divClassName = document.divs[i];
+
+
+
+
+
+
+
+		var matched = false;
+
+
+
+
+
+
+
+		if(divClassName.className == className)
+
+
+
+
+
+
+
+			   matched = true;
+
+
+
+
+
+
+
+		if(matched) {
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+			if(divClassName != null) {
+
+
+
+
+
+
+
+				if (divClassName.style.display == 'block') {
+
+
+
+
+
+
+
+					divClassName.style.display = 'none';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					UnSetCookie(containerName);
+
+
+
+
+
+
+
+				} else {
+
+
+
+
+
+
+
+					divClassName.style.display = 'block';
+
+
+
+
+
+
+
+					if(content == '') {
+
+
+
+
+
+
+
+						if(className == 'specific-desktop')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-ios')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+						if(className == 'specific-android')
+
+
+
+
+
+
+
+							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
+
+
+
+
+
+
+
+					} else {
+
+
+
+
+
+
+
+						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
+
+
+
+
+
+
+
+					}
+
+
+
+
+
+
+
+					SetCookie(containerName, 'set', 30);
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+		}	
+
+
+
+
+
+
+
+        }			   
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    function UnSetCookie(cn) {
+
+
+
+
+
+
+
+    	SetCookie(cn,'',30);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function GetCookie(cName) {
+
+
+
+
+
+
+
+	if (document.cookie.length > 0) {
+
+
+
+
+
+
+
+            cStart = document.cookie.indexOf(cName + "=");
+
+
+
+
+
+
+
+	    if(cStart != -1) {
+
+
+
+
+
+
+
+	        cStart = cStart + cName.length + 1;
+
+
+
+
+
+
+
+	        cEnd = document.cookie.indexOf(";", cStart);
+
+
+
+
+
+
+
+	        if (cEnd == -1) {
+
+
+
+
+
+
+
+	            cEnd = document.cookie.length;
+
+
+
+
+
+
+
+	        }
+
+
+
+
+
+
+
+	        return unescape(document.cookie.substring(cStart, cEnd));;
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	return "";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function SetCookie(cName, value, expireDays) {
+
+
+
+
+
+
+
+	var exDate = new Date();
+
+
+
+
+
+
+
+	exDate.setDate(exDate.getDate()+expireDays);
+
+
+
+
+
+
+
+	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function DocLoaded() {
+
+
+
+
+
+
+
+	document.divs = document.getElementsByTagName('div');
+
+
+
+
+
+
+
+	var prefDesktop = GetCookie('desktopRef');
+
+
+
+
+
+
+
+	var prefiOS = GetCookie('iosRef');
+
+
+
+
+
+
+
+	var prefAndroid = GetCookie('androidRef');
+
+
+
+
+
+
+
+	var firstTime = GetCookie('FT');
+
+
+
+
+
+
+
+	if (firstTime == null || firstTime == "" ) {
+
+
+
+
+
+
+
+	    SetCookie('FT', 'no', 30);
+
+
+
+
+
+
+
+	    SetCookie('desktopRef', 'set', 30)
+
+
+
+
+
+
+
+	} else if (prefDesktop == null || prefDesktop =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('desktopRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefiOS == null || prefiOS =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('iosRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('iosRef','specific-ios','iOS');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+	if (prefAndroid == null || prefAndroid =="") {
+
+
+
+
+
+
+
+	    if(getElementByClass('androidRefIMG')) {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','');
+
+
+
+
+
+
+
+	    } else {
+
+
+
+
+
+
+
+	        ShowHideDiv('androidRef','specific-android','Android');
+
+
+
+
+
+
+
+	    }
+
+
+
+
+
+
+
+	}	
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+		<!-- #TemplateEndEditable -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="nav">
+
+
+
+
+
+
+
+		<div class="nav-prev">
+
+
+
+
+
+
+
+			<a href='../Manual/Scripting.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Previous</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+		<div class="nav-next">
+
+
+
+
+
+
+
+			<a href='../Manual/Behind the Scenes.html'>
+
+
+
+
+
+
+
+				<div class="nav-left"></div>
+
+
+
+
+
+
+
+				<div class="nav-main">Next</div>
+
+
+
+
+
+
+
+				<div class="nav-right"></div>
+
+
+
+
+
+
+
+			</a>
+
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+<!-- #EndTemplate -->
+
+
+
+
+
+
+
