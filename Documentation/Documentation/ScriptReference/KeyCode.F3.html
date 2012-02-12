@@ -1,728 +1,367 @@
 <!-- #BeginTemplate "/Templates/manual-scriptref-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta charset="utf-8">
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
 			<title>Unity Script Reference &ndash; KeyCode.F3</title>
-
 	<!-- #TemplateEndEditable -->
-
 <link rel="StyleSheet"  href="docs.css" type="text/css" />
-
 <script type="text/javascript" src="../Images/jquery-1.4.2.js"></script>
-
 <script type="text/javascript" src="../Images/jquery.cookie.js"></script>
 
-
-
 <style>
-
 /* 
-
 Unity standard fonts 
-
 */
-
 body{ font-family:Helvetica, Arial, sans-serif; font-size:.9em; }
 
-
-
 /*
-
 simple format for code, using fixed width
-
 and a nice border
-
 */
-
 pre { font-family:"Courier New", Courier, monospace; font-size:.8em; }
-
 pre { padding:10px; margin:10px; border:1px #d8d8d8 solid; }
-
 pre { -moz-border-radius:10px; -webkit-border-radius:10px; }
-
 pre { background:#f8f8f8; }
 
-
-
 /*
-
 aligns the selection dialog on the top right
-
 */
-
 .selectLang { margin-right:10px; text-align:right; float:right; }
 
 
-
-
-
 .cSelect,
-
 .cSelect ul,
-
 .cSelect li { font-size:12px; }
 
-
-
 /*.cSelect { border:1px solid #d0d0d0; }
-
 .cSelect { background:#ddf; }*/
-
 /*
-
 .cSelect { -moz-border-radius:10px; -webkit-border-radius:10px; }*/
 
-
-
 .cSelect { display:inline-block; position:relative; float:right; margin-right:20px;}
-
 .cSelect { padding-top:.4em; padding-bottom:.2em;}
-
 .cSelect-Selected,
-
 .cSelect-ArrowDown,
-
 .cSelect li { cursor:pointer; }
 
-
-
 .cSelect,
-
 .roundTop { -webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; }
-
 .cSelect,
-
 .roundTop { -moz-border-radius-topleft:10px; -moz-border-radius-topright:10px; }
 
-
-
 .roundBottom,
-
 .cSelect ul { -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; }
-
 .roundBottom,
-
 .cSelect ul { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; }
-
-
-
 
 
 .cSelectWidth { width:10em; display:block;}
 
-
-
 .cSelect-wrapper { position:relative; }
 
-
-
 .cSelect ul { background:#fff; padding:0px; margin:0px; display:inline-block; }
-
 .cSelect ul { z-index:10; position:absolute; top:1.3em; }
-
 .cSelect ul { padding-bottom:.5em; padding-top:.5em; padding-left:0px; padding-right:0px; }
-
 /*.cSelect ul { border:1px solid #d0d0d0; }*/
 
 
-
-
-
 .cSelect li { padding:.1em; margin:0px; text-align:right; list-style-type:none; }
-
 .cSelect li { padding-left:.7em; padding-right:24px; }
-
-
 
 .cSelect-highlight { background:#f0f0f0; }
 
-
-
 .cSelect-Selected { margin-left:.5em; margin-right:.5em; text-align:right; float:right; width:75%}
 
-
-
 .cSelect-ArrowDown { width:18px; height:18px; display:inline-block; float:right}
-
 .cSelect-ArrowDown { background:url('../Images/down-arrow.png'); text-align:center; }
-
 .cSelect-ArrowDown { -moz-border-radius:9px; -webkit-border-radius:9px; }
 
-
-
 .monoCompatibility-roweven { background-color:#DCDDDF; }
-
 .monoCompatibility-rowodd { background-color:#F3F3F4; }
-
 .monoCompatibility-cell { border:1px solid #ffffff;}
 
 
-
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
 
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
 	<td class="titlemid">
-
 		<table><tr>
-
 			<td class="doctitle"><a href='KeyCode.html' class='classlink' title='Go to KeyCode scripting documentation'>KeyCode</a>.F3</td>
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
 			<td class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting&nbsp;&nbsp;</span></a></td>
-
 			<!-- #TemplateEndEditable -->	
-
 		</tr><tr>
-
 			<td colspan="4">
-
 				<table width="100%" class="docpath"><tr><td >
-
 					<!-- #TemplateBeginEditable name="path" -->
-
 						<a href="index.html">Scripting</a> &gt <a href='20_class_hierarchy.Enumerations.html'>Enumerations</a> &gt <a href='KeyCode.html'>KeyCode</a>
-
 					<!-- #TemplateEndEditable -->	
-
 				</td>
-
 				</td><td class="switchlink">
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
 					<!-- #TemplateEndEditable -->	
-
 				</td></tr></table>
-
 			</td>
-
 		</tr></table>
-
 	</td>
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
 </tr></table>
-
 <div class="scriprefmain">
-
 		<span class="heading">
-
 			<!-- #TemplateBeginEditable name="title" -->
-
 				<a href='KeyCode.html' class='classlink' title='Go to KeyCode scripting documentation'>KeyCode</a>.F3
-
 			<!-- #TemplateEndEditable -->	
-
 		</span>
-
 <!-- #TemplateBeginEditable name="details" -->
-
 	<span class="text"></span>
-
 <!-- #TemplateEndEditable -->	
 
-
-
 	<!-- #TemplateBeginEditable name="manual-top-nav" --><div class="left-menu-container"><ul class="left-menu"><li>
-
 <form class="apisearch" action="30_search.html" method="GET">
-
 	<input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q" />
-
 				
-
 	<script type="text/javascript" language="JavaScript">
-
 	<!--
-
 	function detect() {
-
 		// simplify things
-
 		var agent 	= navigator.userAgent.toLowerCase();
-
 		
-
 		// detect platform
-
 		this.isMac		= (agent.indexOf('mac') != -1);
-
 		this.isWin		= (agent.indexOf('win') != -1);
-
 		this.isWin2k	= (this.isWin && (
-
 				agent.indexOf('nt 5') != -1));
-
 		this.isWinSP2	= (this.isWin && (
-
 				agent.indexOf('xp') != -1 || 
-
 				agent.indexOf('sv1') != -1));
-
 		this.isOther	= (
-
 				agent.indexOf('unix') != -1 || 
-
 				agent.indexOf('sunos') != -1 || 
-
 				agent.indexOf('bsd') != -1 ||
-
 				agent.indexOf('x11') != -1 || 
-
 				agent.indexOf('linux') != -1);
-
 		
-
 		// detect browser
-
 		this.isSafari	= (agent.indexOf('safari') != -1);
-
 		this.isSafari2 = (this.isSafari && (parseFloat(agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).substring(0,agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).indexOf(' '))) >=  300));
-
 		this.isOpera	= (agent.indexOf('opera') != -1);
-
 		this.isNN		= (agent.indexOf('netscape') != -1);
-
 		this.isIE		= (agent.indexOf('msie') != -1);
-
 	}
-
 	var browser = new detect();
-
 	var str = "Search";
-
 	var q=document.getElementById('q');
-
 	if (!browser.isSafari2) {q.value=str;q.onfocus=function(){q.value="";q.style.color="#000";};}
-
 	//-->
-
 	</script>
-
 </form>
-
 </li><li><span class="left-menu-heading">Menu</span></li><li><a title="Scripting overview" class="left-menu-item" href="index.html">Overview</a></li><li><a title="List of scripting classes" class="left-menu-item" href="20_class_hierarchy.html">Runtime Classes</a></li><li><a title="List of attributes" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Attributes.html">Attributes</a></li><li><a title="List of enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Enumerations.html">Enumerations</a></li><li><a title="Classes for extending Unity editor" class="left-menu-item" href="20_class_hierarchy.Editor_Classes.html">Editor Classes</a></li><li><a title="List of editor enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Editor_Enumerations.html">Enumerations</a></li><li><a title="Scripting change history" class="left-menu-item" href="40_history.html">History</a></li><li><a title="Alphabetical index" class="left-menu-item" href="10_reference.html">Index</a></li><li><span class="left-menu-seperator"></span></li><li><a class="left-menu-heading" href="KeyCode.html">KeyCode</a></li><li><a class="left-menu-item" href="KeyCode.html">All Members</a></li><li><span class="left-menu-subheading">Values</span></li><li><a class="left-menu-item" href="KeyCode.A.html">A</a></li><li><a class="left-menu-item" href="KeyCode.Alpha0.html">Alpha0</a></li><li><a class="left-menu-item" href="KeyCode.Alpha1.html">Alpha1</a></li><li><a class="left-menu-item" href="KeyCode.Alpha2.html">Alpha2</a></li><li><a class="left-menu-item" href="KeyCode.Alpha3.html">Alpha3</a></li><li><a class="left-menu-item" href="KeyCode.Alpha4.html">Alpha4</a></li><li><a class="left-menu-item" href="KeyCode.Alpha5.html">Alpha5</a></li><li><a class="left-menu-item" href="KeyCode.Alpha6.html">Alpha6</a></li><li><a class="left-menu-item" href="KeyCode.Alpha7.html">Alpha7</a></li><li><a class="left-menu-item" href="KeyCode.Alpha8.html">Alpha8</a></li><li><a class="left-menu-item" href="KeyCode.Alpha9.html">Alpha9</a></li><li><a class="left-menu-item" href="KeyCode.AltGr.html">AltGr</a></li><li><a class="left-menu-item" href="KeyCode.Ampersand.html">Ampersand</a></li><li><a class="left-menu-item" href="KeyCode.Asterisk.html">Asterisk</a></li><li><a class="left-menu-item" href="KeyCode.At.html">At</a></li><li><a class="left-menu-item" href="KeyCode.B.html">B</a></li><li><a class="left-menu-item" href="KeyCode.BackQuote.html">BackQuote</a></li><li><a class="left-menu-item" href="KeyCode.Backslash.html">Backslash</a></li><li><a class="left-menu-item" href="KeyCode.Backspace.html">Backspace</a></li><li><a class="left-menu-item" href="KeyCode.Break.html">Break</a></li><li><a class="left-menu-item" href="KeyCode.C.html">C</a></li><li><a class="left-menu-item" href="KeyCode.CapsLock.html">CapsLock</a></li><li><a class="left-menu-item" href="KeyCode.Caret.html">Caret</a></li><li><a class="left-menu-item" href="KeyCode.Clear.html">Clear</a></li><li><a class="left-menu-item" href="KeyCode.Colon.html">Colon</a></li><li><a class="left-menu-item" href="KeyCode.Comma.html">Comma</a></li><li><a class="left-menu-item" href="KeyCode.D.html">D</a></li><li><a class="left-menu-item" href="KeyCode.Delete.html">Delete</a></li><li><a class="left-menu-item" href="KeyCode.Dollar.html">Dollar</a></li><li><a class="left-menu-item" href="KeyCode.DoubleQuote.html">DoubleQuote</a></li><li><a class="left-menu-item" href="KeyCode.DownArrow.html">DownArrow</a></li><li><a class="left-menu-item" href="KeyCode.E.html">E</a></li><li><a class="left-menu-item" href="KeyCode.End.html">End</a></li><li><a class="left-menu-item" href="KeyCode.Equals.html">Equals</a></li><li><a class="left-menu-item" href="KeyCode.Escape.html">Escape</a></li><li><a class="left-menu-item" href="KeyCode.Exclaim.html">Exclaim</a></li><li><a class="left-menu-item" href="KeyCode.F.html">F</a></li><li><a class="left-menu-item" href="KeyCode.F1.html">F1</a></li><li><a class="left-menu-item" href="KeyCode.F10.html">F10</a></li><li><a class="left-menu-item" href="KeyCode.F11.html">F11</a></li><li><a class="left-menu-item" href="KeyCode.F12.html">F12</a></li><li><a class="left-menu-item" href="KeyCode.F13.html">F13</a></li><li><a class="left-menu-item" href="KeyCode.F14.html">F14</a></li><li><a class="left-menu-item" href="KeyCode.F15.html">F15</a></li><li><a class="left-menu-item" href="KeyCode.F2.html">F2</a></li><li><span class="left-menu-item left-menu-current">F3</span></li><li><a class="left-menu-item" href="KeyCode.F4.html">F4</a></li><li><a class="left-menu-item" href="KeyCode.F5.html">F5</a></li><li><a class="left-menu-item" href="KeyCode.F6.html">F6</a></li><li><a class="left-menu-item" href="KeyCode.F7.html">F7</a></li><li><a class="left-menu-item" href="KeyCode.F8.html">F8</a></li><li><a class="left-menu-item" href="KeyCode.F9.html">F9</a></li><li><a class="left-menu-item" href="KeyCode.G.html">G</a></li><li><a class="left-menu-item" href="KeyCode.Greater.html">Greater</a></li><li><a class="left-menu-item" href="KeyCode.H.html">H</a></li><li><a class="left-menu-item" href="KeyCode.Hash.html">Hash</a></li><li><a class="left-menu-item" href="KeyCode.Help.html">Help</a></li><li><a class="left-menu-item" href="KeyCode.Home.html">Home</a></li><li><a class="left-menu-item" href="KeyCode.I.html">I</a></li><li><a class="left-menu-item" href="KeyCode.Insert.html">Insert</a></li><li><a class="left-menu-item" href="KeyCode.J.html">J</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button0.html">Joystick1Button0</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button1.html">Joystick1Button1</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button10.html">Joystick1Button10</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button11.html">Joystick1Button11</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button12.html">Joystick1Button12</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button13.html">Joystick1Button13</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button14.html">Joystick1Button14</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button15.html">Joystick1Button15</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button16.html">Joystick1Button16</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button17.html">Joystick1Button17</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button18.html">Joystick1Button18</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button19.html">Joystick1Button19</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button2.html">Joystick1Button2</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button3.html">Joystick1Button3</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button4.html">Joystick1Button4</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button5.html">Joystick1Button5</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button6.html">Joystick1Button6</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button7.html">Joystick1Button7</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button8.html">Joystick1Button8</a></li><li><a class="left-menu-item" href="KeyCode.Joystick1Button9.html">Joystick1Button9</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button0.html">Joystick2Button0</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button1.html">Joystick2Button1</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button10.html">Joystick2Button10</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button11.html">Joystick2Button11</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button12.html">Joystick2Button12</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button13.html">Joystick2Button13</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button14.html">Joystick2Button14</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button15.html">Joystick2Button15</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button16.html">Joystick2Button16</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button17.html">Joystick2Button17</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button18.html">Joystick2Button18</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button19.html">Joystick2Button19</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button2.html">Joystick2Button2</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button3.html">Joystick2Button3</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button4.html">Joystick2Button4</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button5.html">Joystick2Button5</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button6.html">Joystick2Button6</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button7.html">Joystick2Button7</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button8.html">Joystick2Button8</a></li><li><a class="left-menu-item" href="KeyCode.Joystick2Button9.html">Joystick2Button9</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button0.html">Joystick3Button0</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button1.html">Joystick3Button1</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button10.html">Joystick3Button10</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button11.html">Joystick3Button11</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button12.html">Joystick3Button12</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button13.html">Joystick3Button13</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button14.html">Joystick3Button14</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button15.html">Joystick3Button15</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button16.html">Joystick3Button16</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button17.html">Joystick3Button17</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button18.html">Joystick3Button18</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button19.html">Joystick3Button19</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button2.html">Joystick3Button2</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button3.html">Joystick3Button3</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button4.html">Joystick3Button4</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button5.html">Joystick3Button5</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button6.html">Joystick3Button6</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button7.html">Joystick3Button7</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button8.html">Joystick3Button8</a></li><li><a class="left-menu-item" href="KeyCode.Joystick3Button9.html">Joystick3Button9</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton0.html">JoystickButton0</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton1.html">JoystickButton1</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton10.html">JoystickButton10</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton11.html">JoystickButton11</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton12.html">JoystickButton12</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton13.html">JoystickButton13</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton14.html">JoystickButton14</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton15.html">JoystickButton15</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton16.html">JoystickButton16</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton17.html">JoystickButton17</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton18.html">JoystickButton18</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton19.html">JoystickButton19</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton2.html">JoystickButton2</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton3.html">JoystickButton3</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton4.html">JoystickButton4</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton5.html">JoystickButton5</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton6.html">JoystickButton6</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton7.html">JoystickButton7</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton8.html">JoystickButton8</a></li><li><a class="left-menu-item" href="KeyCode.JoystickButton9.html">JoystickButton9</a></li><li><a class="left-menu-item" href="KeyCode.K.html">K</a></li><li><a class="left-menu-item" href="KeyCode.Keypad0.html">Keypad0</a></li><li><a class="left-menu-item" href="KeyCode.Keypad1.html">Keypad1</a></li><li><a class="left-menu-item" href="KeyCode.Keypad2.html">Keypad2</a></li><li><a class="left-menu-item" href="KeyCode.Keypad3.html">Keypad3</a></li><li><a class="left-menu-item" href="KeyCode.Keypad4.html">Keypad4</a></li><li><a class="left-menu-item" href="KeyCode.Keypad5.html">Keypad5</a></li><li><a class="left-menu-item" href="KeyCode.Keypad6.html">Keypad6</a></li><li><a class="left-menu-item" href="KeyCode.Keypad7.html">Keypad7</a></li><li><a class="left-menu-item" href="KeyCode.Keypad8.html">Keypad8</a></li><li><a class="left-menu-item" href="KeyCode.Keypad9.html">Keypad9</a></li><li><a class="left-menu-item" href="KeyCode.KeypadDivide.html">KeypadDivide</a></li><li><a class="left-menu-item" href="KeyCode.KeypadEnter.html">KeypadEnter</a></li><li><a class="left-menu-item" href="KeyCode.KeypadEquals.html">KeypadEquals</a></li><li><a class="left-menu-item" href="KeyCode.KeypadMinus.html">KeypadMinus</a></li><li><a class="left-menu-item" href="KeyCode.KeypadMultiply.html">KeypadMultiply</a></li><li><a class="left-menu-item" href="KeyCode.KeypadPeriod.html">KeypadPeriod</a></li><li><a class="left-menu-item" href="KeyCode.KeypadPlus.html">KeypadPlus</a></li><li><a class="left-menu-item" href="KeyCode.L.html">L</a></li><li><a class="left-menu-item" href="KeyCode.LeftAlt.html">LeftAlt</a></li><li><a class="left-menu-item" href="KeyCode.LeftApple.html">LeftApple</a></li><li><a class="left-menu-item" href="KeyCode.LeftArrow.html">LeftArrow</a></li><li><a class="left-menu-item" href="KeyCode.LeftBracket.html">LeftBracket</a></li><li><a class="left-menu-item" href="KeyCode.LeftControl.html">LeftControl</a></li><li><a class="left-menu-item" href="KeyCode.LeftParen.html">LeftParen</a></li><li><a class="left-menu-item" href="KeyCode.LeftShift.html">LeftShift</a></li><li><a class="left-menu-item" href="KeyCode.LeftWindows.html">LeftWindows</a></li><li><a class="left-menu-item" href="KeyCode.Less.html">Less</a></li><li><a class="left-menu-item" href="KeyCode.M.html">M</a></li><li><a class="left-menu-item" href="KeyCode.Menu.html">Menu</a></li><li><a class="left-menu-item" href="KeyCode.Minus.html">Minus</a></li><li><a class="left-menu-item" href="KeyCode.Mouse0.html">Mouse0</a></li><li><a class="left-menu-item" href="KeyCode.Mouse1.html">Mouse1</a></li><li><a class="left-menu-item" href="KeyCode.Mouse2.html">Mouse2</a></li><li><a class="left-menu-item" href="KeyCode.Mouse3.html">Mouse3</a></li><li><a class="left-menu-item" href="KeyCode.Mouse4.html">Mouse4</a></li><li><a class="left-menu-item" href="KeyCode.Mouse5.html">Mouse5</a></li><li><a class="left-menu-item" href="KeyCode.Mouse6.html">Mouse6</a></li><li><a class="left-menu-item" href="KeyCode.N.html">N</a></li><li><a class="left-menu-item" href="KeyCode.None.html">None</a></li><li><a class="left-menu-item" href="KeyCode.Numlock.html">Numlock</a></li><li><a class="left-menu-item" href="KeyCode.O.html">O</a></li><li><a class="left-menu-item" href="KeyCode.P.html">P</a></li><li><a class="left-menu-item" href="KeyCode.PageDown.html">PageDown</a></li><li><a class="left-menu-item" href="KeyCode.PageUp.html">PageUp</a></li><li><a class="left-menu-item" href="KeyCode.Pause.html">Pause</a></li><li><a class="left-menu-item" href="KeyCode.Period.html">Period</a></li><li><a class="left-menu-item" href="KeyCode.Plus.html">Plus</a></li><li><a class="left-menu-item" href="KeyCode.Print.html">Print</a></li><li><a class="left-menu-item" href="KeyCode.Q.html">Q</a></li><li><a class="left-menu-item" href="KeyCode.Question.html">Question</a></li><li><a class="left-menu-item" href="KeyCode.Quote.html">Quote</a></li><li><a class="left-menu-item" href="KeyCode.R.html">R</a></li><li><a class="left-menu-item" href="KeyCode.Return.html">Return</a></li><li><a class="left-menu-item" href="KeyCode.RightAlt.html">RightAlt</a></li><li><a class="left-menu-item" href="KeyCode.RightApple.html">RightApple</a></li><li><a class="left-menu-item" href="KeyCode.RightArrow.html">RightArrow</a></li><li><a class="left-menu-item" href="KeyCode.RightBracket.html">RightBracket</a></li><li><a class="left-menu-item" href="KeyCode.RightControl.html">RightControl</a></li><li><a class="left-menu-item" href="KeyCode.RightParen.html">RightParen</a></li><li><a class="left-menu-item" href="KeyCode.RightShift.html">RightShift</a></li><li><a class="left-menu-item" href="KeyCode.RightWindows.html">RightWindows</a></li><li><a class="left-menu-item" href="KeyCode.S.html">S</a></li><li><a class="left-menu-item" href="KeyCode.ScrollLock.html">ScrollLock</a></li><li><a class="left-menu-item" href="KeyCode.Semicolon.html">Semicolon</a></li><li><a class="left-menu-item" href="KeyCode.Slash.html">Slash</a></li><li><a class="left-menu-item" href="KeyCode.Space.html">Space</a></li><li><a class="left-menu-item" href="KeyCode.SysReq.html">SysReq</a></li><li><a class="left-menu-item" href="KeyCode.T.html">T</a></li><li><a class="left-menu-item" href="KeyCode.Tab.html">Tab</a></li><li><a class="left-menu-item" href="KeyCode.U.html">U</a></li><li><a class="left-menu-item" href="KeyCode.Underscore.html">Underscore</a></li><li><a class="left-menu-item" href="KeyCode.UpArrow.html">UpArrow</a></li><li><a class="left-menu-item" href="KeyCode.V.html">V</a></li><li><a class="left-menu-item" href="KeyCode.W.html">W</a></li><li><a class="left-menu-item" href="KeyCode.X.html">X</a></li><li><a class="left-menu-item" href="KeyCode.Y.html">Y</a></li><li><a class="left-menu-item" href="KeyCode.Z.html">Z</a></li></ul></div>
-
 	<!-- #TemplateEndEditable -->
-
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
 
 			<!-- #TemplateBeginEditable name="body" -->
-
 			<div class="manual-entry"><h3><a href="KeyCode.F3.html" class="itemlink">KeyCode.F3</a>
-
 </h3><h3 class="soft">Description</h3>
-
    <p class="details"> F3 function key</p>
-
 <div class="entry-sep"></div>
-
 </div>	
-
 	</div><!-- #TemplateEndEditable -->
-
     <script type="text/javascript">
 
-
-
     //prevent an error on older versions of IE(x) < IE7 who did not have a javascript console.
-
     if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
 
 
-
-
-
     var $j = jQuery.noConflict();
-
     $j(document).ready(function($){
 
-
-
     	var languages = [];
-
     	function getCookie(cookieName){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try {
-
     			return $.cookie(cookieName);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
-
 
     	function setCookie(cookieName, cookieValue){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try{
-
     			return $.cookie(cookieName, cookieValue);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
     
-
     /*
-
     decectLangauges looks at all of the div(s) containing a class of "code"
-
     it then creates a list of languages in that list to generate the drop down.
-
     to ad a language, ad an example with that language defined 
-
     in the attribute "code_lang_name" for that div
-
     */
-
     	function detectLanguages(){
-
     		languages = [];
-
     		$("div.code").each(
-
     			function(){
-
     				var isThere = false;
-
     //set the value of the attribute
-
     				var isNewLang = $(this).attr("code_lang_name");
-
     				for ( i in languages ){
-
     					if( isNewLang == languages[i] ){
-
     						isThere = true;
-
     					}
-
     				}				
-
     				if( !isThere ){
-
     //adds a new language to the stack/ array
-
     				   languages.push(isNewLang);
-
     				}
-
     			});
-
     		console.log("languages detected", languages);
-
     	}
-
     
-
     //execute the function detectLanguages just after we defined it, this should only happen once and on page load after the document object model is ready
-
     	detectLanguages();
 
-
-
     	function buildListCSelect(){
-
     //finds the doc element with an id of selectedLangauge, base on css3 rules, then removes all children
-
     		$(".cSelect ul").empty();
-
     		$(".cSelect .cSelect-Selected").text("");
-
     		var langCookie = getCookie("codeLanguage");		
-
     		for( i in languages ){
-
     //inserts a new child with the included html
-
     			$(".cSelect ul").append("<li>" + languages[i] + "</li>");
-
     		}
-
     
-
     //if the cookie is there, set that item to selected.
-
     		for( i in languages ){
-
     			if(langCookie !== null && languages[i] == langCookie){
-
     				$(".cSelect .cSelect-Selected").text(languages[i]);
-
     			}
-
     		}
-
-
 
     		if( $(".cSelect .cSelect-Selected").text().length == 0){
-
     			var first = $(".cSelect li:first").text();
-
     			$(".cSelect .cSelect-Selected").text(first);
-
     		}
 
-
-
     	}
-
     	buildListCSelect();
-
     
-
     	function showCSelectedLanguage(){
-
     		var selected = $(".cSelect .cSelect-Selected:first").text();
-
     		var langAvail = false;
-
     		var langCookie = getCookie("codeLanguage");
-
     		for( i in languages ){
-
     			if(langCookie == languages[i]){
-
     				langAvail = true;
-
     			}
-
     		}
-
     		if(langAvail) {
-
     			selected = langCookie;
-
     		} else {
-
     			console.log("the language stored in the cookie is not availible", langCookie);
-
     		}
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     	}
-
     	showCSelectedLanguage(); //set the default.
-
            $(".cSelect").addClass("roundBottom");
-
     	$(".cSelect ul").hide();
-
     /* 	$(".cSelect").hover(
-
      		function(){
-
      			$(this).find("ul").show();
-
      		},
-
      		function(){
-
      			$(this).find("ul").hide();
-
      		}
-
      	);
-
 */
-
     	$(".cSelect").hover(
-
     		function(){
-
     			$(document).unbind("click.cSelect");
-
     		},
-
     		function(){
-
     			$(document).bind("click.cSelect", function(event){
-
                                    $(".cSelect").addClass("roundBottom");
-
     				$(".cSelect ul").hide();
-
     				$(this).unbind(event);
-
     			});
-
     		}
-
     	);
-
-
-
 
 
     	$(".cSelect li").hover(
-
     		function(){
-
     			$(this).addClass("cSelect-highlight");
-
     		},
-
     		function(){
-
     			$(this).removeClass("cSelect-highlight");
-
     		}
-
     	);
 
-
-
     	var suppress = false;
-
     	function enable(){
-
     		suppress = false;
-
     	}
 
 
-
-
-
     	$(".cSelect li").click(function(){
-
     		var value = $(this).text();
-
     		console.log( "new selection ", value );
-
     		$(this).parents(".cSelect").find(".cSelect-Selected").text(value);
-
     		suppress = true;
-
                    $(".cSelect").addClass("roundBottom");
-
     		$(".cSelect ul").hide();
-
     		$(this).parents(".cSelect").trigger("change");
-
     		setTimeout(enable, 300 );
-
     	});
-
-
-
 
 
            $(".cSelect-ArrowDown")
-
      		.add(".cSelect-Selected")
-
      		.add(".cSelect").click(
-
      		function(){
-
      			var visible = $(this).parents(".cSelect").find("ul").css("display") == "block" ? true : false;
-
      			if( !visible ){
-
      				$(this).parents(".cSelect").removeClass("roundBottom");
-
      				$(this).parents(".cSelect").find("ul").show();
-
      			}else{
-
      				$(this).parents(".cSelect").addClass("roundBottom");
-
      				$(".cSelect ul").hide();
-
      			}
-
      		});
 
 
-
-
-
     	$(".cSelect").click(function(){if(!suppress){}});
-
  
-
     	$(".cSelect").change(function(){
-
     		console.log("selected",$(this).find(".cSelect-Selected").text());
-
     		selected = $(this).find(".cSelect-Selected").text();
-
     		$(".cSelect").find(".cSelect-Selected").text(selected);
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     		setCookie("codeLanguage", selected);
-
     	});
-
     });
-
     </script>
-
 </body>
-
 </html><!-- #EndTemplate -->
-
-
 

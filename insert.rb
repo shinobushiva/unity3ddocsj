@@ -12,18 +12,19 @@ Dir::glob("**/*.html").each{|fname|
   }
   file.rewind
   while l = file.gets
-   idx = l.index('<!-- #TemplateEndEditable -->')
+   end_text = '<!-- #TemplateEndEditable -->'
+   idx = l.index(end_text)
    if skip && idx
     skip = false
-    res += l[idx, l.length]+"\n"
+    res += l[idx+end_text.length, l.length]
    elsif skip
    elsif l.index('<!-- #TemplateBeginEditable name="unofficial translation" -->')
     skip = true
     #print insertion_txt
-    res = res+insertion_txt+"\n"
+    res += insertion_txt+"\n"
    else
     #print l
-    res = res+l+"\n"
+    res += l
    end
   end
  }

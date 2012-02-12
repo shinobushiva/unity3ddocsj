@@ -1,4154 +1,523 @@
 <!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-
-
-
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
-
-
-
-
-
 <head>
-
-
-
-
-
-
-
 <meta charset="utf-8">
-
-
-
-
-
-
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
-
-
-
-
-
-
 		<title>Unity - Player Settings</title>
-
-
-
-
-
-
-
 	<!-- #TemplateEndEditable -->
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
-
 <link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
-
-
-
-
-
-
-
 <body onLoad="DocLoaded();">
-
-
-
-
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
-
-
-
-
-
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
-
-
-
-
-
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
-
-
-
-
-
-
 	<td class="titlemid">
-
-
-
-
-
-
-
 		<table><tr>
-
-
-
-
-
-
-
 			<td class="doctitle">Player Settings</td>
-
-
-
-
-
-
-
 			<td><table align="right"><tr>
-
-
-
-
-
-
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
-
-
-
-
-
-
 			<td class="Manual"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
-
-
-
-
-
-
 			<td class="Manual"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
-
-
-
-
-
-
 			<td class="Manual"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
-
-
-
-
-
-
-
 			<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 			</tr></table></td>
-
-
-
-
-
-
-
 		</tr><tr>
-
-
-
-
-
-
-
 			<td colspan="4">
-
-
-
-
-
-
-
 				<table width="100%" class="docpath"><tr><td >
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="path" -->
-
-
-
-
-
-
-
 					<a href="../Manual/index.html">Unity Manual</a> &gt; <a href="../Manual/android-GettingStarted.html">Getting Started with Android Development</a> &gt; <a href="../Manual/Android Player Settings.html">Player Settings</a>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 				</td>
-
-
-
-
-
-
-
 				</td><td class="switchlink">
-
-
-
-
-
-
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
-
-
-
-
-
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
-
-
-
-
-
-
 					<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 				</td></tr></table>
-
-
-
-
-
-
-
 			</td>
-
-
-
-
-
-
-
 		</tr></table>
-
-
-
-
-
-
-
 	</td>
-
-
-
-
-
-
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
-
-
-
-
-
-
 </tr></table>
-
-
-
-
-
-
-
 <div class="manual">
-
-
-
-
-
-
-
 	<div class="main">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
-
-
-
-<!-- #TemplateEndEditable -->
-
-
-
-
-
-
-
-<!-- #TemplateEndEditable -->
-
-
-
-
-
-
 
 		<!-- #TemplateBeginEditable name="navigation" -->
-
-
-
-
-
-
-
 		<div class="nav">
-
-
-
-
-
-
-
 		<div class="nav-prev">
-
-
-
-
-
-
-
 			<a href='../Manual/android-unsupported.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Previous</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	
-
-
-
-
-
-
-
 		<div class="nav-next">
-
-
-
-
-
-
-
 			<a href='../Manual/android-API.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Next</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="title" -->
-
-
-
-
-
-
-
 			<h1>Player Settings</h1>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="body" -->
-
-
-
-
-
-
-
 			
-
-
-
-
-
-
-
 <p><span class='doc-keyword'>Player Settings</span> is where you define various parameters (platform specific) for the final game that you will build in Unity. Some of these values for example are used in the <span class='doc-keyword'>Resolution Dialog</span> that launches when you open a standalone game, others are used by XCode when building your game for the iOS devices, so it's important to fill them out correctly.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <p class='vspace'>To see the Player Settings choose <span class='doc-menu'>Edit-&gt;Project Settings-&gt;Player</span> from the menu bar.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><div><img class='figure' src='../Images/manual/Android Player Settings-0.jpg' /><br /><em>Global Settings that apply for  any project you create.</em></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><h1>Cross-Platform Properties</h1>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Company Name</span></td><td  align='left'>The name of your company. This is used to locate the preferences file</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Product Name</span></td><td >The name that will appear on the menu bar when your game is running and is used to locate the preferences file also.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Icon</span></td><td >Default icon the application will have on every platform (You can override this later for platform specific needs).</td></tr>
-
-
-
-
-
-
-
 </table>
-
-
-
-
-
-
-
 <div class='vspace'></div><h1>Per-Platform Settings</h1>
-
-
-
-
-
-
-
 <a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/Android Player Settings-1.jpg' /> Desktop </h1> </a>
-
-
-
-
-
-
-
 <div class='specific-desktop' style='display: block;' id='specific-desktop' > 
-
-
-
-
-
-
-
 <h2>Web-Player</h2>
-
-
-
-
-
-
-
 <h4><em>Resolution And Presentation</em></h4>
-
-
-
-
-
-
-
 <div><img class='figure' src='../Images/manual/Android Player Settings-2.jpg' /><br /><em>Resolution and presentation for web player builds.</em></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Resolution</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Screen Width</span></td><td >Screen Width the player will be generated with.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Screen Height</span></td><td >Screen Height the plater will be generated with.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Run in background</span></td><td >Check this if you dont want to stop executing your game if the player looses focus.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><b><em>WebPlayer Template</em></b></td><td >For more information you should check the <a href="../Manual/Using Web Player templates.html">"Using WebPlayer templates page"</a>, note that for each built-in and custom template there will be an icon in this section.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Watermark</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Always Display Watermark</span></td><td >Check this if you want to display Unity's Watermark when the game is running.(This is a shared setting between the WebPlayer and StandAlone Executables)</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Other Settings</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-3.jpg' /><br /><em>Other general settings for Web Player builds.</em></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><b><em>Rendering</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Rendering Path</span></td><td >This property is shared between Standalone and WebPlayer content.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Vertex Lit</span></span></td><td >Lowest lighting fidelity, no shadows support. Best used on old machines or limited mobile platforms.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Forward with Shaders</span></span></td><td >Good support for lighting features; limited support for shadows.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Deferred Lighting</span></span></td><td >Best support for lighting and shadowing features, but requires certain level of hardware support. Best used if you have many realtime lights. Unity Pro only.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Streaming</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>First Streamed Level</span></td><td >If you are publishing a Streamed Web Player, this is the index of the first level that will have access to all Resources.Load assets.</td></tr>
-
-
-
-
-
-
-
 </table>
-
-
-
-
-
-
-
 <div class='vspace'></div><h2>Standalone (and OSX Widget)</h2>
-
-
-
-
-
-
-
 <h4><em>Resolution And Presentation</em></h4>
-
-
-
-
-
-
-
 <div><img class='figure' src='../Images/manual/Android Player Settings-4.jpg' /><br /><em>Resolution and presentation for both windows/mac standalone builds.</em></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Resolution</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Screen Width</span></td><td >Screen Width the stand alone game will be using by default.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Screen Height</span></td><td >Screen Height the plater will be using by default.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Run in background</span></td><td >Check this if you dont want to stop executing your game if it looses focus.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'><b><em>Standalone Player Options</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default is Full Screen</span></td><td >Check this if you want to start your game by default in full screen mode.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Capture Single Screen</span></td><td >If enabled, standalone games in fullscreen mode will not darken the secondary monitor in multi-monitor setups.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><span class='doc-prop'>DisplayResolution Dialog</span></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Disabled</span></span></td><td >No resolution dialog will appear when starting the game.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Enabled</span></span></td><td >Resolution dialog will always appear when the game is launched.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Hidden by default</span></td><td >The resolution player is possible to be opened only if you have pressed the "alt" key when starting the game.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Supported Aspect Ratios</span></td><td >Aspect Ratios selectable in the Resolution Dialog will be monitor-supported resolutions of enabled items from this list.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'><b><em>Dashboard Widget Options</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Use Alpha in Dashboard</span></td><td >Enabling this will use the alpha channel rendered in Unity for the transparency of the OSX Dashboard Widget. This allows you to make a dashboard widget with the shape of a mesh for example.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Watermark</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Always Display Watermark</span></td><td >Check this if you want to display Unity's Watermark when the game is running.(This is a shared setting between the WebPlayer and StandAlone Executables)</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Icon</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-5.jpg' /><br /><em>Different icons that your project will have when built.</em></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Override for Standalone</span></td><td >Check if you want to assign a custom icon you would like to be used for your standalone game. Different sizes of the icon should fill in the squares below.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>SplashImage</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-6.jpg' /><br /><em>Splash image that is going to be displayed when your project is loading all the resources when you execute it.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Config Dialog Banner</span></td><td >Add your custom splash image that will be displayed when the game is starting.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Other Settings</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-7.jpg' /><br /><em>Other general settings for stand alone builds.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr ><td  align='left'><b><em>Rendering</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Rendering Path</span></td><td >This property is shared between Standalone and WebPlayer content.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Vertex Lit</span></span></td><td >Lowest lighting fidelity, no shadows support. Best used on old machines or limited mobile platforms.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Forward with Shaders</span></span></td><td >Good support for lighting features; limited support for shadows.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Deferred Lighting</span></span></td><td >Best support for lighting and shadowing features, but requires certain level of hardware support. Best used if you have many realtime lights. Unity Pro only.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><span class='doc-prop'>API Compatibility Level</span></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0</span></span></td><td >.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0 Subset</span></span></td><td >Subset of full .net compatibility,  smaller file sizes</td></tr>
-
-
-
-
-
-
-
 </table></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><a class='iosRef' id='iosRef' href="javascript:ShowHideDiv('iosRef','specific-ios', 'iOS');"><h1><img class='figure' src='../Images/manual/Android Player Settings-8.jpg' /> iOS</h1></a>
-
-
-
-
-
-
-
 <div class='specific-ios' style='display: block;' id='specific-ios' > 
-
-
-
-
-
-
-
 <h4><em>Resolution And Presentation</em></h4>
-
-
-
-
-
-
-
 <div><img class='figure' src='../Images/manual/Android Player Settings-9.jpg' /><br />''Orientation and presentation for iOS builds.'.</div>
-
-
-
-
-
-
-
 <div class='vspace'></div><table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Resolution</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Orientation</span></td><td >(This setting is shared between iOS and Android devices)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Portrait</span></span></td><td >The device is in portrait mode, with the device held upright and the home button at the bottom.</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Portrait Upside Down (iOS Only)</span></span></td><td >The device is in portrait mode but upside down, with the device held upright and the home button at the top.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Landscape Right (iOS Only)</span></span></td><td >The device is in landscape mode, with the device held upright and the home button on the <b>left</b> side.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Landscape Left</span></span></td><td >The device is in landscape mode, with the device held upright and the home button on the <b>right</b> side.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Status Bar</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Status Bar Hidden</span></td><td >Specifies whether the status bar is initially hidden when the application launches.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Status Bar Style</span></td><td >Specifies the style of the status bar as the application launches</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Default</span></span></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Black Translucent</span></span></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Black Opaque</span></span></td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Icon</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-10.jpg' /><br /><em>Different icons that your project will have when built.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Override for iOS</span></td><td >Check if you want to assign a custom icon you would like to be used for your iPhone/iPad game. Different sizes of the icon should fill in the squares below.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Prerendered icon</span></td><td >If unchecked iOS applies sheen and bevel effects to the application icon.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>SplashImage</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-11.jpg' /><br /><em>Splash image that is going to be displayed when your project is launched.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>Mobile Splash Screen (Advanced-only feature)</span></td><td >Specifies texture which should be used for iOS Splash Screen. Standard Splash Screen size is 320x480.(This is shared between Android and iOS)</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>High Res. iPhone (Advanced-only feature)</span></td><td >Specifies texture which should be used for iOS 4th gen device Splash Screen. Splash Screen size is 640x960.</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>iPad Portrait (Advanced-only feature)</span></td><td >Specifies texture which should be used as iPad Portrait orientation Splash Screen. Standard Splash Screen size is 768x1024.</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>iPad Landscape (Advanced-only feature)</span></td><td >Specifies texture which should be used as iPad Landscape orientation Splash Screen. Standard Splash Screen size is 1024x768.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Other Settings</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-12.jpg' /><br /><em>Other general settings for iPhone/iPad builds.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr ><td  align='left' colspan='2'><b><em>Identification</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Bundle Identifier</span></td><td  align='left'>The string used in your provisioning certificate from your Apple Developer Network account(This is shared between iOS and Android)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Bundle Version</span></td><td >Specifies the build version number of the bundle, which identifies an iteration (released or unreleased) of the bundle. This is a monotonically increased string, comprised of one or more period-separated</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Application Display Name</span></td><td >Specifies the display name of the bundle.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><b><em>Configuration</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Target Device</span></td><td >Specifies application target device type.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone Only</span></span></td><td >Application is targeted for iPhone devices only.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPad Only</span></span></td><td >Application is targeted for iPad devices only.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone + iPad</span></span></td><td >Application is targeted for both iPad and iPhone devices.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Target Platform</span></td><td >Specifies the target arquitecture you are going to build for.(This setting is shared between iOS and Android Platforms)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>armv6 (OpenGL ES1.1)</span></span></td><td >Application is optimized for armv6 chipsets</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Universal armv6+armv7 (OpenGL ES1.1+2.0)</span></span></td><td >Application supports both armv6 and armv7 chipsets. <em>Note: increases application distribution size</em></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Target Resolution</span></td><td >Resolution you want to use on your deployed device.(This setting will not have any effect on devices with maximum resolution of 480x320)</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Native(Default Device Resolution)</span></span></td><td >Will use the device native resolution.</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>Standard(Medium or Low Resolution)</span></span></td><td >Use the lowest resolution possible (480x320).</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span  style='padding-left: 1.5em;'><span class='doc-prop'>HD(Highest available resolution)</span></span></td><td >Use the maximum resolution allowed on the device (960x640).</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>Override iPod Music</span></td><td  align='left'>If selected application will silence user's iPod music. Otherwise user's iPod music will continue playing in the background.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>UI Requires Persistent WiFi</span></td><td >Specifies whether the application requires a Wi-Fi connection. iOS maintains the active Wi-Fi connection open while the application is running.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Optimization</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Api Compatibility Level</span></td><td >Specifies active .NET API profile</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0</span></span></td><td >.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0 Subset</span></span></td><td >Subset of full .net compatibility,  smaller file sizes</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>SDK Version</span></td><td >Specifies iPhone OS SDK version to use for building in Xcode</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 3.0</span></span></td><td >iPhone OS 3.0.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 3.1</span></span></td><td >iPhone OS 3.1.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 3.1.2</span></span></td><td >iPhone OS 3.1.2.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 3.1.3</span></span></td><td >iPhone OS 3.1.3.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 3.2</span></span></td><td >iPhone OS 3.2.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Simulator 3.2</span></span></td><td >iPad Simulator 3.2. Application built for this version of SDK will be able to run only on iPad Simulator.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 4.0</span></span></td><td >iPhone OS 4.0. (default value)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Simulator 4.0</span></span></td><td >iPad Simulator 4.0. Application built for this version of SDK will be able to run only on Simulator from the SDK 4.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>iPhone OS 4.1</span></span></td><td >iPhone OS 4.1.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Simulator 4.1</span></span></td><td >iPad Simulator 4.1. Application built for this version of SDK will be able to run only on Simulator from the SDK 4.x.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Unknown</span></span></td><td >iPhone OS SDK version is not managed by Unity Editor.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Target iOS Version</span></td><td >Specifies lowest iOS version where final application will able to run</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>3.0</span></span></td><td >iPhone OS 3.0. (default value)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>3.1</span></span></td><td >iPhone OS 3.1.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>3.1.2</span></span></td><td >iPhone OS 3.1.2.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>3.1.3</span></span></td><td >iPhone OS 3.1.3.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>3.2</span></span></td><td >iPhone OS 3.2.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>4.0</span></span></td><td >iPhone OS 4.0.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>4.1</span></span></td><td >iPhone OS 4.1.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Unknown</span></span></td><td >iPhone OS SDK version is not managed by Unity Editor.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Stripping Level (Advanced-only feature)</span></td><td >Options to strip out scripting features to reduce built player size(This setting is shared between iOS and Android Platforms)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Disabled</span></span></td><td >No reduction is done.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Strip Assemblies</span></span></td><td >Level 1 size reduction.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Strip ByteCode</span></span></td><td >Level 2 size reduction (includes reductions from Level 1).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Use micro mscorlib</span></span></td><td >Level 3 size reduction (includes reductions from Levels 1 and 2).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Script Call Optimization</span></td><td  align='left'>Optionally disable exception handling for a speed boost at runtime</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Slow and Safe</span></span></td><td  align='left'>Full exception handling will occur with some performance impact on the device</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Fast but no Exceptions</span></span></td><td  align='left'>No data provided for exceptions on the device, but the game will run faster</td></tr>
-
-
-
-
-
-
-
 </table>
-
-
-
-
-
-
-
 <p class='vspace'><b>Note:</b> If you build for example for iPhone OS 3.2, and then select Simulator 3.2 in Xcode you will get a ton of errors. So you <b>MUST</b> be sure to select a proper Target SDK in Unity Editor.
-
-
-
-
-
-
-
 </p></div>
-
-
-
-
-
-
-
 <p><a name='Android' id='Android'></a>
-
-
-
-
-
-
-
 </p><a class='androidRef' id='androidRef' href="javascript:ShowHideDiv('androidRef','specific-android', 'Android');"><h1><img class='figure' src='../Images/manual/Android Player Settings-13.jpg' /> Android</h1></a>
-
-
-
-
-
-
-
 <div class='specific-android' style='display: block;' id='specific-android' > 
-
-
-
-
-
-
-
 <h4><em>Resolution And Presentation</em></h4>
-
-
-
-
-
-
-
 <div><img class='figure' src='../Images/manual/Android Player Settings-14.jpg' /><br /><em>Resolution and presentation for your Android project builds.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Resolution</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Default Orientation</span></td><td >(This setting is shared between iOS and Android devices)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Portrait</span></span></td><td >The device is in portrait mode, with the device held upright and the home button at the bottom.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Portrait Upside Down</span></span></td><td >The device is in portrait mode but upside down, with the device held upright and the home button at the top.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Landscape Right</span></span></td><td >The device is in landscape mode, with the device held upright and the home button on the <b>left</b> side.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Landscape Left</span></span></td><td >The device is in landscape mode, with the device held upright and the home button on the <b>right</b> side.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Icon</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-15.jpg' /><br /><em>Different icons that your project will have when built.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Override for Android</span></td><td >Check if you want to assign a custom icon you would like to be used for your Android game. Different sizes of the icon should fill in the squares below.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>SplashImage</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-16.jpg' /><br /><em>Splash image that is going to be displayed when your project is launched.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>Mobile Splash Screen (Advanced-only feature)</span></td><td >Specifies texture which should be used by the iOS Splash Screen. Standard Splash Screen size is 320x480.(This is shared between Android and iOS)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Splash Scaling</span></td><td >Specifies how will be the splash image scaling on the device.</td></tr>
-
-
-
-
-
-
-
 <tr ><th >&nbsp;</th><th ></th></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'>&nbsp;</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Other Settings</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-17.jpg' /><br /><em>Other general settings for Android builds.</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr ><td  align='left' colspan='2'><b>Rendering</b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Static Batching</span></td><td >Set this to use Static batching on your build (Activated by default).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Dynamic Batching</span></td><td >Set this to use Dynamic Batching on your build (Activated by default).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Identification</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Bundle Identifier</span></td><td  align='left'>The string used in your provisioning certificate from your Apple Developer Network account(This is shared between iOS and Android)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Bundle Version</span></td><td >Specifies the build version number of the bundle, which identifies an iteration (released or unreleased) of the bundle. This is a monotonically increased string, comprised of one or more period-separated(This is shared between iOS and Android)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Bundle Version Code</span></td><td >An internal version number. This number is used only to determine whether one version is more recent than another, with higher numbers indicating more recent versions. This is not the version number shown to users; that number is set by the versionName attribute. The value must be set as an integer, such as "100". You can define it however you want, as long as each successive version has a higher number. For example, it could be a build number. Or you could translate a version number in "x.y" format to an integer by encoding the "x" and "y" separately in the lower and upper 16 bits. Or you could simply increase the number by one each time a new version is released.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><b><em>Configuration</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Device Filter</span></td><td >Specifies the target architecture you are going to build for.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>ARMv7 only (Recommended for Android Market)</span></span></td><td >Enable Android Market device filtering. Only devices supporting Unity Android will list the application on the Android Market.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>ARMv7 or ARMv6 with VPF (Runtime detection)</span></span></td><td >Use runtime detection of hardware capabilities rather than relying on the Android Market filtering mechanism. It means the application when published to the Android Market will be visible also to devices not supporting Unity Android. Obviously this is not recommended, especially for paid applications, but could be useful either for testing purposes on low-end devices (devices with an ARMv6 CPU with VFP capabilities) or for development boards that are not recognized as ARMv7 capable (like the Nvidia Tegra development board).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Universal (*experimental* - emulator only)</span></span></td><td >Will enable 'universal' builds with support for both ARMv5 (low-end / previous generation) and ARMv7 (high-end / current generation) devices. The ARMv5 path is highly experimental and this setting should only be used for testing purposes (on devices without VFP capabilities) and/or with the Android Emulator.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Graphics Level</span></td><td >Select either ES 1.1 ('fixed function') or ES 2.0 ('shader based') Open GL level</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Optimization</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Api Compatibility Level</span></td><td >Specifies active .NET API profile</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0</span></span></td><td >.Net 2.0 libraries. Maximum .net compatibility,  biggest file sizes</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>.Net 2.0 Subset</span></span></td><td >Subset of full .net compatibility,  smaller file sizes</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Stripping Level (Advanced-only feature)</span></td><td >Options to strip out scripting features to reduce built player size(This setting is shared between iOS and Android Platforms)</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Disabled</span></span></td><td >No reduction is done.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Strip Assemblies</span></span></td><td >Level 1 size reduction.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Strip ByteCode (iOS only)</span></span></td><td >Level 2 size reduction (includes reductions from Level 1).</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span  style='padding-left: 1.5em;'><span class='doc-prop'>Use micro mscorlib</span></span></td><td >Level 3 size reduction (includes reductions from Levels 1 and 2).</td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>Enable "logcat" profiler</span></td><td >Enable this if you want to get feedback from your device while testing your projects. So adb logcat prints logs from the device to the console</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Force Internet Permission</span></td><td >Will enable networking permissions even if your scripts are not using this (This is commonly used for profiling your apps).</td></tr>
-
-
-
-
-
-
-
 <tr ><th  align='left' colspan='2'>Publishing Settings</th></tr>
-
-
-
-
-
-
-
 </table><div><img class='figure' src='../Images/manual/Android Player Settings-18.jpg' /><br /><em>Publishing settings for Android Market</em></div>
-
-
-
-
-
-
-
 <table width='100%'><tr class='tableheader'><td  class='prop'></td><td class='function'></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Keystore</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td ><span class='doc-prop'>Use Existing Keystore / Create new Keystore</span></td><td >Use this if you are creating a new Keystore or using one you have already.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Browse Keystore</span></td><td >Lets you select a generated Keystore.</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left' colspan='2'><b><em>Key</em></b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Alias</span></td><td >Key alias</td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Password</span></td><td >Password for key alias</td></tr>
-
-
-
-
-
-
-
 <tr ><td  colspan='2'><b>Android Market Licensing (LVL)</b></td></tr>
-
-
-
-
-
-
-
 <tr ><td  align='left'><span class='doc-prop'>Public Key</span></td><td >Here goes the public key provided by the <a class='urllink' href='http://developer.android.com/guide/publishing/licensing.html#account' rel='nofollow'>Android developer site</a>.</td></tr>
-
-
-
-
-
-
-
 </table></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><h1>Details</h1>
-
-
-
-
-
-
-
 <a class='desktopRef' id='desktopRef' href="javascript:ShowHideDiv('desktopRef','specific-desktop','Desktop');"> <h1> <img class='figure' src='../Images/manual/Android Player Settings-19.jpg' /> Desktop </h1> </a>
-
-
-
-
-
-
-
 <div class='specific-desktop' style='display: block;' id='specific-desktop' > 
-
-
-
-
-
-
-
 <p>The Player Settings window is where many technical preference defaults are set. See also <a href="../Components/class-QualitySettings.html">Quality Settings</a> where the different graphics quality levels can be set up.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h3>Publishing a web player</h3>
-
-
-
-
-
-
-
 <p><span class='doc-prop'>Default Web Screen Width</span> and <span class='doc-prop'>Default Web Screen Height</span> determine the size used in the html file. You can modify the size in the html file later.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <p class='vspace'><span class='doc-prop'>Default Screen Width</span> and <span class='doc-prop'>Default Screen Height</span> are used by the Web Player when entering fullscreen mode through the context menu in the Web Player at runtime.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h3>Customizing your Resolution Dialog</h3>
-
-
-
-
-
-
-
 <div><img class='figure' src='../Images/manual/Android Player Settings-20.jpg' /><br /><em>The Resolution Dialog, presented to end-users</em></div>
-
-
-
-
-
-
-
 <p class='vspace'>You have the option of adding a custom banner image to the Screen Resolution Dialog in the Standalone Player. The maximum image size is 432 x 163 pixels. The image will not be scaled up to fit the screen selector. Instead it will be centered and cropped.
-
-
-
-
-
-
-
 </p></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><a class='iosRef' id='iosRef' href="javascript:ShowHideDiv('iosRef','specific-ios', 'iOS');"><h1><img class='figure' src='../Images/manual/Android Player Settings-21.jpg' /> iOS</h1></a>
-
-
-
-
-
-
-
 <div class='specific-ios' style='display: block;' id='specific-ios' > 
-
-
-
-
-
-
-
 <h3>Bundle Identifier</h3>
-
-
-
-
-
-
-
 <p>The <span class='doc-prop'>Bundle Identifier</span> string must match the provisioning profile of the game you are building.  The basic structure of the identifier is <span class='doc-prop'>com.CompanyName.GameName</span>. This structure may vary internationally based on where you live, so always default to the string provided to you by Apple for your Developer Account.  Your GameName is set up in your provisioning certificates, that are manageable from the Apple iPhone Developer Center website.  Please refer to the <a class='urllink' href='http://developer.apple.com/iphone/' rel='nofollow'>Apple iPhone Developer Center website</a> for more information on how this is performed.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h3>Stripping Level (Advanced-only)</h3>
-
-
-
-
-
-
-
 <p>Most games don't use all necessary dlls.  With this option, you can strip out unused parts to reduce the size of the built player on iOS devices.  If your game is using classes that would normally be stripped out by the option you currently have selected, you'll be presented with a Debug message when you make a build.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h3>Script Call Optimization</h3>
-
-
-
-
-
-
-
 <p>A good development practice on iOS is to never rely on exception handling (either internally or through the use of try/catch blocks).  When using the default <span class='doc-prop'>Slow and Safe</span> option, any exceptions that occur on the device will be caught and a stack trace will be provided.  When using the <span class='doc-prop'>Fast but no Exceptions</span> option, any exceptions that occur will crash the game, and no stack trace will be provided.  However, the game will run faster since the processor is not diverting power to handle exceptions.  When releasing your game to the world, it's best to publish with the <span class='doc-prop'>Fast but no Exceptions</span> option.
-
-
-
-
-
-
-
 </p></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><a class='androidRef' id='androidRef' href="javascript:ShowHideDiv('androidRef','specific-android', 'Android');"><h1><img class='figure' src='../Images/manual/Android Player Settings-22.jpg' /> Android</h1></a>
-
-
-
-
-
-
-
 <div class='specific-android' style='display: block;' id='specific-android' > 
-
-
-
-
-
-
-
 <p>Unity Android is currently in preview state for Unity 3.  As such this documentation is not yet complete.  Please watch this space for proper Unity Android documentation as it is added.
-
-
-
-
-
-
-
 </p></div>
-
-
-
-
-
-
-
 </p><small>Page last updated: 2010-09-23</p>
-
-
-
-
-
-
-
     <script type="text/javascript">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     var allHTMLTags = new Array();
-
-
-
-
-
-
-
     document.divs = new Array();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function getElementByClass(theClass) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	    var allHTMLTags=document.getElementsByTagName("*");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	    for (var i=0; i<allHTMLTags.length; i++) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		    if (allHTMLTags[i].className==theClass) {
-
-
-
-
-
-
-
 			    return true;
-
-
-
-
-
-
-
 		    }
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	    return false;
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function ShowHideDiv(containerName, className, content){
-
-
-
-
-
-
-
 	var container = document.getElementById(containerName);
-
-
-
-
-
-
-
 	if(container == null)
-
-
-
-
-
-
-
 		return;
-
-
-
-
-
-
-
 	if(content == '') {//In case there are no divs in the page we still can change the icons.
-
-
-
-
-
-
-
 		if(containerName == 'desktopRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 		if(containerName == 'iosRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 		if(containerName == 'androidRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}	
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 	} else {
-
-
-
-
-
-
-
 		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
-
-
-
-
-
-
-
 		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
-
-
-
-
-
-
-
 			SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 		} else {
-
-
-
-
-
-
-
 			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
-
-
-
-
-
-
-
 			UnSetCookie(containerName);
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	for(var i = 0; i < document.divs.length; i++) {
-
-
-
-
-
-
-
 		var divClassName = document.divs[i];
-
-
-
-
-
-
-
 		var matched = false;
-
-
-
-
-
-
-
 		if(divClassName.className == className)
-
-
-
-
-
-
-
 			   matched = true;
-
-
-
-
-
-
-
 		if(matched) {
-
-
-
-
-
-
-
 			
-
-
-
-
-
-
-
 			if(divClassName != null) {
-
-
-
-
-
-
-
 				if (divClassName.style.display == 'block') {
-
-
-
-
-
-
-
 					divClassName.style.display = 'none';
-
-
-
-
-
-
-
 					if(content == '') {
-
-
-
-
-
-
-
 						if(className == 'specific-desktop')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-ios')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-android')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 					} else {
-
-
-
-
-
-
-
 						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
-
-
-
-
-
-
-
 					}
-
-
-
-
-
-
-
 					UnSetCookie(containerName);
-
-
-
-
-
-
-
 				} else {
-
-
-
-
-
-
-
 					divClassName.style.display = 'block';
-
-
-
-
-
-
-
 					if(content == '') {
-
-
-
-
-
-
-
 						if(className == 'specific-desktop')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-ios')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-android')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 					} else {
-
-
-
-
-
-
-
 						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
-
-
-
-
-
-
-
 					}
-
-
-
-
-
-
-
 					SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 				}
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}	
-
-
-
-
-
-
-
         }			   
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     function UnSetCookie(cn) {
-
-
-
-
-
-
-
     	SetCookie(cn,'',30);
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function GetCookie(cName) {
-
-
-
-
-
-
-
 	if (document.cookie.length > 0) {
-
-
-
-
-
-
-
             cStart = document.cookie.indexOf(cName + "=");
-
-
-
-
-
-
-
 	    if(cStart != -1) {
-
-
-
-
-
-
-
 	        cStart = cStart + cName.length + 1;
-
-
-
-
-
-
-
 	        cEnd = document.cookie.indexOf(";", cStart);
-
-
-
-
-
-
-
 	        if (cEnd == -1) {
-
-
-
-
-
-
-
 	            cEnd = document.cookie.length;
-
-
-
-
-
-
-
 	        }
-
-
-
-
-
-
-
 	        return unescape(document.cookie.substring(cStart, cEnd));;
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	return "";
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function SetCookie(cName, value, expireDays) {
-
-
-
-
-
-
-
 	var exDate = new Date();
-
-
-
-
-
-
-
 	exDate.setDate(exDate.getDate()+expireDays);
-
-
-
-
-
-
-
 	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function DocLoaded() {
-
-
-
-
-
-
-
 	document.divs = document.getElementsByTagName('div');
-
-
-
-
-
-
-
 	var prefDesktop = GetCookie('desktopRef');
-
-
-
-
-
-
-
 	var prefiOS = GetCookie('iosRef');
-
-
-
-
-
-
-
 	var prefAndroid = GetCookie('androidRef');
-
-
-
-
-
-
-
 	var firstTime = GetCookie('FT');
-
-
-
-
-
-
-
 	if (firstTime == null || firstTime == "" ) {
-
-
-
-
-
-
-
 	    SetCookie('FT', 'no', 30);
-
-
-
-
-
-
-
 	    SetCookie('desktopRef', 'set', 30)
-
-
-
-
-
-
-
 	} else if (prefDesktop == null || prefDesktop =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('desktopRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('desktopRef','specific-desktop','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	if (prefiOS == null || prefiOS =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('iosRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('iosRef','specific-ios','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('iosRef','specific-ios','iOS');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	if (prefAndroid == null || prefAndroid =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('androidRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('androidRef','specific-android','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('androidRef','specific-android','Android');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}	
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     </script>
-
-
-
-
-
-
-
     
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="nav">
-
-
-
-
-
-
-
 		<div class="nav-prev">
-
-
-
-
-
-
-
 			<a href='../Manual/android-unsupported.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Previous</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	
-
-
-
-
-
-
-
 		<div class="nav-next">
-
-
-
-
-
-
-
 			<a href='../Manual/android-API.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Next</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
 </body></html>
-
-
-
-
-
-
-
 <!-- #EndTemplate -->
-
-
-
-
-
-
-

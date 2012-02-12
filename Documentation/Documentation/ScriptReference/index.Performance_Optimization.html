@@ -1,1274 +1,640 @@
 <!-- #BeginTemplate "/Templates/manual-scriptref-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta charset="utf-8">
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
 			<title>Unity Script Reference &ndash; Overview: Performance Optimization</title>
-
 	<!-- #TemplateEndEditable -->
-
 <link rel="StyleSheet"  href="docs.css" type="text/css" />
-
 <script type="text/javascript" src="../Images/jquery-1.4.2.js"></script>
-
 <script type="text/javascript" src="../Images/jquery.cookie.js"></script>
 
-
-
 <style>
-
 /* 
-
 Unity standard fonts 
-
 */
-
 body{ font-family:Helvetica, Arial, sans-serif; font-size:.9em; }
 
-
-
 /*
-
 simple format for code, using fixed width
-
 and a nice border
-
 */
-
 pre { font-family:"Courier New", Courier, monospace; font-size:.8em; }
-
 pre { padding:10px; margin:10px; border:1px #d8d8d8 solid; }
-
 pre { -moz-border-radius:10px; -webkit-border-radius:10px; }
-
 pre { background:#f8f8f8; }
 
-
-
 /*
-
 aligns the selection dialog on the top right
-
 */
-
 .selectLang { margin-right:10px; text-align:right; float:right; }
 
 
-
-
-
 .cSelect,
-
 .cSelect ul,
-
 .cSelect li { font-size:12px; }
 
-
-
 /*.cSelect { border:1px solid #d0d0d0; }
-
 .cSelect { background:#ddf; }*/
-
 /*
-
 .cSelect { -moz-border-radius:10px; -webkit-border-radius:10px; }*/
 
-
-
 .cSelect { display:inline-block; position:relative; float:right; margin-right:20px;}
-
 .cSelect { padding-top:.4em; padding-bottom:.2em;}
-
 .cSelect-Selected,
-
 .cSelect-ArrowDown,
-
 .cSelect li { cursor:pointer; }
 
-
-
 .cSelect,
-
 .roundTop { -webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; }
-
 .cSelect,
-
 .roundTop { -moz-border-radius-topleft:10px; -moz-border-radius-topright:10px; }
 
-
-
 .roundBottom,
-
 .cSelect ul { -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; }
-
 .roundBottom,
-
 .cSelect ul { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; }
-
-
-
 
 
 .cSelectWidth { width:10em; display:block;}
 
-
-
 .cSelect-wrapper { position:relative; }
 
-
-
 .cSelect ul { background:#fff; padding:0px; margin:0px; display:inline-block; }
-
 .cSelect ul { z-index:10; position:absolute; top:1.3em; }
-
 .cSelect ul { padding-bottom:.5em; padding-top:.5em; padding-left:0px; padding-right:0px; }
-
 /*.cSelect ul { border:1px solid #d0d0d0; }*/
 
 
-
-
-
 .cSelect li { padding:.1em; margin:0px; text-align:right; list-style-type:none; }
-
 .cSelect li { padding-left:.7em; padding-right:24px; }
-
-
 
 .cSelect-highlight { background:#f0f0f0; }
 
-
-
 .cSelect-Selected { margin-left:.5em; margin-right:.5em; text-align:right; float:right; width:75%}
 
-
-
 .cSelect-ArrowDown { width:18px; height:18px; display:inline-block; float:right}
-
 .cSelect-ArrowDown { background:url('../Images/down-arrow.png'); text-align:center; }
-
 .cSelect-ArrowDown { -moz-border-radius:9px; -webkit-border-radius:9px; }
 
-
-
 .monoCompatibility-roweven { background-color:#DCDDDF; }
-
 .monoCompatibility-rowodd { background-color:#F3F3F4; }
-
 .monoCompatibility-cell { border:1px solid #ffffff;}
 
 
-
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
 
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
 	<td class="titlemid">
-
 		<table><tr>
-
 			<td class="doctitle">Overview: Performance Optimization</td>
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
 			<td class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting&nbsp;&nbsp;</span></a></td>
-
 			<!-- #TemplateEndEditable -->	
-
 		</tr><tr>
-
 			<td colspan="4">
-
 				<table width="100%" class="docpath"><tr><td >
-
 					<!-- #TemplateBeginEditable name="path" -->
-
 						<a href="index.html">Scripting</a>
-
 					<!-- #TemplateEndEditable -->	
-
 				</td>
-
 				</td><td class="switchlink">
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
 					<!-- #TemplateEndEditable -->	
-
 				</td></tr></table>
-
 			</td>
-
 		</tr></table>
-
 	</td>
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
 </tr></table>
-
 <div class="scriprefmain">
-
 		<span class="heading">
-
 			<!-- #TemplateBeginEditable name="title" -->
-
 				Overview: Performance Optimization
-
 			<!-- #TemplateEndEditable -->	
-
 		</span>
-
 <!-- #TemplateBeginEditable name="details" -->
-
 	<span class="text"></span>
-
 <!-- #TemplateEndEditable -->	
 
-
-
 	<!-- #TemplateBeginEditable name="manual-top-nav" --><div class="left-menu-container"><ul class="left-menu"><li>
-
 <form class="apisearch" action="30_search.html" method="GET">
-
 	<input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q" />
-
 				
-
 	<script type="text/javascript" language="JavaScript">
-
 	<!--
-
 	function detect() {
-
 		// simplify things
-
 		var agent 	= navigator.userAgent.toLowerCase();
-
 		
-
 		// detect platform
-
 		this.isMac		= (agent.indexOf('mac') != -1);
-
 		this.isWin		= (agent.indexOf('win') != -1);
-
 		this.isWin2k	= (this.isWin && (
-
 				agent.indexOf('nt 5') != -1));
-
 		this.isWinSP2	= (this.isWin && (
-
 				agent.indexOf('xp') != -1 || 
-
 				agent.indexOf('sv1') != -1));
-
 		this.isOther	= (
-
 				agent.indexOf('unix') != -1 || 
-
 				agent.indexOf('sunos') != -1 || 
-
 				agent.indexOf('bsd') != -1 ||
-
 				agent.indexOf('x11') != -1 || 
-
 				agent.indexOf('linux') != -1);
-
 		
-
 		// detect browser
-
 		this.isSafari	= (agent.indexOf('safari') != -1);
-
 		this.isSafari2 = (this.isSafari && (parseFloat(agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).substring(0,agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).indexOf(' '))) >=  300));
-
 		this.isOpera	= (agent.indexOf('opera') != -1);
-
 		this.isNN		= (agent.indexOf('netscape') != -1);
-
 		this.isIE		= (agent.indexOf('msie') != -1);
-
 	}
-
 	var browser = new detect();
-
 	var str = "Search";
-
 	var q=document.getElementById('q');
-
 	if (!browser.isSafari2) {q.value=str;q.onfocus=function(){q.value="";q.style.color="#000";};}
-
 	//-->
-
 	</script>
-
 </form>
-
 </li><li><span class="left-menu-heading">Menu</span></li><li><a title="Scripting overview" class="left-menu-item" href="index.html">Overview</a></li><li><a title="List of scripting classes" class="left-menu-item" href="20_class_hierarchy.html">Runtime Classes</a></li><li><a title="List of attributes" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Attributes.html">Attributes</a></li><li><a title="List of enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Enumerations.html">Enumerations</a></li><li><a title="Classes for extending Unity editor" class="left-menu-item" href="20_class_hierarchy.Editor_Classes.html">Editor Classes</a></li><li><a title="List of editor enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Editor_Enumerations.html">Enumerations</a></li><li><a title="Scripting change history" class="left-menu-item" href="40_history.html">History</a></li><li><a title="Alphabetical index" class="left-menu-item" href="10_reference.html">Index</a></li><li><span class="left-menu-seperator"></span></li><li><a class="left-menu-heading" href="index.html">Scripting Overview</a></li><li><a title="Common Operations" class="left-menu-item" href="index.Common_Operations.html">Common Operations</a></li><li><a title="Keeping Track of Time" class="left-menu-item" href="index.Keeping_Track_of_Time.html">Time</a></li><li><a title="Accessing Other Components" class="left-menu-item" href="index.Accessing_Other_Components.html">Accessing Components</a></li><li><a title="Accessing Other Game Objects" class="left-menu-item" href="index.Accessing_Other_Game_Objects.html">Accessing Objects</a></li><li><a title="Vectors" class="left-menu-item" href="index.Vectors.html">Vectors</a></li><li><a title="Member Variables & Global Variables" class="left-menu-item" href="index.Member_Variables_26_Global_Variables.html">Variables</a></li><li><a title="Instantiate" class="left-menu-item" href="index.Instantiate.html">Instantiate</a></li><li><a title="Coroutines & Yield" class="left-menu-item" href="index.Coroutines_26_Yield.html">Coroutines & Yield</a></li><li><a title="Writing Scripts in C#" class="left-menu-item" href="index.Writing_Scripts_in_Csharp.html">Using C#</a></li><li><a title="The most important classes" class="left-menu-item" href="index.The_most_important_classes.html">Important Classes</a></li><li><span title="Performance Optimization" class="left-menu-item left-menu-current">Performance Optimization</span></li><li><a title="Script compilation (Advanced)" class="left-menu-item" href="index.Script_compilation_28Advanced29.html">Script Compilation</a></li></ul></div>
-
 	<!-- #TemplateEndEditable -->
-
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
 
 				<!-- #TemplateBeginEditable name="body" -->
-
 			<div class="pre-next-link"><b>Previous:</b> <a href="index.The_most_important_classes.html">Important Classes</a> <b>Next:</b> <a href="index.Script_compilation_28Advanced29.html">Script Compilation</a></div>
-
    <p class="basic"> <b>1. Use Static Typing</b>
-
 </p><p class="basic">
-
 When using JavaScript the most important optimization is to use static typing instead of dynamic typing.
-
 Unity uses a technique called type inference to automatically convert JavaScript constructs to statically typed code without you having to do any work.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">var</span> foo = 5;<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <span class="hl-datatype">int</span> foo = 5;<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> foo as <span class="hl-datatype">int</span> = 5<br/><p class="basic"></div>
-
 </div>
-
 In the above example <tt>foo</tt> will automatically be inferred to be an integer value. Thus Unity can apply a lot of compile time optimizations, without costly dynamic name variable lookups etc.
-
 This is one of the reasons why Unity's JavaScript is on average around 20 times faster than other JavaScript implementations.
-
 </p><p class="basic">
-
 The only problem is that sometimes not everything can be type inferred, thus Unity will fall back to dynamic typing for those variables.
-
 By falling back to dynamic typing, writing JavaScript code is simpler. However it also makes the code run slower.
-
 </p><p class="basic">
-
 Let's see some examples.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-keyword">var</span> foo = GetComponent(MyScript);<br/>    foo.DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        duck foo = GetComponent&lt;MyScript&gt;();<br/>        foo.DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        foo as duck = GetComponent[of MyScript]()<br/>        foo.DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 Here <tt>foo</tt> will be dynamically typed, thus calling the function DoSomething takes longer than necessary - because the type of <tt>foo</tt> is unknown,
-
 it has to figure out whether it supports <tt>DoSomething</tt> function, and if it does, invoke that function. 
-
 </p><p class="basic">
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-keyword">var</span> foo : MyScript = GetComponent(MyScript);<br/>    foo.DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        MyScript foo = GetComponent&lt;MyScript&gt;();<br/>        foo.DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        foo as MyScript = GetComponent[of MyScript]()<br/>        foo.DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 Here we're forcing <tt>foo</tt> to be of specific type. You will get much better performance.
-
 </p><p class="basic">
-
 <b>2. Use #pragma strict</b>
-
 </p><p class="basic">
-
 Now the problem is of course, that you don't usually notice when you are using dynamic typing. <tt>#pragma strict</tt> to the rescue!
-
 Simply add #pragma strict at the top of a script and Unity will disable dynamic typing in that script, forcing you to use static typing. Wherever a type is not known, Unity will report compile errors.
-
 So in this case, <tt>foo</tt> will produce an error when compiling: 
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript">#pragma strict<br/><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-keyword">var</span> foo : MyScript = GetComponent(MyScript) as MyScript;<br/>    foo.DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        MyScript foo = GetComponent&lt;MyScript&gt;() as MyScript;<br/>        foo.DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        foo as MyScript = GetComponent[of MyScript]()<br/>        foo.DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 <b>3. Cache component lookups</b>
-
 </p><p class="basic">
-
 Another optimization is caching of components. This optimization unfortunately requires a bit of coding effort and is not always worth it.
-
 But if your script is really used a lot and you need to get the last bit of performance out of it, this can be a very good optimization.
-
 </p><p class="basic">
-
 Whenever you access a component through GetComponent or an accessor variable, Unity has to find the right component from the game object.
-
 This time can easily be saved by caching a reference to the component in a private variable.
-
 </p><p class="basic">
-
 Simply turn this:
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () {<br/>    transform.Translate(0, 0, 5);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        transform.Translate(0, 0, 5);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Update</span>():<br/>        transform.Translate(0, 0, 5)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 Into this:
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">private</span> <span class="hl-keyword">var</span> myTransform : <a href="Transform.html" class="classlink">Transform</a>;<br/><span class="hl-keyword">function</span> <span class="hl-operator">Awake</span> () {<br/>    myTransform = transform;<br/>}<br/><br/><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () {<br/>    myTransform.Translate(0, 0, 5);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">private</span> <a href="Transform.html" class="classlink">Transform</a> myTransform;<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Awake</span>() {<br/>        myTransform = transform;<br/>    }<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        myTransform.Translate(0, 0, 5);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">private</span> myTransform as <a href="Transform.html" class="classlink">Transform</a><br/><br/>    def <span class="hl-operator">Awake</span>():<br/>        myTransform = transform<br/><br/>    def <span class="hl-operator">Update</span>():<br/>        myTransform.Translate(0, 0, 5)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 The latter code will run a lot faster since Unity doesn't have to find the transform component in the game object each frame.
-
 The same applies for scripted components, where you use GetComponent instead of the transform or other shorthand property.
-
 </p><p class="basic">
-
 <b>4. Use Builtin arrays</b>
-
 </p><p class="basic">
-
 Builtin arrays are <b>fast</b>, very fast, so use them.
-
 </p><p class="basic">
-
 While the ArrayList or <a href="Array.html" class="classlink">Array</a> classes are easier to use since you can easily add elements they don't have nearly the same speed.
-
 Builtin arrays have a fixed size but most of the time you know the maximum size in advance and can just fill it out later.
-
 The best thing about builtin arrays is that they directly embed struct data types in one tightly packed buffer, without any extra type information or other overhead.
-
 Thus iterating through is very easy on the cache as everything is linear in memory.
-
 </p><p class="basic">
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">private</span> <span class="hl-keyword">var</span> positions : <a href="Vector3.html" class="classlink">Vector3</a>[];<br/><span class="hl-keyword">function</span> <span class="hl-operator">Awake</span> () {<br/>    positions = <span class="hl-keyword">new</span> <a href="Vector3.html" class="classlink">Vector3</a>[100];<br/>    <span class="hl-keyword">for</span> (<span class="hl-keyword">var</span> i = 0; i &lt; 100; i++)<br/>        positions[i] = <a href="Vector3-zero.html?from=index" class="itemlink">Vector3.zero</a>;<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">private</span> <a href="Vector3.html" class="classlink">Vector3</a>[] positions;<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Awake</span>() {<br/>        positions = <span class="hl-keyword">new</span> <a href="Vector3.html" class="classlink">Vector3</a>[100];<br/>        <span class="hl-datatype">int</span> i = 0;<br/>        <span class="hl-keyword">while</span> (i &lt; 100) {<br/>            positions[i] = <a href="Vector3-zero.html?from=index" class="itemlink">Vector3.zero</a>;<br/>            i++;<br/>        }<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">private</span> positions as (<a href="Vector3.html" class="classlink">Vector3</a>)<br/><br/>    def <span class="hl-operator">Awake</span>():<br/>        positions = array(typeof(<a href="Vector3.html" class="classlink">Vector3</a>), 100)<br/>        i as <span class="hl-datatype">int</span> = 0<br/>        <span class="hl-keyword">while</span> i &lt; 100:<br/>            positions[i] = <a href="Vector3-zero.html?from=index" class="itemlink">Vector3.zero</a><br/>            i++<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
-
 
 <b>5. Don't call a function if you don't have to</b>
-
 </p><p class="basic">
-
 The simplest and best of all optimizations is to perform less work.
-
 For example , when an enemy is far away it is most of the time perfectly acceptable to have the enemy fall asleep. That is do nothing until the player comes close.
-
 The slow way of handling this situation would be:
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">var</span> target : <a href="Transform.html" class="classlink">Transform</a>;<br/><br/><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () {<br/>    <span class="hl-comment">// Early out if the player is too far away.</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">if</span> (<a href="Vector3.Distance.html?from=index" class="itemlink">Vector3.Distance</a>(transform.position, target.position) &gt; 100)<br/>        <span class="hl-keyword">return</span>;<br/>    <span class="hl-comment">// perform real work work...</span><span class="hl-comment"><br/></span>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <a href="Transform.html" class="classlink">Transform</a> target;<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        <span class="hl-keyword">if</span> (<a href="Vector3.Distance.html?from=index" class="itemlink">Vector3.Distance</a>(transform.position, target.position) &gt; 100)<br/>            <span class="hl-keyword">return</span>;<br/>        <br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> target as <a href="Transform.html" class="classlink">Transform</a><br/><br/>    def <span class="hl-operator">Update</span>():<br/>        <span class="hl-keyword">if</span> <a href="Vector3.Distance.html?from=index" class="itemlink">Vector3.Distance</a>(transform.position, target.position) &gt; 100:<br/>            <span class="hl-keyword">return</span><br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 This is not a good idea since Unity has to invoke the update function and you are performing work every frame. A better solution is to disabling the behaviour until the player comes closer.
-
 There are 3 ways to do this:
-
 1. Use OnBecameVisible and OnBecameInvisible. These call backs are tied into the rendering system. As soon as any camera can see the object, OnBecameVisible will be called, when no camera sees it anymore OnBecameInvisible will be called. This is useful in some cases, but often for AI it is not useful because enemies would become disabled as soon as you turn the camera away from them.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">OnBecameVisible</span> () {<br/>    enabled = true;<br/>}<br/><br/><span class="hl-keyword">function</span> <span class="hl-operator">OnBecameInvisible</span> () {<br/>    enabled = <span class="hl-keyword">false</span>;<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnBecameVisible</span>() {<br/>        enabled = true;<br/>    }<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnBecameInvisible</span>() {<br/>        enabled = <span class="hl-keyword">false</span>;<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">OnBecameVisible</span>():<br/>        enabled = true<br/><br/>    def <span class="hl-operator">OnBecameInvisible</span>():<br/>        enabled = <span class="hl-keyword">false</span><br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 2. Use triggers. A simple sphere trigger can work wonders though. You get OnTriggerEnter/Exit calls when exiting the sphere of influence you want
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">OnTriggerEnter</span> (c : <a href="Collider.html" class="classlink">Collider</a>) {<br/>    <span class="hl-keyword">if</span> (c.CompareTag(<span class="hl-string">"Player"</span>))<br/>        enabled = true;<br/>}<br/><br/><span class="hl-keyword">function</span> <span class="hl-operator">OnTriggerExit</span> (c : <a href="Collider.html" class="classlink">Collider</a>) {<br/>    <span class="hl-keyword">if</span> (c.CompareTag(<span class="hl-string">"Player"</span>))<br/>        enabled = <span class="hl-keyword">false</span>;<br/>}<br/><br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnTriggerEnter</span>(<a href="Collider.html" class="classlink">Collider</a> c) {<br/>        <span class="hl-keyword">if</span> (c.CompareTag(<span class="hl-string">"Player"</span>))<br/>            enabled = true;<br/>        <br/>    }<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnTriggerExit</span>(<a href="Collider.html" class="classlink">Collider</a> c) {<br/>        <span class="hl-keyword">if</span> (c.CompareTag(<span class="hl-string">"Player"</span>))<br/>            enabled = <span class="hl-keyword">false</span>;<br/>        <br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">OnTriggerEnter</span>(c as <a href="Collider.html" class="classlink">Collider</a>):<br/>        <span class="hl-keyword">if</span> c.CompareTag('Player'):<br/>            enabled = true<br/><br/>    def <span class="hl-operator">OnTriggerExit</span>(c as <a href="Collider.html" class="classlink">Collider</a>):<br/>        <span class="hl-keyword">if</span> c.CompareTag('Player'):<br/>            enabled = <span class="hl-keyword">false</span><br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 3. Use Coroutines. The problem with Update calls is that they happen every frame. Quite possibly checking the distance to the player could be performed only every 5 seconds. This would save a lot of processing power.
-
 </p><p class="basic">
-
 </p>
-
 <div class="pre-next-link"><b>Previous:</b> <a href="index.The_most_important_classes.html">Important Classes</a> <b>Next:</b> <a href="index.Script_compilation_28Advanced29.html">Script Compilation</a></div>
 
-
-
 			<!-- #TemplateEndEditable -->	
-
 				
-
 	</div><!-- #TemplateEndEditable -->
-
     <script type="text/javascript">
 
-
-
     //prevent an error on older versions of IE(x) < IE7 who did not have a javascript console.
-
     if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
 
 
-
-
-
     var $j = jQuery.noConflict();
-
     $j(document).ready(function($){
 
-
-
     	var languages = [];
-
     	function getCookie(cookieName){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try {
-
     			return $.cookie(cookieName);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
-
 
     	function setCookie(cookieName, cookieValue){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try{
-
     			return $.cookie(cookieName, cookieValue);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
     
-
     /*
-
     decectLangauges looks at all of the div(s) containing a class of "code"
-
     it then creates a list of languages in that list to generate the drop down.
-
     to ad a language, ad an example with that language defined 
-
     in the attribute "code_lang_name" for that div
-
     */
-
     	function detectLanguages(){
-
     		languages = [];
-
     		$("div.code").each(
-
     			function(){
-
     				var isThere = false;
-
     //set the value of the attribute
-
     				var isNewLang = $(this).attr("code_lang_name");
-
     				for ( i in languages ){
-
     					if( isNewLang == languages[i] ){
-
     						isThere = true;
-
     					}
-
     				}				
-
     				if( !isThere ){
-
     //adds a new language to the stack/ array
-
     				   languages.push(isNewLang);
-
     				}
-
     			});
-
     		console.log("languages detected", languages);
-
     	}
-
     
-
     //execute the function detectLanguages just after we defined it, this should only happen once and on page load after the document object model is ready
-
     	detectLanguages();
 
-
-
     	function buildListCSelect(){
-
     //finds the doc element with an id of selectedLangauge, base on css3 rules, then removes all children
-
     		$(".cSelect ul").empty();
-
     		$(".cSelect .cSelect-Selected").text("");
-
     		var langCookie = getCookie("codeLanguage");		
-
     		for( i in languages ){
-
     //inserts a new child with the included html
-
     			$(".cSelect ul").append("<li>" + languages[i] + "</li>");
-
     		}
-
     
-
     //if the cookie is there, set that item to selected.
-
     		for( i in languages ){
-
     			if(langCookie !== null && languages[i] == langCookie){
-
     				$(".cSelect .cSelect-Selected").text(languages[i]);
-
     			}
-
     		}
-
-
 
     		if( $(".cSelect .cSelect-Selected").text().length == 0){
-
     			var first = $(".cSelect li:first").text();
-
     			$(".cSelect .cSelect-Selected").text(first);
-
     		}
 
-
-
     	}
-
     	buildListCSelect();
-
     
-
     	function showCSelectedLanguage(){
-
     		var selected = $(".cSelect .cSelect-Selected:first").text();
-
     		var langAvail = false;
-
     		var langCookie = getCookie("codeLanguage");
-
     		for( i in languages ){
-
     			if(langCookie == languages[i]){
-
     				langAvail = true;
-
     			}
-
     		}
-
     		if(langAvail) {
-
     			selected = langCookie;
-
     		} else {
-
     			console.log("the language stored in the cookie is not availible", langCookie);
-
     		}
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     	}
-
     	showCSelectedLanguage(); //set the default.
-
            $(".cSelect").addClass("roundBottom");
-
     	$(".cSelect ul").hide();
-
     /* 	$(".cSelect").hover(
-
      		function(){
-
      			$(this).find("ul").show();
-
      		},
-
      		function(){
-
      			$(this).find("ul").hide();
-
      		}
-
      	);
-
 */
-
     	$(".cSelect").hover(
-
     		function(){
-
     			$(document).unbind("click.cSelect");
-
     		},
-
     		function(){
-
     			$(document).bind("click.cSelect", function(event){
-
                                    $(".cSelect").addClass("roundBottom");
-
     				$(".cSelect ul").hide();
-
     				$(this).unbind(event);
-
     			});
-
     		}
-
     	);
-
-
-
 
 
     	$(".cSelect li").hover(
-
     		function(){
-
     			$(this).addClass("cSelect-highlight");
-
     		},
-
     		function(){
-
     			$(this).removeClass("cSelect-highlight");
-
     		}
-
     	);
 
-
-
     	var suppress = false;
-
     	function enable(){
-
     		suppress = false;
-
     	}
 
 
-
-
-
     	$(".cSelect li").click(function(){
-
     		var value = $(this).text();
-
     		console.log( "new selection ", value );
-
     		$(this).parents(".cSelect").find(".cSelect-Selected").text(value);
-
     		suppress = true;
-
                    $(".cSelect").addClass("roundBottom");
-
     		$(".cSelect ul").hide();
-
     		$(this).parents(".cSelect").trigger("change");
-
     		setTimeout(enable, 300 );
-
     	});
-
-
-
 
 
            $(".cSelect-ArrowDown")
-
      		.add(".cSelect-Selected")
-
      		.add(".cSelect").click(
-
      		function(){
-
      			var visible = $(this).parents(".cSelect").find("ul").css("display") == "block" ? true : false;
-
      			if( !visible ){
-
      				$(this).parents(".cSelect").removeClass("roundBottom");
-
      				$(this).parents(".cSelect").find("ul").show();
-
      			}else{
-
      				$(this).parents(".cSelect").addClass("roundBottom");
-
      				$(".cSelect ul").hide();
-
      			}
-
      		});
 
 
-
-
-
     	$(".cSelect").click(function(){if(!suppress){}});
-
  
-
     	$(".cSelect").change(function(){
-
     		console.log("selected",$(this).find(".cSelect-Selected").text());
-
     		selected = $(this).find(".cSelect-Selected").text();
-
     		$(".cSelect").find(".cSelect-Selected").text(selected);
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     		setCookie("codeLanguage", selected);
-
     	});
-
     });
-
     </script>
-
 </body>
-
 </html><!-- #EndTemplate -->
-
-
 

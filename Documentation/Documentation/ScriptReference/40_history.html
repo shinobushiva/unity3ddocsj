@@ -1,770 +1,388 @@
 <!-- #BeginTemplate "/Templates/manual-scriptref-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta charset="utf-8">
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
 			<title>Unity Script Reference &ndash; history</title>
-
 	<!-- #TemplateEndEditable -->
-
 <link rel="StyleSheet"  href="docs.css" type="text/css" />
-
 <script type="text/javascript" src="../Images/jquery-1.4.2.js"></script>
-
 <script type="text/javascript" src="../Images/jquery.cookie.js"></script>
 
-
-
 <style>
-
 /* 
-
 Unity standard fonts 
-
 */
-
 body{ font-family:Helvetica, Arial, sans-serif; font-size:.9em; }
 
-
-
 /*
-
 simple format for code, using fixed width
-
 and a nice border
-
 */
-
 pre { font-family:"Courier New", Courier, monospace; font-size:.8em; }
-
 pre { padding:10px; margin:10px; border:1px #d8d8d8 solid; }
-
 pre { -moz-border-radius:10px; -webkit-border-radius:10px; }
-
 pre { background:#f8f8f8; }
 
-
-
 /*
-
 aligns the selection dialog on the top right
-
 */
-
 .selectLang { margin-right:10px; text-align:right; float:right; }
 
 
-
-
-
 .cSelect,
-
 .cSelect ul,
-
 .cSelect li { font-size:12px; }
 
-
-
 /*.cSelect { border:1px solid #d0d0d0; }
-
 .cSelect { background:#ddf; }*/
-
 /*
-
 .cSelect { -moz-border-radius:10px; -webkit-border-radius:10px; }*/
 
-
-
 .cSelect { display:inline-block; position:relative; float:right; margin-right:20px;}
-
 .cSelect { padding-top:.4em; padding-bottom:.2em;}
-
 .cSelect-Selected,
-
 .cSelect-ArrowDown,
-
 .cSelect li { cursor:pointer; }
 
-
-
 .cSelect,
-
 .roundTop { -webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; }
-
 .cSelect,
-
 .roundTop { -moz-border-radius-topleft:10px; -moz-border-radius-topright:10px; }
 
-
-
 .roundBottom,
-
 .cSelect ul { -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; }
-
 .roundBottom,
-
 .cSelect ul { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; }
-
-
-
 
 
 .cSelectWidth { width:10em; display:block;}
 
-
-
 .cSelect-wrapper { position:relative; }
 
-
-
 .cSelect ul { background:#fff; padding:0px; margin:0px; display:inline-block; }
-
 .cSelect ul { z-index:10; position:absolute; top:1.3em; }
-
 .cSelect ul { padding-bottom:.5em; padding-top:.5em; padding-left:0px; padding-right:0px; }
-
 /*.cSelect ul { border:1px solid #d0d0d0; }*/
 
 
-
-
-
 .cSelect li { padding:.1em; margin:0px; text-align:right; list-style-type:none; }
-
 .cSelect li { padding-left:.7em; padding-right:24px; }
-
-
 
 .cSelect-highlight { background:#f0f0f0; }
 
-
-
 .cSelect-Selected { margin-left:.5em; margin-right:.5em; text-align:right; float:right; width:75%}
 
-
-
 .cSelect-ArrowDown { width:18px; height:18px; display:inline-block; float:right}
-
 .cSelect-ArrowDown { background:url('../Images/down-arrow.png'); text-align:center; }
-
 .cSelect-ArrowDown { -moz-border-radius:9px; -webkit-border-radius:9px; }
 
-
-
 .monoCompatibility-roweven { background-color:#DCDDDF; }
-
 .monoCompatibility-rowodd { background-color:#F3F3F4; }
-
 .monoCompatibility-cell { border:1px solid #ffffff;}
 
 
-
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
 
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
 	<td class="titlemid">
-
 		<table><tr>
-
 			<td class="doctitle">Scripting API changes by Unity version</td>
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
 			<td class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting&nbsp;&nbsp;</span></a></td>
-
 			<!-- #TemplateEndEditable -->	
-
 		</tr><tr>
-
 			<td colspan="4">
-
 				<table width="100%" class="docpath"><tr><td >
-
 					<!-- #TemplateBeginEditable name="path" -->
-
 						<a href="index.html">Scripting</a> &gt <a href='40_history.html'>History</a>
-
 					<!-- #TemplateEndEditable -->	
-
 				</td>
-
 				</td><td class="switchlink">
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
 					<!-- #TemplateEndEditable -->	
-
 				</td></tr></table>
-
 			</td>
-
 		</tr></table>
-
 	</td>
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
 </tr></table>
-
 <div class="scriprefmain">
-
 		<span class="heading">
-
 			<!-- #TemplateBeginEditable name="title" -->
-
 				Scripting API changes by Unity version
-
 			<!-- #TemplateEndEditable -->	
-
 		</span>
-
 <!-- #TemplateBeginEditable name="details" -->
-
 	<span class="text"></span>
-
 <!-- #TemplateEndEditable -->	
 
-
-
 	<!-- #TemplateBeginEditable name="manual-top-nav" --><div class="left-menu-container"><ul class="left-menu"><li>
-
 <form class="apisearch" action="30_search.html" method="GET">
-
 	<input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q" />
-
 				
-
 	<script type="text/javascript" language="JavaScript">
-
 	<!--
-
 	function detect() {
-
 		// simplify things
-
 		var agent 	= navigator.userAgent.toLowerCase();
-
 		
-
 		// detect platform
-
 		this.isMac		= (agent.indexOf('mac') != -1);
-
 		this.isWin		= (agent.indexOf('win') != -1);
-
 		this.isWin2k	= (this.isWin && (
-
 				agent.indexOf('nt 5') != -1));
-
 		this.isWinSP2	= (this.isWin && (
-
 				agent.indexOf('xp') != -1 || 
-
 				agent.indexOf('sv1') != -1));
-
 		this.isOther	= (
-
 				agent.indexOf('unix') != -1 || 
-
 				agent.indexOf('sunos') != -1 || 
-
 				agent.indexOf('bsd') != -1 ||
-
 				agent.indexOf('x11') != -1 || 
-
 				agent.indexOf('linux') != -1);
-
 		
-
 		// detect browser
-
 		this.isSafari	= (agent.indexOf('safari') != -1);
-
 		this.isSafari2 = (this.isSafari && (parseFloat(agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).substring(0,agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).indexOf(' '))) >=  300));
-
 		this.isOpera	= (agent.indexOf('opera') != -1);
-
 		this.isNN		= (agent.indexOf('netscape') != -1);
-
 		this.isIE		= (agent.indexOf('msie') != -1);
-
 	}
-
 	var browser = new detect();
-
 	var str = "Search";
-
 	var q=document.getElementById('q');
-
 	if (!browser.isSafari2) {q.value=str;q.onfocus=function(){q.value="";q.style.color="#000";};}
-
 	//-->
-
 	</script>
-
 </form>
-
 </li><li><span class="left-menu-heading">Menu</span></li><li><a title="Scripting overview" class="left-menu-item" href="index.html">Overview</a></li><li><a title="List of scripting classes" class="left-menu-item" href="20_class_hierarchy.html">Runtime Classes</a></li><li><a title="List of attributes" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Attributes.html">Attributes</a></li><li><a title="List of enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Enumerations.html">Enumerations</a></li><li><a title="Classes for extending Unity editor" class="left-menu-item" href="20_class_hierarchy.Editor_Classes.html">Editor Classes</a></li><li><a title="List of editor enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Editor_Enumerations.html">Enumerations</a></li><li><span title="Scripting change history" class="left-menu-item left-menu-current">History</span></li><li><a title="Alphabetical index" class="left-menu-item" href="10_reference.html">Index</a></li><li><span class="left-menu-seperator"></span></li></ul></div>
-
 	<!-- #TemplateEndEditable -->
-
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
 
 <!-- #TemplateBeginEditable name="body" -->
-
 Here is what was added to Unity's scripting API in each version.<br/><span style='font-size: 80%'><a href='#3.1.0'>Unity 3.1.0</a><br/><a href='#3.0.0'>Unity 3.0.0</a><br/><a href='#2.6.0'>Unity 2.6.0</a><br/><a href='#2.5.0'>Unity 2.5.0</a><br/><a href='#2.1.0'>Unity 2.1.0</a><br/><a href='#2.0.2'>Unity 2.0.2</a><br/><a href='#2.0.0'>Unity 2.0.0</a><br/><a href='#1.x.x'>Unity 1.x.x</a><br/></span><a name='3.1.0'></a><h2>Unity 3.1.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 Added to AudioListener: <ul class="list"><li><a href="AudioListener.GetOutputData.html" class="itemlink">GetOutputData</a></li><li><a href="AudioListener.GetSpectrumData.html" class="itemlink">GetSpectrumData</a></li></ul>Added to AudioSettings: <ul class="list"><li><a href="AudioSettings-outputSampleRate.html" class="itemlink">outputSampleRate</a></li></ul>Added to AudioSource: <ul class="list"><li><a href="AudioSource.GetOutputData.html" class="itemlink">GetOutputData</a></li><li><a href="AudioSource.GetSpectrumData.html" class="itemlink">GetSpectrumData</a></li></ul>Added to GL: <ul class="list"><li><a href="GL.InvalidateState.html" class="itemlink">InvalidateState</a></li></ul>Added to TerrainData: <ul class="list"><li><a href="TerrainData.GetDetailLayer.html" class="itemlink">GetDetailLayer</a></li><li><a href="TerrainData.GetSupportedLayers.html" class="itemlink">GetSupportedLayers</a></li><li><a href="TerrainData.SetDetailLayer.html" class="itemlink">SetDetailLayer</a></li><li><a href="TerrainData.SetDetailResolution.html" class="itemlink">SetDetailResolution</a></li></ul>Added to iPhoneUtils: <ul class="list"><li><a href="iPhoneUtils-isApplicationGenuineAvailable.html" class="itemlink">isApplicationGenuineAvailable</a></li></ul></td><td width=50%></td></tr></table><br/><a name='3.0.0'></a><h2>Unity 3.0.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='AudioChorusFilter.html'>AudioChorusFilter</a></li><li><a href='AudioDistortionFilter.html'>AudioDistortionFilter</a></li><li><a href='AudioEchoFilter.html'>AudioEchoFilter</a></li><li><a href='AudioHighPassFilter.html'>AudioHighPassFilter</a></li><li><a href='AudioLowPassFilter.html'>AudioLowPassFilter</a></li><li><a href='AudioReverbFilter.html'>AudioReverbFilter</a></li><li><a href='AudioReverbZone.html'>AudioReverbZone</a></li><li><a href='AudioSettings.html'>AudioSettings</a></li><li><a href='Cloth.html'>Cloth</a></li><li><a href='ClothRenderer.html'>ClothRenderer</a></li><li><a href='DetailPrototype.html'>DetailPrototype</a></li><li><a href='InteractiveCloth.html'>InteractiveCloth</a></li><li><a href='OcclusionArea.html'>OcclusionArea</a></li><li><a href='Security.html'>Security</a></li><li><a href='SkinnedCloth.html'>SkinnedCloth</a></li><li><a href='SplatPrototype.html'>SplatPrototype</a></li><li><a href='StaticBatchingUtility.html'>StaticBatchingUtility</a></li><li><a href='Tree.html'>Tree</a></li><li><a href='TreePrototype.html'>TreePrototype</a></li><li><a href='iPhoneInput.html'>iPhoneInput</a></li><li><a href='iPhoneKeyboard.html'>iPhoneKeyboard</a></li><li><a href='iPhoneSettings.html'>iPhoneSettings</a></li><li><a href='iPhoneUtils.html'>iPhoneUtils</a></li></ul>New Enumerations: <ul class="list"><li><a href='AudioReverbPreset.html'>AudioReverbPreset</a></li><li><a href='AudioRolloffMode.html'>AudioRolloffMode</a></li><li><a href='AudioSpeakerMode.html'>AudioSpeakerMode</a></li><li><a href='CollisionDetectionMode.html'>CollisionDetectionMode</a></li><li><a href='DetailRenderMode.html'>DetailRenderMode</a></li><li><a href='DeviceOrientation.html'>DeviceOrientation</a></li><li><a href='FFTWindow.html'>FFTWindow</a></li><li><a href='FontStyle.html'>FontStyle</a></li><li><a href='LightmapsMode.html'>LightmapsMode</a></li><li><a href='LocationServiceStatus.html'>LocationServiceStatus</a></li><li><a href='NetworkLogLevel.html'>NetworkLogLevel</a></li><li><a href='RenderingPath.html'>RenderingPath</a></li><li><a href='TouchPhase.html'>TouchPhase</a></li><li><a href='iPhoneGeneration.html'>iPhoneGeneration</a></li><li><a href='iPhoneKeyboardType.html'>iPhoneKeyboardType</a></li><li><a href='iPhoneMovieControlMode.html'>iPhoneMovieControlMode</a></li><li><a href='iPhoneMovieScalingMode.html'>iPhoneMovieScalingMode</a></li><li><a href='iPhoneNetworkReachability.html'>iPhoneNetworkReachability</a></li><li><a href='iPhoneScreenOrientation.html'>iPhoneScreenOrientation</a></li></ul>New Structures: <ul class="list"><li><a href='AccelerationEvent.html'>AccelerationEvent</a></li><li><a href='ClothSkinningCoefficient.html'>ClothSkinningCoefficient</a></li><li><a href='LocationInfo.html'>LocationInfo</a></li><li><a href='Touch.html'>Touch</a></li><li><a href='TreeInstance.html'>TreeInstance</a></li></ul>Added to AnimationEvent: <ul class="list"><li><a href="AnimationEvent-intParameter.html" class="itemlink">intParameter</a></li></ul>Added to Application: <ul class="list"><li><a href="Application.RegisterLogCallbackThreaded.html" class="itemlink">RegisterLogCallbackThreaded</a></li><li><a href="Application-isWebPlayer.html" class="itemlink">isWebPlayer</a></li><li><a href="Application-webSecurityEnabled.html" class="itemlink">webSecurityEnabled</a></li></ul>Added to Array: <ul class="list"><li><a href="Array.Array.html" class="itemlink">Array</a></li></ul>Added to AudioSource: <ul class="list"><li><a href="AudioSource-bypassEffects.html" class="itemlink">bypassEffects</a></li><li><a href="AudioSource-dopplerLevel.html" class="itemlink">dopplerLevel</a></li><li><a href="AudioSource-maxDistance.html" class="itemlink">maxDistance</a></li><li><a href="AudioSource-minDistance.html" class="itemlink">minDistance</a></li><li><a href="AudioSource-mute.html" class="itemlink">mute</a></li><li><a href="AudioSource-pan.html" class="itemlink">pan</a></li><li><a href="AudioSource-panLevel.html" class="itemlink">panLevel</a></li><li><a href="AudioSource-priority.html" class="itemlink">priority</a></li><li><a href="AudioSource-rolloffMode.html" class="itemlink">rolloffMode</a></li><li><a href="AudioSource-spread.html" class="itemlink">spread</a></li></ul>Added to Bounds: <ul class="list"><li><a href="Bounds.Intersects.html" class="itemlink">Intersects</a></li></ul>Added to Camera: <ul class="list"><li><a href="Camera.OnRenderObject.html" class="itemlink">OnRenderObject</a></li><li><a href="Camera-actualRenderingPath.html" class="itemlink">actualRenderingPath</a></li><li><a href="Camera-renderingPath.html" class="itemlink">renderingPath</a></li></ul>Added to ConfigurableJoint: <ul class="list"><li><a href="ConfigurableJoint-secondaryAxis.html" class="itemlink">secondaryAxis</a></li></ul>Added to ConnectionTesterStatus: <ul class="list"><li><a href="ConnectionTesterStatus.LimitedNATPunchthroughPortRestricted.html" class="itemlink">LimitedNATPunchthroughPortRestricted</a></li><li><a href="ConnectionTesterStatus.LimitedNATPunchthroughSymmetric.html" class="itemlink">LimitedNATPunchthroughSymmetric</a></li><li><a href="ConnectionTesterStatus.NATpunchthroughAddressRestrictedCone.html" class="itemlink">NATpunchthroughAddressRestrictedCone</a></li><li><a href="ConnectionTesterStatus.NATpunchthroughFullCone.html" class="itemlink">NATpunchthroughFullCone</a></li></ul>Added to Event: <ul class="list"><li><a href="Event-modifiers.html" class="itemlink">modifiers</a></li></ul>Added to GL: <ul class="list"><li><a href="GL.ClearWithSkybox.html" class="itemlink">ClearWithSkybox</a></li></ul>Added to GUILayout: <ul class="list"><li><a href="GUILayout.BeginHorizontal.html" class="itemlink">BeginHorizontal</a></li><li><a href="GUILayout.BeginVertical.html" class="itemlink">BeginVertical</a></li></ul>Added to GUIStyle: <ul class="list"><li><a href="GUIStyle-fontSize.html" class="itemlink">fontSize</a></li><li><a href="GUIStyle-fontStyle.html" class="itemlink">fontStyle</a></li></ul>Added to GUIText: <ul class="list"><li><a href="GUIText-fontSize.html" class="itemlink">fontSize</a></li><li><a href="GUIText-fontStyle.html" class="itemlink">fontStyle</a></li></ul>Added to GameObject: <ul class="list"><li><a href="GameObject-isStatic.html" class="itemlink">isStatic</a></li></ul>Added to Hashtable: <ul class="list"><li><a href="Hashtable.Count.html" class="itemlink">Count</a></li></ul>Added to HostData: <ul class="list"><li><a href="HostData-guid.html" class="itemlink">guid</a></li></ul>Added to Input: <ul class="list"><li><a href="Input.GetAccelerationEvent.html" class="itemlink">GetAccelerationEvent</a></li><li><a href="Input.GetTouch.html" class="itemlink">GetTouch</a></li><li><a href="Input-acceleration.html" class="itemlink">acceleration</a></li><li><a href="Input-accelerationEventCount.html" class="itemlink">accelerationEventCount</a></li><li><a href="Input-accelerationEvents.html" class="itemlink">accelerationEvents</a></li><li><a href="Input-deviceOrientation.html" class="itemlink">deviceOrientation</a></li><li><a href="Input-multiTouchEnabled.html" class="itemlink">multiTouchEnabled</a></li><li><a href="Input-touchCount.html" class="itemlink">touchCount</a></li><li><a href="Input-touches.html" class="itemlink">touches</a></li></ul>Added to KeyCode: <ul class="list"><li><a href="KeyCode.Menu.html" class="itemlink">Menu</a></li></ul>Added to LightmapData: <ul class="list"><li><a href="LightmapData-lightmapFar.html" class="itemlink">lightmapFar</a></li><li><a href="LightmapData-lightmapNear.html" class="itemlink">lightmapNear</a></li></ul>Added to LightmapSettings: <ul class="list"><li><a href="LightmapSettings-lightmapsMode.html" class="itemlink">lightmapsMode</a></li></ul>Added to Mathf: <ul class="list"><li><a href="Mathf.Max.html" class="itemlink">Max</a></li><li><a href="Mathf.Min.html" class="itemlink">Min</a></li><li><a href="Mathf.MoveTowards.html" class="itemlink">MoveTowards</a></li><li><a href="Mathf.MoveTowardsAngle.html" class="itemlink">MoveTowardsAngle</a></li></ul>Added to MonoBehaviour: <ul class="list"><li><a href="MonoBehaviour.OnApplicationFocus.html" class="itemlink">OnApplicationFocus</a></li><li><a href="MonoBehaviour.OnRenderObject.html" class="itemlink">OnRenderObject</a></li><li><a href="MonoBehaviour-print.html" class="itemlink">print</a></li><li><a href="MonoBehaviour-useGUILayout.html" class="itemlink">useGUILayout</a></li></ul>Added to Network: <ul class="list"><li><a href="Network.Connect.html" class="itemlink">Connect</a></li><li><a href="Network.InitializeServer.html" class="itemlink">InitializeServer</a></li><li><a href="Network-logLevel.html" class="itemlink">logLevel</a></li></ul>Added to NetworkPlayer: <ul class="list"><li><a href="NetworkPlayer-guid.html" class="itemlink">guid</a></li></ul>Added to Particle: <ul class="list"><li><a href="Particle-angularVelocity.html" class="itemlink">angularVelocity</a></li><li><a href="Particle-rotation.html" class="itemlink">rotation</a></li><li><a href="Particle-startEnergy.html" class="itemlink">startEnergy</a></li></ul>Added to ParticleEmitter: <ul class="list"><li><a href="ParticleEmitter.Emit.html" class="itemlink">Emit</a></li><li><a href="ParticleEmitter-angularVelocity.html" class="itemlink">angularVelocity</a></li><li><a href="ParticleEmitter-rndAngularVelocity.html" class="itemlink">rndAngularVelocity</a></li><li><a href="ParticleEmitter-rndRotation.html" class="itemlink">rndRotation</a></li></ul>Added to Physics: <ul class="list"><li><a href="Physics.CapsuleCast.html" class="itemlink">CapsuleCast</a></li><li><a href="Physics.CapsuleCastAll.html" class="itemlink">CapsuleCastAll</a></li><li><a href="Physics.GetIgnoreLayerCollision.html" class="itemlink">GetIgnoreLayerCollision</a></li><li><a href="Physics.IgnoreLayerCollision.html" class="itemlink">IgnoreLayerCollision</a></li><li><a href="Physics.SphereCast.html" class="itemlink">SphereCast</a></li><li><a href="Physics.SphereCastAll.html" class="itemlink">SphereCastAll</a></li></ul>Added to QualitySettings: <ul class="list"><li><a href="QualitySettings-maxQueuedFrames.html" class="itemlink">maxQueuedFrames</a></li></ul>Added to Quaternion: <ul class="list"><li><a href="Quaternion.RotateTowards.html" class="itemlink">RotateTowards</a></li></ul>Added to RaycastHit: <ul class="list"><li><a href="RaycastHit-lightmapCoord.html" class="itemlink">lightmapCoord</a></li></ul>Added to RectOffset: <ul class="list"><li><a href="RectOffset.RectOffset.html" class="itemlink">RectOffset</a></li></ul>Added to Renderer: <ul class="list"><li><a href="Renderer-isPartOfStaticBatch.html" class="itemlink">isPartOfStaticBatch</a></li><li><a href="Renderer-localToWorldMatrix.html" class="itemlink">localToWorldMatrix</a></li><li><a href="Renderer-worldToLocalMatrix.html" class="itemlink">worldToLocalMatrix</a></li></ul>Added to Resources: <ul class="list"><li><a href="Resources.FindObjectsOfTypeAll.html" class="itemlink">FindObjectsOfTypeAll</a></li></ul>Added to Rigidbody: <ul class="list"><li><a href="Rigidbody.SweepTest.html" class="itemlink">SweepTest</a></li><li><a href="Rigidbody.SweepTestAll.html" class="itemlink">SweepTestAll</a></li><li><a href="Rigidbody-collisionDetectionMode.html" class="itemlink">collisionDetectionMode</a></li></ul>Added to RuntimePlatform: <ul class="list"><li><a href="RuntimePlatform.Android.html" class="itemlink">Android</a></li><li><a href="RuntimePlatform.IPhonePlayer.html" class="itemlink">IPhonePlayer</a></li><li><a href="RuntimePlatform.PS3.html" class="itemlink">PS3</a></li><li><a href="RuntimePlatform.WiiPlayer.html" class="itemlink">WiiPlayer</a></li><li><a href="RuntimePlatform.XBOX360.html" class="itemlink">XBOX360</a></li></ul>Added to ScriptableObject: <ul class="list"><li><a href="ScriptableObject.CreateInstance.html" class="itemlink">CreateInstance</a></li></ul>Added to SystemInfo: <ul class="list"><li><a href="SystemInfo-graphicsDeviceID.html" class="itemlink">graphicsDeviceID</a></li><li><a href="SystemInfo-graphicsDeviceVendorID.html" class="itemlink">graphicsDeviceVendorID</a></li><li><a href="SystemInfo-graphicsPixelFillrate.html" class="itemlink">graphicsPixelFillrate</a></li></ul>Added to Terrain: <ul class="list"><li><a href="Terrain.AddTreeInstance.html" class="itemlink">AddTreeInstance</a></li><li><a href="Terrain.Flush.html" class="itemlink">Flush</a></li><li><a href="Terrain.GetPosition.html" class="itemlink">GetPosition</a></li><li><a href="Terrain-detailObjectDensity.html" class="itemlink">detailObjectDensity</a></li><li><a href="Terrain-editorRenderFlags.html" class="itemlink">editorRenderFlags</a></li><li><a href="Terrain-lightmapIndex.html" class="itemlink">lightmapIndex</a></li></ul>Added to TerrainData: <ul class="list"><li><a href="TerrainData.GetAlphamaps.html" class="itemlink">GetAlphamaps</a></li><li><a href="TerrainData.GetHeight.html" class="itemlink">GetHeight</a></li><li><a href="TerrainData.GetInterpolatedHeight.html" class="itemlink">GetInterpolatedHeight</a></li><li><a href="TerrainData.GetSteepness.html" class="itemlink">GetSteepness</a></li><li><a href="TerrainData.RefreshPrototypes.html" class="itemlink">RefreshPrototypes</a></li><li><a href="TerrainData.SetAlphamaps.html" class="itemlink">SetAlphamaps</a></li><li><a href="TerrainData-alphamapHeight.html" class="itemlink">alphamapHeight</a></li><li><a href="TerrainData-alphamapLayers.html" class="itemlink">alphamapLayers</a></li><li><a href="TerrainData-alphamapResolution.html" class="itemlink">alphamapResolution</a></li><li><a href="TerrainData-alphamapWidth.html" class="itemlink">alphamapWidth</a></li><li><a href="TerrainData-baseMapResolution.html" class="itemlink">baseMapResolution</a></li><li><a href="TerrainData-detailHeight.html" class="itemlink">detailHeight</a></li><li><a href="TerrainData-detailPrototypes.html" class="itemlink">detailPrototypes</a></li><li><a href="TerrainData-detailResolution.html" class="itemlink">detailResolution</a></li><li><a href="TerrainData-detailWidth.html" class="itemlink">detailWidth</a></li><li><a href="TerrainData-heightmapResolution.html" class="itemlink">heightmapResolution</a></li><li><a href="TerrainData-heightmapScale.html" class="itemlink">heightmapScale</a></li><li><a href="TerrainData-splatPrototypes.html" class="itemlink">splatPrototypes</a></li><li><a href="TerrainData-treeInstances.html" class="itemlink">treeInstances</a></li><li><a href="TerrainData-treePrototypes.html" class="itemlink">treePrototypes</a></li><li><a href="TerrainData-wavingGrassAmount.html" class="itemlink">wavingGrassAmount</a></li><li><a href="TerrainData-wavingGrassSpeed.html" class="itemlink">wavingGrassSpeed</a></li><li><a href="TerrainData-wavingGrassStrength.html" class="itemlink">wavingGrassStrength</a></li><li><a href="TerrainData-wavingGrassTint.html" class="itemlink">wavingGrassTint</a></li></ul>Added to TextMesh: <ul class="list"><li><a href="TextMesh-fontSize.html" class="itemlink">fontSize</a></li><li><a href="TextMesh-fontStyle.html" class="itemlink">fontStyle</a></li></ul>Added to Texture: <ul class="list"><li><a href="Texture.GetNativeTextureID.html" class="itemlink">GetNativeTextureID</a></li></ul>Added to TextureFormat: <ul class="list"><li><a href="TextureFormat.ARGB4444.html" class="itemlink">ARGB4444</a></li><li><a href="TextureFormat.ETC_RGB4.html" class="itemlink">ETC_RGB4</a></li><li><a href="TextureFormat.RGB565.html" class="itemlink">RGB565</a></li></ul>Added to Time: <ul class="list"><li><a href="Time-maximumDeltaTime.html" class="itemlink">maximumDeltaTime</a></li></ul>Added to Vector2: <ul class="list"><li><a href="Vector2.Angle.html" class="itemlink">Angle</a></li><li><a href="Vector2.ClampMagnitude.html" class="itemlink">ClampMagnitude</a></li><li><a href="Vector2.Lerp.html" class="itemlink">Lerp</a></li><li><a href="Vector2.Max.html" class="itemlink">Max</a></li><li><a href="Vector2.Min.html" class="itemlink">Min</a></li><li><a href="Vector2.MoveTowards.html" class="itemlink">MoveTowards</a></li><li><a href="Vector2.Normalize.html" class="itemlink">Normalize</a></li><li><a href="Vector2.Scale.html" class="itemlink">Scale</a></li><li><a href="Vector2-normalized.html" class="itemlink">normalized</a></li><li><a href="Vector2-one.html" class="itemlink">one</a></li></ul>Added to Vector3: <ul class="list"><li><a href="Vector3.ClampMagnitude.html" class="itemlink">ClampMagnitude</a></li><li><a href="Vector3.MoveTowards.html" class="itemlink">MoveTowards</a></li><li><a href="Vector3.SmoothDamp.html" class="itemlink">SmoothDamp</a></li></ul>Added to Vector4: <ul class="list"><li><a href="Vector4.Max.html" class="itemlink">Max</a></li><li><a href="Vector4.Min.html" class="itemlink">Min</a></li><li><a href="Vector4.MoveTowards.html" class="itemlink">MoveTowards</a></li></ul>Added to WWW: <ul class="list"><li><a href="WWW-text.html" class="itemlink">text</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='LightmapEditorSettings.html'>LightmapEditorSettings</a></li><li><a href='Lightmapping.html'>Lightmapping</a></li><li><a href='MeshUtility.html'>MeshUtility</a></li><li><a href='PlayerSettings.html'>PlayerSettings</a></li><li><a href='StaticOcclusionCulling.html'>StaticOcclusionCulling</a></li><li><a href='StaticOcclusionCullingVisualization.html'>StaticOcclusionCullingVisualization</a></li><li><a href='TextureImporterSettings.html'>TextureImporterSettings</a></li><li><a href='Unwrapping.html'>Unwrapping</a></li></ul>New Enumerations: <ul class="list"><li><a href='AspectRatio.html'>AspectRatio</a></li><li><a href='DrawCameraMode.html'>DrawCameraMode</a></li><li><a href='EditorSkin.html'>EditorSkin</a></li><li><a href='LightmapBakeQuality.html'>LightmapBakeQuality</a></li><li><a href='ResolutionDialogSetting.html'>ResolutionDialogSetting</a></li><li><a href='StaticOcclusionCullingQuality.html'>StaticOcclusionCullingQuality</a></li><li><a href='TextureImporterType.html'>TextureImporterType</a></li></ul>New Structures: <ul class="list"><li><a href='UnwrapParam.html'>UnwrapParam</a></li></ul>Added to AssetDatabase: <ul class="list"><li><a href="AssetDatabase.ClearLabels.html" class="itemlink">ClearLabels</a></li><li><a href="AssetDatabase.CompleteLabel.html" class="itemlink">CompleteLabel</a></li><li><a href="AssetDatabase.GetLabels.html" class="itemlink">GetLabels</a></li><li><a href="AssetDatabase.SetLabels.html" class="itemlink">SetLabels</a></li></ul>Added to AudioImporter: <ul class="list"><li><a href="AudioImporter-compressionBitrate.html" class="itemlink">compressionBitrate</a></li><li><a href="AudioImporter-decompressOnLoad.html" class="itemlink">decompressOnLoad</a></li><li><a href="AudioImporter-hardware.html" class="itemlink">hardware</a></li></ul>Added to BuildOptions: <ul class="list"><li><a href="BuildOptions.AcceptExternalModificationsToPlayer.html" class="itemlink">AcceptExternalModificationsToPlayer</a></li><li><a href="BuildOptions.None.html" class="itemlink">None</a></li><li><a href="BuildOptions.WebPlayerOfflineDeployment.html" class="itemlink">WebPlayerOfflineDeployment</a></li></ul>Added to BuildTarget: <ul class="list"><li><a href="BuildTarget.Android.html" class="itemlink">Android</a></li><li><a href="BuildTarget.PS3.html" class="itemlink">PS3</a></li><li><a href="BuildTarget.Wii.html" class="itemlink">Wii</a></li><li><a href="BuildTarget.XBOX360.html" class="itemlink">XBOX360</a></li><li><a href="BuildTarget-iPhone.html" class="itemlink">iPhone</a></li></ul>Added to Editor: <ul class="list"><li><a href="Editor.GetInfoString.html" class="itemlink">GetInfoString</a></li><li><a href="Editor.HasPreviewGUI.html" class="itemlink">HasPreviewGUI</a></li><li><a href="Editor.OnPreviewGUI.html" class="itemlink">OnPreviewGUI</a></li><li><a href="Editor.OnPreviewSettings.html" class="itemlink">OnPreviewSettings</a></li></ul>Added to EditorApplication: <ul class="list"><li><a href="EditorApplication.ExecuteMenuItem.html" class="itemlink">ExecuteMenuItem</a></li><li><a href="EditorApplication.OpenProject.html" class="itemlink">OpenProject</a></li></ul>Added to EditorGUI: <ul class="list"><li><a href="EditorGUI.CurveField.html" class="itemlink">CurveField</a></li><li><a href="EditorGUI.DrawPreviewTexture.html" class="itemlink">DrawPreviewTexture</a></li><li><a href="EditorGUI.IntPopup.html" class="itemlink">IntPopup</a></li><li><a href="EditorGUI.MinMaxSlider.html" class="itemlink">MinMaxSlider</a></li><li><a href="EditorGUI.ProgressBar.html" class="itemlink">ProgressBar</a></li><li><a href="EditorGUI.Slider.html" class="itemlink">Slider</a></li></ul>Added to EditorGUILayout: <ul class="list"><li><a href="EditorGUILayout.CurveField.html" class="itemlink">CurveField</a></li><li><a href="EditorGUILayout.IntPopup.html" class="itemlink">IntPopup</a></li><li><a href="EditorGUILayout.IntSlider.html" class="itemlink">IntSlider</a></li><li><a href="EditorGUILayout.MinMaxSlider.html" class="itemlink">MinMaxSlider</a></li><li><a href="EditorGUILayout.PropertyField.html" class="itemlink">PropertyField</a></li><li><a href="EditorGUILayout.Slider.html" class="itemlink">Slider</a></li></ul>Added to EditorGUIUtility: <ul class="list"><li><a href="EditorGUIUtility.CommandEvent.html" class="itemlink">CommandEvent</a></li><li><a href="EditorGUIUtility.DrawCurveSwatch.html" class="itemlink">DrawCurveSwatch</a></li><li><a href="EditorGUIUtility.GetBuiltinSkin.html" class="itemlink">GetBuiltinSkin</a></li><li><a href="EditorGUIUtility.PingObject.html" class="itemlink">PingObject</a></li></ul>Added to EditorStyles: <ul class="list"><li><a href="EditorStyles-foldoutPreDrop.html" class="itemlink">foldoutPreDrop</a></li><li><a href="EditorStyles-miniBoldFont.html" class="itemlink">miniBoldFont</a></li><li><a href="EditorStyles-miniBoldLabel.html" class="itemlink">miniBoldLabel</a></li><li><a href="EditorStyles-miniFont.html" class="itemlink">miniFont</a></li><li><a href="EditorStyles-radioButton.html" class="itemlink">radioButton</a></li><li><a href="EditorStyles-wordWrappedMiniLabel.html" class="itemlink">wordWrappedMiniLabel</a></li></ul>Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.DisplayCancelableProgressBar.html" class="itemlink">DisplayCancelableProgressBar</a></li><li><a href="EditorUtility.OpenFolderPanel.html" class="itemlink">OpenFolderPanel</a></li><li><a href="EditorUtility.UnloadUnusedAssets.html" class="itemlink">UnloadUnusedAssets</a></li><li><a href="EditorUtility.UnloadUnusedAssetsIgnoreManagedReferences.html" class="itemlink">UnloadUnusedAssetsIgnoreManagedReferences</a></li></ul>Added to EditorWindow: <ul class="list"><li><a href="EditorWindow.ShowAuxWindow.html" class="itemlink">ShowAuxWindow</a></li><li><a href="EditorWindow.ShowPopup.html" class="itemlink">ShowPopup</a></li></ul>Added to FileUtil: <ul class="list"><li><a href="FileUtil.ReplaceDirectory.html" class="itemlink">ReplaceDirectory</a></li><li><a href="FileUtil.ReplaceFile.html" class="itemlink">ReplaceFile</a></li></ul>Added to FontTextureCase: <ul class="list"><li><a href="FontTextureCase.Dynamic.html" class="itemlink">Dynamic</a></li></ul>Added to HandleUtility: <ul class="list"><li><a href="HandleUtility.DistancePointBezier.html" class="itemlink">DistancePointBezier</a></li><li><a href="HandleUtility.PickGameObject.html" class="itemlink">PickGameObject</a></li><li><a href="HandleUtility.PickRectObjects.html" class="itemlink">PickRectObjects</a></li></ul>Added to Handles: <ul class="list"><li><a href="Handles.CircleCap.html" class="itemlink">CircleCap</a></li><li><a href="Handles.DrawAAPolyLine.html" class="itemlink">DrawAAPolyLine</a></li><li><a href="Handles.DrawBezier.html" class="itemlink">DrawBezier</a></li><li><a href="Handles.DrawCamera.html" class="itemlink">DrawCamera</a></li><li><a href="Handles.RadiusHandle.html" class="itemlink">RadiusHandle</a></li></ul>Added to ModelImporter: <ul class="list"><li><a href="ModelImporter-animationPositionError.html" class="itemlink">animationPositionError</a></li><li><a href="ModelImporter-animationRotationError.html" class="itemlink">animationRotationError</a></li><li><a href="ModelImporter-animationScaleError.html" class="itemlink">animationScaleError</a></li><li><a href="ModelImporter-generateSecondaryUV.html" class="itemlink">generateSecondaryUV</a></li><li><a href="ModelImporter-isBakeIKSupported.html" class="itemlink">isBakeIKSupported</a></li><li><a href="ModelImporter-isTangentImportSupported.html" class="itemlink">isTangentImportSupported</a></li><li><a href="ModelImporter-isUseFileUnitsSupported.html" class="itemlink">isUseFileUnitsSupported</a></li><li><a href="ModelImporter-normalImportMode.html" class="itemlink">normalImportMode</a></li><li><a href="ModelImporter-secondaryUVAngleDistortion.html" class="itemlink">secondaryUVAngleDistortion</a></li><li><a href="ModelImporter-secondaryUVAreaDistortion.html" class="itemlink">secondaryUVAreaDistortion</a></li><li><a href="ModelImporter-secondaryUVHardAngle.html" class="itemlink">secondaryUVHardAngle</a></li><li><a href="ModelImporter-secondaryUVPackMargin.html" class="itemlink">secondaryUVPackMargin</a></li><li><a href="ModelImporter-tangentImportMode.html" class="itemlink">tangentImportMode</a></li><li><a href="ModelImporter-useFileUnits.html" class="itemlink">useFileUnits</a></li></ul>Added to ModelImporterTangentSpaceMode: <ul class="list"><li><a href="ModelImporterTangentSpaceMode.Calculate.html" class="itemlink">Calculate</a></li><li><a href="ModelImporterTangentSpaceMode.Import.html" class="itemlink">Import</a></li></ul>Added to SerializedObject: <ul class="list"><li><a href="SerializedObject.ApplyModifiedPropertiesMultiSelect.html" class="itemlink">ApplyModifiedPropertiesMultiSelect</a></li></ul>Added to SerializedProperty: <ul class="list"><li><a href="SerializedProperty.EqualContents.html" class="itemlink">EqualContents</a></li><li><a href="SerializedProperty-animationCurveValue.html" class="itemlink">animationCurveValue</a></li></ul>Added to SerializedPropertyType: <ul class="list"><li><a href="SerializedPropertyType.AnimationCurve.html" class="itemlink">AnimationCurve</a></li></ul>Added to TextureImporter: <ul class="list"><li><a href="TextureImporter.ClearPlatformTextureSettings.html" class="itemlink">ClearPlatformTextureSettings</a></li><li><a href="TextureImporter.DoesSourceTextureHaveAlpha.html" class="itemlink">DoesSourceTextureHaveAlpha</a></li><li><a href="TextureImporter.GetPlatformTextureSettings.html" class="itemlink">GetPlatformTextureSettings</a></li><li><a href="TextureImporter.ReadTextureSettings.html" class="itemlink">ReadTextureSettings</a></li><li><a href="TextureImporter.SetPlatformTextureSettings.html" class="itemlink">SetPlatformTextureSettings</a></li><li><a href="TextureImporter.SetTextureSettings.html" class="itemlink">SetTextureSettings</a></li><li><a href="TextureImporter-lightmap.html" class="itemlink">lightmap</a></li><li><a href="TextureImporter-normalmap.html" class="itemlink">normalmap</a></li><li><a href="TextureImporter-textureType.html" class="itemlink">textureType</a></li></ul>Added to TextureImporterFormat: <ul class="list"><li><a href="TextureImporterFormat.Automatic16bit.html" class="itemlink">Automatic16bit</a></li><li><a href="TextureImporterFormat.AutomaticCompressed.html" class="itemlink">AutomaticCompressed</a></li><li><a href="TextureImporterFormat.AutomaticTruecolor.html" class="itemlink">AutomaticTruecolor</a></li><li><a href="TextureImporterFormat.ETC_RGB4.html" class="itemlink">ETC_RGB4</a></li><li><a href="TextureImporterFormat.RGBA32.html" class="itemlink">RGBA32</a></li></ul>Added to TrueTypeFontImporter: <ul class="list"><li><a href="TrueTypeFontImporter-fontNames.html" class="itemlink">fontNames</a></li><li><a href="TrueTypeFontImporter-fontTTFName.html" class="itemlink">fontTTFName</a></li><li><a href="TrueTypeFontImporter-includeFontData.html" class="itemlink">includeFontData</a></li><li><a href="TrueTypeFontImporter-style.html" class="itemlink">style</a></li><li><a href="TrueTypeFontImporter-use2xBehaviour.html" class="itemlink">use2xBehaviour</a></li></ul>Added to Undo: <ul class="list"><li><a href="Undo.RegisterCompleteAssetUndo.html" class="itemlink">RegisterCompleteAssetUndo</a></li><li><a href="Undo.RegisterCreatedObjectUndo.html" class="itemlink">RegisterCreatedObjectUndo</a></li></ul></td></tr></table><br/><a name='2.6.0'></a><h2>Unity 2.6.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='AssetBundleRequest.html'>AssetBundleRequest</a></li><li><a href='AsyncOperation.html'>AsyncOperation</a></li><li><a href='Profiler.html'>Profiler</a></li><li><a href='SerializeField.html'>SerializeField</a></li></ul>New Enumerations: <ul class="list"><li><a href='AnisotropicFiltering.html'>AnisotropicFiltering</a></li><li><a href='DepthTextureMode.html'>DepthTextureMode</a></li><li><a href='LogType.html'>LogType</a></li><li><a href='SystemLanguage.html'>SystemLanguage</a></li><li><a href='ThreadPriority.html'>ThreadPriority</a></li></ul>New Structures: <ul class="list"><li><a href='CombineInstance.html'>CombineInstance</a></li></ul>Added to Animation: <ul class="list"><li><a href="Animation-animateOnlyIfVisible.html" class="itemlink">animateOnlyIfVisible</a></li></ul>Added to AnimationClip: <ul class="list"><li><a href="AnimationClip-wrapMode.html" class="itemlink">wrapMode</a></li></ul>Added to AnimationEvent: <ul class="list"><li><a href="AnimationEvent-floatParameter.html" class="itemlink">floatParameter</a></li><li><a href="AnimationEvent-objectReferenceParameter.html" class="itemlink">objectReferenceParameter</a></li><li><a href="AnimationEvent-stringParameter.html" class="itemlink">stringParameter</a></li></ul>Added to Application: <ul class="list"><li><a href="Application.LoadLevelAdditiveAsync.html" class="itemlink">LoadLevelAdditiveAsync</a></li><li><a href="Application.LoadLevelAsync.html" class="itemlink">LoadLevelAsync</a></li><li><a href="Application.LogCallback.html" class="itemlink">LogCallback</a></li><li><a href="Application.RegisterLogCallback.html" class="itemlink">RegisterLogCallback</a></li><li><a href="Application-backgroundLoadingPriority.html" class="itemlink">backgroundLoadingPriority</a></li><li><a href="Application-systemLanguage.html" class="itemlink">systemLanguage</a></li></ul>Added to AssetBundle: <ul class="list"><li><a href="AssetBundle.Contains.html" class="itemlink">Contains</a></li><li><a href="AssetBundle.LoadAsync.html" class="itemlink">LoadAsync</a></li></ul>Added to AudioClip: <ul class="list"><li><a href="AudioClip-channels.html" class="itemlink">channels</a></li><li><a href="AudioClip-frequency.html" class="itemlink">frequency</a></li><li><a href="AudioClip-samples.html" class="itemlink">samples</a></li></ul>Added to AudioSource: <ul class="list"><li><a href="AudioSource-timeSamples.html" class="itemlink">timeSamples</a></li></ul>Added to Camera: <ul class="list"><li><a href="Camera-depthTextureMode.html" class="itemlink">depthTextureMode</a></li><li><a href="Camera-layerCullDistances.html" class="itemlink">layerCullDistances</a></li></ul>Added to Event: <ul class="list"><li><a href="Event-commandName.html" class="itemlink">commandName</a></li></ul>Added to GUIContent: <ul class="list"><li><a href="GUIContent-none.html" class="itemlink">none</a></li></ul>Added to GUILayoutUtility: <ul class="list"><li><a href="GUILayoutUtility.GetLastRect.html" class="itemlink">GetLastRect</a></li></ul>Added to Graphics: <ul class="list"><li><a href="Graphics.Blit.html" class="itemlink">Blit</a></li><li><a href="Graphics.BlitMultiTap.html" class="itemlink">BlitMultiTap</a></li></ul>Added to Input: <ul class="list"><li><a href="Input.GetJoystickNames.html" class="itemlink">GetJoystickNames</a></li></ul>Added to KeyCode: <ul class="list"><li><a href="KeyCode.None.html" class="itemlink">None</a></li></ul>Added to Mathf: <ul class="list"><li><a href="Mathf.DeltaAngle.html" class="itemlink">DeltaAngle</a></li></ul>Added to Mesh: <ul class="list"><li><a href="Mesh.CombineMeshes.html" class="itemlink">CombineMeshes</a></li></ul>Added to ParticleEmitter: <ul class="list"><li><a href="ParticleEmitter.Simulate.html" class="itemlink">Simulate</a></li><li><a href="ParticleEmitter-enabled.html" class="itemlink">enabled</a></li></ul>Added to Path: <ul class="list"><li><a href="Path.AltDirectorySeparatorChar.html" class="itemlink">AltDirectorySeparatorChar</a></li><li><a href="Path.DirectorySeparatorChar.html" class="itemlink">DirectorySeparatorChar</a></li></ul>Added to QualitySettings: <ul class="list"><li><a href="QualitySettings-anisotropicFiltering.html" class="itemlink">anisotropicFiltering</a></li><li><a href="QualitySettings-masterTextureLimit.html" class="itemlink">masterTextureLimit</a></li></ul>Added to RenderTextureFormat: <ul class="list"><li><a href="RenderTextureFormat.ARGBHalf.html" class="itemlink">ARGBHalf</a></li></ul>Added to Renderer: <ul class="list"><li><a href="Renderer-isVisible.html" class="itemlink">isVisible</a></li></ul>Added to Resources: <ul class="list"><li><a href="Resources.UnloadUnusedAssets.html" class="itemlink">UnloadUnusedAssets</a></li></ul>Added to SystemInfo: <ul class="list"><li><a href="SystemInfo-graphicsShaderLevel.html" class="itemlink">graphicsShaderLevel</a></li><li><a href="SystemInfo-operatingSystem.html" class="itemlink">operatingSystem</a></li><li><a href="SystemInfo-processorCount.html" class="itemlink">processorCount</a></li><li><a href="SystemInfo-processorType.html" class="itemlink">processorType</a></li><li><a href="SystemInfo-systemMemorySize.html" class="itemlink">systemMemorySize</a></li></ul>Added to TextureFormat: <ul class="list"><li><a href="TextureFormat.PVRTC_RGB2.html" class="itemlink">PVRTC_RGB2</a></li><li><a href="TextureFormat.PVRTC_RGB4.html" class="itemlink">PVRTC_RGB4</a></li><li><a href="TextureFormat.PVRTC_RGBA2.html" class="itemlink">PVRTC_RGBA2</a></li><li><a href="TextureFormat.PVRTC_RGBA4.html" class="itemlink">PVRTC_RGBA4</a></li></ul>Added to WWW: <ul class="list"><li><a href="WWW-threadPriority.html" class="itemlink">threadPriority</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='CustomEditor.html'>CustomEditor</a></li><li><a href='SerializedObject.html'>SerializedObject</a></li><li><a href='SerializedProperty.html'>SerializedProperty</a></li></ul>New Enumerations: <ul class="list"><li><a href='ModelImporterAnimationCompression.html'>ModelImporterAnimationCompression</a></li><li><a href='ModelImporterMeshCompression.html'>ModelImporterMeshCompression</a></li><li><a href='ModelImporterTangentSpaceMode.html'>ModelImporterTangentSpaceMode</a></li><li><a href='SerializedPropertyType.html'>SerializedPropertyType</a></li></ul>Added to AnimationUtility: <ul class="list"><li><a href="AnimationUtility.CalculateTransformPath.html" class="itemlink">CalculateTransformPath</a></li><li><a href="AnimationUtility.GetAnimatableObjects.html" class="itemlink">GetAnimatableObjects</a></li><li><a href="AnimationUtility.GetAnimatablePropertiesForObject.html" class="itemlink">GetAnimatablePropertiesForObject</a></li><li><a href="AnimationUtility.GetAnimationClips.html" class="itemlink">GetAnimationClips</a></li><li><a href="AnimationUtility.InAnimationMode.html" class="itemlink">InAnimationMode</a></li><li><a href="AnimationUtility.SetAnimationClips.html" class="itemlink">SetAnimationClips</a></li><li><a href="AnimationUtility.StartAnimationMode.html" class="itemlink">StartAnimationMode</a></li><li><a href="AnimationUtility.StopAnimationMode.html" class="itemlink">StopAnimationMode</a></li></ul>Added to AudioImporter: <ul class="list"><li><a href="AudioImporter-forceToMono.html" class="itemlink">forceToMono</a></li><li><a href="AudioImporter-threeD.html" class="itemlink">threeD</a></li></ul>Added to AudioImporterFormat: <ul class="list"><li><a href="AudioImporterFormat.Compressed.html" class="itemlink">Compressed</a></li><li><a href="AudioImporterFormat.Native.html" class="itemlink">Native</a></li></ul>Added to BuildAssetBundleOptions: <ul class="list"><li><a href="BuildAssetBundleOptions.DeterministicAssetBundle.html" class="itemlink">DeterministicAssetBundle</a></li></ul>Added to BuildOptions: <ul class="list"><li><a href="BuildOptions.Development.html" class="itemlink">Development</a></li></ul>Added to BuildPipeline: <ul class="list"><li><a href="BuildPipeline.BuildAssetBundleExplicitAssetNames.html" class="itemlink">BuildAssetBundleExplicitAssetNames</a></li></ul>Added to Editor: <ul class="list"><li><a href="Editor.DrawDefaultInspector.html" class="itemlink">DrawDefaultInspector</a></li><li><a href="Editor.OnInspectorGUI.html" class="itemlink">OnInspectorGUI</a></li><li><a href="Editor.Repaint.html" class="itemlink">Repaint</a></li></ul>Added to EditorApplication: <ul class="list"><li><a href="EditorApplication.CallbackFunction.html" class="itemlink">CallbackFunction</a></li><li><a href="EditorApplication-modifierKeysChanged.html" class="itemlink">modifierKeysChanged</a></li><li><a href="EditorApplication-playmodeStateChanged.html" class="itemlink">playmodeStateChanged</a></li><li><a href="EditorApplication-timeSinceStartup.html" class="itemlink">timeSinceStartup</a></li><li><a href="EditorApplication-update.html" class="itemlink">update</a></li></ul>Added to EditorGUI: <ul class="list"><li><a href="EditorGUI.DropShadowLabel.html" class="itemlink">DropShadowLabel</a></li><li><a href="EditorGUI.PropertyField.html" class="itemlink">PropertyField</a></li><li><a href="EditorGUI-indentLevel.html" class="itemlink">indentLevel</a></li></ul>Added to EditorGUILayout: <ul class="list"><li><a href="EditorGUILayout.PropertyField.html" class="itemlink">PropertyField</a></li></ul>Added to EditorGUIUtility: <ul class="list"><li><a href="EditorGUIUtility.HSVToRGB.html" class="itemlink">HSVToRGB</a></li><li><a href="EditorGUIUtility.RGBToHSV.html" class="itemlink">RGBToHSV</a></li></ul>Added to EditorStyles: <ul class="list"><li><a href="EditorStyles-boldLabel.html" class="itemlink">boldLabel</a></li><li><a href="EditorStyles-largeLabel.html" class="itemlink">largeLabel</a></li><li><a href="EditorStyles-miniButton.html" class="itemlink">miniButton</a></li><li><a href="EditorStyles-miniButtonLeft.html" class="itemlink">miniButtonLeft</a></li><li><a href="EditorStyles-miniButtonMid.html" class="itemlink">miniButtonMid</a></li><li><a href="EditorStyles-miniButtonRight.html" class="itemlink">miniButtonRight</a></li><li><a href="EditorStyles-miniLabel.html" class="itemlink">miniLabel</a></li><li><a href="EditorStyles-miniTextField.html" class="itemlink">miniTextField</a></li><li><a href="EditorStyles-notificationBackground.html" class="itemlink">notificationBackground</a></li><li><a href="EditorStyles-notificationText.html" class="itemlink">notificationText</a></li><li><a href="EditorStyles-toolbar.html" class="itemlink">toolbar</a></li><li><a href="EditorStyles-toolbarButton.html" class="itemlink">toolbarButton</a></li><li><a href="EditorStyles-toolbarDropDown.html" class="itemlink">toolbarDropDown</a></li><li><a href="EditorStyles-toolbarPopup.html" class="itemlink">toolbarPopup</a></li><li><a href="EditorStyles-toolbarTextField.html" class="itemlink">toolbarTextField</a></li><li><a href="EditorStyles-whiteBoldLabel.html" class="itemlink">whiteBoldLabel</a></li><li><a href="EditorStyles-whiteLabel.html" class="itemlink">whiteLabel</a></li><li><a href="EditorStyles-whiteLargeLabel.html" class="itemlink">whiteLargeLabel</a></li><li><a href="EditorStyles-whiteMiniLabel.html" class="itemlink">whiteMiniLabel</a></li><li><a href="EditorStyles-wordWrappedLabel.html" class="itemlink">wordWrappedLabel</a></li></ul>Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.CollectDeepHierarchy.html" class="itemlink">CollectDeepHierarchy</a></li><li><a href="EditorUtility.CompressTexture.html" class="itemlink">CompressTexture</a></li><li><a href="EditorUtility.FindPrefabRoot.html" class="itemlink">FindPrefabRoot</a></li><li><a href="EditorUtility.FocusProjectWindow.html" class="itemlink">FocusProjectWindow</a></li><li><a href="EditorUtility.ResetGameObjectToPrefabState.html" class="itemlink">ResetGameObjectToPrefabState</a></li><li><a href="EditorUtility.ResetToPrefabState.html" class="itemlink">ResetToPrefabState</a></li><li><a href="EditorUtility.SaveFilePanelInProject.html" class="itemlink">SaveFilePanelInProject</a></li><li><a href="EditorUtility.SaveFolderPanel.html" class="itemlink">SaveFolderPanel</a></li></ul>Added to EditorWindow: <ul class="list"><li><a href="EditorWindow.BeginWindows.html" class="itemlink">BeginWindows</a></li><li><a href="EditorWindow.EndWindows.html" class="itemlink">EndWindows</a></li><li><a href="EditorWindow.RemoveNotification.html" class="itemlink">RemoveNotification</a></li><li><a href="EditorWindow.ShowNotification.html" class="itemlink">ShowNotification</a></li></ul>Added to FileUtil: <ul class="list"><li><a href="FileUtil.GetUniqueTempPathInProject.html" class="itemlink">GetUniqueTempPathInProject</a></li></ul>Added to Handles: <ul class="list"><li><a href="Handles.ArrowCap.html" class="itemlink">ArrowCap</a></li><li><a href="Handles.ConeCap.html" class="itemlink">ConeCap</a></li><li><a href="Handles.CubeCap.html" class="itemlink">CubeCap</a></li><li><a href="Handles.CylinderCap.html" class="itemlink">CylinderCap</a></li><li><a href="Handles.DotCap.html" class="itemlink">DotCap</a></li><li><a href="Handles.DrawAAPolyLine.html" class="itemlink">DrawAAPolyLine</a></li><li><a href="Handles.DrawCapFunction.html" class="itemlink">DrawCapFunction</a></li><li><a href="Handles.FreeMoveHandle.html" class="itemlink">FreeMoveHandle</a></li><li><a href="Handles.RectangleCap.html" class="itemlink">RectangleCap</a></li><li><a href="Handles.SphereCap.html" class="itemlink">SphereCap</a></li><li><a href="Handles-matrix.html" class="itemlink">matrix</a></li></ul>Added to ModelImporter: <ul class="list"><li><a href="ModelImporter-animationCompression.html" class="itemlink">animationCompression</a></li><li><a href="ModelImporter-animationWrapMode.html" class="itemlink">animationWrapMode</a></li><li><a href="ModelImporter-meshCompression.html" class="itemlink">meshCompression</a></li></ul>Added to ModelImporterClipAnimation: <ul class="list"><li><a href="ModelImporterClipAnimation-wrapMode.html" class="itemlink">wrapMode</a></li></ul>Added to MouseCursor: <ul class="list"><li><a href="MouseCursor.MoveArrow.html" class="itemlink">MoveArrow</a></li><li><a href="MouseCursor.RotateArrow.html" class="itemlink">RotateArrow</a></li><li><a href="MouseCursor.ScaleArrow.html" class="itemlink">ScaleArrow</a></li></ul>Added to TextureImporter: <ul class="list"><li><a href="TextureImporter-isReadable.html" class="itemlink">isReadable</a></li></ul>Added to TextureImporterFormat: <ul class="list"><li><a href="TextureImporterFormat.PVRTC_RGB2.html" class="itemlink">PVRTC_RGB2</a></li><li><a href="TextureImporterFormat.PVRTC_RGB4.html" class="itemlink">PVRTC_RGB4</a></li><li><a href="TextureImporterFormat.PVRTC_RGBA2.html" class="itemlink">PVRTC_RGBA2</a></li><li><a href="TextureImporterFormat.PVRTC_RGBA4.html" class="itemlink">PVRTC_RGBA4</a></li></ul>Added to Undo: <ul class="list"><li><a href="Undo.RegisterUndo.html" class="itemlink">RegisterUndo</a></li><li><a href="Undo.RestoreSnapshot.html" class="itemlink">RestoreSnapshot</a></li></ul></td></tr></table><br/><a name='2.5.0'></a><h2>Unity 2.5.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Enumerations: <ul class="list"><li><a href='MasterServerEvent.html'>MasterServerEvent</a></li></ul>Added to Application: <ul class="list"><li><a href="Application-targetFrameRate.html" class="itemlink">targetFrameRate</a></li></ul>Added to Cubemap: <ul class="list"><li><a href="Cubemap.GetPixels.html" class="itemlink">GetPixels</a></li><li><a href="Cubemap.SetPixels.html" class="itemlink">SetPixels</a></li></ul>Added to EventType: <ul class="list"><li><a href="EventType.ValidateCommand.html" class="itemlink">ValidateCommand</a></li></ul>Added to GUI: <ul class="list"><li><a href="GUI.GetNameOfFocusedControl.html" class="itemlink">GetNameOfFocusedControl</a></li><li><a href="GUI.PasswordField.html" class="itemlink">PasswordField</a></li><li><a href="GUI.ScrollTo.html" class="itemlink">ScrollTo</a></li></ul>Added to GUILayout: <ul class="list"><li><a href="GUILayout.BeginScrollView.html" class="itemlink">BeginScrollView</a></li><li><a href="GUILayout.PasswordField.html" class="itemlink">PasswordField</a></li></ul>Added to GUISkin: <ul class="list"><li><a href="GUISkin-scrollView.html" class="itemlink">scrollView</a></li></ul>Added to GUIStyle: <ul class="list"><li><a href="GUIStyle.DrawCursor.html" class="itemlink">DrawCursor</a></li></ul>Added to GUIUtility: <ul class="list"><li><a href="GUIUtility.GetControlID.html" class="itemlink">GetControlID</a></li></ul>Added to Material: <ul class="list"><li><a href="Material-renderQueue.html" class="itemlink">renderQueue</a></li></ul>Added to MonoBehaviour: <ul class="list"><li><a href="MonoBehaviour.OnMasterServerEvent.html" class="itemlink">OnMasterServerEvent</a></li></ul>Added to RuntimePlatform: <ul class="list"><li><a href="RuntimePlatform.WindowsEditor.html" class="itemlink">WindowsEditor</a></li></ul>Added to Shader: <ul class="list"><li><a href="Shader-globalMaximumLOD.html" class="itemlink">globalMaximumLOD</a></li><li><a href="Shader-maximumLOD.html" class="itemlink">maximumLOD</a></li><li><a href="Shader-renderQueue.html" class="itemlink">renderQueue</a></li></ul>Added to Texture2D: <ul class="list"><li><a href="Texture2D.Compress.html" class="itemlink">Compress</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='Editor.html'>Editor</a></li><li><a href='EditorStyles.html'>EditorStyles</a></li><li><a href='HandleUtility.html'>HandleUtility</a></li><li><a href='MovieImporter.html'>MovieImporter</a></li><li><a href='TrueTypeFontImporter.html'>TrueTypeFontImporter</a></li></ul>New Enumerations: <ul class="list"><li><a href='FontRenderMode.html'>FontRenderMode</a></li><li><a href='FontTextureCase.html'>FontTextureCase</a></li><li><a href='MouseCursor.html'>MouseCursor</a></li><li><a href='PrefabType.html'>PrefabType</a></li><li><a href='ReplacePrefabOptions.html'>ReplacePrefabOptions</a></li></ul>Added to AnimationClipCurveData: <ul class="list"><li><a href="AnimationClipCurveData-target.html" class="itemlink">target</a></li></ul>Added to AssetDatabase: <ul class="list"><li><a href="AssetDatabase.Contains.html" class="itemlink">Contains</a></li><li><a href="AssetDatabase.GetAssetPath.html" class="itemlink">GetAssetPath</a></li><li><a href="AssetDatabase.IsMainAsset.html" class="itemlink">IsMainAsset</a></li><li><a href="AssetDatabase.LoadAllAssetsAtPath.html" class="itemlink">LoadAllAssetsAtPath</a></li><li><a href="AssetDatabase.RenameAsset.html" class="itemlink">RenameAsset</a></li><li><a href="AssetDatabase.SaveAssets.html" class="itemlink">SaveAssets</a></li><li><a href="AssetDatabase.ValidateMoveAsset.html" class="itemlink">ValidateMoveAsset</a></li></ul>Added to AssetPostprocessor: <ul class="list"><li><a href="AssetPostprocessor.OnPostprocessGameObjectWithUserProperties.html" class="itemlink">OnPostprocessGameObjectWithUserProperties</a></li></ul>Added to EditorApplication: <ul class="list"><li><a href="EditorApplication.Beep.html" class="itemlink">Beep</a></li><li><a href="EditorApplication.Exit.html" class="itemlink">Exit</a></li><li><a href="EditorApplication.LockReloadAssemblies.html" class="itemlink">LockReloadAssemblies</a></li><li><a href="EditorApplication.Step.html" class="itemlink">Step</a></li><li><a href="EditorApplication.UnlockReloadAssemblies.html" class="itemlink">UnlockReloadAssemblies</a></li><li><a href="EditorApplication-applicationPath.html" class="itemlink">applicationPath</a></li><li><a href="EditorApplication-isCompiling.html" class="itemlink">isCompiling</a></li><li><a href="EditorApplication-isPaused.html" class="itemlink">isPaused</a></li><li><a href="EditorApplication-isPlayingOrWillChangePlaymode.html" class="itemlink">isPlayingOrWillChangePlaymode</a></li></ul>Added to EditorGUI: <ul class="list"><li><a href="EditorGUI.ColorField.html" class="itemlink">ColorField</a></li><li><a href="EditorGUI.DrawTextureAlpha.html" class="itemlink">DrawTextureAlpha</a></li><li><a href="EditorGUI.EnumPopup.html" class="itemlink">EnumPopup</a></li><li><a href="EditorGUI.FloatField.html" class="itemlink">FloatField</a></li><li><a href="EditorGUI.Foldout.html" class="itemlink">Foldout</a></li><li><a href="EditorGUI.InspectorTitlebar.html" class="itemlink">InspectorTitlebar</a></li><li><a href="EditorGUI.IntField.html" class="itemlink">IntField</a></li><li><a href="EditorGUI.IntPopup.html" class="itemlink">IntPopup</a></li><li><a href="EditorGUI.IntSlider.html" class="itemlink">IntSlider</a></li><li><a href="EditorGUI.LabelField.html" class="itemlink">LabelField</a></li><li><a href="EditorGUI.LayerField.html" class="itemlink">LayerField</a></li><li><a href="EditorGUI.ObjectField.html" class="itemlink">ObjectField</a></li><li><a href="EditorGUI.PasswordField.html" class="itemlink">PasswordField</a></li><li><a href="EditorGUI.Popup.html" class="itemlink">Popup</a></li><li><a href="EditorGUI.PrefixLabel.html" class="itemlink">PrefixLabel</a></li><li><a href="EditorGUI.RectField.html" class="itemlink">RectField</a></li><li><a href="EditorGUI.Slider.html" class="itemlink">Slider</a></li><li><a href="EditorGUI.TagField.html" class="itemlink">TagField</a></li><li><a href="EditorGUI.TextArea.html" class="itemlink">TextArea</a></li><li><a href="EditorGUI.TextField.html" class="itemlink">TextField</a></li><li><a href="EditorGUI.Toggle.html" class="itemlink">Toggle</a></li><li><a href="EditorGUI.Vector4Field.html" class="itemlink">Vector4Field</a></li><li><a href="EditorGUI-actionKey.html" class="itemlink">actionKey</a></li></ul>Added to EditorGUILayout: <ul class="list"><li><a href="EditorGUILayout.BeginHorizontal.html" class="itemlink">BeginHorizontal</a></li><li><a href="EditorGUILayout.BeginScrollView.html" class="itemlink">BeginScrollView</a></li><li><a href="EditorGUILayout.BeginToggleGroup.html" class="itemlink">BeginToggleGroup</a></li><li><a href="EditorGUILayout.BeginVertical.html" class="itemlink">BeginVertical</a></li><li><a href="EditorGUILayout.ColorField.html" class="itemlink">ColorField</a></li><li><a href="EditorGUILayout.EndHorizontal.html" class="itemlink">EndHorizontal</a></li><li><a href="EditorGUILayout.EndScrollView.html" class="itemlink">EndScrollView</a></li><li><a href="EditorGUILayout.EndToggleGroup.html" class="itemlink">EndToggleGroup</a></li><li><a href="EditorGUILayout.EndVertical.html" class="itemlink">EndVertical</a></li><li><a href="EditorGUILayout.EnumPopup.html" class="itemlink">EnumPopup</a></li><li><a href="EditorGUILayout.FloatField.html" class="itemlink">FloatField</a></li><li><a href="EditorGUILayout.Foldout.html" class="itemlink">Foldout</a></li><li><a href="EditorGUILayout.InspectorTitlebar.html" class="itemlink">InspectorTitlebar</a></li><li><a href="EditorGUILayout.IntField.html" class="itemlink">IntField</a></li><li><a href="EditorGUILayout.IntPopup.html" class="itemlink">IntPopup</a></li><li><a href="EditorGUILayout.IntSlider.html" class="itemlink">IntSlider</a></li><li><a href="EditorGUILayout.LabelField.html" class="itemlink">LabelField</a></li><li><a href="EditorGUILayout.LayerField.html" class="itemlink">LayerField</a></li><li><a href="EditorGUILayout.ObjectField.html" class="itemlink">ObjectField</a></li><li><a href="EditorGUILayout.PasswordField.html" class="itemlink">PasswordField</a></li><li><a href="EditorGUILayout.Popup.html" class="itemlink">Popup</a></li><li><a href="EditorGUILayout.PrefixLabel.html" class="itemlink">PrefixLabel</a></li><li><a href="EditorGUILayout.RectField.html" class="itemlink">RectField</a></li><li><a href="EditorGUILayout.Separator.html" class="itemlink">Separator</a></li><li><a href="EditorGUILayout.Slider.html" class="itemlink">Slider</a></li><li><a href="EditorGUILayout.Space.html" class="itemlink">Space</a></li><li><a href="EditorGUILayout.TagField.html" class="itemlink">TagField</a></li><li><a href="EditorGUILayout.TextArea.html" class="itemlink">TextArea</a></li><li><a href="EditorGUILayout.TextField.html" class="itemlink">TextField</a></li><li><a href="EditorGUILayout.Toggle.html" class="itemlink">Toggle</a></li><li><a href="EditorGUILayout.Vector4Field.html" class="itemlink">Vector4Field</a></li></ul>Added to EditorGUIUtility: <ul class="list"><li><a href="EditorGUIUtility.AddCursorRect.html" class="itemlink">AddCursorRect</a></li><li><a href="EditorGUIUtility.DrawColorSwatch.html" class="itemlink">DrawColorSwatch</a></li><li><a href="EditorGUIUtility.HasObjectThumbnail.html" class="itemlink">HasObjectThumbnail</a></li><li><a href="EditorGUIUtility.Load.html" class="itemlink">Load</a></li><li><a href="EditorGUIUtility.LoadRequired.html" class="itemlink">LoadRequired</a></li><li><a href="EditorGUIUtility.LookLikeControls.html" class="itemlink">LookLikeControls</a></li><li><a href="EditorGUIUtility.LookLikeInspector.html" class="itemlink">LookLikeInspector</a></li><li><a href="EditorGUIUtility.PingObject.html" class="itemlink">PingObject</a></li><li><a href="EditorGUIUtility.QueueGameViewInputEvent.html" class="itemlink">QueueGameViewInputEvent</a></li><li><a href="EditorGUIUtility.RenderGameViewCameras.html" class="itemlink">RenderGameViewCameras</a></li><li><a href="EditorGUIUtility-systemCopyBuffer.html" class="itemlink">systemCopyBuffer</a></li><li><a href="EditorGUIUtility-whiteTexture.html" class="itemlink">whiteTexture</a></li></ul>Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.CreateGameObjectWithHideFlags.html" class="itemlink">CreateGameObjectWithHideFlags</a></li><li><a href="EditorUtility.DisplayPopupMenu.html" class="itemlink">DisplayPopupMenu</a></li><li><a href="EditorUtility.GetPrefabParent.html" class="itemlink">GetPrefabParent</a></li><li><a href="EditorUtility.GetPrefabType.html" class="itemlink">GetPrefabType</a></li><li><a href="EditorUtility.InstanceIDToObject.html" class="itemlink">InstanceIDToObject</a></li><li><a href="EditorUtility.IsPersistent.html" class="itemlink">IsPersistent</a></li><li><a href="EditorUtility.ReconnectToLastPrefab.html" class="itemlink">ReconnectToLastPrefab</a></li></ul>Added to EditorWindow: <ul class="list"><li><a href="EditorWindow.Focus.html" class="itemlink">Focus</a></li><li><a href="EditorWindow.GetWindow.html" class="itemlink">GetWindow</a></li><li><a href="EditorWindow.GetWindowWithRect.html" class="itemlink">GetWindowWithRect</a></li><li><a href="EditorWindow.OnDestroy.html" class="itemlink">OnDestroy</a></li><li><a href="EditorWindow.OnFocus.html" class="itemlink">OnFocus</a></li><li><a href="EditorWindow.OnHierarchyChange.html" class="itemlink">OnHierarchyChange</a></li><li><a href="EditorWindow.OnLostFocus.html" class="itemlink">OnLostFocus</a></li><li><a href="EditorWindow.OnProjectChange.html" class="itemlink">OnProjectChange</a></li><li><a href="EditorWindow.SendEvent.html" class="itemlink">SendEvent</a></li><li><a href="EditorWindow.Show.html" class="itemlink">Show</a></li><li><a href="EditorWindow.ShowUtility.html" class="itemlink">ShowUtility</a></li><li><a href="EditorWindow-focusedWindow.html" class="itemlink">focusedWindow</a></li><li><a href="EditorWindow-mouseOverWindow.html" class="itemlink">mouseOverWindow</a></li><li><a href="EditorWindow-wantsMouseMove.html" class="itemlink">wantsMouseMove</a></li></ul>Added to Handles: <ul class="list"><li><a href="Handles.BeginGUI.html" class="itemlink">BeginGUI</a></li><li><a href="Handles.Button.html" class="itemlink">Button</a></li><li><a href="Handles.ClearCamera.html" class="itemlink">ClearCamera</a></li><li><a href="Handles.Disc.html" class="itemlink">Disc</a></li><li><a href="Handles.DrawLine.html" class="itemlink">DrawLine</a></li><li><a href="Handles.DrawPolyLine.html" class="itemlink">DrawPolyLine</a></li><li><a href="Handles.DrawSolidArc.html" class="itemlink">DrawSolidArc</a></li><li><a href="Handles.DrawSolidDisc.html" class="itemlink">DrawSolidDisc</a></li><li><a href="Handles.DrawWireArc.html" class="itemlink">DrawWireArc</a></li><li><a href="Handles.DrawWireDisc.html" class="itemlink">DrawWireDisc</a></li><li><a href="Handles.EndGUI.html" class="itemlink">EndGUI</a></li><li><a href="Handles.FreeRotateHandle.html" class="itemlink">FreeRotateHandle</a></li><li><a href="Handles.Label.html" class="itemlink">Label</a></li><li><a href="Handles.PositionHandle.html" class="itemlink">PositionHandle</a></li><li><a href="Handles.RotationHandle.html" class="itemlink">RotationHandle</a></li><li><a href="Handles.ScaleHandle.html" class="itemlink">ScaleHandle</a></li><li><a href="Handles.ScaleSlider.html" class="itemlink">ScaleSlider</a></li><li><a href="Handles.ScaleValueHandle.html" class="itemlink">ScaleValueHandle</a></li><li><a href="Handles.SetCamera.html" class="itemlink">SetCamera</a></li><li><a href="Handles.Slider.html" class="itemlink">Slider</a></li><li><a href="Handles-currentCamera.html" class="itemlink">currentCamera</a></li></ul>Added to Help: <ul class="list"><li><a href="Help.BrowseURL.html" class="itemlink">BrowseURL</a></li><li><a href="Help.ShowHelpPage.html" class="itemlink">ShowHelpPage</a></li></ul>Added to ObjectNames: <ul class="list"><li><a href="ObjectNames.GetClassName.html" class="itemlink">GetClassName</a></li><li><a href="ObjectNames.GetInspectorTitle.html" class="itemlink">GetInspectorTitle</a></li><li><a href="ObjectNames.NicifyVariableName.html" class="itemlink">NicifyVariableName</a></li><li><a href="ObjectNames.SetNameSmart.html" class="itemlink">SetNameSmart</a></li></ul>Added to Selection: <ul class="list"><li><a href="Selection.Contains.html" class="itemlink">Contains</a></li><li><a href="Selection-activeInstanceID.html" class="itemlink">activeInstanceID</a></li><li><a href="Selection-instanceIDs.html" class="itemlink">instanceIDs</a></li></ul>Added to Undo: <ul class="list"><li><a href="Undo.ClearSnapshotTarget.html" class="itemlink">ClearSnapshotTarget</a></li><li><a href="Undo.CreateSnapshot.html" class="itemlink">CreateSnapshot</a></li><li><a href="Undo.RegisterSnapshot.html" class="itemlink">RegisterSnapshot</a></li><li><a href="Undo.SetSnapshotTarget.html" class="itemlink">SetSnapshotTarget</a></li></ul></td></tr></table><br/><a name='2.1.0'></a><h2>Unity 2.1.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='AnimationCurve.html'>AnimationCurve</a></li><li><a href='AnimationEvent.html'>AnimationEvent</a></li><li><a href='AssetBundle.html'>AssetBundle</a></li><li><a href='LightmapData.html'>LightmapData</a></li><li><a href='LightmapSettings.html'>LightmapSettings</a></li><li><a href='MaterialPropertyBlock.html'>MaterialPropertyBlock</a></li><li><a href='Path.html'>Path</a></li><li><a href='PlayerPrefsException.html'>PlayerPrefsException</a></li></ul>New Enumerations: <ul class="list"><li><a href='RenderTextureFormat.html'>RenderTextureFormat</a></li></ul>New Structures: <ul class="list"><li><a href='BoneWeight.html'>BoneWeight</a></li><li><a href='Keyframe.html'>Keyframe</a></li></ul>Added to Animation: <ul class="list"><li><a href="Animation.RemoveClip.html" class="itemlink">RemoveClip</a></li><li><a href="Animation.Sample.html" class="itemlink">Sample</a></li></ul>Added to AnimationClip: <ul class="list"><li><a href="AnimationClip.AddEvent.html" class="itemlink">AddEvent</a></li><li><a href="AnimationClip.ClearCurves.html" class="itemlink">ClearCurves</a></li><li><a href="AnimationClip.SetCurve.html" class="itemlink">SetCurve</a></li></ul>Added to Application: <ul class="list"><li><a href="Application.LoadLevelAdditive.html" class="itemlink">LoadLevelAdditive</a></li><li><a href="Application-isLoadingLevel.html" class="itemlink">isLoadingLevel</a></li></ul>Added to AudioSource: <ul class="list"><li><a href="AudioSource-time.html" class="itemlink">time</a></li></ul>Added to BitStream: <ul class="list"><li><a href="BitStream.Serialize.html" class="itemlink">Serialize</a></li></ul>Added to Camera: <ul class="list"><li><a href="Camera.CopyFrom.html" class="itemlink">CopyFrom</a></li><li><a href="Camera.RenderWithShader.html" class="itemlink">RenderWithShader</a></li><li><a href="Camera.ResetReplacementShader.html" class="itemlink">ResetReplacementShader</a></li><li><a href="Camera.SetReplacementShader.html" class="itemlink">SetReplacementShader</a></li></ul>Added to EventType: <ul class="list"><li><a href="EventType.ContextClick.html" class="itemlink">ContextClick</a></li><li><a href="EventType.DragExited.html" class="itemlink">DragExited</a></li><li><a href="EventType.DragPerform.html" class="itemlink">DragPerform</a></li><li><a href="EventType.DragUpdated.html" class="itemlink">DragUpdated</a></li><li><a href="EventType.ExecuteCommand.html" class="itemlink">ExecuteCommand</a></li></ul>Added to GUISettings: <ul class="list"><li><a href="GUISettings-cursorFlashSpeed.html" class="itemlink">cursorFlashSpeed</a></li></ul>Added to Graphics: <ul class="list"><li><a href="Graphics.DrawMesh.html" class="itemlink">DrawMesh</a></li><li><a href="Graphics.DrawMeshNow.html" class="itemlink">DrawMeshNow</a></li><li><a href="Graphics.DrawTexture.html" class="itemlink">DrawTexture</a></li></ul>Added to Input: <ul class="list"><li><a href="Input.GetKey.html" class="itemlink">GetKey</a></li><li><a href="Input.GetKeyDown.html" class="itemlink">GetKeyDown</a></li><li><a href="Input.GetKeyUp.html" class="itemlink">GetKeyUp</a></li></ul>Added to KeyCode: <ul class="list"><li><a href="KeyCode.Joystick1Button0.html" class="itemlink">Joystick1Button0</a></li><li><a href="KeyCode.Joystick1Button1.html" class="itemlink">Joystick1Button1</a></li><li><a href="KeyCode.Joystick1Button10.html" class="itemlink">Joystick1Button10</a></li><li><a href="KeyCode.Joystick1Button11.html" class="itemlink">Joystick1Button11</a></li><li><a href="KeyCode.Joystick1Button12.html" class="itemlink">Joystick1Button12</a></li><li><a href="KeyCode.Joystick1Button13.html" class="itemlink">Joystick1Button13</a><i> ...and so on</i></li><li><a href="KeyCode.Mouse0.html" class="itemlink">Mouse0</a></li><li><a href="KeyCode.Mouse1.html" class="itemlink">Mouse1</a></li><li><a href="KeyCode.Mouse2.html" class="itemlink">Mouse2</a></li><li><a href="KeyCode.Mouse3.html" class="itemlink">Mouse3</a></li><li><a href="KeyCode.Mouse4.html" class="itemlink">Mouse4</a></li><li><a href="KeyCode.Mouse5.html" class="itemlink">Mouse5</a></li><li><a href="KeyCode.Mouse6.html" class="itemlink">Mouse6</a></li></ul>Added to Light: <ul class="list"><li><a href="Light-shadowStrength.html" class="itemlink">shadowStrength</a></li></ul>Added to Mesh: <ul class="list"><li><a href="Mesh-bindposes.html" class="itemlink">bindposes</a></li><li><a href="Mesh-boneWeights.html" class="itemlink">boneWeights</a></li></ul>Added to Network: <ul class="list"><li><a href="Network.SetSendingEnabled.html" class="itemlink">SetSendingEnabled</a></li><li><a href="Network-proxyIP.html" class="itemlink">proxyIP</a></li><li><a href="Network-proxyPassword.html" class="itemlink">proxyPassword</a></li><li><a href="Network-proxyPort.html" class="itemlink">proxyPort</a></li><li><a href="Network-useProxy.html" class="itemlink">useProxy</a></li></ul>Added to NetworkView: <ul class="list"><li><a href="NetworkView.SetScope.html" class="itemlink">SetScope</a></li></ul>Added to ParticleAnimator: <ul class="list"><li><a href="ParticleAnimator-colorAnimation.html" class="itemlink">colorAnimation</a></li></ul>Added to ParticleRenderMode: <ul class="list"><li><a href="ParticleRenderMode.HorizontalBillboard.html" class="itemlink">HorizontalBillboard</a></li><li><a href="ParticleRenderMode.VerticalBillboard.html" class="itemlink">VerticalBillboard</a></li></ul>Added to PlayerPrefs: <ul class="list"><li><a href="PlayerPrefs.DeleteAll.html" class="itemlink">DeleteAll</a></li><li><a href="PlayerPrefs.DeleteKey.html" class="itemlink">DeleteKey</a></li><li><a href="PlayerPrefs.HasKey.html" class="itemlink">HasKey</a></li></ul>Added to RenderTexture: <ul class="list"><li><a href="RenderTexture-format.html" class="itemlink">format</a></li></ul>Added to Renderer: <ul class="list"><li><a href="Renderer-lightmapIndex.html" class="itemlink">lightmapIndex</a></li><li><a href="Renderer-lightmapTilingOffset.html" class="itemlink">lightmapTilingOffset</a></li></ul>Added to Resources: <ul class="list"><li><a href="Resources.LoadAssetAtPath.html" class="itemlink">LoadAssetAtPath</a></li></ul>Added to Shader: <ul class="list"><li><a href="Shader.PropertyToID.html" class="itemlink">PropertyToID</a></li></ul>Added to SkinnedMeshRenderer: <ul class="list"><li><a href="SkinnedMeshRenderer-bones.html" class="itemlink">bones</a></li><li><a href="SkinnedMeshRenderer-skinNormals.html" class="itemlink">skinNormals</a></li><li><a href="SkinnedMeshRenderer-updateWhenOffscreen.html" class="itemlink">updateWhenOffscreen</a></li></ul>Added to SystemInfo: <ul class="list"><li><a href="SystemInfo.SupportsRenderTextureFormat.html" class="itemlink">SupportsRenderTextureFormat</a></li></ul>Added to Terrain: <ul class="list"><li><a href="Terrain.SetNeighbors.html" class="itemlink">SetNeighbors</a></li><li><a href="Terrain-castShadows.html" class="itemlink">castShadows</a></li></ul>Added to TextAsset: <ul class="list"><li><a href="TextAsset-bytes.html" class="itemlink">bytes</a></li></ul>Added to Texture2D: <ul class="list"><li><a href="Texture2D.LoadImage.html" class="itemlink">LoadImage</a></li></ul>Added to WWW: <ul class="list"><li><a href="WWW-assetBundle.html" class="itemlink">assetBundle</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='AnimationClipCurveData.html'>AnimationClipCurveData</a></li><li><a href='AnimationUtility.html'>AnimationUtility</a></li><li><a href='AssetDatabase.html'>AssetDatabase</a></li><li><a href='AssetImporter.html'>AssetImporter</a></li><li><a href='AssetPostprocessor.html'>AssetPostprocessor</a></li><li><a href='AudioImporter.html'>AudioImporter</a></li><li><a href='BuildPipeline.html'>BuildPipeline</a></li><li><a href='DragAndDrop.html'>DragAndDrop</a></li><li><a href='EditorApplication.html'>EditorApplication</a></li><li><a href='EditorGUI.html'>EditorGUI</a></li><li><a href='EditorGUILayout.html'>EditorGUILayout</a></li><li><a href='EditorGUIUtility.html'>EditorGUIUtility</a></li><li><a href='EditorPrefs.html'>EditorPrefs</a></li><li><a href='EditorWindow.html'>EditorWindow</a></li><li><a href='FileUtil.html'>FileUtil</a></li><li><a href='Handles.html'>Handles</a></li><li><a href='Help.html'>Help</a></li><li><a href='ModelImporter.html'>ModelImporter</a></li><li><a href='ModelImporterClipAnimation.html'>ModelImporterClipAnimation</a></li><li><a href='MonoScript.html'>MonoScript</a></li><li><a href='ObjectNames.html'>ObjectNames</a></li><li><a href='Undo.html'>Undo</a></li></ul>New Enumerations: <ul class="list"><li><a href='AudioImporterFormat.html'>AudioImporterFormat</a></li><li><a href='BuildAssetBundleOptions.html'>BuildAssetBundleOptions</a></li><li><a href='BuildOptions.html'>BuildOptions</a></li><li><a href='BuildTarget.html'>BuildTarget</a></li><li><a href='DragAndDropVisualMode.html'>DragAndDropVisualMode</a></li><li><a href='ImportAssetOptions.html'>ImportAssetOptions</a></li><li><a href='ModelImporterGenerateAnimations.html'>ModelImporterGenerateAnimations</a></li><li><a href='ModelImporterGenerateMaterials.html'>ModelImporterGenerateMaterials</a></li><li><a href='TextureImporterFormat.html'>TextureImporterFormat</a></li><li><a href='TextureImporterGenerateCubemap.html'>TextureImporterGenerateCubemap</a></li><li><a href='TextureImporterMipFilter.html'>TextureImporterMipFilter</a></li><li><a href='TextureImporterNPOTScale.html'>TextureImporterNPOTScale</a></li><li><a href='TextureImporterNormalFilter.html'>TextureImporterNormalFilter</a></li></ul>Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.CollectDependencies.html" class="itemlink">CollectDependencies</a></li><li><a href="EditorUtility.CopySerialized.html" class="itemlink">CopySerialized</a></li><li><a href="EditorUtility.CreateEmptyPrefab.html" class="itemlink">CreateEmptyPrefab</a></li><li><a href="EditorUtility.DisplayDialogComplex.html" class="itemlink">DisplayDialogComplex</a></li><li><a href="EditorUtility.ExtractOggFile.html" class="itemlink">ExtractOggFile</a></li><li><a href="EditorUtility.GetObjectEnabled.html" class="itemlink">GetObjectEnabled</a></li><li><a href="EditorUtility.InstantiatePrefab.html" class="itemlink">InstantiatePrefab</a></li><li><a href="EditorUtility.ReplacePrefab.html" class="itemlink">ReplacePrefab</a></li><li><a href="EditorUtility.SetObjectEnabled.html" class="itemlink">SetObjectEnabled</a></li></ul>Added to TextureImporter: <ul class="list"><li><a href="TextureImporter-borderMipmap.html" class="itemlink">borderMipmap</a></li><li><a href="TextureImporter-convertToNormalmap.html" class="itemlink">convertToNormalmap</a></li><li><a href="TextureImporter-correctGamma.html" class="itemlink">correctGamma</a></li><li><a href="TextureImporter-fadeout.html" class="itemlink">fadeout</a></li><li><a href="TextureImporter-generateCubemap.html" class="itemlink">generateCubemap</a></li><li><a href="TextureImporter-grayscaleToAlpha.html" class="itemlink">grayscaleToAlpha</a></li><li><a href="TextureImporter-heightmapScale.html" class="itemlink">heightmapScale</a></li><li><a href="TextureImporter-maxTextureSize.html" class="itemlink">maxTextureSize</a></li><li><a href="TextureImporter-mipmapEnabled.html" class="itemlink">mipmapEnabled</a></li><li><a href="TextureImporter-mipmapFadeDistanceEnd.html" class="itemlink">mipmapFadeDistanceEnd</a></li><li><a href="TextureImporter-mipmapFadeDistanceStart.html" class="itemlink">mipmapFadeDistanceStart</a></li><li><a href="TextureImporter-mipmapFilter.html" class="itemlink">mipmapFilter</a></li><li><a href="TextureImporter-normalmapFilter.html" class="itemlink">normalmapFilter</a></li><li><a href="TextureImporter-npotScale.html" class="itemlink">npotScale</a></li><li><a href="TextureImporter-textureFormat.html" class="itemlink">textureFormat</a></li></ul></td></tr></table><br/><a name='2.0.2'></a><h2>Unity 2.0.2</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='FixedJoint.html'>FixedJoint</a></li><li><a href='Ping.html'>Ping</a></li></ul>New Enumerations: <ul class="list"><li><a href='ScaleMode.html'>ScaleMode</a></li></ul>Added to CameraClearFlags: <ul class="list"><li><a href="CameraClearFlags.SolidColor.html" class="itemlink">SolidColor</a></li></ul>Added to Event: <ul class="list"><li><a href="Event.GetTypeForControl.html" class="itemlink">GetTypeForControl</a></li></ul>Added to EventType: <ul class="list"><li><a href="EventType.Ignore.html" class="itemlink">Ignore</a></li><li><a href="EventType.KeyDown.html" class="itemlink">KeyDown</a></li><li><a href="EventType.KeyUp.html" class="itemlink">KeyUp</a></li><li><a href="EventType.Layout.html" class="itemlink">Layout</a></li><li><a href="EventType.MouseDown.html" class="itemlink">MouseDown</a></li><li><a href="EventType.MouseDrag.html" class="itemlink">MouseDrag</a></li><li><a href="EventType.MouseMove.html" class="itemlink">MouseMove</a></li><li><a href="EventType.MouseUp.html" class="itemlink">MouseUp</a></li><li><a href="EventType.Repaint.html" class="itemlink">Repaint</a></li><li><a href="EventType.ScrollWheel.html" class="itemlink">ScrollWheel</a></li><li><a href="EventType.Used.html" class="itemlink">Used</a></li></ul>Added to GUI: <ul class="list"><li><a href="GUI.DrawTexture.html" class="itemlink">DrawTexture</a></li></ul>Added to GUIUtility: <ul class="list"><li><a href="GUIUtility.GetControlID.html" class="itemlink">GetControlID</a></li><li><a href="GUIUtility.QueryStateObject.html" class="itemlink">QueryStateObject</a></li><li><a href="GUIUtility.RotateAroundPivot.html" class="itemlink">RotateAroundPivot</a></li><li><a href="GUIUtility.ScaleAroundPivot.html" class="itemlink">ScaleAroundPivot</a></li></ul>Added to MonoBehaviour: <ul class="list"><li><a href="MonoBehaviour.OnConnectedToServer.html" class="itemlink">OnConnectedToServer</a></li><li><a href="MonoBehaviour.OnControllerColliderHit.html" class="itemlink">OnControllerColliderHit</a></li><li><a href="MonoBehaviour.OnDisconnectedFromServer.html" class="itemlink">OnDisconnectedFromServer</a></li><li><a href="MonoBehaviour.OnFailedToConnect.html" class="itemlink">OnFailedToConnect</a></li><li><a href="MonoBehaviour.OnFailedToConnectToMasterServer.html" class="itemlink">OnFailedToConnectToMasterServer</a></li><li><a href="MonoBehaviour.OnNetworkInstantiate.html" class="itemlink">OnNetworkInstantiate</a></li><li><a href="MonoBehaviour.OnPlayerConnected.html" class="itemlink">OnPlayerConnected</a></li><li><a href="MonoBehaviour.OnPlayerDisconnected.html" class="itemlink">OnPlayerDisconnected</a></li><li><a href="MonoBehaviour.OnSerializeNetworkView.html" class="itemlink">OnSerializeNetworkView</a></li><li><a href="MonoBehaviour.OnServerInitialized.html" class="itemlink">OnServerInitialized</a></li><li><a href="MonoBehaviour.StartCoroutine.html" class="itemlink">StartCoroutine</a></li></ul>Added to Network: <ul class="list"><li><a href="Network-player.html" class="itemlink">player</a></li></ul>Added to NetworkPlayer: <ul class="list"><li><a href="NetworkPlayer-externalIP.html" class="itemlink">externalIP</a></li><li><a href="NetworkPlayer-externalPort.html" class="itemlink">externalPort</a></li><li><a href="NetworkPlayer-operator_ne.html" class="itemlink">operator !=</a></li><li><a href="NetworkPlayer-operator_eq.html" class="itemlink">operator ==</a></li></ul>Added to NetworkViewID: <ul class="list"><li><a href="NetworkViewID-operator_ne.html" class="itemlink">operator !=</a></li><li><a href="NetworkViewID-operator_eq.html" class="itemlink">operator ==</a></li></ul>Added to Physics: <ul class="list"><li><a href="Physics-bounceThreshold.html" class="itemlink">bounceThreshold</a></li></ul>Added to WWW: <ul class="list"><li><a href="WWW-uploadProgress.html" class="itemlink">uploadProgress</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.SetDirty.html" class="itemlink">SetDirty</a></li></ul></td></tr></table><br/><a name='2.0.0'></a><h2>Unity 2.0.0</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='BitStream.html'>BitStream</a></li><li><a href='ConfigurableJoint.html'>ConfigurableJoint</a></li><li><a href='Cubemap.html'>Cubemap</a></li><li><a href='Event.html'>Event</a></li><li><a href='ExecuteInEditMode.html'>ExecuteInEditMode</a></li><li><a href='GUI.html'>GUI</a></li><li><a href='GUIContent.html'>GUIContent</a></li><li><a href='GUILayout.html'>GUILayout</a></li><li><a href='GUILayoutOption.html'>GUILayoutOption</a></li><li><a href='GUILayoutUtility.html'>GUILayoutUtility</a></li><li><a href='GUISettings.html'>GUISettings</a></li><li><a href='GUISkin.html'>GUISkin</a></li><li><a href='GUIStyle.html'>GUIStyle</a></li><li><a href='GUIStyleState.html'>GUIStyleState</a></li><li><a href='GUIUtility.html'>GUIUtility</a></li><li><a href='GeometryUtility.html'>GeometryUtility</a></li><li><a href='HideInInspector.html'>HideInInspector</a></li><li><a href='HostData.html'>HostData</a></li><li><a href='MasterServer.html'>MasterServer</a></li><li><a href='MovieTexture.html'>MovieTexture</a></li><li><a href='Network.html'>Network</a></li><li><a href='NetworkView.html'>NetworkView</a></li><li><a href='NonSerialized.html'>NonSerialized</a></li><li><a href='RPC.html'>RPC</a></li><li><a href='RectOffset.html'>RectOffset</a></li><li><a href='SkinnedMeshRenderer.html'>SkinnedMeshRenderer</a></li><li><a href='SystemInfo.html'>SystemInfo</a></li><li><a href='Terrain.html'>Terrain</a></li><li><a href='TerrainCollider.html'>TerrainCollider</a></li><li><a href='TerrainData.html'>TerrainData</a></li><li><a href='TextAsset.html'>TextAsset</a></li><li><a href='WWWForm.html'>WWWForm</a></li><li><a href='WaitForEndOfFrame.html'>WaitForEndOfFrame</a></li></ul>New Enumerations: <ul class="list"><li><a href='ConfigurableJointMotion.html'>ConfigurableJointMotion</a></li><li><a href='ConnectionTesterStatus.html'>ConnectionTesterStatus</a></li><li><a href='CubemapFace.html'>CubemapFace</a></li><li><a href='EventType.html'>EventType</a></li><li><a href='FocusType.html'>FocusType</a></li><li><a href='HideFlags.html'>HideFlags</a></li><li><a href='ImagePosition.html'>ImagePosition</a></li><li><a href='JointDriveMode.html'>JointDriveMode</a></li><li><a href='JointProjectionMode.html'>JointProjectionMode</a></li><li><a href='KeyCode.html'>KeyCode</a></li><li><a href='LightShadows.html'>LightShadows</a></li><li><a href='NetworkConnectionError.html'>NetworkConnectionError</a></li><li><a href='NetworkDisconnection.html'>NetworkDisconnection</a></li><li><a href='NetworkPeerType.html'>NetworkPeerType</a></li><li><a href='NetworkStateSynchronization.html'>NetworkStateSynchronization</a></li><li><a href='RPCMode.html'>RPCMode</a></li><li><a href='RotationDriveMode.html'>RotationDriveMode</a></li><li><a href='SkinQuality.html'>SkinQuality</a></li><li><a href='TextClipping.html'>TextClipping</a></li></ul>New Structures: <ul class="list"><li><a href='JointDrive.html'>JointDrive</a></li><li><a href='NetworkMessageInfo.html'>NetworkMessageInfo</a></li><li><a href='NetworkPlayer.html'>NetworkPlayer</a></li><li><a href='NetworkViewID.html'>NetworkViewID</a></li><li><a href='Plane.html'>Plane</a></li></ul>Added to Animation: <ul class="list"><li><a href="Animation.GetClipCount.html" class="itemlink">GetClipCount</a></li><li><a href="Animation.RemoveClip.html" class="itemlink">RemoveClip</a></li><li><a href="Animation-animatePhysics.html" class="itemlink">animatePhysics</a></li></ul>Added to AnimationClip: <ul class="list"><li><a href="AnimationClip.AnimationClip.html" class="itemlink">AnimationClip</a></li></ul>Added to Application: <ul class="list"><li><a href="Application.CanStreamedLevelBeLoaded.html" class="itemlink">CanStreamedLevelBeLoaded</a></li><li><a href="Application.GetStreamProgressForLevel.html" class="itemlink">GetStreamProgressForLevel</a></li><li><a href="Application-streamedBytes.html" class="itemlink">streamedBytes</a></li><li><a href="Application-unityVersion.html" class="itemlink">unityVersion</a></li></ul>Added to AudioClip: <ul class="list"><li><a href="AudioClip-isReadyToPlay.html" class="itemlink">isReadyToPlay</a></li></ul>Added to AudioSource: <ul class="list"><li><a href="AudioSource-playOnAwake.html" class="itemlink">playOnAwake</a></li></ul>Added to Bounds: <ul class="list"><li><a href="Bounds.Encapsulate.html" class="itemlink">Encapsulate</a></li><li><a href="Bounds.Expand.html" class="itemlink">Expand</a></li><li><a href="Bounds.IntersectRay.html" class="itemlink">IntersectRay</a></li><li><a href="Bounds.SqrDistance.html" class="itemlink">SqrDistance</a></li><li><a href="Bounds.ToString.html" class="itemlink">ToString</a></li></ul>Added to Camera: <ul class="list"><li><a href="Camera.OnWillRenderObject.html" class="itemlink">OnWillRenderObject</a></li><li><a href="Camera.Render.html" class="itemlink">Render</a></li><li><a href="Camera.RenderToCubemap.html" class="itemlink">RenderToCubemap</a></li><li><a href="Camera.ResetAspect.html" class="itemlink">ResetAspect</a></li><li><a href="Camera-orthographic.html" class="itemlink">orthographic</a></li></ul>Added to CharacterController: <ul class="list"><li><a href="CharacterController-detectCollisions.html" class="itemlink">detectCollisions</a></li><li><a href="CharacterController-slopeLimit.html" class="itemlink">slopeLimit</a></li><li><a href="CharacterController-stepOffset.html" class="itemlink">stepOffset</a></li></ul>Added to Collider: <ul class="list"><li><a href="Collider.Raycast.html" class="itemlink">Raycast</a></li></ul>Added to Color: <ul class="list"><li><a href="Color.Index_operator.html" class="itemlink">this [int index</a>]</li></ul>Added to Component: <ul class="list"><li><a href="Component.GetComponentsInChildren.html" class="itemlink">GetComponentsInChildren</a></li><li><a href="Component-networkView.html" class="itemlink">networkView</a></li></ul>Added to Debug: <ul class="list"><li><a href="Debug.LogError.html" class="itemlink">LogError</a></li><li><a href="Debug.LogWarning.html" class="itemlink">LogWarning</a></li></ul>Added to Font: <ul class="list"><li><a href="Font.HasCharacter.html" class="itemlink">HasCharacter</a></li></ul>Added to GL: <ul class="list"><li><a href="GL.Clear.html" class="itemlink">Clear</a></li><li><a href="GL.LoadPixelMatrix.html" class="itemlink">LoadPixelMatrix</a></li><li><a href="GL.MultiTexCoord.html" class="itemlink">MultiTexCoord</a></li><li><a href="GL.MultiTexCoord2.html" class="itemlink">MultiTexCoord2</a></li><li><a href="GL.MultiTexCoord3.html" class="itemlink">MultiTexCoord3</a></li><li><a href="GL.Viewport.html" class="itemlink">Viewport</a></li></ul>Added to GameObject: <ul class="list"><li><a href="GameObject.GetComponentsInChildren.html" class="itemlink">GetComponentsInChildren</a></li><li><a href="GameObject-networkView.html" class="itemlink">networkView</a></li></ul>Added to Gizmos: <ul class="list"><li><a href="Gizmos.DrawGUITexture.html" class="itemlink">DrawGUITexture</a></li><li><a href="Gizmos.DrawRay.html" class="itemlink">DrawRay</a></li><li><a href="Gizmos-matrix.html" class="itemlink">matrix</a></li></ul>Added to Graphics: <ul class="list"><li><a href="Graphics.DrawTexture.html" class="itemlink">DrawTexture</a></li></ul>Added to Joint: <ul class="list"><li><a href="Joint.OnJointBreak.html" class="itemlink">OnJointBreak</a></li></ul>Added to LayerMask: <ul class="list"><li><a href="LayerMask.LayerToName.html" class="itemlink">LayerToName</a></li><li><a href="LayerMask.NameToLayer.html" class="itemlink">NameToLayer</a></li></ul>Added to Light: <ul class="list"><li><a href="Light-intensity.html" class="itemlink">intensity</a></li><li><a href="Light-shadows.html" class="itemlink">shadows</a></li></ul>Added to LineRenderer: <ul class="list"><li><a href="LineRenderer-useWorldSpace.html" class="itemlink">useWorldSpace</a></li></ul>Added to Material: <ul class="list"><li><a href="Material.CopyPropertiesFromMaterial.html" class="itemlink">CopyPropertiesFromMaterial</a></li><li><a href="Material.HasProperty.html" class="itemlink">HasProperty</a></li><li><a href="Material.Material.html" class="itemlink">Material</a></li></ul>Added to Mathf: <ul class="list"><li><a href="Mathf.Abs.html" class="itemlink">Abs</a></li><li><a href="Mathf.CeilToInt.html" class="itemlink">CeilToInt</a></li><li><a href="Mathf.ClosestPowerOfTwo.html" class="itemlink">ClosestPowerOfTwo</a></li><li><a href="Mathf.FloorToInt.html" class="itemlink">FloorToInt</a></li><li><a href="Mathf.Max.html" class="itemlink">Max</a></li><li><a href="Mathf.Min.html" class="itemlink">Min</a></li><li><a href="Mathf.RoundToInt.html" class="itemlink">RoundToInt</a></li><li><a href="Mathf.SmoothStep.html" class="itemlink">SmoothStep</a></li></ul>Added to Matrix4x4: <ul class="list"><li><a href="Matrix4x4.Perspective.html" class="itemlink">Perspective</a></li><li><a href="Matrix4x4-isIdentity.html" class="itemlink">isIdentity</a></li></ul>Added to MeshCollider: <ul class="list"><li><a href="MeshCollider-convex.html" class="itemlink">convex</a></li><li><a href="MeshCollider-smoothSphereCollisions.html" class="itemlink">smoothSphereCollisions</a></li></ul>Added to MonoBehaviour: <ul class="list"><li><a href="MonoBehaviour.OnGUI.html" class="itemlink">OnGUI</a></li><li><a href="MonoBehaviour.OnJointBreak.html" class="itemlink">OnJointBreak</a></li><li><a href="MonoBehaviour.OnWillRenderObject.html" class="itemlink">OnWillRenderObject</a></li><li><a href="MonoBehaviour.StartCoroutine.html" class="itemlink">StartCoroutine</a></li></ul>Added to Object: <ul class="list"><li><a href="Object-hideFlags.html" class="itemlink">hideFlags</a></li></ul>Added to Physics: <ul class="list"><li><a href="Physics.CheckSphere.html" class="itemlink">CheckSphere</a></li><li><a href="Physics.RaycastAll.html" class="itemlink">RaycastAll</a></li></ul>Added to Projector: <ul class="list"><li><a href="Projector-orthographic.html" class="itemlink">orthographic</a></li><li><a href="Projector-orthographicSize.html" class="itemlink">orthographicSize</a></li></ul>Added to QualitySettings: <ul class="list"><li><a href="QualitySettings-pixelLightCount.html" class="itemlink">pixelLightCount</a></li><li><a href="QualitySettings-shadowCascades.html" class="itemlink">shadowCascades</a></li><li><a href="QualitySettings-shadowDistance.html" class="itemlink">shadowDistance</a></li><li><a href="QualitySettings-softVegetation.html" class="itemlink">softVegetation</a></li></ul>Added to Quaternion: <ul class="list"><li><a href="Quaternion-operator_ne.html" class="itemlink">operator !=</a></li><li><a href="Quaternion-operator_eq.html" class="itemlink">operator ==</a></li></ul>Added to Random: <ul class="list"><li><a href="Random-insideUnitCircle.html" class="itemlink">insideUnitCircle</a></li><li><a href="Random-seed.html" class="itemlink">seed</a></li></ul>Added to Ray: <ul class="list"><li><a href="Ray.ToString.html" class="itemlink">ToString</a></li></ul>Added to RaycastHit: <ul class="list"><li><a href="RaycastHit-barycentricCoordinate.html" class="itemlink">barycentricCoordinate</a></li></ul>Added to Rect: <ul class="list"><li><a href="Rect.Contains.html" class="itemlink">Contains</a></li><li><a href="Rect.MinMaxRect.html" class="itemlink">MinMaxRect</a></li><li><a href="Rect.Rect.html" class="itemlink">Rect</a></li><li><a href="Rect-operator_ne.html" class="itemlink">operator !=</a></li><li><a href="Rect-operator_eq.html" class="itemlink">operator ==</a></li><li><a href="Rect-x.html" class="itemlink">x</a></li><li><a href="Rect-y.html" class="itemlink">y</a></li></ul>Added to RenderSettings: <ul class="list"><li><a href="RenderSettings-skybox.html" class="itemlink">skybox</a></li></ul>Added to RenderTexture: <ul class="list"><li><a href="RenderTexture.Release.html" class="itemlink">Release</a></li><li><a href="RenderTexture-isCubemap.html" class="itemlink">isCubemap</a></li><li><a href="RenderTexture-useMipMap.html" class="itemlink">useMipMap</a></li></ul>Added to Renderer: <ul class="list"><li><a href="Renderer-castShadows.html" class="itemlink">castShadows</a></li><li><a href="Renderer-materials.html" class="itemlink">materials</a></li><li><a href="Renderer-receiveShadows.html" class="itemlink">receiveShadows</a></li></ul>Added to Rigidbody: <ul class="list"><li><a href="Rigidbody.MovePosition.html" class="itemlink">MovePosition</a></li><li><a href="Rigidbody.MoveRotation.html" class="itemlink">MoveRotation</a></li><li><a href="Rigidbody-useConeFriction.html" class="itemlink">useConeFriction</a></li></ul>Added to ScriptableObject: <ul class="list"><li><a href="ScriptableObject.OnDisable.html" class="itemlink">OnDisable</a></li><li><a href="ScriptableObject.OnEnable.html" class="itemlink">OnEnable</a></li></ul>Added to Shader: <ul class="list"><li><a href="Shader.SetGlobalMatrix.html" class="itemlink">SetGlobalMatrix</a></li><li><a href="Shader.SetGlobalVector.html" class="itemlink">SetGlobalVector</a></li></ul>Added to Texture: <ul class="list"><li><a href="Texture-mipMapBias.html" class="itemlink">mipMapBias</a></li></ul>Added to Texture2D: <ul class="list"><li><a href="Texture2D.EncodeToPNG.html" class="itemlink">EncodeToPNG</a></li><li><a href="Texture2D.GetPixelBilinear.html" class="itemlink">GetPixelBilinear</a></li><li><a href="Texture2D.PackTextures.html" class="itemlink">PackTextures</a></li><li><a href="Texture2D.ReadPixels.html" class="itemlink">ReadPixels</a></li><li><a href="Texture2D.Resize.html" class="itemlink">Resize</a></li><li><a href="Texture2D-format.html" class="itemlink">format</a></li></ul>Added to TextureFormat: <ul class="list"><li><a href="TextureFormat.DXT1.html" class="itemlink">DXT1</a></li><li><a href="TextureFormat.DXT5.html" class="itemlink">DXT5</a></li></ul>Added to Vector2: <ul class="list"><li><a href="Vector2.Distance.html" class="itemlink">Distance</a></li><li><a href="Vector2.Dot.html" class="itemlink">Dot</a></li><li><a href="Vector2-magnitude.html" class="itemlink">magnitude</a></li><li><a href="Vector2-operator_ne.html" class="itemlink">operator !=</a></li><li><a href="Vector2-operator_eq.html" class="itemlink">operator ==</a></li><li><a href="Vector2-right.html" class="itemlink">right</a></li><li><a href="Vector2-sqrMagnitude.html" class="itemlink">sqrMagnitude</a></li><li><a href="Vector2-up.html" class="itemlink">up</a></li><li><a href="Vector2-zero.html" class="itemlink">zero</a></li></ul>Added to WWW: <ul class="list"><li><a href="WWW.WWW.html" class="itemlink">WWW</a></li><li><a href="WWW-audioClip.html" class="itemlink">audioClip</a></li><li><a href="WWW-movie.html" class="itemlink">movie</a></li><li><a href="WWW-url.html" class="itemlink">url</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='TextureImporter.html'>TextureImporter</a></li></ul>Added to AssetImporter: <ul class="list"><li><a href="AssetImporter-assetPath.html" class="itemlink">assetPath</a></li></ul>Added to EditorUtility: <ul class="list"><li><a href="EditorUtility.ClearProgressBar.html" class="itemlink">ClearProgressBar</a></li><li><a href="EditorUtility.CloneComponent.html" class="itemlink">CloneComponent</a></li><li><a href="EditorUtility.DisplayProgressBar.html" class="itemlink">DisplayProgressBar</a></li><li><a href="EditorUtility.FormatBytes.html" class="itemlink">FormatBytes</a></li><li><a href="EditorUtility.OpenFilePanel.html" class="itemlink">OpenFilePanel</a></li><li><a href="EditorUtility.SaveFilePanel.html" class="itemlink">SaveFilePanel</a></li></ul>Added to MenuCommand: <ul class="list"><li><a href="MenuCommand.MenuCommand.html" class="itemlink">MenuCommand</a></li><li><a href="MenuCommand-userData.html" class="itemlink">userData</a></li></ul>Added to SelectionMode: <ul class="list"><li><a href="SelectionMode.Assets.html" class="itemlink">Assets</a></li><li><a href="SelectionMode.DeepAssets.html" class="itemlink">DeepAssets</a></li></ul></td></tr></table><br/><a name='1.x.x'></a><h2>Unity 1.x.x</h2>
-
 <table border=0 width=90%><tr><td width=50%><h3>Runtime API</h3>
-
 New Classes: <ul class="list"><li><a href='AddComponentMenu.html'>AddComponentMenu</a></li><li><a href='Animation.html'>Animation</a></li><li><a href='AnimationClip.html'>AnimationClip</a></li><li><a href='AnimationState.html'>AnimationState</a></li><li><a href='Application.html'>Application</a></li><li><a href='Array.html'>Array</a></li><li><a href='AudioClip.html'>AudioClip</a></li><li><a href='AudioListener.html'>AudioListener</a></li><li><a href='AudioSource.html'>AudioSource</a></li><li><a href='Behaviour.html'>Behaviour</a></li><li><a href='BoxCollider.html'>BoxCollider</a></li><li><a href='Camera.html'>Camera</a></li><li><a href='CapsuleCollider.html'>CapsuleCollider</a></li><li><a href='CharacterController.html'>CharacterController</a></li><li><a href='CharacterJoint.html'>CharacterJoint</a></li><li><a href='Collider.html'>Collider</a></li><li><a href='Collision.html'>Collision</a></li><li><a href='Component.html'>Component</a></li><li><a href='ConstantForce.html'>ConstantForce</a></li><li><a href='ContextMenu.html'>ContextMenu</a></li><li><a href='ControllerColliderHit.html'>ControllerColliderHit</a></li><li><a href='Coroutine.html'>Coroutine</a></li><li><a href='Debug.html'>Debug</a></li><li><a href='Flare.html'>Flare</a></li><li><a href='Font.html'>Font</a></li><li><a href='GL.html'>GL</a></li><li><a href='GUIElement.html'>GUIElement</a></li><li><a href='GUILayer.html'>GUILayer</a></li><li><a href='GUIText.html'>GUIText</a></li><li><a href='GUITexture.html'>GUITexture</a></li><li><a href='GameObject.html'>GameObject</a></li><li><a href='Gizmos.html'>Gizmos</a></li><li><a href='Graphics.html'>Graphics</a></li><li><a href='Hashtable.html'>Hashtable</a></li><li><a href='HingeJoint.html'>HingeJoint</a></li><li><a href='Input.html'>Input</a></li><li><a href='Joint.html'>Joint</a></li><li><a href='LensFlare.html'>LensFlare</a></li><li><a href='Light.html'>Light</a></li><li><a href='LineRenderer.html'>LineRenderer</a></li><li><a href='Material.html'>Material</a></li><li><a href='Mesh.html'>Mesh</a></li><li><a href='MeshCollider.html'>MeshCollider</a></li><li><a href='MeshFilter.html'>MeshFilter</a></li><li><a href='MeshRenderer.html'>MeshRenderer</a></li><li><a href='MonoBehaviour.html'>MonoBehaviour</a></li><li><a href='Object.html'>Object</a></li><li><a href='ParticleAnimator.html'>ParticleAnimator</a></li><li><a href='ParticleEmitter.html'>ParticleEmitter</a></li><li><a href='ParticleRenderer.html'>ParticleRenderer</a></li><li><a href='PhysicMaterial.html'>PhysicMaterial</a></li><li><a href='Physics.html'>Physics</a></li><li><a href='PlayerPrefs.html'>PlayerPrefs</a></li><li><a href='Projector.html'>Projector</a></li><li><a href='QualitySettings.html'>QualitySettings</a></li><li><a href='Random.html'>Random</a></li><li><a href='RenderSettings.html'>RenderSettings</a></li><li><a href='RenderTexture.html'>RenderTexture</a></li><li><a href='Renderer.html'>Renderer</a></li><li><a href='RequireComponent.html'>RequireComponent</a></li><li><a href='Resources.html'>Resources</a></li><li><a href='Rigidbody.html'>Rigidbody</a></li><li><a href='Screen.html'>Screen</a></li><li><a href='ScriptableObject.html'>ScriptableObject</a></li><li><a href='Serializable.html'>Serializable</a></li><li><a href='Shader.html'>Shader</a></li><li><a href='Skybox.html'>Skybox</a></li><li><a href='SphereCollider.html'>SphereCollider</a></li><li><a href='SpringJoint.html'>SpringJoint</a></li><li><a href='String.html'>String</a></li><li><a href='TextMesh.html'>TextMesh</a></li><li><a href='Texture.html'>Texture</a></li><li><a href='Texture2D.html'>Texture2D</a></li><li><a href='Time.html'>Time</a></li><li><a href='TrailRenderer.html'>TrailRenderer</a></li><li><a href='Transform.html'>Transform</a></li><li><a href='WWW.html'>WWW</a></li><li><a href='WaitForFixedUpdate.html'>WaitForFixedUpdate</a></li><li><a href='WaitForSeconds.html'>WaitForSeconds</a></li><li><a href='WheelCollider.html'>WheelCollider</a></li><li><a href='YieldInstruction.html'>YieldInstruction</a></li></ul>New Enumerations: <ul class="list"><li><a href='AnimationBlendMode.html'>AnimationBlendMode</a></li><li><a href='AudioVelocityUpdateMode.html'>AudioVelocityUpdateMode</a></li><li><a href='CameraClearFlags.html'>CameraClearFlags</a></li><li><a href='CollisionFlags.html'>CollisionFlags</a></li><li><a href='FilterMode.html'>FilterMode</a></li><li><a href='ForceMode.html'>ForceMode</a></li><li><a href='LightRenderMode.html'>LightRenderMode</a></li><li><a href='LightType.html'>LightType</a></li><li><a href='ParticleRenderMode.html'>ParticleRenderMode</a></li><li><a href='PhysicMaterialCombine.html'>PhysicMaterialCombine</a></li><li><a href='PlayMode.html'>PlayMode</a></li><li><a href='PrimitiveType.html'>PrimitiveType</a></li><li><a href='QualityLevel.html'>QualityLevel</a></li><li><a href='QueueMode.html'>QueueMode</a></li><li><a href='RigidbodyInterpolation.html'>RigidbodyInterpolation</a></li><li><a href='RuntimePlatform.html'>RuntimePlatform</a></li><li><a href='SendMessageOptions.html'>SendMessageOptions</a></li><li><a href='Space.html'>Space</a></li><li><a href='TextAlignment.html'>TextAlignment</a></li><li><a href='TextAnchor.html'>TextAnchor</a></li><li><a href='TextureFormat.html'>TextureFormat</a></li><li><a href='TextureWrapMode.html'>TextureWrapMode</a></li><li><a href='WrapMode.html'>WrapMode</a></li></ul>New Structures: <ul class="list"><li><a href='Bounds.html'>Bounds</a></li><li><a href='Color.html'>Color</a></li><li><a href='ContactPoint.html'>ContactPoint</a></li><li><a href='JointLimits.html'>JointLimits</a></li><li><a href='JointMotor.html'>JointMotor</a></li><li><a href='JointSpring.html'>JointSpring</a></li><li><a href='LayerMask.html'>LayerMask</a></li><li><a href='Mathf.html'>Mathf</a></li><li><a href='Matrix4x4.html'>Matrix4x4</a></li><li><a href='Particle.html'>Particle</a></li><li><a href='Quaternion.html'>Quaternion</a></li><li><a href='Ray.html'>Ray</a></li><li><a href='RaycastHit.html'>RaycastHit</a></li><li><a href='Rect.html'>Rect</a></li><li><a href='Resolution.html'>Resolution</a></li><li><a href='SoftJointLimit.html'>SoftJointLimit</a></li><li><a href='Vector2.html'>Vector2</a></li><li><a href='Vector3.html'>Vector3</a></li><li><a href='Vector4.html'>Vector4</a></li><li><a href='WheelFrictionCurve.html'>WheelFrictionCurve</a></li><li><a href='WheelHit.html'>WheelHit</a></li></ul></td><td width=50%><h3>Editor API</h3>
-
 New Classes: <ul class="list"><li><a href='DrawGizmo.html'>DrawGizmo</a></li><li><a href='EditorUtility.html'>EditorUtility</a></li><li><a href='MenuCommand.html'>MenuCommand</a></li><li><a href='MenuItem.html'>MenuItem</a></li><li><a href='ScriptableWizard.html'>ScriptableWizard</a></li><li><a href='Selection.html'>Selection</a></li></ul>New Enumerations: <ul class="list"><li><a href='GizmoType.html'>GizmoType</a></li><li><a href='SelectionMode.html'>SelectionMode</a></li></ul></td></tr></table><br/>
-
 <!-- #TemplateEndEditable -->
-
 	
-
 	</div><!-- #TemplateEndEditable -->
-
     <script type="text/javascript">
 
-
-
     //prevent an error on older versions of IE(x) < IE7 who did not have a javascript console.
-
     if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
 
 
-
-
-
     var $j = jQuery.noConflict();
-
     $j(document).ready(function($){
 
-
-
     	var languages = [];
-
     	function getCookie(cookieName){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try {
-
     			return $.cookie(cookieName);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
-
 
     	function setCookie(cookieName, cookieValue){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try{
-
     			return $.cookie(cookieName, cookieValue);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
     
-
     /*
-
     decectLangauges looks at all of the div(s) containing a class of "code"
-
     it then creates a list of languages in that list to generate the drop down.
-
     to ad a language, ad an example with that language defined 
-
     in the attribute "code_lang_name" for that div
-
     */
-
     	function detectLanguages(){
-
     		languages = [];
-
     		$("div.code").each(
-
     			function(){
-
     				var isThere = false;
-
     //set the value of the attribute
-
     				var isNewLang = $(this).attr("code_lang_name");
-
     				for ( i in languages ){
-
     					if( isNewLang == languages[i] ){
-
     						isThere = true;
-
     					}
-
     				}				
-
     				if( !isThere ){
-
     //adds a new language to the stack/ array
-
     				   languages.push(isNewLang);
-
     				}
-
     			});
-
     		console.log("languages detected", languages);
-
     	}
-
     
-
     //execute the function detectLanguages just after we defined it, this should only happen once and on page load after the document object model is ready
-
     	detectLanguages();
 
-
-
     	function buildListCSelect(){
-
     //finds the doc element with an id of selectedLangauge, base on css3 rules, then removes all children
-
     		$(".cSelect ul").empty();
-
     		$(".cSelect .cSelect-Selected").text("");
-
     		var langCookie = getCookie("codeLanguage");		
-
     		for( i in languages ){
-
     //inserts a new child with the included html
-
     			$(".cSelect ul").append("<li>" + languages[i] + "</li>");
-
     		}
-
     
-
     //if the cookie is there, set that item to selected.
-
     		for( i in languages ){
-
     			if(langCookie !== null && languages[i] == langCookie){
-
     				$(".cSelect .cSelect-Selected").text(languages[i]);
-
     			}
-
     		}
-
-
 
     		if( $(".cSelect .cSelect-Selected").text().length == 0){
-
     			var first = $(".cSelect li:first").text();
-
     			$(".cSelect .cSelect-Selected").text(first);
-
     		}
 
-
-
     	}
-
     	buildListCSelect();
-
     
-
     	function showCSelectedLanguage(){
-
     		var selected = $(".cSelect .cSelect-Selected:first").text();
-
     		var langAvail = false;
-
     		var langCookie = getCookie("codeLanguage");
-
     		for( i in languages ){
-
     			if(langCookie == languages[i]){
-
     				langAvail = true;
-
     			}
-
     		}
-
     		if(langAvail) {
-
     			selected = langCookie;
-
     		} else {
-
     			console.log("the language stored in the cookie is not availible", langCookie);
-
     		}
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     	}
-
     	showCSelectedLanguage(); //set the default.
-
            $(".cSelect").addClass("roundBottom");
-
     	$(".cSelect ul").hide();
-
     /* 	$(".cSelect").hover(
-
      		function(){
-
      			$(this).find("ul").show();
-
      		},
-
      		function(){
-
      			$(this).find("ul").hide();
-
      		}
-
      	);
-
 */
-
     	$(".cSelect").hover(
-
     		function(){
-
     			$(document).unbind("click.cSelect");
-
     		},
-
     		function(){
-
     			$(document).bind("click.cSelect", function(event){
-
                                    $(".cSelect").addClass("roundBottom");
-
     				$(".cSelect ul").hide();
-
     				$(this).unbind(event);
-
     			});
-
     		}
-
     	);
-
-
-
 
 
     	$(".cSelect li").hover(
-
     		function(){
-
     			$(this).addClass("cSelect-highlight");
-
     		},
-
     		function(){
-
     			$(this).removeClass("cSelect-highlight");
-
     		}
-
     	);
 
-
-
     	var suppress = false;
-
     	function enable(){
-
     		suppress = false;
-
     	}
 
 
-
-
-
     	$(".cSelect li").click(function(){
-
     		var value = $(this).text();
-
     		console.log( "new selection ", value );
-
     		$(this).parents(".cSelect").find(".cSelect-Selected").text(value);
-
     		suppress = true;
-
                    $(".cSelect").addClass("roundBottom");
-
     		$(".cSelect ul").hide();
-
     		$(this).parents(".cSelect").trigger("change");
-
     		setTimeout(enable, 300 );
-
     	});
-
-
-
 
 
            $(".cSelect-ArrowDown")
-
      		.add(".cSelect-Selected")
-
      		.add(".cSelect").click(
-
      		function(){
-
      			var visible = $(this).parents(".cSelect").find("ul").css("display") == "block" ? true : false;
-
      			if( !visible ){
-
      				$(this).parents(".cSelect").removeClass("roundBottom");
-
      				$(this).parents(".cSelect").find("ul").show();
-
      			}else{
-
      				$(this).parents(".cSelect").addClass("roundBottom");
-
      				$(".cSelect ul").hide();
-
      			}
-
      		});
 
 
-
-
-
     	$(".cSelect").click(function(){if(!suppress){}});
-
  
-
     	$(".cSelect").change(function(){
-
     		console.log("selected",$(this).find(".cSelect-Selected").text());
-
     		selected = $(this).find(".cSelect-Selected").text();
-
     		$(".cSelect").find(".cSelect-Selected").text(selected);
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     		setCookie("codeLanguage", selected);
-
     	});
-
     });
-
     </script>
-
 </body>
-
 </html><!-- #EndTemplate -->
-
-
 

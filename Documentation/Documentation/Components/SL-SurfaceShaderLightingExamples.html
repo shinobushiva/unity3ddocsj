@@ -1,3362 +1,424 @@
 <!-- #BeginTemplate "/Templates/manual-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-
-
-
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-
-
-
-
-
-
 <head>
-
-
-
-
-
-
-
 <meta charset="utf-8">
-
-
-
-
-
-
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
-
-
-
-
-
-
 		<title>Unity - Surface Shader Lighting Examples</title>
-
-
-
-
-
-
-
 	<!-- #TemplateEndEditable -->
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
-
 <link rel="StyleSheet"  href="../Images/docs.css" type="text/css" />
-
-
-
-
-
-
-
 <body onLoad="DocLoaded();">
-
-
-
-
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
-
-
-
-
-
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
-
-
-
-
-
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
-
-
-
-
-
-
 	<td class="titlemid">
-
-
-
-
-
-
-
 		<table><tr>
-
-
-
-
-
-
-
 			<td class="doctitle">Surface Shader Lighting Examples</td>
-
-
-
-
-
-
-
 			<td><table align="right"><tr>
-
-
-
-
-
-
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
-
-
-
-
-
-
 			<td class="Components"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
-
-
-
-
-
-
 			<td class="Components"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
-
-
-
-
-
-
 			<td class="Components"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting &nbsp;&nbsp;</span></a></td>
-
-
-
-
-
-
-
 			<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 			</tr></table></td>
-
-
-
-
-
-
-
 		</tr><tr>
-
-
-
-
-
-
-
 			<td colspan="4">
-
-
-
-
-
-
-
 				<table width="100%" class="docpath"><tr><td >
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="path" -->
-
-
-
-
-
-
-
 					<a href="../Components/index.html">Reference Manual</a> &gt; <a href="../Components/SL-Reference.html">Shader Reference</a> &gt; <a href="../Components/SL-SurfaceShaders.html">Writing Surface Shaders</a> &gt; <a href="../Components/SL-SurfaceShaderLightingExamples.html">Surface Shader Lighting Examples</a>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 				</td>
-
-
-
-
-
-
-
 				</td><td class="switchlink">
-
-
-
-
-
-
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
-
-
-
-
-
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
-
-
-
-
-
-
 					<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 				</td></tr></table>
-
-
-
-
-
-
-
 			</td>
-
-
-
-
-
-
-
 		</tr></table>
-
-
-
-
-
-
-
 	</td>
-
-
-
-
-
-
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
-
-
-
-
-
-
 </tr></table>
-
-
-
-
-
-
-
 <div class="manual">
-
-
-
-
-
-
-
 	<div class="main">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
-
-
-
-<!-- #TemplateEndEditable -->
-
-
-
-
-
-
-
-<!-- #TemplateEndEditable -->
-
-
-
-
-
-
 
 		<!-- #TemplateBeginEditable name="navigation" -->
-
-
-
-
-
-
-
 		<div class="nav">
-
-
-
-
-
-
-
 		<div class="nav-prev">
-
-
-
-
-
-
-
 			<a href='../Components/SL-SurfaceShaderLighting.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Previous</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	
-
-
-
-
-
-
-
 		<div class="nav-next">
-
-
-
-
-
-
-
 			<a href='../Components/SL-ShaderPrograms.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Next</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="title" -->
-
-
-
-
-
-
-
 			<h1>Surface Shader Lighting Examples</h1>
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
-
-
-
-
-
-
-
 		<!-- #TemplateBeginEditable name="body" -->
-
-
-
-
-
-
-
 			
-
-
-
-
-
-
-
 <p>Here are some examples of <a href="../Components/SL-SurfaceShaderLighting.html"><span class='doc-keyword'>custom lighting models</span></a> in <a href="../Components/SL-SurfaceShaders.html">Surface Shaders</a>. General Surface Shader examples are in <a href="../Components/SL-SurfaceShaderExamples.html">this page</a>.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <p class='vspace'>Because Deferred Lighting does not play well with some custom per-material lighting models, in most examples below we make the shaders compile to Forward Rendering only.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h2>Diffuse</h2>
-
-
-
-
-
-
-
 <p>We'll start with a shader that uses built-in Lambert lighting model:
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><pre>  Shader "Example/Diffuse Texture" {
-
-
-
-
-
-
-
     Properties {
-
-
-
-
-
-
-
       _MainTex ("Texture", 2D) = "white" {}
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     SubShader {
-
-
-
-
-
-
-
       Tags { "RenderType" = "Opaque" }
-
-
-
-
-
-
-
       CGPROGRAM
-
-
-
-
-
-
-
       #pragma surface surf Lambert
-
-
-
-
-
-
-
       struct Input {
-
-
-
-
-
-
-
           float2 uv_MainTex;
-
-
-
-
-
-
-
       };
-
-
-
-
-
-
-
       sampler2D _MainTex;
-
-
-
-
-
-
-
       void surf (Input IN, inout SurfaceOutput o) {
-
-
-
-
-
-
-
           o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
-
-
-
-
-
-
-
       }
-
-
-
-
-
-
-
       ENDCG
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     Fallback "Diffuse"
-
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
 </pre><p class='vspace'>Here's how it looks like with a texture and without an actual texture (one directional light is in the scene): <br /><img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-0.jpg' /> <img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-1.jpg' />
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <p class='vspace'>Now, let's do exactly the same, but write out <em>our own lighting model</em> instead of using built-in Lambert one. <a href="../Components/SL-SurfaceShaderLighting.html">Surface Shader Lighting Models</a> are just some functions that we need to write. Here's a simple Lambert one. Note that the "shader part" itself did not change at all (grayed out):
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><pre>  <span  style='color: gray;'>Shader "Example/Diffuse Texture" {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Properties {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    _MainTex ("Texture", 2D) = "white" {}</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  SubShader {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    Tags { "RenderType" = "Opaque" }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    CGPROGRAM</span>
-
-
-
-
-
-
-
       #pragma surface surf <b>SimpleLambert</b>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir, half atten) {
-
-
-
-
-
-
-
           half NdotL = dot (s.Normal, lightDir);
-
-
-
-
-
-
-
           half4 c;
-
-
-
-
-
-
-
           c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten * 2);
-
-
-
-
-
-
-
           c.a = s.Alpha;
-
-
-
-
-
-
-
           return c;
-
-
-
-
-
-
-
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <span  style='color: gray;'>    struct Input {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        float2 uv_MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    };</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    sampler2D _MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    void surf (Input IN, inout SurfaceOutput o) {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    ENDCG</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Fallback "Diffuse"</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>}</span>
-
-
-
-
-
-
-
 </pre><p class='vspace'>So our simple Diffuse lighting model is <code>LightingSimpleLambert</code> function. It computes lighting by doing a dot product between surface normal and light direction, and then applies light attenuation and color.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><h2>Diffuse Wrap</h2>
-
-
-
-
-
-
-
 <p>Here's Wrapped Diffuse - a modification of Diffuse lighting, where illumination "wraps around" the edges of objects. It's useful for faking subsurface scattering effect. Again, the surface shader itself did not change at all, we're just using different lighting function.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><pre>  <span  style='color: gray;'>Shader "Example/Diffuse Wrapped" {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Properties {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    _MainTex ("Texture", 2D) = "white" {}</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  SubShader {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    Tags { "RenderType" = "Opaque" }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    CGPROGRAM</span>
-
-
-
-
-
-
-
       #pragma surface surf <b>WrapLambert</b>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       half4 LightingWrapLambert (SurfaceOutput s, half3 lightDir, half atten) {
-
-
-
-
-
-
-
           half NdotL = dot (s.Normal, lightDir);
-
-
-
-
-
-
-
           half diff = <b>NdotL * 0.5 + 0.5</b>;
-
-
-
-
-
-
-
           half4 c;
-
-
-
-
-
-
-
           c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 2);
-
-
-
-
-
-
-
           c.a = s.Alpha;
-
-
-
-
-
-
-
           return c;
-
-
-
-
-
-
-
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <span  style='color: gray;'>    struct Input {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        float2 uv_MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    };</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    sampler2D _MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    void surf (Input IN, inout SurfaceOutput o) {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    ENDCG</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Fallback "Diffuse"</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>}</span>
-
-
-
-
-
-
-
 </pre><div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-2.jpg' /> <img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-3.jpg' /></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><h2>Toon Ramp</h2>
-
-
-
-
-
-
-
 <p>Here's a "Ramp" lighting model that uses a texture ramp to define how surface responds to angle between light and the normal. This can be used for variety of effects, including Toon lighting.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><pre>  <span  style='color: gray;'>Shader "Example/Toon Ramp" {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Properties {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    _MainTex ("Texture", 2D) = "white" {}</span>
-
-
-
-
-
-
-
       <b>_Ramp ("Shading Ramp", 2D) = "gray" {}</b>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  SubShader {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    Tags { "RenderType" = "Opaque" }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    CGPROGRAM</span>
-
-
-
-
-
-
-
       #pragma surface surf <b>Ramp</b>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       sampler2D _Ramp;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       half4 LightingRamp (SurfaceOutput s, half3 lightDir, half atten) {
-
-
-
-
-
-
-
           half NdotL = dot (s.Normal, lightDir);
-
-
-
-
-
-
-
           half diff = NdotL * 0.5 + 0.5;
-
-
-
-
-
-
-
           <b>half3 ramp = tex2D (_Ramp, float2(diff)).rgb;</b>
-
-
-
-
-
-
-
           half4 c;
-
-
-
-
-
-
-
           c.rgb = s.Albedo * _LightColor0.rgb * ramp * (atten * 2);
-
-
-
-
-
-
-
           c.a = s.Alpha;
-
-
-
-
-
-
-
           return c;
-
-
-
-
-
-
-
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <span  style='color: gray;'>    struct Input {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        float2 uv_MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    };</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    sampler2D _MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    void surf (Input IN, inout SurfaceOutput o) {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    ENDCG</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Fallback "Diffuse"</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>}</span>
-
-
-
-
-
-
-
 </pre><div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-4.jpg' /> <img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-5.jpg' /></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-6.jpg' /></div>
-
-
-
-
-
-
-
 <div class='vspace'></div><h2>Simple Specular</h2>
-
-
-
-
-
-
-
 <p>Here's a simple specular lighting model. It's quite simple to what built-in BlinnPhong actually does; we just put it here to illustrate how it's done.
-
-
-
-
-
-
-
 </p>
-
-
-
-
-
-
-
 <div class='vspace'></div><pre>  <span  style='color: gray;'>Shader "Example/Simple Specular" {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Properties {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    _MainTex ("Texture", 2D) = "white" {}</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  SubShader {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    Tags { "RenderType" = "Opaque" }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    CGPROGRAM</span>
-
-
-
-
-
-
-
       #pragma surface surf SimpleSpecular
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       half4 LightingSimpleSpecular (SurfaceOutput s, half3 lightDir, half3 viewDir, half atten) {
-
-
-
-
-
-
-
           half3 h = normalize (lightDir + viewDir);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           half diff = max (0, dot (s.Normal, lightDir));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           float nh = max (0, dot (s.Normal, h));
-
-
-
-
-
-
-
           float spec = pow (nh, 48.0);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           half4 c;
-
-
-
-
-
-
-
           c.rgb = (s.Albedo * _LightColor0.rgb * diff + _LightColor0.rgb * spec) * (atten * 2);
-
-
-
-
-
-
-
           c.a = s.Alpha;
-
-
-
-
-
-
-
           return c;
-
-
-
-
-
-
-
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <span  style='color: gray;'>    struct Input {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        float2 uv_MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    };</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    sampler2D _MainTex;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    void surf (Input IN, inout SurfaceOutput o) {</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>        o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>    ENDCG</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  }</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>  Fallback "Diffuse"</span>
-
-
-
-
-
-
-
   <span  style='color: gray;'>}</span>
-
-
-
-
-
-
-
 </pre><div class='vspace'></div><div><img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-7.jpg' /> <img class='figure' src='../Images/manual/SL-SurfaceShaderLightingExamples-8.jpg' /></div>
-
-
-
-
-
-
-
 </p><small>Page last updated: 2010-09-14</p>
-
-
-
-
-
-
-
     <script type="text/javascript">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     var allHTMLTags = new Array();
-
-
-
-
-
-
-
     document.divs = new Array();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function getElementByClass(theClass) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	    var allHTMLTags=document.getElementsByTagName("*");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	    for (var i=0; i<allHTMLTags.length; i++) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		    if (allHTMLTags[i].className==theClass) {
-
-
-
-
-
-
-
 			    return true;
-
-
-
-
-
-
-
 		    }
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	    return false;
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function ShowHideDiv(containerName, className, content){
-
-
-
-
-
-
-
 	var container = document.getElementById(containerName);
-
-
-
-
-
-
-
 	if(container == null)
-
-
-
-
-
-
-
 		return;
-
-
-
-
-
-
-
 	if(content == '') {//In case there are no divs in the page we still can change the icons.
-
-
-
-
-
-
-
 		if(containerName == 'desktopRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/DesktopNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 		if(containerName == 'iosRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/iPhoneNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 		if(containerName == 'androidRef') {
-
-
-
-
-
-
-
 			if(container.innerHTML == "<img src=\"../Images/AndroidNO.png\" alt=\"\">") {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\">";
-
-
-
-
-
-
-
 				SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 			} else {
-
-
-
-
-
-
-
 				container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\">";
-
-
-
-
-
-
-
 				UnSetCookie(containerName);
-
-
-
-
-
-
-
 			}	
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 	} else {
-
-
-
-
-
-
-
 		if(container.innerHTML == "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\"> " + content + "</h1>") {
-
-
-
-
-
-
-
 		container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\">" + content + "</h1>";
-
-
-
-
-
-
-
 			SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 		} else {
-
-
-
-
-
-
-
 			container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\">" + content + "</h1>";
-
-
-
-
-
-
-
 			UnSetCookie(containerName);
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	for(var i = 0; i < document.divs.length; i++) {
-
-
-
-
-
-
-
 		var divClassName = document.divs[i];
-
-
-
-
-
-
-
 		var matched = false;
-
-
-
-
-
-
-
 		if(divClassName.className == className)
-
-
-
-
-
-
-
 			   matched = true;
-
-
-
-
-
-
-
 		if(matched) {
-
-
-
-
-
-
-
 			
-
-
-
-
-
-
-
 			if(divClassName != null) {
-
-
-
-
-
-
-
 				if (divClassName.style.display == 'block') {
-
-
-
-
-
-
-
 					divClassName.style.display = 'none';
-
-
-
-
-
-
-
 					if(content == '') {
-
-
-
-
-
-
-
 						if(className == 'specific-desktop')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/DesktopNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-ios')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/iPhoneNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-android')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/AndroidNO.png\" alt=\"\" />";
-
-
-
-
-
-
-
 					} else {
-
-
-
-
-
-
-
 						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowRight.png\" alt=\"\" /> " + content + "</h1>";
-
-
-
-
-
-
-
 					}
-
-
-
-
-
-
-
 					UnSetCookie(containerName);
-
-
-
-
-
-
-
 				} else {
-
-
-
-
-
-
-
 					divClassName.style.display = 'block';
-
-
-
-
-
-
-
 					if(content == '') {
-
-
-
-
-
-
-
 						if(className == 'specific-desktop')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/DesktopYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-ios')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/iPhoneYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 						if(className == 'specific-android')
-
-
-
-
-
-
-
 							container.innerHTML = "<img src=\"../Images/AndroidYES.png\" alt=\"\" />";
-
-
-
-
-
-
-
 					} else {
-
-
-
-
-
-
-
 						container.innerHTML = "<h1><img src=\"../Images/PlatformArrowDown.png\" alt=\"\" /> " + content + "</h1>";
-
-
-
-
-
-
-
 					}
-
-
-
-
-
-
-
 					SetCookie(containerName, 'set', 30);
-
-
-
-
-
-
-
 				}
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
 		}	
-
-
-
-
-
-
-
         }			   
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     function UnSetCookie(cn) {
-
-
-
-
-
-
-
     	SetCookie(cn,'',30);
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function GetCookie(cName) {
-
-
-
-
-
-
-
 	if (document.cookie.length > 0) {
-
-
-
-
-
-
-
             cStart = document.cookie.indexOf(cName + "=");
-
-
-
-
-
-
-
 	    if(cStart != -1) {
-
-
-
-
-
-
-
 	        cStart = cStart + cName.length + 1;
-
-
-
-
-
-
-
 	        cEnd = document.cookie.indexOf(";", cStart);
-
-
-
-
-
-
-
 	        if (cEnd == -1) {
-
-
-
-
-
-
-
 	            cEnd = document.cookie.length;
-
-
-
-
-
-
-
 	        }
-
-
-
-
-
-
-
 	        return unescape(document.cookie.substring(cStart, cEnd));;
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	return "";
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function SetCookie(cName, value, expireDays) {
-
-
-
-
-
-
-
 	var exDate = new Date();
-
-
-
-
-
-
-
 	exDate.setDate(exDate.getDate()+expireDays);
-
-
-
-
-
-
-
 	document.cookie = cName + "=" + escape(value) + ((expireDays ==null) ? "" : ";expires=" + exDate.toGMTString()) + ";path=/";
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     function DocLoaded() {
-
-
-
-
-
-
-
 	document.divs = document.getElementsByTagName('div');
-
-
-
-
-
-
-
 	var prefDesktop = GetCookie('desktopRef');
-
-
-
-
-
-
-
 	var prefiOS = GetCookie('iosRef');
-
-
-
-
-
-
-
 	var prefAndroid = GetCookie('androidRef');
-
-
-
-
-
-
-
 	var firstTime = GetCookie('FT');
-
-
-
-
-
-
-
 	if (firstTime == null || firstTime == "" ) {
-
-
-
-
-
-
-
 	    SetCookie('FT', 'no', 30);
-
-
-
-
-
-
-
 	    SetCookie('desktopRef', 'set', 30)
-
-
-
-
-
-
-
 	} else if (prefDesktop == null || prefDesktop =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('desktopRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('desktopRef','specific-desktop','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('desktopRef','specific-desktop','Desktop');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	if (prefiOS == null || prefiOS =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('iosRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('iosRef','specific-ios','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('iosRef','specific-ios','iOS');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
-
 	if (prefAndroid == null || prefAndroid =="") {
-
-
-
-
-
-
-
 	    if(getElementByClass('androidRefIMG')) {
-
-
-
-
-
-
-
 	        ShowHideDiv('androidRef','specific-android','');
-
-
-
-
-
-
-
 	    } else {
-
-
-
-
-
-
-
 	        ShowHideDiv('androidRef','specific-android','Android');
-
-
-
-
-
-
-
 	    }
-
-
-
-
-
-
-
 	}	
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
     </script>
-
-
-
-
-
-
-
     
-
-
-
-
-
-
-
 		<!-- #TemplateEndEditable -->	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		<div class="nav">
-
-
-
-
-
-
-
 		<div class="nav-prev">
-
-
-
-
-
-
-
 			<a href='../Components/SL-SurfaceShaderLighting.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Previous</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	
-
-
-
-
-
-
-
 		<div class="nav-next">
-
-
-
-
-
-
-
 			<a href='../Components/SL-ShaderPrograms.html'>
-
-
-
-
-
-
-
 				<div class="nav-left"></div>
-
-
-
-
-
-
-
 				<div class="nav-main">Next</div>
-
-
-
-
-
-
-
 				<div class="nav-right"></div>
-
-
-
-
-
-
-
 			</a>
-
-
-
-
-
-
-
 		</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 	</div>
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
 </body></html>
-
-
-
-
-
-
-
 <!-- #EndTemplate -->
-
-
-
-
-
-
-

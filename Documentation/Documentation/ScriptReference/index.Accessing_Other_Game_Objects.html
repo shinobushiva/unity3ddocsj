@@ -1,1288 +1,647 @@
 <!-- #BeginTemplate "/Templates/manual-scriptref-page.dwt" --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta charset="utf-8">
-
 	<!-- #TemplateBeginEditable name="doctitle" -->
-
 			<title>Unity Script Reference &ndash; Overview: Accessing Other Game Objects</title>
-
 	<!-- #TemplateEndEditable -->
-
 <link rel="StyleSheet"  href="docs.css" type="text/css" />
-
 <script type="text/javascript" src="../Images/jquery-1.4.2.js"></script>
-
 <script type="text/javascript" src="../Images/jquery.cookie.js"></script>
 
-
-
 <style>
-
 /* 
-
 Unity standard fonts 
-
 */
-
 body{ font-family:Helvetica, Arial, sans-serif; font-size:.9em; }
 
-
-
 /*
-
 simple format for code, using fixed width
-
 and a nice border
-
 */
-
 pre { font-family:"Courier New", Courier, monospace; font-size:.8em; }
-
 pre { padding:10px; margin:10px; border:1px #d8d8d8 solid; }
-
 pre { -moz-border-radius:10px; -webkit-border-radius:10px; }
-
 pre { background:#f8f8f8; }
 
-
-
 /*
-
 aligns the selection dialog on the top right
-
 */
-
 .selectLang { margin-right:10px; text-align:right; float:right; }
 
 
-
-
-
 .cSelect,
-
 .cSelect ul,
-
 .cSelect li { font-size:12px; }
 
-
-
 /*.cSelect { border:1px solid #d0d0d0; }
-
 .cSelect { background:#ddf; }*/
-
 /*
-
 .cSelect { -moz-border-radius:10px; -webkit-border-radius:10px; }*/
 
-
-
 .cSelect { display:inline-block; position:relative; float:right; margin-right:20px;}
-
 .cSelect { padding-top:.4em; padding-bottom:.2em;}
-
 .cSelect-Selected,
-
 .cSelect-ArrowDown,
-
 .cSelect li { cursor:pointer; }
 
-
-
 .cSelect,
-
 .roundTop { -webkit-border-top-left-radius:10px; -webkit-border-top-right-radius:10px; }
-
 .cSelect,
-
 .roundTop { -moz-border-radius-topleft:10px; -moz-border-radius-topright:10px; }
 
-
-
 .roundBottom,
-
 .cSelect ul { -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; }
-
 .roundBottom,
-
 .cSelect ul { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; }
-
-
-
 
 
 .cSelectWidth { width:10em; display:block;}
 
-
-
 .cSelect-wrapper { position:relative; }
 
-
-
 .cSelect ul { background:#fff; padding:0px; margin:0px; display:inline-block; }
-
 .cSelect ul { z-index:10; position:absolute; top:1.3em; }
-
 .cSelect ul { padding-bottom:.5em; padding-top:.5em; padding-left:0px; padding-right:0px; }
-
 /*.cSelect ul { border:1px solid #d0d0d0; }*/
 
 
-
-
-
 .cSelect li { padding:.1em; margin:0px; text-align:right; list-style-type:none; }
-
 .cSelect li { padding-left:.7em; padding-right:24px; }
-
-
 
 .cSelect-highlight { background:#f0f0f0; }
 
-
-
 .cSelect-Selected { margin-left:.5em; margin-right:.5em; text-align:right; float:right; width:75%}
 
-
-
 .cSelect-ArrowDown { width:18px; height:18px; display:inline-block; float:right}
-
 .cSelect-ArrowDown { background:url('../Images/down-arrow.png'); text-align:center; }
-
 .cSelect-ArrowDown { -moz-border-radius:9px; -webkit-border-radius:9px; }
 
-
-
 .monoCompatibility-roweven { background-color:#DCDDDF; }
-
 .monoCompatibility-rowodd { background-color:#F3F3F4; }
-
 .monoCompatibility-cell { border:1px solid #ffffff;}
 
 
-
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
 
-
-
-
 <table class="titlebar" cellpadding=0 cellspacing=0 border=0><tr>
-
 	<td class="titleleft"><img src="../images/top/left.png"></td>
-
 	<td><a href="../../Documentation.html"><img src="../images/top/logo.png"></a></td>
-
 	<td class="titlemid">
-
 		<table><tr>
-
 			<td class="doctitle">Overview: Accessing Other Game Objects</td>
-
 			<!-- #TemplateBeginEditable name="sections-nav" -->
-
 			<td class="Scripting"><a href="../Manual/index.html" title="Go to Unity manual" class="scripting-anchor"><img src="../images/spacer.gif" class="manual" border="0"><span class="manual-text">Manual</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../Components/index.html" title="Go to Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="reference" border="0"><span class="components-text">Reference</span></a><span class="docs-navigation">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-
 			<td class="Scripting"><a href="../ScriptReference/index.html" title="Go to Scripting Reference" class="scripting-anchor"><img src="../images/spacer.gif" class="scripting" border="0"><span class="scripting-text">Scripting&nbsp;&nbsp;</span></a></td>
-
 			<!-- #TemplateEndEditable -->	
-
 		</tr><tr>
-
 			<td colspan="4">
-
 				<table width="100%" class="docpath"><tr><td >
-
 					<!-- #TemplateBeginEditable name="path" -->
-
 						<a href="index.html">Scripting</a>
-
 					<!-- #TemplateEndEditable -->	
-
 				</td>
-
 				</td><td class="switchlink">
-
 					<!-- #TemplateBeginEditable name="switchLink" -->
-
 					<!--BeginSwitchLink--><!--EndSwitchLink-->
-
 					<!-- #TemplateEndEditable -->	
-
 				</td></tr></table>
-
 			</td>
-
 		</tr></table>
-
 	</td>
-
 	<td class="titleright" width="9"><img src="../images/top/right.png"></td>
-
 </tr></table>
-
 <div class="scriprefmain">
-
 		<span class="heading">
-
 			<!-- #TemplateBeginEditable name="title" -->
-
 				Overview: Accessing Other Game Objects
-
 			<!-- #TemplateEndEditable -->	
-
 		</span>
-
 <!-- #TemplateBeginEditable name="details" -->
-
 	<span class="text"></span>
-
 <!-- #TemplateEndEditable -->	
 
-
-
 	<!-- #TemplateBeginEditable name="manual-top-nav" --><div class="left-menu-container"><ul class="left-menu"><li>
-
 <form class="apisearch" action="30_search.html" method="GET">
-
 	<input type="search" name="q" placeholder="Search" autosave="Unity Reference" results="5" class="sbox" id="q" />
-
 				
-
 	<script type="text/javascript" language="JavaScript">
-
 	<!--
-
 	function detect() {
-
 		// simplify things
-
 		var agent 	= navigator.userAgent.toLowerCase();
-
 		
-
 		// detect platform
-
 		this.isMac		= (agent.indexOf('mac') != -1);
-
 		this.isWin		= (agent.indexOf('win') != -1);
-
 		this.isWin2k	= (this.isWin && (
-
 				agent.indexOf('nt 5') != -1));
-
 		this.isWinSP2	= (this.isWin && (
-
 				agent.indexOf('xp') != -1 || 
-
 				agent.indexOf('sv1') != -1));
-
 		this.isOther	= (
-
 				agent.indexOf('unix') != -1 || 
-
 				agent.indexOf('sunos') != -1 || 
-
 				agent.indexOf('bsd') != -1 ||
-
 				agent.indexOf('x11') != -1 || 
-
 				agent.indexOf('linux') != -1);
-
 		
-
 		// detect browser
-
 		this.isSafari	= (agent.indexOf('safari') != -1);
-
 		this.isSafari2 = (this.isSafari && (parseFloat(agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).substring(0,agent.substring(agent.indexOf("applewebkit/")+"applewebkit/".length,agent.length).indexOf(' '))) >=  300));
-
 		this.isOpera	= (agent.indexOf('opera') != -1);
-
 		this.isNN		= (agent.indexOf('netscape') != -1);
-
 		this.isIE		= (agent.indexOf('msie') != -1);
-
 	}
-
 	var browser = new detect();
-
 	var str = "Search";
-
 	var q=document.getElementById('q');
-
 	if (!browser.isSafari2) {q.value=str;q.onfocus=function(){q.value="";q.style.color="#000";};}
-
 	//-->
-
 	</script>
-
 </form>
-
 </li><li><span class="left-menu-heading">Menu</span></li><li><a title="Scripting overview" class="left-menu-item" href="index.html">Overview</a></li><li><a title="List of scripting classes" class="left-menu-item" href="20_class_hierarchy.html">Runtime Classes</a></li><li><a title="List of attributes" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Attributes.html">Attributes</a></li><li><a title="List of enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Enumerations.html">Enumerations</a></li><li><a title="Classes for extending Unity editor" class="left-menu-item" href="20_class_hierarchy.Editor_Classes.html">Editor Classes</a></li><li><a title="List of editor enumerations" class="left-menu-item left-menu-indent" href="20_class_hierarchy.Editor_Enumerations.html">Enumerations</a></li><li><a title="Scripting change history" class="left-menu-item" href="40_history.html">History</a></li><li><a title="Alphabetical index" class="left-menu-item" href="10_reference.html">Index</a></li><li><span class="left-menu-seperator"></span></li><li><a class="left-menu-heading" href="index.html">Scripting Overview</a></li><li><a title="Common Operations" class="left-menu-item" href="index.Common_Operations.html">Common Operations</a></li><li><a title="Keeping Track of Time" class="left-menu-item" href="index.Keeping_Track_of_Time.html">Time</a></li><li><a title="Accessing Other Components" class="left-menu-item" href="index.Accessing_Other_Components.html">Accessing Components</a></li><li><span title="Accessing Other Game Objects" class="left-menu-item left-menu-current">Accessing Objects</span></li><li><a title="Vectors" class="left-menu-item" href="index.Vectors.html">Vectors</a></li><li><a title="Member Variables & Global Variables" class="left-menu-item" href="index.Member_Variables_26_Global_Variables.html">Variables</a></li><li><a title="Instantiate" class="left-menu-item" href="index.Instantiate.html">Instantiate</a></li><li><a title="Coroutines & Yield" class="left-menu-item" href="index.Coroutines_26_Yield.html">Coroutines & Yield</a></li><li><a title="Writing Scripts in C#" class="left-menu-item" href="index.Writing_Scripts_in_Csharp.html">Using C#</a></li><li><a title="The most important classes" class="left-menu-item" href="index.The_most_important_classes.html">Important Classes</a></li><li><a title="Performance Optimization" class="left-menu-item" href="index.Performance_Optimization.html">Performance Optimization</a></li><li><a title="Script compilation (Advanced)" class="left-menu-item" href="index.Script_compilation_28Advanced29.html">Script Compilation</a></li></ul></div>
-
 	<!-- #TemplateEndEditable -->
-
 <!-- #TemplateBeginEditable name="unofficial translation" -->
 <div id="unofficial_translation"><center><table border="1" ><tr><td  bgcolor="yellow"><center>このドキュメントは有志により翻訳されたもので、オフィシャルではありません。オリジナルのページは<a href="http://unity3d.com/support/documentation/" target="_blank">こちら</a>。<br>This document is unofficially translated by users.Please see the original document <a href="http://unity3d.com/support/documentation/" target="_blank">here</a>.<br><br>翻訳に関する修正など、ご連絡は<a href="mailto:stagesp1@gmail.com">こちら</a>まで。<br>Please send e-mail to <a href="mailto:stagesp1@gmail.com">here</a>, when you have any question about the translation.</center></td>
-<!--<td><a href="toedit_proxy.php?url=<replace_here_with_url>"><img src="../Images/pencil.png"/></a><br/>編集</td>-->
+<td><a href="https://github.com/shinobushiva/unity3ddocsj"><img src="../Images/pencil.png"/></a><br/>編集 (GitHub)</td>
 </tr></table></center></div>
 <!-- #TemplateEndEditable -->
 
-<!-- #TemplateEndEditable -->
 
 				<!-- #TemplateBeginEditable name="body" -->
-
 			<div class="pre-next-link"><b>Previous:</b> <a href="index.Accessing_Other_Components.html">Accessing Components</a> <b>Next:</b> <a href="index.Vectors.html">Vectors</a></div>
-
    <p class="basic"> 
-
 </p><p class="basic">
-
 Most advanced game code does not only manipulate a single object. The Unity scripting interface has various ways to find and access other game objects and components there-in.
-
 In the following we assume there is a script named OtherScript.js attached to game objects in the scene.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () { <br/>     otherScript = GetComponent(OtherScript); <br/>     otherScript.DoSomething(); <br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        otherScript = GetComponent&lt;OtherScript&gt;();<br/>        otherScript.DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Update</span>():<br/>        otherScript = GetComponent[of OtherScript]()<br/>        otherScript.DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 <b>1. Through inspector assignable references.</b>
-
 </p><p class="basic">
-
 You can assign variables to any object type through the inspector:
-
 </p><p class="basic">
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-comment">// Translate the object dragged on the target slot</span><span class="hl-comment"><br/></span><br/><span class="hl-keyword">var</span> target : <a href="Transform.html" class="classlink">Transform</a>;<br/><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () {<br/>    target.Translate(0, 1, 0);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <a href="Transform.html" class="classlink">Transform</a> target;<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        target.Translate(0, 1, 0);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> target as <a href="Transform.html" class="classlink">Transform</a><br/><br/>    def <span class="hl-operator">Update</span>():<br/>        target.Translate(0, 1, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 You can also expose references to other objects to the inspector.
-
 Below you can drag a game object that contains the OtherScript on the target slot in the inspector.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-comment">// Set foo DoSomething on the target variable assigned in the inspector.</span><span class="hl-comment"><br/></span><br/><span class="hl-keyword">var</span> target : OtherScript;<br/><br/><span class="hl-keyword">function</span> <span class="hl-operator">Update</span> () {<br/>    <span class="hl-comment">// Set foo variable of the target object</span><span class="hl-comment"><br/></span>    target.foo = 2;<br/>    <span class="hl-comment">// Call do something on the target</span><span class="hl-comment"><br/></span>    target.DoSomething(<span class="hl-string">"Hello"</span>);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> OtherScript target;<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Update</span>() {<br/>        target.foo = 2;<br/>        target.DoSomething(<span class="hl-string">"Hello"</span>);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> target as OtherScript<br/><br/>    def <span class="hl-operator">Update</span>():<br/>        target.foo = 2<br/>        target.DoSomething('Hello')<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 <b>2. Located through the object hierarchy.</b>
-
 </p><p class="basic">
-
 You can find child and parent objects to an existing object through the <a href="Transform.html" class="classlink">Transform</a> component of a game object:
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-comment">// Find the child "Hand" of the game object </span><span class="hl-comment"><br/></span><span class="hl-comment">// we attached the script to</span><span class="hl-comment"><br/></span><br/>transform.Find(<span class="hl-string">"Hand"</span>).Translate(0, 1, 0);<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <span class="hl-keyword">void</span> <span class="hl-operator">Awake</span>() {<br/>        transform.Find(<span class="hl-string">"Hand"</span>).Translate(0, 1, 0);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> def <span class="hl-operator">Awake</span>():<br/>        transform.Find('Hand').Translate(0, 1, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 Once you have found the transform in the hierarchy, you can use <a href="Component.GetComponent.html?from=index" class="itemlink">GetComponent</a> to get to other scripts.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-comment">// Find the child named "Hand".</span><span class="hl-comment"><br/></span><span class="hl-comment">// On the OtherScript attached to it, set foo to 2.</span><span class="hl-comment"><br/></span>transform.Find(<span class="hl-string">"Hand"</span>).GetComponent(OtherScript).foo = 2;<br/><br/><span class="hl-comment">// Find the child named "Hand".</span><span class="hl-comment"><br/></span><span class="hl-comment">// Call DoSomething on the OtherScript attached to it.</span><span class="hl-comment"><br/></span>transform.Find(<span class="hl-string">"Hand"</span>).GetComponent(OtherScript).DoSomething(<span class="hl-string">"Hello"</span>);<br/><br/><span class="hl-comment">// Find the child named "Hand".</span><span class="hl-comment"><br/></span><span class="hl-comment">// Then apply a force to the rigidbody attached to the hand.</span><span class="hl-comment"><br/></span>transform.Find(<span class="hl-string">"Hand"</span>).rigidbody.AddForce(0, 10, 0);<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <span class="hl-keyword">void</span> <span class="hl-operator">Awake</span>() {<br/>        transform.Find(<span class="hl-string">"Hand"</span>).GetComponent&lt;OtherScript&gt;().foo = 2;<br/>        transform.Find(<span class="hl-string">"Hand"</span>).GetComponent&lt;OtherScript&gt;().DoSomething(<span class="hl-string">"Hello"</span>);<br/>        transform.Find(<span class="hl-string">"Hand"</span>).rigidbody.AddForce(0, 10, 0);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> def <span class="hl-operator">Awake</span>():<br/>        transform.Find('Hand').GetComponent[of OtherScript]().foo = 2<br/>        transform.Find('Hand').GetComponent[of OtherScript]().DoSomething('Hello')<br/>        transform.Find('Hand').rigidbody.AddForce(0, 10, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 You can loop over all children:
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-comment">// Moves all transform children 10 units upwards!</span><span class="hl-comment"><br/></span><br/><span class="hl-keyword">for</span> (<span class="hl-keyword">var</span> child : <a href="Transform.html" class="classlink">Transform</a> <span class="hl-keyword">in</span> transform) {<br/>    child.Translate(0, 10, 0);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">public</span> <span class="hl-keyword">void</span> <span class="hl-operator">Awake</span>() {<br/>        foreach (<a href="Transform.html" class="classlink">Transform</a> child <span class="hl-keyword">in</span> transform) {<br/>            child.Translate(0, 10, 0);<br/>        }<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    <span class="hl-keyword">public</span> def <span class="hl-operator">Awake</span>():<br/>        <span class="hl-keyword">for</span> child as <a href="Transform.html" class="classlink">Transform</a> <span class="hl-keyword">in</span> transform:<br/>            child.Translate(0, 10, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
-
 
 See the documentation for the <a href="Transform.html" class="classlink">Transform</a> class for further information.
-
 </p><p class="basic">
-
 <b>3. Located by name or Tag.</b>
-
 </p><p class="basic">
-
 You can search for game objects with certain tags using <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a> and <a href="GameObject.FindGameObjectsWithTag.html?from=index" class="itemlink">GameObject.FindGameObjectsWithTag</a>.
-
 Use <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a> to find a game object by name.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-comment">// By name</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">var</span> go = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>(<span class="hl-string">"SomeGuy"</span>);<br/>    go.transform.Translate(0, 1, 0);<br/><br/>    <span class="hl-comment">// By tag</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">var</span> player = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>(<span class="hl-string">"Player"</span>);<br/>    player.transform.Translate(0, 1, 0);<br/>    <br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        <a href="GameObject.html" class="classlink">GameObject</a> go = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>(<span class="hl-string">"SomeGuy"</span>);<br/>        go.transform.Translate(0, 1, 0);<br/>        <a href="GameObject.html" class="classlink">GameObject</a> player = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>(<span class="hl-string">"Player"</span>);<br/>        player.transform.Translate(0, 1, 0);<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        go as <a href="GameObject.html" class="classlink">GameObject</a> = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>('SomeGuy')<br/>        go.transform.Translate(0, 1, 0)<br/>        player as <a href="GameObject.html" class="classlink">GameObject</a> = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>('Player')<br/>        player.transform.Translate(0, 1, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 You can use GetComponent on the result to get to any script or component on the found game object
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-comment">// By name</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">var</span> go = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>(<span class="hl-string">"SomeGuy"</span>);<br/>    go.GetComponent(OtherScript).DoSomething();<br/><br/>    <span class="hl-comment">// By tag</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">var</span> player = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>(<span class="hl-string">"Player"</span>);<br/>    player.GetComponent(OtherScript).DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        <a href="GameObject.html" class="classlink">GameObject</a> go = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>(<span class="hl-string">"SomeGuy"</span>);<br/>        go.GetComponent&lt;OtherScript&gt;().DoSomething();<br/>        <a href="GameObject.html" class="classlink">GameObject</a> player = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>(<span class="hl-string">"Player"</span>);<br/>        player.GetComponent&lt;OtherScript&gt;().DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        go as <a href="GameObject.html" class="classlink">GameObject</a> = <a href="GameObject.Find.html?from=index" class="itemlink">GameObject.Find</a>('SomeGuy')<br/>        go.GetComponent[of OtherScript]().DoSomething()<br/>        player as <a href="GameObject.html" class="classlink">GameObject</a> = <a href="GameObject.FindWithTag.html?from=index" class="itemlink">GameObject.FindWithTag</a>('Player')<br/>        player.GetComponent[of OtherScript]().DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 Some special objects like the main camera have shorts cuts using <a href="Camera-main.html?from=index" class="itemlink">Camera.main</a>.
-
 </p><p class="basic">
-
 <b>4. Passed as parameters.</b>
-
 </p><p class="basic">
-
 Some event messages contain detailed information on the event. For instance, trigger events pass the <a href="Collider.html" class="classlink">Collider</a> component of the colliding object to the handler function.
-
 </p><p class="basic">
-
 OnTriggerStay gives us a reference to a collider. From the collider we can get to its attached rigidbody.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">OnTriggerStay</span>( other : <a href="Collider.html" class="classlink">Collider</a> ) {<br/>    <span class="hl-comment">// If the other collider also has a rigidbody</span><span class="hl-comment"><br/></span>    <span class="hl-comment">// apply a force to it!</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">if</span> (other.rigidbody)<br/>        other.rigidbody.AddForce(0, 2, 0);<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnTriggerStay</span>(<a href="Collider.html" class="classlink">Collider</a> other) {<br/>        <span class="hl-keyword">if</span> (other.rigidbody)<br/>            other.rigidbody.AddForce(0, 2, 0);<br/>        <br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">OnTriggerStay</span>(other as <a href="Collider.html" class="classlink">Collider</a>):<br/>        <span class="hl-keyword">if</span> other.rigidbody:<br/>            other.rigidbody.AddForce(0, 2, 0)<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 Or we can get to any component attached to the same game object as the collider.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">OnTriggerStay</span>( other : <a href="Collider.html" class="classlink">Collider</a> ) {<br/>    <span class="hl-comment">// If the other collider has a OtherScript attached</span><span class="hl-comment"><br/></span>    <span class="hl-comment">// call DoSomething on it.</span><span class="hl-comment"><br/></span>    <span class="hl-comment">// Most of the time colliders won't have this script attached,</span><span class="hl-comment"><br/></span>    <span class="hl-comment">// so we need to check first to avoid null reference exceptions.</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">if</span> (other.GetComponent(OtherScript))<br/>        other.GetComponent(OtherScript).DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">OnTriggerStay</span>(<a href="Collider.html" class="classlink">Collider</a> other) {<br/>        <span class="hl-keyword">if</span> (other.GetComponent&lt;OtherScript&gt;())<br/>            other.GetComponent&lt;OtherScript&gt;().DoSomething();<br/>        <br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">OnTriggerStay</span>(other as <a href="Collider.html" class="classlink">Collider</a>):<br/>        <span class="hl-keyword">if</span> other.GetComponent[of OtherScript]():<br/>            other.GetComponent[of OtherScript]().DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
 Note that by suffixing the <span class="variable">other</span> variable in the above example, you can access any component inside the colliding object.
-
 </p><p class="basic">
-
 <b>5. All scripts of one Type</b>
-
 </p><p class="basic">
-
 Find any object of one class or script name using <a href="Object.FindObjectsOfType.html?from=index" class="itemlink">Object.FindObjectsOfType</a> or find the first object of one type using <a href="Object.FindObjectOfType.html?from=index" class="itemlink">Object.FindObjectOfType</a>.
-
 <div class="example">
-
   <div style="clear:both;">
-
     <div class="cSelect cSelectWidth roundBottom">
-
       <div class="cSelect-wrapper">
-
         <div class="cSelect-ArrowDown"></div>
-
 	 <span class="cSelect-Selected">
-
 	 JavaScripts
-
 	 </span>
-
 	 <ul class="cSelectWidth" style="display:none;">
-
 		<li>JavaScript</li>
-
 		<li>C#</li>
-
 		<li>Boo</li>
-
 	 </ul>
-
       </div>
-
     </div>
-
     <div style="clear:both;"></div>
-
   </div>
-
 <div class="code" code_lang_name="JavaScript"><span class="hl-keyword">function</span> <span class="hl-operator">Start</span> () {<br/>    <span class="hl-comment">// Find the OtherScript which is attached to any game object in the scene.</span><span class="hl-comment"><br/></span>    <span class="hl-keyword">var</span> other : OtherScript = FindObjectOfType(OtherScript);<br/>    other.DoSomething();<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="C#">using UnityEngine;<br/>using System.Collections;<br/><br/><span class="hl-keyword">public</span> <span class="hl-keyword">class</span> example : <a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a> {<br/>    <span class="hl-keyword">void</span> <span class="hl-operator">Start</span>() {<br/>        OtherScript other = FindObjectOfType(typeof(OtherScript));<br/>        other.DoSomething();<br/>    }<br/>}<br/><p class="basic"></div>
-
 <div class="code" code_lang_name="Boo"><span class="hl-keyword">import</span> UnityEngine<br/><span class="hl-keyword">import</span> System.Collections<br/><br/><span class="hl-keyword">class</span> example(<a href="MonoBehaviour.html" class="classlink">MonoBehaviour</a>):<br/><br/>    def <span class="hl-operator">Start</span>():<br/>        other as OtherScript = FindObjectOfType(OtherScript)<br/>        other.DoSomething()<br/><p class="basic"></div>
-
 </div>
-
 </p><p class="basic">
-
-
 
 </p>
-
 <div class="pre-next-link"><b>Previous:</b> <a href="index.Accessing_Other_Components.html">Accessing Components</a> <b>Next:</b> <a href="index.Vectors.html">Vectors</a></div>
 
-
-
 			<!-- #TemplateEndEditable -->	
-
 				
-
 	</div><!-- #TemplateEndEditable -->
-
     <script type="text/javascript">
 
-
-
     //prevent an error on older versions of IE(x) < IE7 who did not have a javascript console.
-
     if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
 
 
-
-
-
     var $j = jQuery.noConflict();
-
     $j(document).ready(function($){
 
-
-
     	var languages = [];
-
     	function getCookie(cookieName){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try {
-
     			return $.cookie(cookieName);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
-
 
     	function setCookie(cookieName, cookieValue){
-
     //a wrapper, because google chrome does not allow for security reasons cookies on local files.
-
     //an option can be set while loading chrome to allow cookies on local files
-
     		try{
-
     			return $.cookie(cookieName, cookieValue);
-
     		}catch(e){
-
     			console.log(e);
-
     		}
-
     	}
-
     
-
     /*
-
     decectLangauges looks at all of the div(s) containing a class of "code"
-
     it then creates a list of languages in that list to generate the drop down.
-
     to ad a language, ad an example with that language defined 
-
     in the attribute "code_lang_name" for that div
-
     */
-
     	function detectLanguages(){
-
     		languages = [];
-
     		$("div.code").each(
-
     			function(){
-
     				var isThere = false;
-
     //set the value of the attribute
-
     				var isNewLang = $(this).attr("code_lang_name");
-
     				for ( i in languages ){
-
     					if( isNewLang == languages[i] ){
-
     						isThere = true;
-
     					}
-
     				}				
-
     				if( !isThere ){
-
     //adds a new language to the stack/ array
-
     				   languages.push(isNewLang);
-
     				}
-
     			});
-
     		console.log("languages detected", languages);
-
     	}
-
     
-
     //execute the function detectLanguages just after we defined it, this should only happen once and on page load after the document object model is ready
-
     	detectLanguages();
 
-
-
     	function buildListCSelect(){
-
     //finds the doc element with an id of selectedLangauge, base on css3 rules, then removes all children
-
     		$(".cSelect ul").empty();
-
     		$(".cSelect .cSelect-Selected").text("");
-
     		var langCookie = getCookie("codeLanguage");		
-
     		for( i in languages ){
-
     //inserts a new child with the included html
-
     			$(".cSelect ul").append("<li>" + languages[i] + "</li>");
-
     		}
-
     
-
     //if the cookie is there, set that item to selected.
-
     		for( i in languages ){
-
     			if(langCookie !== null && languages[i] == langCookie){
-
     				$(".cSelect .cSelect-Selected").text(languages[i]);
-
     			}
-
     		}
-
-
 
     		if( $(".cSelect .cSelect-Selected").text().length == 0){
-
     			var first = $(".cSelect li:first").text();
-
     			$(".cSelect .cSelect-Selected").text(first);
-
     		}
 
-
-
     	}
-
     	buildListCSelect();
-
     
-
     	function showCSelectedLanguage(){
-
     		var selected = $(".cSelect .cSelect-Selected:first").text();
-
     		var langAvail = false;
-
     		var langCookie = getCookie("codeLanguage");
-
     		for( i in languages ){
-
     			if(langCookie == languages[i]){
-
     				langAvail = true;
-
     			}
-
     		}
-
     		if(langAvail) {
-
     			selected = langCookie;
-
     		} else {
-
     			console.log("the language stored in the cookie is not availible", langCookie);
-
     		}
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     	}
-
     	showCSelectedLanguage(); //set the default.
-
            $(".cSelect").addClass("roundBottom");
-
     	$(".cSelect ul").hide();
-
     /* 	$(".cSelect").hover(
-
      		function(){
-
      			$(this).find("ul").show();
-
      		},
-
      		function(){
-
      			$(this).find("ul").hide();
-
      		}
-
      	);
-
 */
-
     	$(".cSelect").hover(
-
     		function(){
-
     			$(document).unbind("click.cSelect");
-
     		},
-
     		function(){
-
     			$(document).bind("click.cSelect", function(event){
-
                                    $(".cSelect").addClass("roundBottom");
-
     				$(".cSelect ul").hide();
-
     				$(this).unbind(event);
-
     			});
-
     		}
-
     	);
-
-
-
 
 
     	$(".cSelect li").hover(
-
     		function(){
-
     			$(this).addClass("cSelect-highlight");
-
     		},
-
     		function(){
-
     			$(this).removeClass("cSelect-highlight");
-
     		}
-
     	);
 
-
-
     	var suppress = false;
-
     	function enable(){
-
     		suppress = false;
-
     	}
 
 
-
-
-
     	$(".cSelect li").click(function(){
-
     		var value = $(this).text();
-
     		console.log( "new selection ", value );
-
     		$(this).parents(".cSelect").find(".cSelect-Selected").text(value);
-
     		suppress = true;
-
                    $(".cSelect").addClass("roundBottom");
-
     		$(".cSelect ul").hide();
-
     		$(this).parents(".cSelect").trigger("change");
-
     		setTimeout(enable, 300 );
-
     	});
-
-
-
 
 
            $(".cSelect-ArrowDown")
-
      		.add(".cSelect-Selected")
-
      		.add(".cSelect").click(
-
      		function(){
-
      			var visible = $(this).parents(".cSelect").find("ul").css("display") == "block" ? true : false;
-
      			if( !visible ){
-
      				$(this).parents(".cSelect").removeClass("roundBottom");
-
      				$(this).parents(".cSelect").find("ul").show();
-
      			}else{
-
      				$(this).parents(".cSelect").addClass("roundBottom");
-
      				$(".cSelect ul").hide();
-
      			}
-
      		});
 
 
-
-
-
     	$(".cSelect").click(function(){if(!suppress){}});
-
  
-
     	$(".cSelect").change(function(){
-
     		console.log("selected",$(this).find(".cSelect-Selected").text());
-
     		selected = $(this).find(".cSelect-Selected").text();
-
     		$(".cSelect").find(".cSelect-Selected").text(selected);
-
     		$("div.code[code_lang_name]").hide();
-
     		$("div.code[code_lang_name='"+ selected +"']").show();
-
     		setCookie("codeLanguage", selected);
-
     	});
-
     });
-
     </script>
-
 </body>
-
 </html><!-- #EndTemplate -->
-
-
 
